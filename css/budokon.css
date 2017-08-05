@@ -1,0 +1,21 @@
+.fullwidth img {
+	width: 100%;
+}
+
+.budokon img {
+	margin-top: 100px;
+}
+.zemljevid img {
+	margin-top: 50px;
+}
+
+.bg-white {
+	background-color: white;
+}
+
+#program p {
+	text-align: justify;
+}
+#program .row .row {
+	margin-top: 150px;
+}
