@@ -23,3 +23,12 @@
 iframe {
 	border: 10px solid black;
 }
+
+.zemljevid img {
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+}
+.zemljevid img:hover {
+	opacity: 1;
+	filter: alpha(opacity=80);
+}
