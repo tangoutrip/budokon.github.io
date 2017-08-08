@@ -17,7 +17,7 @@
 	text-align: justify;
 }
 #program .row .row {
-	margin-top: 150px;
+	margin-top: 70px;
 }
 
 iframe {
@@ -31,4 +31,12 @@ iframe {
 .zemljevid img:hover {
 	opacity: 1;
 	filter: alpha(opacity=80);
+}
+
+.bg-white {
+	color: #333333;
+}
+
+#cenik .col-lg-6 {
+	text-align: left;
 }
