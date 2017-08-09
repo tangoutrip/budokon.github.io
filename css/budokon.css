@@ -12,6 +12,12 @@
 .bg-white {
 	background-color: white;
 }
+.bg-white a {
+	color: #a69349;
+}
+.bg-white a:hover {
+	color: #c8b258;
+}
 
 #program p {
 	text-align: justify;
