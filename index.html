@@ -72,13 +72,13 @@
                     <li>
                         <a class="page-scroll" href="#posnetki">Posnetki</a>
                     </li>
-										<li>
+					<li>
                         <a class="page-scroll" href="#program">Program</a>
                     </li>
-										<li>
+					<li>
                         <a class="page-scroll" href="#cenik">Cenik</a>
                     </li>
-										<li>
+					<li>
                         <a class="page-scroll" href="#kontakt">Kontakt in lokacija</a>
                     </li>
                 </ul>
@@ -90,7 +90,10 @@
 
     <!-- Intro Header -->
     <header class="fullwidth budokon">
-				<img src="img/intro.png" />
+        <video playsinline autoplay muted loop id="videohead" preload="true">
+            <source src="img/header.mp4" type="video/mp4">
+        </video>
+        <!--<div id="unmute-mute"><button class="muted"><i class="fa fa-fw fa-volume-off"></i><i class="fa fa-fw fa-volume-up"></i></button></div>-->
     </header>
 
     <!-- About Section -->
@@ -123,8 +126,7 @@ Praksa vabi pozornost h kritičnem vrednotenju zgodb in prepričanj, ki jih je s
                     <p> Enourno osrediščjanje skozi gostotekoči flow asan, ki vključuje BDK specifične elemente in filozofijo. <br><br>Praksa ni primerna za gibalce začetnike. Prvi dve uri - 9. in 16.10 sta odprtega tipa, prijave niso potrebne. (<br> 
 					
                    
-                    <p><a href="https://www.facebook.com/groups/1751705628459893/" class="btn btn-default btn-lg"><i class="fa fa-facebook-official fa-lg fa-fw"></i> <span class="network-name">BDK skupina</span></a></p>
-					<p><a href="https://www.facebook.com/events/251448269031169/" class="btn btn-default btn-lg"><i class="fa fa-facebook-official fa-lg fa-fw"></i> <span class="network-name">dogodek</span></a></p>
+                    <p><a href="https://www.facebook.com/groups/1751705628459893/" class="btn btn-default btn-lg"><i class="fa fa-facebook-official fa-lg fa-fw"></i> <span class="network-name">BDK skupina</span></a> <a href="https://www.facebook.com/events/251448269031169/" class="btn btn-default btn-lg"><i class="fa fa-facebook-official fa-lg fa-fw"></i> <span class="network-name">dogodek</span></a></p>
                 </div>
             </div>
       </div>
@@ -132,10 +134,12 @@ Praksa vabi pozornost h kritičnem vrednotenju zgodb in prepričanj, ki jih je s
 
 		<section id="posnetki" class="content-section text-center ">
 			<div class="container">
-				<h2>Posnetki</h2>
-          <iframe width="853" height="480" src="https://www.youtube.com/embed/HAofbkwSaEA?rel=0" frameborder="0" allowfullscreen></iframe>
-		  	
-      </div>
+                <h2>Posnetki</h2>
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/g0ckYWcl-E8?rel=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/HAofbkwSaEA?rel=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/jeNhyOLrHUY?rel=0" frameborder="0" allowfullscreen></iframe>
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/B5CILLtIMPg?rel=0" frameborder="0" allowfullscreen></iframe>
+          </div>
     </section>
 
 		<!-- Contact Section -->
@@ -277,17 +281,26 @@ Praksa vabi pozornost h kritičnem vrednotenju zgodb in prepričanj, ki jih je s
 		</a>
 
 
-    <!-- jQuery -->
     <script src="vendor/jquery/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Plugin JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-
-    <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
+    <script>
+        $("#unmute-mute .muted").on('click tap', function() {
+            $("#videohead").attr('muted', false);
+            console.log($(this).attr("class"));
+            $(this).addClass("unmuted");
+            console.log("tried adding class");
+            $(this).removeClass("muted");
+        });
+        $("#unmute-mute .unmuted").on('click tap', function() {
+            $("#videohead").attr('muted', true);
+            console.log($(this).attr("class"));
+            $(this).addClass("muted");
+            $(this).removeClass("unmuted");
+        });
+//
+    </script>
 
 </body>
 
