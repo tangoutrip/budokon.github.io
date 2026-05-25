@@ -161,3 +161,44 @@ a:focus {
 .content-section {
   border-top: 1px solid rgba(185, 166, 106, 0.16);
 }
+
+/* FIX: prvi vsebinski blok "Budokon Slovenija" */
+#budokon,
+#budokon.bg-white,
+section#budokon.content-section,
+section#budokon.content-section.bg-white,
+section#budokon .row,
+section#budokon .col-lg-8,
+section#budokon .col-lg-offset-2 {
+  background-color: #050505 !important;
+  color: #f4f1ea !important;
+}
+
+#budokon h2 {
+  color: #b9a66a !important;
+}
+
+#budokon p {
+  color: #d8d3c8 !important;
+}
+
+#budokon a:not(.btn) {
+  color: #b9a66a !important;
+}
+
+#budokon a:not(.btn):hover {
+  color: #f4f1ea !important;
+}
+
+#budokon .btn-default {
+  color: #b9a66a !important;
+  border-color: #b9a66a !important;
+  background: transparent !important;
+}
+
+#budokon .btn-default:hover,
+#budokon .btn-default:focus {
+  color: #050505 !important;
+  background: #b9a66a !important;
+  border-color: #b9a66a !important;
+}
