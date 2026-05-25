@@ -94,7 +94,7 @@
             padding: 0;
             overflow: hidden;
             background:
-                linear-gradient(to right, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.58) 42%, rgba(5, 5, 5, 0.20) 100%),
+                linear-gradient(to right, rgba(5, 5, 5, 0.74) 0%, rgba(5, 5, 5, 0.46) 42%, rgba(5, 5, 5, 0.12) 100%),
                 url("/img/budokon-moc-hero.jpg");
             background-size: cover;
             background-position: center;
@@ -108,8 +108,8 @@
             z-index: 1;
             pointer-events: none;
             background:
-                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.18) 68%),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.46));
+                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 68%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.28));
         }
 
         .landing-hero-inner {
@@ -128,15 +128,16 @@
             margin: 0;
             font-family: "Six Caps", "Arial Narrow", sans-serif;
             font-weight: 400;
-            font-size: clamp(96px, 12vw, 190px);
-            line-height: 0.86;
-            letter-spacing: 0.11em;
+            font-size: clamp(82px, 10vw, 158px);
+            line-height: 1.02;
+            letter-spacing: 0.10em;
+            word-spacing: 0.12em;
             color: var(--bdk-white);
             text-transform: uppercase;
         }
 
         .landing-subtitle {
-            margin-top: 22px;
+            margin-top: 28px;
             font-family: "Lora", serif;
             font-style: italic;
             font-weight: 400;
@@ -207,7 +208,15 @@
         }
 
         .landing-section.compact {
-            padding: 90px 0;
+            padding: 82px 0;
+        }
+
+        .landing-section.intro-section {
+            padding-bottom: 54px;
+        }
+
+        .landing-section.after-divider {
+            padding-top: 64px;
         }
 
         .landing-section.after-thread {
@@ -220,6 +229,19 @@
         }
 
         .landing-container.wide {
+            width: min(1120px, 88vw);
+        }
+
+        .gold-divider {
+            width: min(720px, 72vw);
+            height: 1px;
+            margin: 0 auto;
+            background: rgba(185, 166, 106, 0.55);
+        }
+
+        .workshop-end-divider {
+            margin-top: 0;
+            margin-bottom: 0;
             width: min(1120px, 88vw);
         }
 
@@ -281,6 +303,31 @@
             background-image:
                 linear-gradient(to right, rgba(5, 5, 5, 0.40), rgba(5, 5, 5, 0.18)),
                 url("/img/budokon-moc-pas-2.jpg");
+        }
+
+        .cta-image-band {
+            height: 210px;
+            margin-top: 62px;
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.28)),
+                url("/img/budokon-moc-pas-3.jpg");
+            background-size: cover;
+            background-position: center;
+            border-top: 1px solid rgba(185, 166, 106, 0.24);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-image-band .landing-button {
+            margin-top: 0;
+            background: rgba(5, 5, 5, 0.56);
+        }
+
+        .cta-image-band .landing-button:hover,
+        .cta-image-band .landing-button:focus {
+            background: var(--bdk-gold-active);
         }
 
         /* THREAD */
@@ -415,11 +462,6 @@
             margin-bottom: 18px;
         }
 
-        .final-cta {
-            text-align: center;
-            margin-top: 50px;
-        }
-
         footer.landing-footer {
             padding: 60px 0;
             border-top: 1px solid rgba(185, 166, 106, 0.20);
@@ -483,12 +525,14 @@
             }
 
             .landing-title {
-                font-size: clamp(82px, 25vw, 122px);
-                line-height: 0.9;
+                font-size: clamp(68px, 21vw, 102px);
+                line-height: 1.08;
                 letter-spacing: 0.08em;
+                word-spacing: 0.16em;
             }
 
             .landing-subtitle {
+                margin-top: 24px;
                 font-size: 30px;
             }
 
@@ -503,7 +547,15 @@
             }
 
             .landing-section.compact {
-                padding: 72px 0;
+                padding: 66px 0;
+            }
+
+            .landing-section.intro-section {
+                padding-bottom: 42px;
+            }
+
+            .landing-section.after-divider {
+                padding-top: 54px;
             }
 
             .landing-section.after-thread {
@@ -517,6 +569,11 @@
 
             .image-band {
                 height: 145px;
+            }
+
+            .cta-image-band {
+                height: 170px;
+                margin-top: 48px;
             }
 
             .thread-section {
@@ -598,7 +655,6 @@
 
                 <div class="landing-meta">
                     <span>4 delavnice</span>
-                    <span>2h</span>
                     <span>julij–avgust</span>
                     <span>Ljubljana</span>
                 </div>
@@ -609,7 +665,7 @@
     </header>
 
     <!-- Intro -->
-    <section class="landing-section compact">
+    <section class="landing-section compact intro-section">
         <div class="landing-container">
             <div class="text-block">
                 <p>Poletna serija štirih Budokon delavnic raziskuje moč skozi štiri različne teme, ki se posvetijo ključnim segmentom Budokona.</p>
@@ -619,8 +675,10 @@
         </div>
     </section>
 
+    <div class="gold-divider"></div>
+
     <!-- Za koga -->
-    <section class="landing-section">
+    <section class="landing-section after-divider">
         <div class="landing-container">
             <h2 class="section-title">Za koga</h2>
 
@@ -674,7 +732,7 @@
                         <div class="workshop-text">
                             <p>Raziskujemo temelje Budokon tehnike skozi delo s tlemi in instinktivno gibanje, ki omogočata moč v premiku.</p>
                             <p><strong>Gibalna vsebina:</strong><br>
-                            tehnična baza za stabilno gibanje skozi animal locomotion in kalisteniko.</p>
+                            Tehnična baza za stabilno gibanje skozi animal locomotion in kalisteniko.</p>
                         </div>
                     </div>
                 </article>
@@ -690,7 +748,7 @@
                             <p>Mobilnost kot telesna inteligenca: sposobnost nadzorovanih prehodov, prilagajanja v trenutku in raziskovanja, kaj dejansko omogoča gibalno svobodo.</p>
                             <p>Fleksibilnost je samo ena plat. Za mobilnost potrebujemo tudi moč.</p>
                             <p><strong>Gibalna vsebina:</strong><br>
-                            raziskovanje kapacitete sklepov skozi BDK mobility verigo.</p>
+                            Raziskovanje kapacitete sklepov skozi BDK mobility verigo.</p>
                         </div>
                     </div>
                 </article>
@@ -705,7 +763,7 @@
                         <div class="workshop-text">
                             <p>Delavnica na temo jasnosti, fokusa, discipline in namere ostati povezan tudi v bolj intenzivnem stanju.</p>
                             <p><strong>Gibalna vsebina:</strong><br>
-                            osnove mešanih borilnih veščin, udarci z rokami in nogami ter orientacijske prakse, ki podpirajo razumevanje brazilskega jiu-jitsuja.</p>
+                            Osnove mešanih borilnih veščin, udarci z rokami in nogami ter orientacijske prakse, ki podpirajo razumevanje brazilskega jiu-jitsuja.</p>
                         </div>
                     </div>
                 </article>
@@ -720,6 +778,8 @@
                         <div class="workshop-text">
                             <p>Povezovanje stabilnosti, mobilnosti in odločnosti v zavesten tok.</p>
                             <p>Raziskujemo odnos z močjo, ki ga ne puščamo samo na tatamiju, ampak ga prenašamo iz prakse v vsakdan.</p>
+                            <p><strong>Gibalna vsebina:</strong><br>
+                            Budokon joga tranzicije in reprezentativni elementi skupaj z ostalimi segmenti Budokona.</p>
                         </div>
                     </div>
                 </article>
@@ -727,6 +787,8 @@
             </div>
         </div>
     </section>
+
+    <div class="gold-divider workshop-end-divider"></div>
 
     <section class="image-band band-two" aria-label="Budokon poletna serija"></section>
 
@@ -758,10 +820,10 @@
                 <p>Število mest je omejeno. Mesto v skupini si zagotovite s plačilom.</p>
                 <p>Za cikel ni nadomeščanj in vračil, ker s plačilom rezervirate mesto v omejeni skupini.</p>
             </div>
+        </div>
 
-            <div class="final-cta">
-                <a class="landing-button" href="mailto:sanja@budokon.si?subject=Prijava%20na%20Budokon%20Mo%C4%8D">Prijava na Budokon moč</a>
-            </div>
+        <div class="cta-image-band" aria-label="Prijava na Budokon moč">
+            <a class="landing-button" href="mailto:sanja@budokon.si?subject=Prijava%20na%20Budokon%20Mo%C4%8D">Prijava na Budokon moč</a>
         </div>
     </section>
 
