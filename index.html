@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sl">
 
 <head>
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="http://budokon.si" />
-		<meta property="og:title" content="Budokon.si" />
-		<meta property="og:description" content="Budokon - mešane gibalne umetnosti. Prva certificirana Budokon praksa v Sloveniji, vodi Sanja Somatika." />
-		<meta property="og:image" content="http://budokon.si/img/BDKdogodekH.png" />
+    <title>Budokon Slovenija | Mešane gibalne umetnosti v Ljubljani</title>
 
-    <title>Budokon Slovenija</title>
+    <meta name="description" content="Budokon Slovenija je prva slovenska Budokon šola, ki jo vodi Sanja Zalar Gostimirović – Sanja Somatika. Mešane gibalne umetnosti: prvinsko gibanje, BDK joga, borilne veščine in mobilnost.">
+    <meta name="author" content="Sanja Zalar Gostimirović – Sanja Somatika">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050505">
+
+    <link rel="canonical" href="https://budokon.si/">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:locale" content="sl_SI">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://budokon.si/">
+    <meta property="og:site_name" content="Budokon Slovenija">
+    <meta property="og:title" content="Budokon Slovenija | Mešane gibalne umetnosti">
+    <meta property="og:description" content="Prva slovenska Budokon šola, ki jo vodi Sanja Zalar Gostimirović – Sanja Somatika. Prvinsko gibanje, BDK joga, borilne veščine in mobilnost.">
+    <meta property="og:image" content="https://budokon.si/img/og-budokon-slovenija.jpg">
+    <meta property="og:image:secure_url" content="https://budokon.si/img/og-budokon-slovenija.jpg">
+    <meta property="og:image:alt" content="Budokon Slovenija — mešane gibalne umetnosti">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Social preview fallback -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Budokon Slovenija | Mešane gibalne umetnosti">
+    <meta name="twitter:description" content="Prva slovenska Budokon šola. Prvinsko gibanje, BDK joga, borilne veščine in mobilnost.">
+    <meta name="twitter:image" content="https://budokon.si/img/og-budokon-slovenija.jpg">
+
+    <link rel="image_src" href="https://budokon.si/img/og-budokon-slovenija.jpg">
 
     <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,10 +47,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
 
     <!-- Theme CSS -->
-		<link href="css/futura.css" rel="stylesheet">
+    <link href="css/futura.css" rel="stylesheet">
     <link href="css/grayscale.css" rel="stylesheet">
-		<link href="css/budokon.css" rel="stylesheet">
-	<link href="css/dark-theme.css" rel="stylesheet">
+    <link href="css/budokon.css" rel="stylesheet">
+    <link href="css/dark-theme.css" rel="stylesheet">
 
     <!-- Header overlay CSS -->
     <style>
@@ -152,8 +172,64 @@
         }
     </style>
 
-		<link rel="image_src" href="http://budokon.si/img/BDKdogodekH.png" />
-		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://budokon.si/#website",
+          "name": "Budokon Slovenija",
+          "url": "https://budokon.si/",
+          "inLanguage": "sl-SI",
+          "description": "Budokon Slovenija je prva slovenska Budokon šola za mešane gibalne umetnosti."
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://budokon.si/#organization",
+          "name": "Budokon Slovenija",
+          "url": "https://budokon.si/",
+          "logo": "https://budokon.si/img/og-budokon-slovenija.jpg",
+          "founder": {
+            "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
+          },
+          "sameAs": [
+            "https://www.instagram.com/budokonslovenija/",
+            "https://www.facebook.com/groups/1751705628459893/",
+            "https://www.youtube.com/channel/UCN39OXmKX4rBJyyXUuC2EKw"
+          ]
+        },
+        {
+          "@type": "Person",
+          "@id": "https://budokon.si/#sanja-zalar-gostimirovic",
+          "name": "Sanja Zalar Gostimirović",
+          "alternateName": "Sanja Somatika",
+          "url": "https://sanjasomatika.si/",
+          "email": "sanja@budokon.si",
+          "jobTitle": "certificirana Budokon izobraževalka",
+          "worksFor": {
+            "@id": "https://budokon.si/#organization"
+          },
+          "knowsAbout": [
+            "Budokon",
+            "mešane gibalne umetnosti",
+            "BDK joga",
+            "somatska čuječnost",
+            "mobilnost",
+            "borilne veščine",
+            "prvinsko gibanje"
+          ],
+          "sameAs": [
+            "https://www.instagram.com/budokonslovenija/",
+            "https://www.facebook.com/SanjaSomatika/"
+          ]
+        }
+      ]
+    }
+    </script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -194,13 +270,13 @@
                     <li>
                         <a class="page-scroll" href="#posnetki">Posnetki</a>
                     </li>
-					<li>
+                    <li>
                         <a class="page-scroll" href="#program">Program</a>
                     </li>
-					<li>
+                    <li>
                         <a class="page-scroll" href="#cenik">Cenik</a>
                     </li>
-					<li>
+                    <li>
                         <a class="page-scroll" href="#kontakt">Kontakt</a>
                     </li>
                 </ul>
