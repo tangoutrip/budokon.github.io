@@ -87,81 +87,96 @@
             color: var(--bdk-muted);
         }
 
+        /* HERO — FULL WIDTH IMAGE */
         .landing-hero {
             position: relative;
-            min-height: 82vh;
-            padding: 150px 0 110px;
-            background: var(--bdk-black);
+            min-height: 100vh;
+            padding: 0;
             overflow: hidden;
-        }
-
-        .landing-hero-inner {
-            width: min(1180px, 88vw);
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 0.95fr 1.05fr;
-            gap: 80px;
+            background:
+                linear-gradient(to right, rgba(5, 5, 5, 0.88) 0%, rgba(5, 5, 5, 0.58) 42%, rgba(5, 5, 5, 0.20) 100%),
+                url("/img/budokon-moc-hero.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
             align-items: center;
         }
 
-        .landing-hero-copy {
-            position: relative;
-            z-index: 2;
+        .landing-hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.18) 68%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.22), rgba(0, 0, 0, 0.46));
         }
 
-        .landing-eyebrow {
-            color: var(--bdk-gold-active);
-            font-size: 13px;
-            line-height: 1.5;
-            letter-spacing: 0.34em;
-            text-transform: uppercase;
-            margin-bottom: 28px;
+        .landing-hero-inner {
+            position: relative;
+            z-index: 2;
+            width: min(1180px, 88vw);
+            margin: 0 auto;
+            padding-top: 86px;
+        }
+
+        .landing-hero-copy {
+            max-width: 640px;
         }
 
         .landing-title {
             margin: 0;
             font-family: "Six Caps", "Arial Narrow", sans-serif;
             font-weight: 400;
-            font-size: clamp(88px, 11vw, 170px);
+            font-size: clamp(96px, 12vw, 190px);
             line-height: 0.86;
-            letter-spacing: 0.10em;
+            letter-spacing: 0.11em;
             color: var(--bdk-white);
             text-transform: uppercase;
         }
 
         .landing-subtitle {
-            margin-top: 18px;
+            margin-top: 22px;
             font-family: "Lora", serif;
             font-style: italic;
             font-weight: 400;
-            font-size: clamp(26px, 3vw, 42px);
+            font-size: clamp(28px, 3.2vw, 48px);
             line-height: 1.15;
             color: var(--bdk-gold-active);
         }
 
         .landing-lead {
             margin-top: 46px;
-            max-width: 560px;
+            max-width: 540px;
             color: var(--bdk-white);
-            font-size: 18px;
+            font-size: 17px;
             line-height: 1.9;
         }
 
+        .landing-lead p {
+            margin-bottom: 6px;
+            color: var(--bdk-white);
+        }
+
         .landing-meta {
-            margin-top: 44px;
+            margin-top: 42px;
             display: flex;
             flex-wrap: wrap;
-            gap: 18px 26px;
+            gap: 0;
             color: var(--bdk-muted);
             font-size: 13px;
             letter-spacing: 0.16em;
             text-transform: uppercase;
         }
 
+        .landing-meta span {
+            display: inline-block;
+        }
+
         .landing-meta span + span:before {
             content: "·";
             color: var(--bdk-gold-active);
-            margin-right: 26px;
+            margin: 0 22px;
         }
 
         .landing-button {
@@ -185,25 +200,18 @@
             text-decoration: none;
         }
 
-        .landing-hero-image {
-            position: relative;
-            z-index: 1;
-            min-height: 52vh;
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.38), rgba(5, 5, 5, 0.06)),
-                url("/img/budokon-moc-hero.jpg");
-            background-size: cover;
-            background-position: center;
-            border-left: 1px solid rgba(185, 166, 106, 0.28);
-        }
-
+        /* GENERAL SECTIONS */
         .landing-section {
-            padding: 115px 0;
+            padding: 118px 0;
             background: var(--bdk-black);
         }
 
         .landing-section.compact {
-            padding: 85px 0;
+            padding: 90px 0;
+        }
+
+        .landing-section.after-thread {
+            padding-top: 36px;
         }
 
         .landing-container {
@@ -212,11 +220,11 @@
         }
 
         .landing-container.wide {
-            width: min(1180px, 88vw);
+            width: min(1120px, 88vw);
         }
 
         .section-title {
-            margin: 0 0 46px;
+            margin: 0 0 48px;
             color: var(--bdk-gold-active);
             font-size: 20px;
             line-height: 1.5;
@@ -253,8 +261,9 @@
             font-weight: 400;
         }
 
+        /* IMAGE BANDS */
         .image-band {
-            height: 190px;
+            height: 180px;
             background-size: cover;
             background-position: center;
             border-top: 1px solid rgba(185, 166, 106, 0.20);
@@ -264,14 +273,19 @@
 
         .image-band.band-one {
             background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.42), rgba(5, 5, 5, 0.18)),
+                linear-gradient(to right, rgba(5, 5, 5, 0.40), rgba(5, 5, 5, 0.18)),
                 url("/img/budokon-moc-pas-1.jpg");
         }
 
         .image-band.band-two {
             background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.42), rgba(5, 5, 5, 0.18)),
+                linear-gradient(to right, rgba(5, 5, 5, 0.40), rgba(5, 5, 5, 0.18)),
                 url("/img/budokon-moc-pas-2.jpg");
+        }
+
+        /* THREAD */
+        .thread-section {
+            padding-bottom: 62px;
         }
 
         .thread-list {
@@ -288,31 +302,38 @@
         }
 
         .practice-note {
-            margin-top: 52px;
+            margin-top: 42px;
             color: var(--bdk-muted);
             text-align: center;
             font-size: 15px;
             line-height: 1.9;
         }
 
+        .practice-note p {
+            margin-bottom: 12px;
+        }
+
+        /* WORKSHOPS */
         .workshops {
             border-top: 1px solid rgba(185, 166, 106, 0.32);
         }
 
         .workshop-row {
             display: grid;
-            grid-template-columns: 130px 1fr 150px;
-            gap: 52px;
+            grid-template-columns: 190px 1fr;
+            gap: 58px;
             padding: 64px 0;
             border-bottom: 1px solid rgba(185, 166, 106, 0.32);
             align-items: start;
         }
 
-        .workshop-number {
-            font-family: "Lora", serif;
+        .workshop-date {
             color: var(--bdk-gold-active);
-            font-size: 54px;
-            line-height: 1;
+            font-family: "Lora", serif;
+            font-size: 24px;
+            line-height: 1.35;
+            letter-spacing: 0.08em;
+            white-space: nowrap;
         }
 
         .workshop-title {
@@ -354,16 +375,7 @@
             font-size: 12px;
         }
 
-        .workshop-date {
-            color: var(--bdk-gold-active);
-            font-size: 15px;
-            line-height: 1.7;
-            letter-spacing: 0.18em;
-            text-align: right;
-            text-transform: uppercase;
-            white-space: nowrap;
-        }
-
+        /* PRICING */
         .pricing {
             max-width: 720px;
             margin: 0 auto;
@@ -420,18 +432,17 @@
 
         @media (max-width: 900px) {
             .landing-hero {
-                padding: 118px 0 80px;
+                min-height: 90vh;
+                background-position: center right;
             }
 
             .landing-hero-inner {
-                grid-template-columns: 1fr;
-                gap: 48px;
+                width: min(92vw, 680px);
+                padding-top: 90px;
             }
 
-            .landing-hero-image {
-                min-height: 38vh;
-                border-left: 0;
-                border-top: 1px solid rgba(185, 166, 106, 0.24);
+            .landing-hero-copy {
+                max-width: 560px;
             }
 
             .landing-meta {
@@ -456,24 +467,35 @@
 
             .workshop-row {
                 grid-template-columns: 1fr;
-                gap: 20px;
+                gap: 18px;
                 padding: 58px 0;
             }
 
             .workshop-date {
-                text-align: left;
+                font-size: 22px;
             }
         }
 
         @media (max-width: 560px) {
+            .landing-hero {
+                min-height: 92vh;
+                background-position: center right;
+            }
+
             .landing-title {
-                font-size: clamp(74px, 24vw, 110px);
+                font-size: clamp(82px, 25vw, 122px);
                 line-height: 0.9;
                 letter-spacing: 0.08em;
             }
 
             .landing-subtitle {
-                font-size: 28px;
+                font-size: 30px;
+            }
+
+            .landing-lead {
+                margin-top: 36px;
+                font-size: 15px;
+                line-height: 1.8;
             }
 
             .landing-section {
@@ -482,6 +504,10 @@
 
             .landing-section.compact {
                 padding: 72px 0;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 28px;
             }
 
             .text-block {
@@ -493,12 +519,20 @@
                 height: 145px;
             }
 
-            .workshop-number {
-                font-size: 46px;
+            .thread-section {
+                padding-bottom: 48px;
+            }
+
+            .thread-list {
+                font-size: 18px;
             }
 
             .workshop-title {
                 font-size: 18px;
+            }
+
+            .workshop-date {
+                font-size: 20px;
             }
 
             .price-row {
@@ -550,11 +584,12 @@
 
     <!-- Hero -->
     <header class="landing-hero">
+        <div class="landing-hero-overlay"></div>
+
         <div class="landing-hero-inner">
             <div class="landing-hero-copy">
-                <div class="landing-eyebrow">Poletna gibalna serija</div>
                 <h1 class="landing-title">Budokon moč</h1>
-                <div class="landing-subtitle">moč ni samo sila</div>
+                <div class="landing-subtitle">poletna gibalna serija</div>
 
                 <div class="landing-lead">
                     <p>Moč nikakor ni samo sila. Je inteligenca.</p>
@@ -570,8 +605,6 @@
 
                 <a class="landing-button" href="#prijava">Prijava na serijo</a>
             </div>
-
-            <div class="landing-hero-image" aria-label="Budokon moč"></div>
         </div>
     </header>
 
@@ -608,7 +641,7 @@
     <section class="image-band band-one" aria-label="Budokon gibanje"></section>
 
     <!-- Rdeča nit -->
-    <section class="landing-section">
+    <section class="landing-section thread-section">
         <div class="landing-container">
             <h2 class="section-title">Rdeča nit</h2>
 
@@ -627,12 +660,12 @@
     </section>
 
     <!-- Delavnice -->
-    <section class="landing-section compact">
+    <section class="landing-section after-thread">
         <div class="landing-container wide">
             <div class="workshops">
 
                 <article class="workshop-row">
-                    <div class="workshop-number">1</div>
+                    <div class="workshop-date">13. 7. 2026</div>
 
                     <div>
                         <h3 class="workshop-title">Moč temeljev</h3>
@@ -644,12 +677,10 @@
                             tehnična baza za stabilno gibanje skozi animal locomotion in kalisteniko.</p>
                         </div>
                     </div>
-
-                    <div class="workshop-date">13. 7. 2026</div>
                 </article>
 
                 <article class="workshop-row">
-                    <div class="workshop-number">2</div>
+                    <div class="workshop-date">27. 7. 2026</div>
 
                     <div>
                         <h3 class="workshop-title">Moč mobilnosti</h3>
@@ -662,12 +693,10 @@
                             raziskovanje kapacitete sklepov skozi BDK mobility verigo.</p>
                         </div>
                     </div>
-
-                    <div class="workshop-date">27. 7. 2026</div>
                 </article>
 
                 <article class="workshop-row">
-                    <div class="workshop-number">3</div>
+                    <div class="workshop-date">10. 8. 2026</div>
 
                     <div>
                         <h3 class="workshop-title">Moč meja</h3>
@@ -679,12 +708,10 @@
                             osnove mešanih borilnih veščin, udarci z rokami in nogami ter orientacijske prakse, ki podpirajo razumevanje brazilskega jiu-jitsuja.</p>
                         </div>
                     </div>
-
-                    <div class="workshop-date">10. 8. 2026</div>
                 </article>
 
                 <article class="workshop-row">
-                    <div class="workshop-number">4</div>
+                    <div class="workshop-date">24. 8. 2026</div>
 
                     <div>
                         <h3 class="workshop-title">Tok moči</h3>
@@ -695,8 +722,6 @@
                             <p>Raziskujemo odnos z močjo, ki ga ne puščamo samo na tatamiju, ampak ga prenašamo iz prakse v vsakdan.</p>
                         </div>
                     </div>
-
-                    <div class="workshop-date">24. 8. 2026</div>
                 </article>
 
             </div>
