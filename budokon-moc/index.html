@@ -136,17 +136,16 @@
             text-transform: uppercase;
         }
 
-     .landing-subtitle {
-    margin-top: 30px;
-    font-family: "Montserrat", "Futura", sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: clamp(14px, 1.6vw, 24px);
-    line-height: 1.5;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--bdk-gold-active);
-
+        .landing-subtitle {
+            margin-top: 30px;
+            font-family: "Montserrat", "Futura", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: clamp(14px, 1.6vw, 24px);
+            line-height: 1.5;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--bdk-gold-active);
         }
 
         .landing-lead {
@@ -157,7 +156,7 @@
             line-height: 1.9;
         }
 
-        .-lead p {
+        .landing-lead p {
             margin-bottom: 6px;
             color: var(--bdk-white);
         }
@@ -466,12 +465,82 @@
         }
 
         footer.landing-footer {
-            padding: 60px 0;
+            padding: 78px 0 62px;
             border-top: 1px solid rgba(185, 166, 106, 0.20);
             color: var(--bdk-muted);
             text-align: center;
+            background: var(--bdk-black);
+        }
+
+        .footer-logo-mark {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 26px;
+            background-color: var(--bdk-gold-active);
+            -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+            mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+            opacity: 0.92;
+        }
+
+        .footer-brand {
+            color: var(--bdk-white);
+            font-size: 15px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .footer-subtitle {
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            letter-spacing: 0.22em;
+            text-transform: lowercase;
+            margin-bottom: 34px;
+        }
+
+        .footer-contact {
+            color: var(--bdk-muted);
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 28px;
+        }
+
+        .footer-contact a {
+            color: var(--bdk-gold-active);
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: var(--bdk-white);
+            text-decoration: none;
+        }
+
+        .footer-links {
             font-size: 12px;
             letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .footer-links a {
+            color: var(--bdk-white);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--bdk-gold-active);
+            text-decoration: none;
+        }
+
+        .footer-links span {
+            margin: 0 12px;
+            color: rgba(185, 166, 106, 0.55);
+        }
+
+        .footer-copy {
+            color: rgba(207, 200, 185, 0.55);
+            font-size: 11px;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
         }
 
@@ -534,11 +603,11 @@
                 word-spacing: 0.16em;
             }
 
-.landing-subtitle {
-    margin-top: 24px;
-    font-size: 13px;
-    letter-spacing: 0.22em;
-}
+            .landing-subtitle {
+                margin-top: 24px;
+                font-size: 13px;
+                letter-spacing: 0.22em;
+            }
 
             .landing-lead {
                 margin-top: 36px;
@@ -663,7 +732,7 @@
                     <span>Ljubljana</span>
                 </div>
 
-             <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Prijava na serijo</a>
+                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Prijava na serijo</a>
             </div>
         </div>
     </header>
@@ -687,11 +756,9 @@
             <h2 class="section-title">Za koga</h2>
 
             <div class="text-block">
-                <p>Serija delavnic je primerna za vse, ki želite poglabljati stik s psihofizično močjo in zapustiti idejo, da morate za tak tip prakse že priti močni, agilni ali fleksibilni. </p>
+                <p>Serija delavnic je primerna za vse, ki želite poglabljati stik s psihofizično močjo in zapustiti idejo, da morate za tak tip prakse že priti močni, agilni ali fleksibilni.</p>
 
                 <p>Budokon gradimo iz temeljev. Praksa omogoča prilagoditve, postopnost in raziskovanje lastnih kapacitet. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje.</p>
-
-
 
                 <p><strong>Predznanje Budokona ni pogoj.</strong></p>
 
@@ -707,10 +774,10 @@
         <div class="landing-container">
             <h2 class="section-title">Opis delavnic</h2>
 
-
             <div class="practice-note">
                 <p>Delavnice potekajo <strong> vsak drugi ponedeljek od 18:00 do 20:00</strong>.</p>
-                <p>Lokacija: BTC, Leskoškova, Ljubljana. </p>  <p> Podlog ne potrebujete, vadimo bosi, na tatami podlogah. </p> 
+                <p>Lokacija: BTC, Leskoškova, Ljubljana.</p>
+                <p>Podlog ne potrebujete, vadimo bosi, na tatami podlogah.</p>
             </div>
         </div>
     </section>
@@ -786,8 +853,6 @@
         </div>
     </section>
 
-
-
     <section class="image-band band-two" aria-label="Budokon poletna serija"></section>
 
     <!-- Prijava -->
@@ -797,7 +862,7 @@
 
             <div class="pricing">
                 <div class="price-row">
-                    <span>Early bird paket (do 22.6.) </span>
+                    <span>Early bird paket (do 22.6.)</span>
                     <strong>99 €</strong>
                 </div>
 
@@ -826,7 +891,23 @@
     </section>
 
     <footer class="landing-footer">
-        Budokon Slovenija · Mešane gibalne umetnosti
+        <div class="footer-logo-mark" aria-label="Budokon Slovenija logo"></div>
+
+        <div class="footer-brand">BUDOKON SLOVENIJA</div>
+        <div class="footer-subtitle">mešane gibalne umetnosti</div>
+
+        <div class="footer-contact">
+            Sanja Zalar Gostimirović | Sanja Somatika<br>
+            <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="/">Domov</a>
+            <span>·</span>
+            <a href="https://www.instagram.com/budokonslovenija/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+
+        <div class="footer-copy">© 2026 Budokon Slovenija</div>
     </footer>
 
     <script src="/vendor/jquery/jquery.js"></script>
