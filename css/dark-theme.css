@@ -1,0 +1,163 @@
+:root {
+  --bdk-black: #050505;
+  --bdk-charcoal: #0b0b0b;
+  --bdk-white: #f4f1ea;
+  --bdk-muted-white: #d8d3c8;
+  --bdk-gold: #b9a66a;
+  --bdk-gold-dark: #8f7d42;
+}
+
+/* Osnovno ozadje strani */
+html,
+body {
+  background: var(--bdk-black);
+  color: var(--bdk-white);
+}
+
+/* Navigacija */
+.navbar-custom {
+  background: rgba(0, 0, 0, 0.92);
+  border-bottom: 1px solid rgba(185, 166, 106, 0.35);
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav li a {
+  color: var(--bdk-white);
+}
+
+.navbar-custom .navbar-brand .light {
+  color: var(--bdk-muted-white);
+}
+
+.navbar-custom .navbar-brand strong,
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li.active a {
+  color: var(--bdk-gold);
+}
+
+/* Bele sekcije spremeni v črne */
+.bg-white,
+.content-section.bg-white {
+  background: var(--bdk-black);
+  color: var(--bdk-white);
+}
+
+/* Vsebinske sekcije */
+.content-section {
+  background: var(--bdk-black);
+  color: var(--bdk-white);
+}
+
+/* Naslovi */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--bdk-white);
+  letter-spacing: 0.08em;
+}
+
+h2 {
+  color: var(--bdk-gold);
+}
+
+/* Tekst */
+p {
+  color: var(--bdk-muted-white);
+}
+
+/* Linki */
+a {
+  color: var(--bdk-gold);
+}
+
+a:hover,
+a:focus {
+  color: var(--bdk-white);
+  text-decoration: none;
+}
+
+/* Gumbi */
+.btn-default {
+  color: var(--bdk-gold);
+  border: 1px solid var(--bdk-gold);
+  background: transparent;
+}
+
+.btn-default:hover,
+.btn-default:focus {
+  color: var(--bdk-black);
+  background: var(--bdk-gold);
+  border-color: var(--bdk-gold);
+}
+
+/* Slike čez celo širino */
+.fullwidth {
+  background: var(--bdk-black);
+}
+
+.fullwidth img,
+.fullwidth video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Program sekcija: bolj filmsko */
+#program .row {
+  margin-bottom: 80px;
+}
+
+#program h3 {
+  color: var(--bdk-white);
+}
+
+#program p {
+  color: var(--bdk-muted-white);
+}
+
+/* Image band */
+#image-band {
+  background: var(--bdk-black);
+  color: var(--bdk-white);
+}
+
+#image-band h3 {
+  color: var(--bdk-gold);
+}
+
+/* Cenik */
+#cenik {
+  background: var(--bdk-black);
+}
+
+#cenik h2 {
+  color: var(--bdk-gold);
+}
+
+#cenik h3 {
+  color: var(--bdk-white);
+}
+
+/* Kontakt */
+#kontakt {
+  background: var(--bdk-black);
+  color: var(--bdk-white);
+}
+
+/* YouTube posnetki */
+#posnetki {
+  background: var(--bdk-black);
+}
+
+#posnetki iframe {
+  margin-bottom: 40px;
+  max-width: 100%;
+}
+
+/* Fine linije med sekcijami */
+.content-section {
+  border-top: 1px solid rgba(185, 166, 106, 0.16);
+}
