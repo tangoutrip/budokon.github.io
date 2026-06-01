@@ -393,13 +393,13 @@
             font-size: 15px;
             line-height: 1.9;
         }
-.program-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1px;
-    border: 1px solid rgba(185, 166, 106, 0.28);
-    background: rgba(185, 166, 106, 0.28);
 
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            border: 1px solid rgba(185, 166, 106, 0.28);
+            background: rgba(185, 166, 106, 0.28);
         }
 
         .program-card {
@@ -433,17 +433,41 @@
             margin: 0;
         }
 
-        .gallery-title {
-            margin: 0 0 34px;
-            color: var(--bdk-gold-active);
-            font-size: 13px;
-            letter-spacing: 0.24em;
-            text-transform: uppercase;
+        .join-panel {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 62px 58px;
+            border-top: 1px solid rgba(185, 166, 106, 0.34);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.34);
             text-align: center;
+        }
+
+        .join-panel h3 {
+            margin: 0 0 24px;
+            color: var(--bdk-white);
+            font-size: 20px;
+            line-height: 1.5;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
             font-weight: 400;
         }
 
+        .join-panel p {
+            color: var(--bdk-muted);
+            font-size: 16px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .gallery-strip {
+            width: 100%;
+            background: var(--bdk-black);
+            border-top: 1px solid rgba(185, 166, 106, 0.24);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+        }
+
         .mini-grid {
+            width: 100%;
             display: grid;
             grid-template-columns: repeat(6, 1fr);
             gap: 0;
@@ -451,8 +475,9 @@
 
         .mini-grid img {
             width: 100%;
-            aspect-ratio: 1 / 1;
+            height: 210px;
             object-fit: cover;
+            display: block;
             filter: grayscale(12%) contrast(1.04) brightness(0.78);
         }
 
@@ -495,34 +520,21 @@
             margin-top: 8px;
         }
 
-        .cta-band {
-            position: relative;
-            min-height: 260px;
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.68), rgba(5, 5, 5, 0.34)),
-                url("img/sanjasomatika.jpg");
-            background-size: cover;
-            background-position: center;
+        .sanja-image-panel {
+            width: min(860px, 86vw);
+            margin: 58px auto 0;
             border-top: 1px solid rgba(185, 166, 106, 0.24);
             border-bottom: 1px solid rgba(185, 166, 106, 0.24);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
+            overflow: hidden;
         }
 
-        .cta-band-inner {
-            width: min(720px, 84vw);
-        }
-
-        .cta-band h2 {
-            margin: 0;
-            color: var(--bdk-white);
-            font-size: 18px;
-            letter-spacing: 0.28em;
-            line-height: 1.7;
-            text-transform: uppercase;
-            font-weight: 400;
+        .sanja-image-panel img {
+            width: 100%;
+            height: clamp(320px, 48vw, 560px);
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            filter: grayscale(10%) contrast(1.04) brightness(0.76);
         }
 
         .video-grid {
@@ -643,9 +655,17 @@
                 grid-template-columns: repeat(3, 1fr);
             }
 
+            .mini-grid img {
+                height: 180px;
+            }
+
             .schedule-row {
                 grid-template-columns: 1fr;
                 gap: 10px;
+            }
+
+            .join-panel {
+                padding: 48px 34px;
             }
         }
 
@@ -691,6 +711,19 @@
 
             .mini-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .mini-grid img {
+                height: 155px;
+            }
+
+            .sanja-image-panel {
+                width: 100%;
+                margin-top: 44px;
+            }
+
+            .sanja-image-panel img {
+                height: 360px;
             }
         }
     </style>
@@ -751,13 +784,6 @@
       ]
     }
     </script>
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 
 </head>
 
@@ -831,7 +857,7 @@
             <div class="text-block">
                 <p><a href="http://www.budokon.com/" target="_blank" rel="noopener">Budokon®</a> je sistem mešanih gibalnih umetnosti, ki je ob začetku novega milenija prvi združil prvinsko živalsko gibanje, BDK jogo, mešane borilne veščine, kalisteniko in mobilnost.</p>
 
-                <p>Praksa krepi moč, koordinacijo, mobilnost in fleksibilnost ob sprotni refleksiji doživljanja. Budokon je pot preobrazbe skozi samoopazovanje - pot bojevniškega duha, ki ne išče bližnjic, se izzivi sooča, spreminja in sprejema.</p>
+                <p>Praksa krepi moč, koordinacijo, mobilnost in fleksibilnost ob sprotni refleksiji doživljanja. Budokon je pot preobrazbe skozi samoopazovanje - pot bojevniškega duha, ki ne išče bližnjic, se z izzivi sooča, spreminja in sprejema.</p>
 
                 <p>V Slovenijo je leta 2016 prakso pripeljala Sanja Zalar Gostimirović - Sanja Somatika. Vodi po avtorski metodi Somatske čuječnosti.</p>
 
@@ -855,18 +881,18 @@
             <div class="schedule-panel">
                 <div class="schedule-row">
                     <div class="schedule-day">Sreda</div>
-                    <div class="schedule-info">BDK TOK · 19:00 · Vič <br><br> <em>Flow tip prakse na vadbeni podlogi, fokus na vzdržljivosti in odpornosti. </em> </div>
+                    <div class="schedule-info">BDK TOK · 19:00 · Vič<br><br><em>Flow tip prakse na vadbeni podlogi, fokus na vzdržljivosti in odpornosti.</em></div>
                 </div>
 
                 <div class="schedule-row">
                     <div class="schedule-day">Petek</div>
-                    <div class="schedule-info">BDK tatami · 18:00 · BTC <br> <br> <em> Vsi jeziki budokona, delo na tatamijih gibanje po prostoru, fokus na agilnosti. </em>  </div>
+                    <div class="schedule-info">BDK tatami · 18:00 · BTC<br><br><em>Vsi jeziki Budokona, delo na tatamijih, gibanje po prostoru, fokus na agilnosti.</em></div>
                 </div>
             </div>
 
             <div class="muted-note">
-                <p>Praksa je primerna za gibalce, ki si želijo krepiti moč na iteligenten in postopen način. <br> <br> Vse logistične informacije prejmete po prijavi preko e-pošte.</p>
-                <p><a href="https://forms.gle/QyuVCJcnDNyiGUP16" class="home-button" target="_blank" rel="noopener">Prijavi se na testne lekcija ali v semester</a></p>
+                <p>Praksa je primerna za gibalce, ki si želijo krepiti moč na inteligenten in postopen način.<br><br>Vse logistične informacije prejmete po prijavi preko e-pošte.</p>
+                <p><a href="https://forms.gle/QyuVCJcnDNyiGUP16" class="home-button" target="_blank" rel="noopener">Prijavi se na testno lekcijo ali v semester</a></p>
             </div>
         </div>
     </section>
@@ -913,19 +939,36 @@
         </div>
     </section>
 
-    <!-- Image grid -->
-    <section id="image-band" class="home-section compact">
-        <div class="home-container wide">
-            <h2 class="gallery-title">mešane gibalne umetnosti</h2>
+    <!-- Kako se pridružiš -->
+    <section id="kako-se-pridruzis" class="home-section compact">
+        <div class="home-container">
+            <h2 class="section-title">Kako se pridružiš</h2>
 
-            <div class="mini-grid">
-                <img src="img/bdk-mini1.png" alt="Budokon gibanje 1">
-                <img src="img/bdk-mini2.png" alt="Budokon gibanje 2">
-                <img src="img/bdk-mini6.png" alt="Budokon gibanje 3">
-                <img src="img/bdk-mini4.png" alt="Budokon gibanje 4">
-                <img src="img/bdk-mini5.png" alt="Budokon gibanje 5">
-                <img src="img/bdk-mini3.png" alt="Budokon gibanje 6">
+            <div class="join-panel">
+                <h3>Vpis v redne skupine</h3>
+
+                <p>Vpis v redne Budokon skupine poteka dvakrat letno: septembra in februarja.</p>
+
+                <p>Pred vsakim vpisom so odprte testne lekcije, ki so namenjene spoznavanju prakse, prostora in načina dela pred odločitvijo za semester.</p>
+
+                <p>Če se po testnem obisku odločite za vpis v semester, se cena testnega obiska odšteje od šolnine.</p>
+
+                <p>Pred srečanjem prejmete e-pošto z vsemi potrebnimi informacijami.</p>
+
+                <a href="https://forms.gle/QyuVCJcnDNyiGUP16" class="home-button" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Full-width image strip -->
+    <section id="image-band" class="gallery-strip" aria-label="Budokon gibanje">
+        <div class="mini-grid">
+            <img src="img/bdk-mini1.png" alt="Budokon gibanje 1">
+            <img src="img/bdk-mini2.png" alt="Budokon gibanje 2">
+            <img src="img/bdk-mini6.png" alt="Budokon gibanje 3">
+            <img src="img/bdk-mini4.png" alt="Budokon gibanje 4">
+            <img src="img/bdk-mini5.png" alt="Budokon gibanje 5">
+            <img src="img/bdk-mini3.png" alt="Budokon gibanje 6">
         </div>
     </section>
 
@@ -938,13 +981,13 @@
                 <div class="price-block">
                     <h3>Redne prakse</h3>
                     <p>5-mesečni semester 1x tedensko<br><span class="price">270 €</span></p>
-                      <p>5-mesečni semester 2x tedensko <br><span class="price">420 €</span></p>
+                    <p>5-mesečni semester 2x tedensko<br><span class="price">420 €</span></p>
                     <p><a href="https://forms.gle/QyuVCJcnDNyiGUP16" class="home-button" target="_blank" rel="noopener">Prijava</a></p>
                 </div>
 
                 <div class="price-block">
                     <h3>Dodatno</h3>
-                    <p>Individualne lekcije <br><span class="price">65 €</span>60 minut</p><br>
+                    <p>Individualne lekcije<br><span class="price">65 €</span>60 minut</p><br>
                     <p>Poletna serija delavnic: <a href="/budokon-moc/" target="_blank" rel="noopener">Budokon moč</a>.</p>
                 </div>
             </div>
@@ -954,18 +997,18 @@
     <section class="image-band band-final" aria-label="Budokon Slovenija"></section>
 
     <section id="okvir-sodelovanja" class="home-section compact">
-    <div class="home-container">
-        <h2 class="section-title">Okvir sodelovanja</h2>
+        <div class="home-container">
+            <h2 class="section-title">Okvir sodelovanja</h2>
 
-        <div class="text-block">
-            <p>Redne prakse potekajo v obliki 5-mesečnih semestrov. Skupina se po začetku semestra zapre, da se lahko gradi kontinuiteta, skupnost in globlje delo.</p>
+            <div class="text-block">
+                <p>Redne prakse potekajo v obliki 5-mesečnih semestrov. Skupina se po začetku semestra zapre, da se lahko gradi kontinuiteta, skupnost in globlje delo.</p>
 
-            <p>Drop-in obiski med letom niso možni. S šolnino rezervirate svoje mesto v skupini, ne posameznih obiskov.</p>
+                <p>Drop-in obiski med letom niso možni. S šolnino rezervirate svoje mesto v skupini, ne posameznih obiskov.</p>
 
-            <p>V izjemnih primerih, kot so poškodba, nosečnost ali druge posebne okoliščine, se dogovorimo o prenosu šolnine.</p>
+                <p>V izjemnih primerih, kot so poškodba, nosečnost ali druge posebne okoliščine, se dogovorimo o prenosu šolnine.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- Posnetki -->
     <section id="posnetki" class="home-section compact">
@@ -986,13 +1029,17 @@
 
             <div class="text-block">
                 <p>Prva slovenska certificirana učiteljica Budokona® — mešanih gibalnih umetnosti.</p>
-                    <p>Budokon v Slovenijo pripeljala leta 2016 kot edukantka.</p>
+                <p>Budokon je v Slovenijo pripeljala leta 2016 kot edukantka.</p>
                 <p>Psihosocialno svetovanje, Somatska čuječnost, integrativni somatski terapevtski pristopi, RYT joga, argentinski tango in travmatsko informirano vodenje procesov.</p>
                 <p><a href="mailto:sanja@budokon.si" target="_blank" rel="noopener">sanja@budokon.si</a></p>
                 <p>
                     <a href="https://www.instagram.com/budokonslovenija/" class="home-button" target="_blank" rel="noopener">Instagram</a>
                     <a href="https://www.youtube.com/channel/UCN39OXmKX4rBJyyXUuC2EKw" class="home-button secondary" target="_blank" rel="noopener">Youtube</a>
                 </p>
+            </div>
+
+            <div class="sanja-image-panel">
+                <img src="img/sanjasomatika.jpg" alt="Sanja Zalar Gostimirović - Sanja Somatika">
             </div>
         </div>
     </section>
@@ -1014,7 +1061,7 @@
             <a href="https://www.instagram.com/budokonslovenija/" target="_blank" rel="noopener">Instagram</a>
         </div>
 
-        <div class="footer-copy">© 2026 Budokon Slovenija </div>
+        <div class="footer-copy">© 2026 Budokon Slovenija</div>
     </footer>
 
     <script src="vendor/jquery/jquery.js"></script>
