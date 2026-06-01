@@ -436,16 +436,17 @@
         .join-panel {
             max-width: 780px;
             margin: 0 auto;
-            padding: 62px 58px;
-            border-top: 1px solid rgba(185, 166, 106, 0.34);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.34);
+            padding: 0;
             text-align: center;
+            color: var(--bdk-muted);
+            font-size: 17px;
+            line-height: 2;
         }
 
         .join-panel h3 {
-            margin: 0 0 24px;
+            margin: 0 0 28px;
             color: var(--bdk-white);
-            font-size: 20px;
+            font-size: 17px;
             line-height: 1.5;
             letter-spacing: 0.22em;
             text-transform: uppercase;
@@ -454,9 +455,9 @@
 
         .join-panel p {
             color: var(--bdk-muted);
-            font-size: 16px;
-            line-height: 1.9;
-            margin-bottom: 18px;
+            font-size: 17px;
+            line-height: 2;
+            margin-bottom: 24px;
         }
 
         .gallery-strip {
@@ -663,10 +664,6 @@
                 grid-template-columns: 1fr;
                 gap: 10px;
             }
-
-            .join-panel {
-                padding: 48px 34px;
-            }
         }
 
         @media (max-width: 560px) {
@@ -688,9 +685,15 @@
                 display: none;
             }
 
-            .text-block {
+            .text-block,
+            .join-panel,
+            .join-panel p {
                 font-size: 15px;
                 line-height: 1.9;
+            }
+
+            .join-panel h3 {
+                font-size: 15px;
             }
 
             .home-button {
@@ -1033,7 +1036,7 @@
                 <p>Psihosocialno svetovanje, Somatska čuječnost, integrativni somatski terapevtski pristopi, RYT joga, argentinski tango in travmatsko informirano vodenje procesov.</p>
                 <p><a href="mailto:sanja@budokon.si" target="_blank" rel="noopener">sanja@budokon.si</a></p>
                 <p>
-                    <a href="https://www.instagram.com/budokonslovenija/" class="home-button" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.sanjasomatika.si/" class="home-button" target="_blank" rel="noopener">Več o Sanji</a>
                     <a href="https://www.youtube.com/channel/UCN39OXmKX4rBJyyXUuC2EKw" class="home-button secondary" target="_blank" rel="noopener">Youtube</a>
                 </p>
             </div>
