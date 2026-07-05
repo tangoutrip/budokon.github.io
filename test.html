@@ -875,6 +875,111 @@
                 margin: 0 8px;
             }
         }
+
+        /* REFINED TEST VERSION — cleaner conversion layout */
+        .landing-section.after-divider,
+        .terms-section {
+            padding-top: 88px;
+        }
+
+        .landing-hero-facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 30px;
+            color: var(--bdk-muted);
+            font-size: 12px;
+            line-height: 1.8;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .landing-hero-facts span {
+            display: inline-block;
+        }
+
+        .landing-hero-facts span + span:before {
+            content: "|";
+            color: var(--bdk-gold-active);
+            margin: 0 14px;
+        }
+
+        .landing-hero-facts strong {
+            color: var(--bdk-gold-active);
+            font-weight: 400;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+
+        .quick-info {
+            max-width: 740px;
+            border-top: 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.26);
+        }
+
+        .quick-info-row {
+            border-top: 1px solid rgba(185, 166, 106, 0.22);
+            border-bottom: 0;
+        }
+
+        .availability-note {
+            margin-top: 34px;
+            font-size: 15px;
+        }
+
+        .practice-overview {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .signup-steps {
+            max-width: 640px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .signup-steps ol {
+            margin: 24px auto 34px;
+        }
+
+        .signup-steps p {
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .landing-hero-facts {
+                display: block;
+            }
+
+            .landing-hero-facts span {
+                display: block;
+            }
+
+            .landing-hero-facts span + span:before {
+                content: "";
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-section.after-divider,
+            .terms-section {
+                padding-top: 72px;
+            }
+
+            .section-intro {
+                margin-bottom: 38px;
+            }
+
+            .signup-steps {
+                font-size: 15px;
+            }
+        }
+
     </style>
 
 </head>
@@ -929,21 +1034,20 @@
                 <div class="landing-subtitle">poletna gibalna serija</div>
 
                 <div class="landing-lead">
-                    <p>Moč nikakor ni samo sila. Je inteligenca.</p>
-                    <p>Je psihofizična kapaciteta, ki jo krepimo.</p>
+                    <p>Moč ni samo sila, je kapaciteta.</p>
+                    <p>Psihofizična inteligenca, ki jo krepimo.</p>
                 </div>
 
                 <div class="landing-meta">
                     <span>4 delavnice</span>
                     <span>julij–avgust</span>
-                    <span>Ljubljana</span>
+                    <span>Ljubljana BTC</span>
                 </div>
 
                 <div class="landing-hero-facts">
-                    <div><strong>Začetek:</strong> 13. 7. 2026</div>
-                    <div><strong>Termin:</strong> vsak drugi ponedeljek, 18:00–20:00</div>
-                    <div><strong>Lokacija:</strong> BTC, Leskoškova, Ljubljana</div>
-                    <div><strong>Sklop delavnic:</strong> 129 €</div>
+                    <span><strong>Začetek:</strong> 13. 7.</span>
+                    <span>vsak 2. ponedeljek</span>
+                    <span>18:00–20:00</span>
                 </div>
 
                 <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
@@ -962,7 +1066,6 @@
         </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- Za koga -->
     <section class="landing-section after-divider">
@@ -985,12 +1088,16 @@
         </div>
     </section>
 
-    <div class="gold-divider"></div>
 
     <!-- Termini in cena -->
-    <section class="landing-section compact after-divider">
+    <section class="landing-section compact terms-section">
         <div class="landing-container">
             <h2 class="section-title">Termini in cena</h2>
+
+            <div class="text-block section-intro">
+                <p>Delavnice potekajo vsak drugi ponedeljek od 18:00 do 20:00.</p>
+                <p>Podlog ne potrebujete, vadimo bosi, na tatamijih.<br>Potrebujete športna oblačila, ki vam pokrijejo ramena in kolena za več udobja.</p>
+            </div>
 
             <div class="quick-info">
                 <div class="quick-info-row">
@@ -1010,8 +1117,12 @@
 
                 <div class="quick-info-row">
                     <div class="quick-info-label">Cena</div>
-                    <div class="quick-info-value">Sklop delavnic: 129 €<br>Posamezne delavnice: 39 €, le v primeru prostih mest.</div>
+                    <div class="quick-info-value">Sklop delavnic: 129 €<br>Posamezne delavnice: 39 €</div>
                 </div>
+            </div>
+
+            <div class="pricing-note availability-note">
+                <p>Posamezne delavnice so možne le v primeru prostih mest.</p>
             </div>
 
             <div class="landing-inline-cta">
@@ -1022,40 +1133,15 @@
 
     <section class="image-band band-one" aria-label="Budokon gibanje"></section>
 
-    <!-- Kaj bomo vadili -->
-    <section class="landing-section compact">
-        <div class="landing-container wide">
-            <h2 class="section-title">Kaj bomo vadili</h2>
-
-            <div class="practice-list">
-                <span>animal locomotion</span>
-                <span>BDK mobility</span>
-                <span>kalisteniko</span>
-                <span>prehode iz tal</span>
-                <span>stabilnost sklepov</span>
-                <span>borilne elemente brez kontakta</span>
-                <span>Budokon joga tranzicije</span>
-                <span>flow</span>
-            </div>
-
-            <div class="practice-note">
-                <p>Poudarek ni na izvedbi popolne forme, ampak na gradnji kapacitete: moči, mobilnosti, stabilnosti, fokusa in toka.</p>
-                <p>Prakso gradimo postopno, z možnostjo prilagoditev.</p>
-            </div>
-        </div>
-    </section>
-
-    <div class="gold-divider"></div>
-
-    <!-- Rdeča nit -->
+    <!-- Kaj bomo vadili / opis delavnic -->
     <section class="landing-section thread-section">
         <div class="landing-container">
-            <h2 class="section-title">Opis delavnic</h2>
+            <h2 class="section-title">Kaj bomo vadili / opis delavnic</h2>
 
-            <div class="practice-note">
-                <p>Delavnice potekajo <strong> vsak drugi ponedeljek od 18:00 do 20:00</strong>.</p>
-                <p>Lokacija: BTC, Leskoškova, Ljubljana.</p>
-                <p>Podlog ne potrebujete, vadimo bosi, na tatami podlogah.</p>
+            <div class="text-block practice-overview">
+                <p>Vadili bomo animal locomotion, BDK mobility, kalisteniko, delo s tlemi, borilne elemente brez kontakta in Budokon joga tranzicije.</p>
+                <p>Poudarek prakse ni na popolni izvedbi forme, ampak na gradnji kapacitete: moči, mobilnosti, stabilnosti, fokusa, stika s telesom in prostorom.</p>
+                <p>Prakso gradimo postopno, z možnostjo prilagoditev.</p>
             </div>
         </div>
     </section>
@@ -1138,25 +1224,6 @@
         <div class="landing-container">
             <h2 class="section-title">Prijava</h2>
 
-            <div class="pricing">
-      
-
-                <div class="price-row">
-                    <span>Sklop delavnic</span>
-                    <strong>129 €</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Posamezne delavnice</span>
-                    <strong>39 €</strong>
-                </div>
-            </div>
-
-            <div class="pricing-note">
-                <p>Posamezne delavnice so možne le v primeru prostih mest.</p>
-                <p>Mesto v skupini je zagotovljeno s plačilom, ne zgolj s prijavo.</p>
-            </div>
-
             <div class="signup-steps">
                 <p><strong>Kako poteka prijava</strong></p>
                 <ol>
@@ -1164,12 +1231,13 @@
                     <li>Prejmete navodila za plačilo.</li>
                     <li>Mesto je potrjeno s plačilom.</li>
                 </ol>
-                <p>S plačilom rezervirate mesto v omejeni skupini. Zaradi majhnega števila mest nadomeščanja in vračila za sklop niso možna.</p>
+                <p>Število mest je omejeno, zagotovite si ga šele s plačilom, ne zgolj s prijavo.</p>
+                <p>Za cikel ni nadomeščanj in vračil, ker s plačilom rezervirate mesto v omejeni skupini.</p>
             </div>
         </div>
 
         <div class="cta-image-band" aria-label="Prijava na Budokon moč">
- <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+            <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
         </div>
     </section>
 
