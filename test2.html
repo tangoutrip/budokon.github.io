@@ -417,12 +417,19 @@ a:focus {
 }
 
 .teacher-stats {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 26px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 18px;
     margin-top: 26px;
     padding-top: 24px;
     border-top: 1px solid rgba(185, 166, 106, 0.24);
+}
+
+.teacher-stat-divider {
+    color: var(--bdk-gold-active);
+    font-size: 12px;
+    line-height: 1.7;
 }
 
 .teacher-stat {
@@ -1093,8 +1100,18 @@ footer.landing-footer {
     }
 
     .teacher-stats {
-        grid-template-columns: 1fr;
-        gap: 12px;
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .teacher-stat {
+        font-size: 10px;
+        letter-spacing: 0.08em;
+        line-height: 1.6;
+    }
+
+    .teacher-stat-divider {
+        font-size: 10px;
     }
 
     .landing-button {
@@ -1462,7 +1479,7 @@ footer.landing-footer {
               "name": "Kako je s plačilom in vračili?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Po prijavi prejmete račun za rezervacijo mesta. Mesto v omejeni skupini je zagotovljeno po plačilu. Vračila niso možna."
+                "text": "Po prijavi prejmete račun za rezervacijo mesta. Mesto v omejeni skupini je zagotovljeno po plačilu. Vračila niso možna, ker je plačilo rezervacija mesta v omejeni skupini."
               }
             }
           ]
@@ -1577,18 +1594,6 @@ footer.landing-footer {
 
 
 
-    <!-- Način prakse -->
-    <section class="landing-section compact method-section" aria-labelledby="method-title">
-        <div class="landing-container">
-            <h2 id="method-title" class="section-title">Način prakse</h2>
-
-            <div class="text-block method-text">
-                <p>Prakso vodi somatsko čuječe z jasno strukturo, tehnično orientacijo in pozornostjo do telesnih mej.</p>
-                <p>V ospredju procesa niso perfekcija, dokazovanje ali potiskanje preko meja, ampak postopno grajenje kapacitete, agilnosti in stabilnosti, iz stika s telesom.</p>
-            </div>
-        </div>
-    </section>
-
     <!-- Vodi prakso -->
     <section class="teacher-section" aria-labelledby="teacher-title">
         <div class="teacher-panel">
@@ -1606,8 +1611,9 @@ footer.landing-footer {
                 </div>
 
                 <div class="teacher-stats" aria-label="Izkušnje">
-                    <div class="teacher-stat">26 let osebne gibalne prakse</div>
-                    <div class="teacher-stat">12 let poučevanja</div>
+                    <span class="teacher-stat">26 let osebne gibalne prakse</span>
+                    <span class="teacher-stat-divider" aria-hidden="true">|</span>
+                    <span class="teacher-stat">12 let poučevanja</span>
                 </div>
             </div>
         </div>
@@ -1776,7 +1782,7 @@ footer.landing-footer {
                 </ol>
 
                 <p>Število mest je omejeno, zagotovite si ga šele s plačilom, ne zgolj s prijavo.</p>
-                <p>Z oddano prijavo in plačilom rezervirate svoje mesto v omejeni skupini. Vračila niso možna.</p>
+                <p>Z oddano prijavo in plačilom rezervirate svoje mesto v omejeni skupini. Vračila niso možna, ker je plačilo rezervacija mesta v omejeni skupini.</p>
 
                 <p class="text-link-cta">Če je to praksa za vas, lahko rezervirate mesto v skupini <a href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">tukaj</a>.</p>
             </div>
@@ -1818,10 +1824,23 @@ footer.landing-footer {
 
             <article class="faq-item">
                 <h3 class="faq-question">Kako je s plačilom in vračili?</h3>
-                <p class="faq-answer">Po prijavi prejmete račun za rezervacijo mesta. Mesto v omejeni skupini je zagotovljeno po plačilu. Vračila niso možna.</p>
+                <p class="faq-answer">Po prijavi prejmete račun za rezervacijo mesta. Mesto v omejeni skupini je zagotovljeno po plačilu. Vračila niso možna, ker je plačilo rezervacija mesta v omejeni skupini.</p>
             </article>
         </div>
     </section>
+
+    <!-- Način prakse -->
+    <section class="landing-section compact method-section" aria-labelledby="method-title">
+        <div class="landing-container">
+            <h2 id="method-title" class="section-title">Način prakse</h2>
+
+            <div class="text-block method-text">
+                <p>Prakso vodi somatsko čuječe z jasno strukturo, tehnično orientacijo in pozornostjo do telesnih mej.</p>
+                <p>V ospredju procesa niso perfekcija, dokazovanje ali potiskanje preko meja, ampak postopno grajenje kapacitete, agilnosti in stabilnosti, iz stika s telesom.</p>
+            </div>
+        </div>
+    </section>
+
 
     <div class="full-width-gold-divider" aria-hidden="true"></div>
 
