@@ -336,21 +336,31 @@ a:focus {
     font-weight: 400;
 }
 
+.method-section {
+    padding-top: 74px;
+    padding-bottom: 72px;
+}
+
+.method-text {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
 .teacher-section {
-    padding: 76px 0 0;
+    padding: 56px 0 0;
     background: var(--bdk-black);
 }
 
 .teacher-panel {
-    width: min(1080px, 88vw);
+    width: min(980px, 88vw);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr);
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
     background: var(--bdk-charcoal);
 }
 
 .teacher-image {
-    min-height: 500px;
+    min-height: 420px;
     overflow: hidden;
 }
 
@@ -364,7 +374,7 @@ a:focus {
 }
 
 .teacher-copy {
-    padding: 58px 64px;
+    padding: 50px 58px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -384,7 +394,7 @@ a:focus {
     margin: 0 0 28px;
     color: var(--bdk-white);
     font-family: "Futura", "Montserrat", sans-serif;
-    font-size: clamp(26px, 3.2vw, 42px);
+    font-size: clamp(24px, 2.8vw, 36px);
     font-weight: 400;
     line-height: 1.24;
     letter-spacing: 0.04em;
@@ -406,16 +416,33 @@ a:focus {
     color: var(--bdk-muted);
 }
 
+.teacher-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 26px;
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(185, 166, 106, 0.24);
+}
+
+.teacher-stat {
+    color: var(--bdk-gold-active);
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
 
 .testimonials-section {
-    padding-top: 124px;
+    padding-top: 156px;
     padding-bottom: 96px;
     background: var(--bdk-black);
 }
 
 .testimonial-grid {
     width: min(1120px, 88vw);
-    margin: 0 auto;
+    margin: 22px auto 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
@@ -423,6 +450,8 @@ a:focus {
 
 .testimonial-card {
     min-height: 420px;
+    border-top: 0;
+    border-bottom: 0;
     padding: 42px 42px 38px;
     display: flex;
     flex-direction: column;
@@ -796,7 +825,7 @@ footer.landing-footer {
 
 @media (max-width: 1060px) {
     .teacher-copy {
-        padding: 52px 48px;
+        padding: 48px 44px;
     }
 
     .testimonial-card {
@@ -866,24 +895,30 @@ footer.landing-footer {
         margin: 0 12px;
     }
 
+    .method-section {
+        padding-top: 68px;
+        padding-bottom: 68px;
+    }
+
     .teacher-panel {
         grid-template-columns: 1fr;
         width: min(88vw, 680px);
     }
 
     .teacher-image {
-        min-height: 420px;
+        min-height: 380px;
     }
 
     .teacher-copy {
         border-left: 0;
         border-top: 1px solid rgba(185, 166, 106, 0.24);
-        padding: 46px 38px;
+        padding: 44px 38px;
     }
 
     .testimonial-grid {
         grid-template-columns: 1fr;
         width: min(84vw, 620px);
+        margin-top: 18px;
     }
 
     .testimonial-card {
@@ -1025,12 +1060,17 @@ footer.landing-footer {
         line-height: 1.9;
     }
 
+    .method-section {
+        padding-top: 58px;
+        padding-bottom: 58px;
+    }
+
     .teacher-panel {
         width: min(88vw, 430px);
     }
 
     .teacher-image {
-        min-height: 420px;
+        min-height: 340px;
     }
 
     .teacher-copy {
@@ -1052,6 +1092,10 @@ footer.landing-footer {
         line-height: 1.9;
     }
 
+    .teacher-stats {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
 
     .landing-button {
         width: 100%;
@@ -1383,10 +1427,10 @@ footer.landing-footer {
             },
             {
               "@type": "Question",
-              "name": "Ali moram biti že močna, agilna ali fleksibilna?",
+              "name": "Ali je za prakso že potrebna moč, agilnost ali fleksibilnost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Ne. Namen delavnic je graditi kapaciteto, ne dokazovati že obstoječo formo. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje."
+                "text": "Ne. Praksa se gradi postopno, z možnostjo prilagoditev. Pomembnejša od predhodne moči ali fleksibilnosti je pripravljenost za raziskovanje gibanja, telesnih mej in novih gibalnih vzorcev."
               }
             },
             {
@@ -1533,6 +1577,18 @@ footer.landing-footer {
 
 
 
+    <!-- Način prakse -->
+    <section class="landing-section compact method-section" aria-labelledby="method-title">
+        <div class="landing-container">
+            <h2 id="method-title" class="section-title">Način prakse</h2>
+
+            <div class="text-block method-text">
+                <p>Prakso vodi somatsko čuječe z jasno strukturo, tehnično orientacijo in pozornostjo do telesnih mej.</p>
+                <p>V ospredju procesa niso perfekcija, dokazovanje ali potiskanje preko meja, ampak postopno grajenje kapacitete, agilnosti in stabilnosti, iz stika s telesom.</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Vodi prakso -->
     <section class="teacher-section" aria-labelledby="teacher-title">
         <div class="teacher-panel">
@@ -1545,11 +1601,14 @@ footer.landing-footer {
                 <h2 id="teacher-title" class="teacher-name">Sanja Zalar Gostimirović <span>|</span> Sanja Somatika</h2>
 
                 <div class="teacher-text">
-                    <p>Sanja je prva slovenska certificirana učiteljica Budokona in ustanoviteljica Budokon Slovenija organizacije. Budokon je v Slovenijo pripeljala leta 2016 in od takrat razvija prostor za raziskovanje mešanih gibalnih umetnosti v obliki somatskega gibanja in čuječega pristopa do telesa. Vsa Budokon izobraževanja je opravila v živo pri avtorju metode, Cameronu Shaynu in Melayne Shayne.</p>
-                    <p>Prakso vodi somatsko čuječe z jasno strukturo, tehnično orientacijo in pozornostjo do telesnih mej. V ospredju procesa niso perfekcija, dokazovanje ali potiskanje preko meja, ampak postopno grajenje kapacitete, agilnosti in stabilnosti, iz stika s telesom.</p>
+                    <p>Sanja je prva slovenska certificirana učiteljica Budokona in ustanoviteljica Budokon Slovenija organizacije. Budokon je v Slovenijo pripeljala leta 2016 in od takrat razvija prostor za raziskovanje mešanih gibalnih umetnosti v obliki somatskega gibanja in čuječega pristopa do telesa.</p>
+                    <p>Vsa Budokon izobraževanja je opravila v živo pri avtorju metode, Cameronu Shaynu.</p>
                 </div>
 
-                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+                <div class="teacher-stats" aria-label="Izkušnje">
+                    <div class="teacher-stat">26 let osebne gibalne prakse</div>
+                    <div class="teacher-stat">12 let poučevanja</div>
+                </div>
             </div>
         </div>
     </section>
@@ -1567,13 +1626,13 @@ footer.landing-footer {
             </article>
 
             <article class="testimonial-card">
-                <p class="testimonial-quote">“Ti si res srce te prakse. Najbolj všeč pri tvojem vodenju mi je tvoja širina, podpora, sočutje, predvsem pa poudarjanje tega, kako pomembna je pot, majhni koraki, dialog s sabo in ne toliko končna perfektna izvedba.”</p>
-                <div class="testimonial-name">Mateja</div>
+                <p class="testimonial-quote">“Sanja v svoje tečaje vnese sintezo telesa in duha na povsem naraven način. Uspe ji nevsiljivo ustvariti občutek skupnosti in domačnosti; je nepopustljiva in obenem nežna. Dobrih učiteljev je malo in Sanja je eden od njih.”</p>
+                <div class="testimonial-name">Matija</div>
             </article>
 
             <article class="testimonial-card">
-                <p class="testimonial-quote">“Vesela sem, da sem Sanjo spoznala, saj zna iz nas praktikantov potegniti najboljše, spodbuja nas, da vztrajamo, raziskujemo svoje meje in spreminjamo svoje vzorce, hkrati pa nas vedno opominja, naj se poslušamo in ohranjamo stik s samim sabo.”</p>
-                <div class="testimonial-name">Maša</div>
+                <p class="testimonial-quote">“Ti si res srce te prakse. Najbolj všeč pri tvojem vodenju mi je tvoja širina, podpora, sočutje, predvsem pa poudarjanje tega, kako pomembna je pot, majhni koraki, dialog s sabo in ne toliko končna perfektna izvedba.”</p>
+                <div class="testimonial-name">Mateja</div>
             </article>
         </div>
     </section>
@@ -1738,8 +1797,8 @@ footer.landing-footer {
             </article>
 
             <article class="faq-item">
-                <h3 class="faq-question">Ali moram biti že močna, agilna ali fleksibilna?</h3>
-                <p class="faq-answer">Ne. Namen delavnic je graditi kapaciteto, ne dokazovati že obstoječo formo. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje.</p>
+                <h3 class="faq-question">Ali je za prakso že potrebna moč, agilnost ali fleksibilnost?</h3>
+                <p class="faq-answer">Ne. Praksa se gradi postopno, z možnostjo prilagoditev. Pomembnejša od predhodne moči ali fleksibilnosti je pripravljenost za raziskovanje gibanja, telesnih mej in novih gibalnih vzorcev.</p>
             </article>
 
             <article class="faq-item">
