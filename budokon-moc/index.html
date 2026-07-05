@@ -337,22 +337,20 @@ a:focus {
 }
 
 .teacher-section {
-    padding: 0;
+    padding: 56px 0 0;
     background: var(--bdk-black);
 }
 
 .teacher-panel {
-    width: min(1180px, 88vw);
+    width: min(980px, 88vw);
     margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, 0.96fr) minmax(0, 1.04fr);
-    border-top: 1px solid rgba(185, 166, 106, 0.24);
-    border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+    grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
     background: var(--bdk-charcoal);
 }
 
 .teacher-image {
-    min-height: 660px;
+    min-height: 420px;
     overflow: hidden;
 }
 
@@ -366,7 +364,7 @@ a:focus {
 }
 
 .teacher-copy {
-    padding: 84px 78px;
+    padding: 50px 58px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -374,7 +372,7 @@ a:focus {
 }
 
 .teacher-kicker {
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     color: var(--bdk-gold-active);
     font-size: 12px;
     line-height: 1.5;
@@ -383,12 +381,13 @@ a:focus {
 }
 
 .teacher-name {
-    margin: 0 0 34px;
+    margin: 0 0 28px;
     color: var(--bdk-white);
-    font-family: "Lora", serif;
-    font-size: clamp(32px, 4.6vw, 58px);
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: clamp(24px, 2.8vw, 36px);
     font-weight: 400;
-    line-height: 1.18;
+    line-height: 1.24;
+    letter-spacing: 0.04em;
 }
 
 .teacher-name span {
@@ -397,51 +396,74 @@ a:focus {
 
 .teacher-text {
     color: var(--bdk-muted);
-    font-size: 16px;
-    line-height: 1.95;
-}
-
-.teacher-text p {
-    margin-bottom: 20px;
-    color: var(--bdk-muted);
-}
-
-.teacher-facts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0;
-    margin-top: 12px;
-    color: var(--bdk-gold-active);
-    font-size: 11px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 15px;
     line-height: 1.9;
 }
 
-.teacher-facts span + span::before {
-    content: "|";
+.teacher-text p {
+    margin-bottom: 18px;
+    color: var(--bdk-muted);
+}
+
+.teacher-text a {
+    color: var(--bdk-gold-active);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(185, 166, 106, 0.46);
+}
+
+.teacher-text a:hover,
+.teacher-text a:focus {
+    color: var(--bdk-white);
+    border-bottom-color: var(--bdk-white);
+}
+
+.teacher-stats {
+    margin-top: 26px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(185, 166, 106, 0.24);
+    color: var(--bdk-gold-active);
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.teacher-stats-line,
+.teacher-stats-training {
+    white-space: nowrap;
+}
+
+.teacher-stats-line span {
+    color: var(--bdk-white);
     margin: 0 12px;
-    color: rgba(185, 166, 106, 0.64);
+}
+
+.teacher-stats-training {
+    margin-top: 8px;
+    color: var(--bdk-muted);
+    letter-spacing: 0.14em;
 }
 
 .testimonials-section {
-    padding-top: 96px;
+    padding-top: 156px;
     padding-bottom: 96px;
     background: var(--bdk-black);
 }
 
 .testimonial-grid {
     width: min(1120px, 88vw);
-    margin: 0 auto;
+    margin: 22px auto 0;
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: stretch;
-    border-top: 1px solid rgba(185, 166, 106, 0.28);
-    border-bottom: 1px solid rgba(185, 166, 106, 0.28);
 }
 
 .testimonial-card {
     min-height: 420px;
+    border-top: 0;
+    border-bottom: 0;
     padding: 42px 42px 38px;
     display: flex;
     flex-direction: column;
@@ -454,14 +476,15 @@ a:focus {
 .testimonial-quote {
     margin: 0 0 34px;
     color: var(--bdk-white);
-    font-family: "Lora", serif;
-    font-size: 17px;
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: 16px;
     line-height: 1.95;
 }
 
 .testimonial-name {
     margin-top: auto;
     color: var(--bdk-gold-active);
+    font-family: "Futura", "Montserrat", sans-serif;
     font-size: 12px;
     letter-spacing: 0.24em;
     text-transform: uppercase;
@@ -705,6 +728,10 @@ a:focus {
     border-bottom: 1px solid rgba(185, 166, 106, 0.28);
 }
 
+.faq-item:last-child {
+    border-bottom: 0;
+}
+
 .faq-question {
     margin: 0 0 12px;
     color: var(--bdk-white);
@@ -810,7 +837,7 @@ footer.landing-footer {
 
 @media (max-width: 1060px) {
     .teacher-copy {
-        padding: 70px 54px;
+        padding: 48px 44px;
     }
 
     .testimonial-card {
@@ -879,25 +906,25 @@ footer.landing-footer {
         width: 34px;
         margin: 0 12px;
     }
-
-    .teacher-panel {
+.teacher-panel {
         grid-template-columns: 1fr;
         width: min(88vw, 680px);
     }
 
     .teacher-image {
-        min-height: 480px;
+        min-height: 380px;
     }
 
     .teacher-copy {
         border-left: 0;
         border-top: 1px solid rgba(185, 166, 106, 0.24);
-        padding: 58px 44px;
+        padding: 44px 38px;
     }
 
     .testimonial-grid {
         grid-template-columns: 1fr;
         width: min(84vw, 620px);
+        margin-top: 18px;
     }
 
     .testimonial-card {
@@ -905,9 +932,14 @@ footer.landing-footer {
         padding: 38px 0;
     }
 
+    .testimonial-card {
+        border-left: 1px solid rgba(185, 166, 106, 0.38);
+        padding-left: 30px;
+    }
+
     .testimonial-card + .testimonial-card {
-        border-left: 0;
-        border-top: 1px solid rgba(185, 166, 106, 0.38);
+        border-left: 1px solid rgba(185, 166, 106, 0.38);
+        border-top: 0;
     }
 
     .terms-section .section-intro {
@@ -1033,13 +1065,12 @@ footer.landing-footer {
         font-size: 15px;
         line-height: 1.9;
     }
-
-    .teacher-panel {
+.teacher-panel {
         width: min(88vw, 430px);
     }
 
     .teacher-image {
-        min-height: 420px;
+        min-height: 340px;
     }
 
     .teacher-copy {
@@ -1060,18 +1091,17 @@ footer.landing-footer {
         font-size: 15px;
         line-height: 1.9;
     }
-
-    .teacher-facts {
-        display: block;
+    .teacher-stats {
+        font-size: 10px;
+        letter-spacing: 0.05em;
     }
 
-    .teacher-facts span {
-        display: block;
+    .teacher-stats-line span {
+        margin: 0 8px;
     }
 
-    .teacher-facts span + span::before {
-        content: "";
-        margin: 0;
+    .teacher-stats-training {
+        letter-spacing: 0.04em;
     }
 
     .landing-button {
@@ -1184,268 +1214,268 @@ footer.landing-footer {
     {
       "@context": "https://schema.org",
       "@graph": [
-        {
-          "@type": "WebPage",
-          "@id": "https://budokon.si/budokon-moc/#webpage",
-          "url": "https://budokon.si/budokon-moc/",
-          "name": "Budokon moč | Poletna gibalna serija",
-          "isPartOf": {
-            "@id": "https://budokon.si/#website"
-          },
-          "about": {
-            "@id": "https://budokon.si/#organization"
-          },
-          "inLanguage": "sl-SI"
-        },
-        {
-          "@id": "https://budokon.si/#organization",
-          "@type": "Organization",
-          "name": "Budokon Slovenija",
-          "url": "https://budokon.si/"
-        },
-        {
-          "@id": "https://budokon.si/#sanja-zalar-gostimirovic",
-          "@type": "Person",
-          "name": "Sanja Zalar Gostimirović",
-          "alternateName": "Sanja Somatika",
-          "url": "https://sanjasomatika.si/"
-        },
-        {
-          "@type": "Place",
-          "@id": "https://budokon.si/budokon-moc/#gendai-center",
-          "name": "Gendai center",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Leskoškova cesta 6",
-            "addressLocality": "Ljubljana",
-            "postalCode": "1000",
-            "addressCountry": "SI"
-          }
-        },
-        {
-          "@type": "Event",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "image": [
-            "https://budokon.si/img/budokon-moc-hero.jpg"
-          ],
-          "location": {
-            "@id": "https://budokon.si/budokon-moc/#gendai-center"
-          },
-          "organizer": {
-            "@id": "https://budokon.si/#organization"
-          },
-          "performer": {
-            "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
-          },
-          "offers": [
             {
-              "@type": "Offer",
-              "name": "Sklop štirih delavnic",
-              "price": "129",
-              "priceCurrency": "EUR",
-              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
-              "availability": "https://schema.org/InStock"
+                  "@type": "WebPage",
+                  "@id": "https://budokon.si/budokon-moc/#webpage",
+                  "url": "https://budokon.si/budokon-moc/",
+                  "name": "Budokon moč | Poletna gibalna serija",
+                  "isPartOf": {
+                        "@id": "https://budokon.si/#website"
+                  },
+                  "about": {
+                        "@id": "https://budokon.si/#organization"
+                  },
+                  "inLanguage": "sl-SI"
             },
             {
-              "@type": "Offer",
-              "name": "Posamezna delavnica",
-              "price": "39",
-              "priceCurrency": "EUR",
-              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
-              "availability": "https://schema.org/InStock"
+                  "@id": "https://budokon.si/#organization",
+                  "@type": "Organization",
+                  "name": "Budokon Slovenija",
+                  "url": "https://budokon.si/"
+            },
+            {
+                  "@id": "https://budokon.si/#sanja-zalar-gostimirovic",
+                  "@type": "Person",
+                  "name": "Sanja Zalar Gostimirović",
+                  "alternateName": "Sanja Somatika",
+                  "url": "https://sanjasomatika.si/"
+            },
+            {
+                  "@type": "Place",
+                  "@id": "https://budokon.si/budokon-moc/#gendai-center",
+                  "name": "Gendai center",
+                  "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "Leskoškova cesta 6",
+                        "addressLocality": "Ljubljana",
+                        "postalCode": "1000",
+                        "addressCountry": "SI"
+                  }
+            },
+            {
+                  "@type": "Event",
+                  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                  "eventStatus": "https://schema.org/EventScheduled",
+                  "image": [
+                        "https://budokon.si/img/budokon-moc-hero.jpg"
+                  ],
+                  "location": {
+                        "@id": "https://budokon.si/budokon-moc/#gendai-center"
+                  },
+                  "organizer": {
+                        "@id": "https://budokon.si/#organization"
+                  },
+                  "performer": {
+                        "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
+                  },
+                  "offers": [
+                        {
+                              "@type": "Offer",
+                              "name": "Sklop štirih delavnic",
+                              "price": "129",
+                              "priceCurrency": "EUR",
+                              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
+                              "availability": "https://schema.org/InStock"
+                        },
+                        {
+                              "@type": "Offer",
+                              "name": "Posamezna delavnica",
+                              "price": "39",
+                              "priceCurrency": "EUR",
+                              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
+                              "availability": "https://schema.org/InStock"
+                        }
+                  ],
+                  "@id": "https://budokon.si/budokon-moc/#event-2026-07-13",
+                  "name": "Budokon moč | Moč temeljev",
+                  "description": "Stabilnost kot jedro moči. Tehnična baza za stabilno gibanje skozi animal locomotion in kalisteniko.",
+                  "startDate": "2026-07-13T18:00:00+02:00",
+                  "endDate": "2026-07-13T20:00:00+02:00",
+                  "url": "https://budokon.si/budokon-moc/",
+                  "inLanguage": "sl-SI"
+            },
+            {
+                  "@type": "Event",
+                  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                  "eventStatus": "https://schema.org/EventScheduled",
+                  "image": [
+                        "https://budokon.si/img/budokon-moc-hero.jpg"
+                  ],
+                  "location": {
+                        "@id": "https://budokon.si/budokon-moc/#gendai-center"
+                  },
+                  "organizer": {
+                        "@id": "https://budokon.si/#organization"
+                  },
+                  "performer": {
+                        "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
+                  },
+                  "offers": [
+                        {
+                              "@type": "Offer",
+                              "name": "Sklop štirih delavnic",
+                              "price": "129",
+                              "priceCurrency": "EUR",
+                              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
+                              "availability": "https://schema.org/InStock"
+                        },
+                        {
+                              "@type": "Offer",
+                              "name": "Posamezna delavnica",
+                              "price": "39",
+                              "priceCurrency": "EUR",
+                              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
+                              "availability": "https://schema.org/InStock"
+                        }
+                  ],
+                  "@id": "https://budokon.si/budokon-moc/#event-2026-07-27",
+                  "name": "Budokon moč | Moč mobilnosti",
+                  "description": "Raziskovanje kapacitete gibanja sklepov skozi BDK mobility verigo.",
+                  "startDate": "2026-07-27T18:00:00+02:00",
+                  "endDate": "2026-07-27T20:00:00+02:00",
+                  "url": "https://budokon.si/budokon-moc/",
+                  "inLanguage": "sl-SI"
+            },
+            {
+                  "@type": "Event",
+                  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                  "eventStatus": "https://schema.org/EventScheduled",
+                  "image": [
+                        "https://budokon.si/img/budokon-moc-hero.jpg"
+                  ],
+                  "location": {
+                        "@id": "https://budokon.si/budokon-moc/#gendai-center"
+                  },
+                  "organizer": {
+                        "@id": "https://budokon.si/#organization"
+                  },
+                  "performer": {
+                        "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
+                  },
+                  "offers": [
+                        {
+                              "@type": "Offer",
+                              "name": "Sklop štirih delavnic",
+                              "price": "129",
+                              "priceCurrency": "EUR",
+                              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
+                              "availability": "https://schema.org/InStock"
+                        },
+                        {
+                              "@type": "Offer",
+                              "name": "Posamezna delavnica",
+                              "price": "39",
+                              "priceCurrency": "EUR",
+                              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
+                              "availability": "https://schema.org/InStock"
+                        }
+                  ],
+                  "@id": "https://budokon.si/budokon-moc/#event-2026-08-10",
+                  "name": "Budokon moč | Moč meja",
+                  "description": "Osnove mešanih borilnih veščin, udarci z rokami in nogami ter orientacijske prakse brez kontakta.",
+                  "startDate": "2026-08-10T18:00:00+02:00",
+                  "endDate": "2026-08-10T20:00:00+02:00",
+                  "url": "https://budokon.si/budokon-moc/",
+                  "inLanguage": "sl-SI"
+            },
+            {
+                  "@type": "Event",
+                  "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                  "eventStatus": "https://schema.org/EventScheduled",
+                  "image": [
+                        "https://budokon.si/img/budokon-moc-hero.jpg"
+                  ],
+                  "location": {
+                        "@id": "https://budokon.si/budokon-moc/#gendai-center"
+                  },
+                  "organizer": {
+                        "@id": "https://budokon.si/#organization"
+                  },
+                  "performer": {
+                        "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
+                  },
+                  "offers": [
+                        {
+                              "@type": "Offer",
+                              "name": "Sklop štirih delavnic",
+                              "price": "129",
+                              "priceCurrency": "EUR",
+                              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
+                              "availability": "https://schema.org/InStock"
+                        },
+                        {
+                              "@type": "Offer",
+                              "name": "Posamezna delavnica",
+                              "price": "39",
+                              "priceCurrency": "EUR",
+                              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
+                              "availability": "https://schema.org/InStock"
+                        }
+                  ],
+                  "@id": "https://budokon.si/budokon-moc/#event-2026-08-24",
+                  "name": "Budokon moč | Tok moči",
+                  "description": "Budokon joga tranzicije in integracija stabilnosti, mobilnosti in odločnosti v zavesten tok.",
+                  "startDate": "2026-08-24T18:00:00+02:00",
+                  "endDate": "2026-08-24T20:00:00+02:00",
+                  "url": "https://budokon.si/budokon-moc/",
+                  "inLanguage": "sl-SI"
+            },
+            {
+                  "@type": "FAQPage",
+                  "@id": "https://budokon.si/budokon-moc/#faq",
+                  "mainEntity": [
+                        {
+                              "@type": "Question",
+                              "name": "Ali potrebujem predznanje Budokona?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Ne. Serija je primerna tudi brez predznanja Budokona. Prakso gradimo iz temeljev in z možnostjo prilagoditev."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Ali je za prakso že potrebna moč, agilnost ali fleksibilnost?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Ne. Praksa se gradi postopno. Pomembnejša od predhodne moči ali fleksibilnosti je pripravljenost za raziskovanje gibanja, telesnih mej in novih gibalnih vzorcev."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Kako potekajo prakse?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Prakso vodimo somatsko čuječe, z jasno strukturo, tehnično orientacijo in pozornostjo do telesnih mej. V ospredju niso perfekcija ali dokazovanje, ampak postopno grajenje kapacitete, agilnosti in stabilnosti iz stika s telesom."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Kje potekajo delavnice in kaj potrebujem s seboj?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Delavnice potekajo v Gendai centru na Leskoškovi cesti 6 v Ljubljani BTC. Potrebujete športna oblačila, ki pokrijejo ramena in kolena. Podlog ne potrebujete. Vadimo bosi na tatamijih."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Ali se lahko prijavim na posamezno delavnico?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Možna je prijava na posamezno delavnico, vendar posamezna delavnica ni zaokrožena Budokon izkušnja, ker se teme celotnega sklopa med seboj povezujejo."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Kako je s plačilom in vračili?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Po prijavi prejmete račun za rezervacijo mesta. Mesto v omejeni skupini je zagotovljeno po plačilu. Vračila niso možna, ker s plačilom rezervirate mesto v omejeni skupini."
+                              }
+                        }
+                  ]
             }
-          ],
-          "@id": "https://budokon.si/budokon-moc/#event-2026-07-13",
-          "name": "Budokon moč | Moč temeljev",
-          "description": "Stabilnost kot jedro moči. Tehnična baza za stabilno gibanje skozi animal locomotion in kalisteniko.",
-          "startDate": "2026-07-13T18:00:00+02:00",
-          "endDate": "2026-07-13T20:00:00+02:00",
-          "url": "https://budokon.si/budokon-moc/",
-          "inLanguage": "sl-SI"
-        },
-        {
-          "@type": "Event",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "image": [
-            "https://budokon.si/img/budokon-moc-hero.jpg"
-          ],
-          "location": {
-            "@id": "https://budokon.si/budokon-moc/#gendai-center"
-          },
-          "organizer": {
-            "@id": "https://budokon.si/#organization"
-          },
-          "performer": {
-            "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
-          },
-          "offers": [
-            {
-              "@type": "Offer",
-              "name": "Sklop štirih delavnic",
-              "price": "129",
-              "priceCurrency": "EUR",
-              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
-              "availability": "https://schema.org/InStock"
-            },
-            {
-              "@type": "Offer",
-              "name": "Posamezna delavnica",
-              "price": "39",
-              "priceCurrency": "EUR",
-              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
-              "availability": "https://schema.org/InStock"
-            }
-          ],
-          "@id": "https://budokon.si/budokon-moc/#event-2026-07-27",
-          "name": "Budokon moč | Moč mobilnosti",
-          "description": "Raziskovanje kapacitete gibanja sklepov skozi BDK mobility verigo.",
-          "startDate": "2026-07-27T18:00:00+02:00",
-          "endDate": "2026-07-27T20:00:00+02:00",
-          "url": "https://budokon.si/budokon-moc/",
-          "inLanguage": "sl-SI"
-        },
-        {
-          "@type": "Event",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "image": [
-            "https://budokon.si/img/budokon-moc-hero.jpg"
-          ],
-          "location": {
-            "@id": "https://budokon.si/budokon-moc/#gendai-center"
-          },
-          "organizer": {
-            "@id": "https://budokon.si/#organization"
-          },
-          "performer": {
-            "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
-          },
-          "offers": [
-            {
-              "@type": "Offer",
-              "name": "Sklop štirih delavnic",
-              "price": "129",
-              "priceCurrency": "EUR",
-              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
-              "availability": "https://schema.org/InStock"
-            },
-            {
-              "@type": "Offer",
-              "name": "Posamezna delavnica",
-              "price": "39",
-              "priceCurrency": "EUR",
-              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
-              "availability": "https://schema.org/InStock"
-            }
-          ],
-          "@id": "https://budokon.si/budokon-moc/#event-2026-08-10",
-          "name": "Budokon moč | Moč meja",
-          "description": "Osnove mešanih borilnih veščin, udarci z rokami in nogami ter orientacijske prakse brez kontakta.",
-          "startDate": "2026-08-10T18:00:00+02:00",
-          "endDate": "2026-08-10T20:00:00+02:00",
-          "url": "https://budokon.si/budokon-moc/",
-          "inLanguage": "sl-SI"
-        },
-        {
-          "@type": "Event",
-          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
-          "eventStatus": "https://schema.org/EventScheduled",
-          "image": [
-            "https://budokon.si/img/budokon-moc-hero.jpg"
-          ],
-          "location": {
-            "@id": "https://budokon.si/budokon-moc/#gendai-center"
-          },
-          "organizer": {
-            "@id": "https://budokon.si/#organization"
-          },
-          "performer": {
-            "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
-          },
-          "offers": [
-            {
-              "@type": "Offer",
-              "name": "Sklop štirih delavnic",
-              "price": "129",
-              "priceCurrency": "EUR",
-              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
-              "availability": "https://schema.org/InStock"
-            },
-            {
-              "@type": "Offer",
-              "name": "Posamezna delavnica",
-              "price": "39",
-              "priceCurrency": "EUR",
-              "url": "https://forms.gle/SE8kGyMnm3J4XRoq6",
-              "availability": "https://schema.org/InStock"
-            }
-          ],
-          "@id": "https://budokon.si/budokon-moc/#event-2026-08-24",
-          "name": "Budokon moč | Tok moči",
-          "description": "Budokon joga tranzicije in integracija stabilnosti, mobilnosti in odločnosti v zavesten tok.",
-          "startDate": "2026-08-24T18:00:00+02:00",
-          "endDate": "2026-08-24T20:00:00+02:00",
-          "url": "https://budokon.si/budokon-moc/",
-          "inLanguage": "sl-SI"
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://budokon.si/budokon-moc/#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Ali potrebujem predznanje Budokona?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ne. Serija je primerna tudi brez predznanja Budokona. Prakso gradimo iz temeljev in z možnostjo prilagoditev."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Ali moram biti že močna, agilna ali fleksibilna?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ne. Namen delavnic je graditi kapaciteto, ne dokazovati že obstoječo formo. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kaj potrebujem s seboj?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Športna oblačila, ki pokrijejo ramena in kolena. Podlog ne potrebujete. Vadimo bosi na tatamijih."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kje potekajo delavnice?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "V Gendai centru na Leskoškovi cesti 6 v Ljubljani BTC."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Ali se lahko prijavim na posamezno delavnico?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Možna je prijava na posamezno delavnico, vendar celoten sklop omogoča bolj zaokroženo Budokon izkušnjo, ker se teme med seboj povezujejo."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kako je s plačilom, nadomeščanji in vračili?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Po prijavi prejmete račun za rezervacijo mesta. Mesto v omejeni skupini je zagotovljeno po plačilu. Nadomeščanja in vračila niso možna."
-              }
-            }
-          ]
-        }
       ]
-    }
+}
     </script>
 
 </head>
@@ -1566,18 +1596,14 @@ footer.landing-footer {
                 <h2 id="teacher-title" class="teacher-name">Sanja Zalar Gostimirović <span>|</span> Sanja Somatika</h2>
 
                 <div class="teacher-text">
-                    <p>Sanja je prva slovenska certificirana učiteljica Budokona in ustanoviteljica Budokon Slovenija. Budokon je v Slovenijo pripeljala leta 2016 in od takrat razvija prostor za mešane gibalne umetnosti, somatsko gibanje in čuječe delo s telesom.</p>
-                    <p>Njeno delo združuje Budokon, Somatsko čuječnost, jogo, mobilnost, animalistiko, osnove borilnih veščin, kalisteniko in psihosocialno svetovanje. Vsa Budokon izobraževanja je opravila v živo pri Cameronu Shaynu.</p>
-                    <p>Prakso vodi s travmo upoštevajočim pristopom, jasno strukturo in pozornostjo do telesnih mej. V ospredju niso perfekcija, dokazovanje ali potiskanje čez meje, ampak postopno grajenje kapacitete, stabilnosti, orientacije, moči in odnosa s telesom.</p>
+                    <p><a href="https://sanjasomatika.si/sanja.html" target="_blank" rel="noopener">Sanja</a> je prva slovenska certificirana učiteljica Budokona in ustanoviteljica Budokon Slovenija organizacije. Budokon je v Slovenijo pripeljala leta 2016 in od takrat razvija prostor za raziskovanje mešanih gibalnih umetnosti v obliki somatskega gibanja in čuječega pristopa do telesa.</p>
+                    <p>Vsa Budokon izobraževanja je opravila v živo pri avtorju metode, Cameronu Shaynu.</p>
                 </div>
 
-                <div class="teacher-facts" aria-label="Izkušnje in ozadje">
-                    <span>26 let osebne gibalne prakse</span>
-                    <span>12 let poučevanja</span>
-                    <span>Budokon v Sloveniji od 2016</span>
+                <div class="teacher-stats" aria-label="Izkušnje">
+                    <div class="teacher-stats-line">26 let osebne prakse <span>|</span> 12 let poučevanja</div>
+                    <div class="teacher-stats-training">10.500+ ur izobraževanj na področju dela z ljudmi</div>
                 </div>
-
-                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
             </div>
         </div>
     </section>
@@ -1595,13 +1621,13 @@ footer.landing-footer {
             </article>
 
             <article class="testimonial-card">
-                <p class="testimonial-quote">“Ti si res srce te prakse. Najbolj všeč pri tvojem vodenju mi je tvoja širina, podpora, sočutje, predvsem pa poudarjanje tega, kako pomembna je pot, majhni koraki, dialog s sabo in ne toliko končna perfektna izvedba.”</p>
-                <div class="testimonial-name">Mateja</div>
+                <p class="testimonial-quote">“Sanja v svoje tečaje vnese sintezo telesa in duha na povsem naraven način. Uspe ji nevsiljivo ustvariti občutek skupnosti in domačnosti; je nepopustljiva in obenem nežna. Dobrih učiteljev je malo in Sanja je eden od njih.”</p>
+                <div class="testimonial-name">Matija</div>
             </article>
 
             <article class="testimonial-card">
-                <p class="testimonial-quote">“Vesela sem, da sem Sanjo spoznala, saj zna iz nas praktikantov potegniti najboljše, spodbuja nas, da vztrajamo, raziskujemo svoje meje in spreminjamo svoje vzorce, hkrati pa nas vedno opominja, naj se poslušamo in ohranjamo stik s samim sabo.”</p>
-                <div class="testimonial-name">Maša</div>
+                <p class="testimonial-quote">“Ti si res srce te prakse. Najbolj všeč pri tvojem vodenju mi je tvoja širina, podpora, sočutje, predvsem pa poudarjanje tega, kako pomembna je pot, majhni koraki, dialog s sabo in ne toliko končna perfektna izvedba.”</p>
+                <div class="testimonial-name">Mateja</div>
             </article>
         </div>
     </section>
@@ -1650,9 +1676,8 @@ footer.landing-footer {
             <h2 class="section-title">Kaj vadimo | opis delavnic</h2>
 
             <div class="text-block practice-overview">
-                <p>Vadili bomo animal locomotion, BDK mobility, kalisteniko, delo s tlemi, borilne elemente brez kontakta in Budokon joga tranzicije.</p>
-                <p>Poudarek prakse ni na popolni izvedbi forme, ampak na gradnji kapacitete: moči, mobilnosti, stabilnosti, fokusa, stika s telesom in prostorom.</p>
-                <p>Prakso gradimo postopno, z možnostjo prilagoditev.</p>
+                <p>Vsebina: animal locomotion, BDK mobilnost, kalistenika, borilni elementi brez kontakta, BDK joga.</p>
+                <p>Prakso gradimo postopno in progresivno, prilagajamo jo telesu, ne telesa praksi.</p>
             </div>
         </div>
     </section>
@@ -1745,7 +1770,7 @@ footer.landing-footer {
                 </ol>
 
                 <p>Število mest je omejeno, zagotovite si ga šele s plačilom, ne zgolj s prijavo.</p>
-                <p>Z oddano prijavo in plačilom rezervirate svoje mesto v omejeni skupini. Nadomeščanja in vračila niso možna.</p>
+                <p>Z oddano prijavo in plačilom rezervirate svoje mesto v omejeni skupini. Vračila niso možna, ker s plačilom rezervirate mesto v omejeni skupini.</p>
 
                 <p class="text-link-cta">Če je to praksa za vas, lahko rezervirate mesto v skupini <a href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">tukaj</a>.</p>
             </div>
@@ -1766,33 +1791,33 @@ footer.landing-footer {
             </article>
 
             <article class="faq-item">
-                <h3 class="faq-question">Ali moram biti že močna, agilna ali fleksibilna?</h3>
-                <p class="faq-answer">Ne. Namen delavnic je graditi kapaciteto, ne dokazovati že obstoječo formo. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje.</p>
+                <h3 class="faq-question">Ali je za prakso že potrebna moč, agilnost ali fleksibilnost?</h3>
+                <p class="faq-answer">Ne. Praksa se gradi postopno. Pomembnejša od predhodne moči ali fleksibilnosti je pripravljenost za raziskovanje gibanja, telesnih mej in novih gibalnih vzorcev.</p>
             </article>
 
             <article class="faq-item">
-                <h3 class="faq-question">Kaj potrebujem s seboj?</h3>
-                <p class="faq-answer">Športna oblačila, ki pokrijejo ramena in kolena. Podlog ne potrebujete. Vadimo bosi na tatamijih.</p>
+                <h3 class="faq-question">Kako potekajo prakse?</h3>
+                <p class="faq-answer">Prakso vodimo somatsko čuječe, z jasno strukturo, tehnično orientacijo in pozornostjo do telesnih mej. V ospredju niso perfekcija ali dokazovanje, ampak postopno grajenje kapacitete, agilnosti in stabilnosti iz stika s telesom.</p>
             </article>
 
             <article class="faq-item">
-                <h3 class="faq-question">Kje potekajo delavnice?</h3>
-                <p class="faq-answer">V Gendai centru na Leskoškovi cesti 6 v Ljubljani BTC.</p>
+                <h3 class="faq-question">Kje potekajo delavnice in kaj potrebujem s seboj?</h3>
+                <p class="faq-answer">Delavnice potekajo v Gendai centru na Leskoškovi cesti 6 v Ljubljani BTC. Potrebujete športna oblačila, ki pokrijejo ramena in kolena. Podlog ne potrebujete. Vadimo bosi na tatamijih.</p>
             </article>
 
             <article class="faq-item">
                 <h3 class="faq-question">Ali se lahko prijavim na posamezno delavnico?</h3>
-                <p class="faq-answer">Možna je prijava na posamezno delavnico, vendar celoten sklop omogoča bolj zaokroženo Budokon izkušnjo, ker se teme med seboj povezujejo.</p>
+                <p class="faq-answer">Možna je prijava na posamezno delavnico, vendar posamezna delavnica ni zaokrožena Budokon izkušnja, ker se teme celotnega sklopa med seboj povezujejo.</p>
             </article>
 
             <article class="faq-item">
-                <h3 class="faq-question">Kako je s plačilom, nadomeščanji in vračili?</h3>
-                <p class="faq-answer">Po prijavi prejmete račun za rezervacijo mesta. Mesto v omejeni skupini je zagotovljeno po plačilu. Nadomeščanja in vračila niso možna.</p>
+                <h3 class="faq-question">Kako je s plačilom in vračili?</h3>
+                <p class="faq-answer">Po prijavi prejmete račun za rezervacijo mesta. Mesto v omejeni skupini je zagotovljeno po plačilu. Vračila niso možna, ker s plačilom rezervirate mesto v omejeni skupini.</p>
             </article>
         </div>
     </section>
 
-    <div class="full-width-gold-divider" aria-hidden="true"></div>
+<div class="full-width-gold-divider" aria-hidden="true"></div>
 
     <footer class="landing-footer">
         <div class="footer-logo-mark" aria-label="Budokon Slovenija logo"></div>
