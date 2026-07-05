@@ -1106,6 +1106,224 @@
             }
         }
 
+
+        /* FINAL LIVE POLISH — spacing, navigation, tables, mobile */
+        .navbar-custom .nav li.active a,
+        .navbar-custom .nav li.active a:hover,
+        .navbar-custom .nav li.active a:focus,
+        .navbar-custom .nav li a:hover,
+        .navbar-custom .nav li a:focus {
+            background: transparent !important;
+            color: var(--bdk-gold-active) !important;
+        }
+
+        .navbar-custom .nav li.active {
+            background: transparent !important;
+        }
+
+        .landing-section {
+            padding-top: 124px;
+            padding-bottom: 124px;
+        }
+
+        .landing-section.compact {
+            padding-top: 104px;
+            padding-bottom: 104px;
+        }
+
+        .landing-section.after-divider,
+        .terms-section,
+        .thread-section,
+        #prijava {
+            padding-top: 112px;
+        }
+
+        .landing-section.after-thread {
+            padding-top: 72px;
+        }
+
+        .section-title {
+            margin-bottom: 62px !important;
+            font-size: 26px;
+            line-height: 1.45;
+            letter-spacing: 0.34em;
+        }
+
+        .terms-section .section-title,
+        .thread-section .section-title,
+        #prijava .section-title {
+            margin-bottom: 62px !important;
+        }
+
+        .terms-section .section-intro {
+            max-width: 840px;
+            margin-bottom: 72px;
+            font-size: 18px;
+            line-height: 2.05;
+        }
+
+        .quick-info {
+            width: min(760px, 84vw);
+            max-width: none;
+            margin: 0 auto 58px;
+            border-top: 1px solid rgba(185, 166, 106, 0.24);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+        }
+
+        .quick-info-row {
+            grid-template-columns: 200px 1fr;
+            gap: 48px;
+            padding: 25px 0;
+            font-size: 17px;
+            line-height: 1.85;
+        }
+
+        .quick-info-label {
+            font-size: 12px;
+            letter-spacing: 0.24em;
+        }
+
+        .terms-section .landing-inline-cta {
+            width: min(760px, 84vw);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .signup-steps {
+            max-width: 960px;
+            margin: 0 auto;
+            font-size: 19px;
+            line-height: 2.05;
+            text-align: center;
+        }
+
+        .signup-steps ol {
+            display: block;
+            max-width: none;
+            margin: 0 auto 52px;
+            padding-left: 0;
+            list-style-position: inside;
+            text-align: center;
+        }
+
+        .signup-steps li {
+            margin-bottom: 14px;
+            color: var(--bdk-white);
+        }
+
+        .signup-steps p {
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 18px;
+            color: var(--bdk-muted);
+        }
+
+        .footer-logo-mark {
+            width: 82px;
+            height: 82px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 900px) {
+            .landing-section,
+            .landing-section.compact,
+            .landing-section.after-divider,
+            .terms-section,
+            .thread-section,
+            #prijava {
+                padding-top: 88px;
+                padding-bottom: 88px;
+            }
+
+            .section-title {
+                font-size: 22px;
+                letter-spacing: 0.28em;
+                margin-bottom: 48px !important;
+            }
+
+            .terms-section .section-intro {
+                margin-bottom: 52px;
+                font-size: 16px;
+            }
+
+            .quick-info {
+                width: min(84vw, 620px);
+                margin-bottom: 46px;
+            }
+
+            .quick-info-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+                font-size: 16px;
+            }
+
+            .terms-section .landing-inline-cta {
+                width: min(84vw, 620px);
+            }
+
+            .signup-steps {
+                font-size: 17px;
+                line-height: 1.95;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-section,
+            .landing-section.compact,
+            .landing-section.after-divider,
+            .terms-section,
+            .thread-section,
+            #prijava {
+                padding-top: 74px;
+                padding-bottom: 74px;
+            }
+
+            .section-title {
+                font-size: 19px;
+                letter-spacing: 0.22em;
+                margin-bottom: 40px !important;
+            }
+
+            .section-title:before,
+            .section-title:after {
+                width: 24px;
+                margin: 0 10px;
+            }
+
+            .terms-section .section-intro {
+                margin-bottom: 42px;
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .quick-info,
+            .terms-section .landing-inline-cta {
+                width: min(88vw, 430px);
+            }
+
+            .quick-info-row {
+                padding: 20px 0;
+                font-size: 15px;
+            }
+
+            .signup-steps {
+                width: min(88vw, 430px);
+                font-size: 16px;
+                line-height: 1.9;
+            }
+
+            .signup-steps ol {
+                margin-bottom: 38px;
+            }
+
+            .footer-logo-mark {
+                width: 72px;
+                height: 72px;
+            }
+        }
+
+
     </style>
 
 </head>
@@ -1342,18 +1560,18 @@
 
     <section class="image-band band-two" aria-label="Budokon poletna serija"></section>
 
-    <!-- Prijava -->
+    <!-- Potek prijave -->
     <section id="prijava" class="landing-section">
-        <div class="landing-container">
-            <h2 class="section-title">Prijava</h2>
+        <div class="landing-container wide">
+            <h2 class="section-title">Potek prijave</h2>
 
             <div class="signup-steps">
-                <p><strong>Kako poteka prijava</strong></p>
                 <ol>
                     <li>Izpolnite prijavni obrazec.</li>
                     <li>Prejmete račun za rezervacijo mesta.</li>
                     <li>Po plačilu prejmete vse informacije.</li>
                 </ol>
+
                 <p>Število mest je omejeno, zagotovite si ga šele s plačilom, ne zgolj s prijavo.</p>
                 <p>Za cikel ni nadomeščanj in vračil, ker s plačilom rezervirate mesto v omejeni skupini.</p>
             </div>
