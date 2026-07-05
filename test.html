@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="sl">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Budokon moč | Poletna gibalna serija</title>
+
+    <meta name="description" content="Budokon moč je poletna serija štirih Budokon delavnic v Ljubljani. Stabilnost, mobilnost, meje in tok skozi prakso mešanih gibalnih umetnosti.">
+    <meta name="author" content="Sanja Zalar Gostimirović – Sanja Somatika">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="theme-color" content="#050505">
+
+    <link rel="canonical" href="https://budokon.si/budokon-moc/">
+
+    <!-- Open Graph / social preview -->
+    <meta property="og:locale" content="sl_SI">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://budokon.si/budokon-moc/">
+    <meta property="og:site_name" content="Budokon Slovenija">
+    <meta property="og:title" content="Budokon moč | Poletna gibalna serija">
+    <meta property="og:description" content="Štiri poletne Budokon delavnice na temo moči: stabilnost, mobilnost, meje in tok. Julij–avgust, Ljubljana.">
+    <meta property="og:image" content="https://budokon.si/img/budokon-moc-hero.jpg">
+    <meta property="og:image:alt" content="Budokon moč — poletna gibalna serija">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <link rel="image_src" href="https://budokon.si/img/budokon-moc-hero.jpg">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="/css/futura.css" rel="stylesheet">
+    <link href="/css/grayscale.css" rel="stylesheet">
+    <link href="/css/budokon.css" rel="stylesheet">
+    <link href="/css/dark-theme.css" rel="stylesheet">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico"/>
+
+    <style>
+        :root {
+            --bdk-black: #050505;
+            --bdk-charcoal: #0b0b0b;
+            --bdk-white: #f4f1ea;
+            --bdk-muted: #cfc8b9;
+            --bdk-gold-fallback: #b9a66a;
+            --bdk-gold-active: var(--bdk-gold, var(--bdk-gold-fallback));
+        }
+
+        html,
+        body {
+            background: var(--bdk-black);
+            color: var(--bdk-white);
+        }
+
+        body.budokon-moc-page {
+            font-family: "Montserrat", "Futura", sans-serif;
+            background: var(--bdk-black);
+            color: var(--bdk-white);
+        }
+
+        .navbar-custom {
+            background: rgba(0, 0, 0, 0.94);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.28);
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav li a {
+            color: var(--bdk-white);
+        }
+
+        .navbar-custom .nav li a:hover,
+        .navbar-custom .nav li.active a {
+            color: var(--bdk-gold-active);
+        }
+
+        .navbar-custom .navbar-brand .light {
+            color: var(--bdk-muted);
+        }
+
+        /* HERO — FULL WIDTH IMAGE */
+        .landing-hero {
+            position: relative;
+            min-height: 100vh;
+            padding: 0;
+            overflow: hidden;
+            background:
+                linear-gradient(to right, rgba(5, 5, 5, 0.74) 0%, rgba(5, 5, 5, 0.46) 42%, rgba(5, 5, 5, 0.12) 100%),
+                url("/img/budokon-moc-hero.jpg");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+        }
+
+
+        .landing-hero-mobile-image {
+            display: none;
+        }
+
+        .landing-hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 68%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.28));
+        }
+
+        .landing-hero-inner {
+            position: relative;
+            z-index: 2;
+            width: min(1180px, 88vw);
+            margin: 0 auto;
+            padding-top: 86px;
+        }
+
+        .landing-hero-copy {
+            max-width: 640px;
+        }
+
+        .landing-title {
+            margin: 0;
+            font-family: "Six Caps", "Arial Narrow", sans-serif;
+            font-weight: 400;
+            font-size: clamp(82px, 10vw, 158px);
+            line-height: 1.02;
+            letter-spacing: 0.10em;
+            word-spacing: 0.12em;
+            color: var(--bdk-white);
+            text-transform: uppercase;
+        }
+
+        .landing-subtitle {
+            margin-top: 30px;
+            font-family: "Montserrat", "Futura", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: clamp(14px, 1.6vw, 24px);
+            line-height: 1.5;
+            letter-spacing: 0.32em;
+            text-transform: uppercase;
+            color: var(--bdk-gold-active);
+        }
+
+        .landing-lead {
+            margin-top: 46px;
+            max-width: 540px;
+            color: var(--bdk-white);
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .landing-lead p {
+            margin-bottom: 6px;
+            color: var(--bdk-white);
+        }
+
+        .landing-meta {
+            margin-top: 42px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            color: var(--bdk-muted);
+            font-size: 13px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .landing-meta span {
+            display: inline-block;
+        }
+
+        .landing-meta span + span:before {
+            content: "·";
+            color: var(--bdk-gold-active);
+            margin: 0 22px;
+        }
+
+        .landing-button {
+            display: inline-block;
+            margin-top: 44px;
+            padding: 16px 34px;
+            border: 1px solid var(--bdk-gold-active);
+            color: var(--bdk-gold-active);
+            background: transparent;
+            font-size: 13px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            transition: all 0.2s ease;
+        }
+
+        .landing-button:hover,
+        .landing-button:focus {
+            color: var(--bdk-black);
+            background: var(--bdk-gold-active);
+            border-color: var(--bdk-gold-active);
+            text-decoration: none;
+        }
+
+
+        /* CONVERSION ADDITIONS */
+        .landing-hero-facts {
+            margin-top: 34px;
+            padding-left: 0;
+            color: var(--bdk-white);
+            font-size: 14px;
+            line-height: 2.0;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .landing-hero-facts strong {
+            color: var(--bdk-gold-active);
+            font-weight: 400;
+        }
+
+        .landing-inline-cta {
+            margin-top: 44px;
+            text-align: center;
+        }
+
+        .quick-info {
+            max-width: 740px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(185, 166, 106, 0.38);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.38);
+        }
+
+        .quick-info-row {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 44px;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.20);
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .quick-info-row:last-child {
+            border-bottom: 0;
+        }
+
+        .quick-info-label {
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .quick-info-value {
+            color: var(--bdk-white);
+        }
+
+        .practice-list {
+            max-width: 760px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px 54px;
+            color: var(--bdk-white);
+            font-size: 15px;
+            line-height: 1.8;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .practice-list span {
+            display: block;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.22);
+        }
+
+        .signup-steps {
+            max-width: 640px;
+            margin: 50px auto 0;
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .signup-steps ol {
+            display: inline-block;
+            margin: 18px auto 0;
+            padding-left: 22px;
+            text-align: left;
+        }
+
+        .signup-steps li {
+            margin-bottom: 10px;
+            color: var(--bdk-muted);
+        }
+
+        .signup-steps strong {
+            color: var(--bdk-white);
+            font-weight: 400;
+        }
+
+        /* GENERAL SECTIONS */
+        .landing-section {
+            padding: 118px 0;
+            background: var(--bdk-black);
+        }
+
+        .landing-section.compact {
+            padding: 82px 0;
+        }
+
+        .landing-section.intro-section {
+            padding-bottom: 54px;
+        }
+
+        .landing-section.after-divider {
+            padding-top: 64px;
+        }
+
+        .landing-section.after-thread {
+            padding-top: 36px;
+        }
+
+        .landing-container {
+            width: min(920px, 84vw);
+            margin: 0 auto;
+        }
+
+        .landing-container.wide {
+            width: min(1120px, 88vw);
+        }
+
+        .gold-divider {
+            width: min(720px, 72vw);
+            height: 1px;
+            margin: 0 auto;
+            background: rgba(185, 166, 106, 0.55);
+        }
+
+        .workshop-end-divider {
+            margin-top: 0;
+            margin-bottom: 0;
+            width: min(1120px, 88vw);
+        }
+
+        .section-title {
+            margin: 0 0 48px;
+            color: var(--bdk-gold-active);
+            font-size: 20px;
+            line-height: 1.5;
+            letter-spacing: 0.30em;
+            text-transform: uppercase;
+            text-align: center;
+        }
+
+        .section-title:before,
+        .section-title:after {
+            content: "";
+            display: inline-block;
+            width: 56px;
+            height: 1px;
+            background: rgba(185, 166, 106, 0.72);
+            vertical-align: middle;
+            margin: 0 22px;
+        }
+
+        .text-block {
+            color: var(--bdk-muted);
+            font-size: 17px;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .text-block p {
+            margin-bottom: 24px;
+            color: var(--bdk-muted);
+        }
+
+        .text-block strong {
+            color: var(--bdk-white);
+            font-weight: 400;
+        }
+
+        /* IMAGE BANDS */
+        .image-band {
+            height: 180px;
+            background-size: cover;
+            background-position: center;
+            border-top: 1px solid rgba(185, 166, 106, 0.20);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.20);
+            opacity: 0.92;
+        }
+
+        .image-band.band-one {
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.40), rgba(5, 5, 5, 0.18)),
+                url("/img/budokon-moc-pas-1.jpg");
+        }
+
+        .image-band.band-two {
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.40), rgba(5, 5, 5, 0.18)),
+                url("/img/budokon-moc-pas-2.jpg");
+        }
+
+        .cta-image-band {
+            height: 210px;
+            margin-top: 62px;
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.28)),
+                url("/img/budokon-moc-pas-3.jpg");
+            background-size: cover;
+            background-position: center;
+            border-top: 1px solid rgba(185, 166, 106, 0.24);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cta-image-band .landing-button {
+            margin-top: 0;
+            background: rgba(5, 5, 5, 0.56);
+        }
+
+        .cta-image-band .landing-button:hover,
+        .cta-image-band .landing-button:focus {
+            background: var(--bdk-gold-active);
+        }
+
+        /* THREAD */
+        .thread-section {
+            padding-bottom: 62px;
+        }
+
+        .thread-list {
+            max-width: 640px;
+            margin: 0 auto;
+            color: var(--bdk-white);
+            text-align: center;
+            font-size: 20px;
+            line-height: 2.1;
+        }
+
+        .thread-list span {
+            display: block;
+        }
+
+        .practice-note {
+            margin-top: 42px;
+            color: var(--bdk-muted);
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .practice-note p {
+            margin-bottom: 12px;
+        }
+
+        /* WORKSHOPS */
+        .workshops {
+            border-top: 1px solid rgba(185, 166, 106, 0.32);
+        }
+
+        .workshop-row {
+            display: grid;
+            grid-template-columns: 190px 1fr;
+            gap: 58px;
+            padding: 64px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.32);
+            align-items: start;
+        }
+
+        .workshop-date {
+            color: var(--bdk-gold-active);
+            font-family: "Lora", serif;
+            font-size: 24px;
+            line-height: 1.35;
+            letter-spacing: 0.08em;
+            white-space: nowrap;
+        }
+
+        .workshop-title {
+            margin: 0;
+            color: var(--bdk-white);
+            font-size: 21px;
+            line-height: 1.4;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .workshop-subtitle {
+            margin-top: 12px;
+            color: var(--bdk-gold-active);
+            font-family: "Lora", serif;
+            font-style: italic;
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .workshop-text {
+            margin-top: 30px;
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .workshop-text p {
+            margin-bottom: 18px;
+            color: var(--bdk-muted);
+        }
+
+        .workshop-text strong {
+            color: var(--bdk-gold-active);
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        /* PRICING */
+        .pricing {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+
+        .price-row {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.34);
+            color: var(--bdk-muted);
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        .price-row:first-child {
+            border-top: 1px solid rgba(185, 166, 106, 0.34);
+        }
+
+        .price-row strong {
+            color: var(--bdk-gold-active);
+            font-size: 22px;
+            font-weight: 400;
+            white-space: nowrap;
+        }
+
+        .pricing-note {
+            margin-top: 52px;
+            color: var(--bdk-muted);
+            text-align: center;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .pricing-note p {
+            margin-bottom: 18px;
+        }
+
+        footer.landing-footer {
+            padding: 78px 0 62px;
+            border-top: 1px solid rgba(185, 166, 106, 0.20);
+            color: var(--bdk-muted);
+            text-align: center;
+            background: var(--bdk-black);
+        }
+
+        .footer-logo-mark {
+            width: 58px;
+            height: 58px;
+            margin: 0 auto 26px;
+            background-color: var(--bdk-gold-active);
+            -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+            mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+            opacity: 0.92;
+        }
+
+        .footer-brand {
+            color: var(--bdk-white);
+            font-size: 15px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .footer-subtitle {
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            letter-spacing: 0.22em;
+            text-transform: lowercase;
+            margin-bottom: 34px;
+        }
+
+        .footer-contact {
+            color: var(--bdk-muted);
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 28px;
+        }
+
+        .footer-contact a {
+            color: var(--bdk-gold-active);
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: var(--bdk-white);
+            text-decoration: none;
+        }
+
+        .footer-links {
+            font-size: 12px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .footer-links a {
+            color: var(--bdk-white);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--bdk-gold-active);
+            text-decoration: none;
+        }
+
+        .footer-links span {
+            margin: 0 12px;
+            color: rgba(185, 166, 106, 0.55);
+        }
+
+        .footer-copy {
+            color: rgba(207, 200, 185, 0.55);
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 900px) {
+            .landing-hero {
+                min-height: 90vh;
+                background-position: center right;
+            }
+
+            .landing-hero-inner {
+                width: min(92vw, 680px);
+                padding-top: 90px;
+            }
+
+            .landing-hero-copy {
+                max-width: 560px;
+            }
+
+            .landing-meta {
+                display: block;
+                line-height: 2.1;
+            }
+
+            .landing-meta span {
+                display: block;
+            }
+
+            .landing-meta span + span:before {
+                content: "";
+                margin: 0;
+            }
+
+
+
+            .quick-info-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .practice-list {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .section-title:before,
+            .section-title:after {
+                width: 34px;
+                margin: 0 12px;
+            }
+
+            .workshop-row {
+                grid-template-columns: 1fr;
+                gap: 18px;
+                padding: 58px 0;
+            }
+
+            .workshop-date {
+                font-size: 22px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-hero {
+                min-height: 92vh;
+                background-position: center right;
+            }
+
+            .landing-title {
+                font-size: clamp(68px, 21vw, 102px);
+                line-height: 1.08;
+                letter-spacing: 0.08em;
+                word-spacing: 0.16em;
+            }
+
+            .landing-subtitle {
+                margin-top: 24px;
+                font-size: 13px;
+                letter-spacing: 0.22em;
+            }
+
+            .landing-lead {
+                margin-top: 36px;
+                font-size: 15px;
+                line-height: 1.8;
+            }
+
+            .landing-section {
+                padding: 88px 0;
+            }
+
+            .landing-section.compact {
+                padding: 66px 0;
+            }
+
+            .landing-section.intro-section {
+                padding-bottom: 42px;
+            }
+
+            .landing-section.after-divider {
+                padding-top: 54px;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 28px;
+            }
+
+            .text-block {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .image-band {
+                height: 145px;
+            }
+
+            .cta-image-band {
+                height: 170px;
+                margin-top: 48px;
+            }
+
+            .thread-section {
+                padding-bottom: 48px;
+            }
+
+            .thread-list {
+                font-size: 18px;
+            }
+
+            .workshop-title {
+                font-size: 18px;
+            }
+
+            .workshop-date {
+                font-size: 20px;
+            }
+
+            .price-row {
+                font-size: 15px;
+            }
+
+            .landing-hero {
+                min-height: auto;
+                display: block;
+                background: var(--bdk-black);
+            }
+
+            .landing-hero-overlay {
+                display: none;
+            }
+
+            .landing-hero-mobile-image {
+                display: block;
+                width: 100%;
+                margin-top: 56px;
+                aspect-ratio: 1200 / 630;
+                background:
+                    linear-gradient(to bottom, rgba(5, 5, 5, 0.08), rgba(5, 5, 5, 0.22)),
+                    url("/img/budokon-moc-hero.jpg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+            }
+
+            .landing-hero-inner {
+                width: min(88vw, 430px);
+                padding-top: 42px;
+                padding-bottom: 74px;
+            }
+
+            .landing-hero-copy {
+                max-width: none;
+            }
+
+            .landing-hero-facts {
+                margin-top: 30px;
+                font-size: 12px;
+                line-height: 1.9;
+                letter-spacing: 0.10em;
+            }
+
+            .landing-button {
+                width: 100%;
+                max-width: 360px;
+                text-align: center;
+                padding: 15px 20px;
+                letter-spacing: 0.18em;
+            }
+
+            .quick-info-row {
+                padding: 20px 0;
+            }
+
+            .quick-info-label {
+                font-size: 11px;
+            }
+
+            .practice-list {
+                font-size: 13px;
+                letter-spacing: 0.07em;
+            }
+
+            .price-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .price-row strong {
+                justify-self: start;
+            }
+        }
+
+        @media (max-width: 380px) {
+            .landing-title {
+                font-size: clamp(58px, 19vw, 82px);
+            }
+
+            .section-title {
+                font-size: 16px;
+                letter-spacing: 0.22em;
+            }
+
+            .section-title:before,
+            .section-title:after {
+                width: 22px;
+                margin: 0 8px;
+            }
+        }
+    </style>
+
+</head>
+
+<body id="page-top" class="budokon-moc-page">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Meni <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/">
+                    BUDOKON <span class="light">SLOVENIJA</span>
+                </a>
+            </div>
+
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="/#budokon">Budokon</a>
+                    </li>
+                    <li class="active">
+                        <a href="/budokon-moc/">Delavnice</a>
+                    </li>
+                    <li>
+                        <a href="/#vteku">Urnik</a>
+                    </li>
+                    <li>
+                        <a href="/#program">Program</a>
+                    </li>
+                    <li>
+                        <a href="/#cenik">Cenik</a>
+                    </li>
+                    <li>
+                        <a href="/#kontakt">Kontakt</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="landing-hero">
+        <div class="landing-hero-overlay"></div>
+        <div class="landing-hero-mobile-image" role="img" aria-label="Budokon moč — poletna gibalna serija"></div>
+
+        <div class="landing-hero-inner">
+            <div class="landing-hero-copy">
+                <h1 class="landing-title">Budokon moč</h1>
+                <div class="landing-subtitle">poletna gibalna serija</div>
+
+                <div class="landing-lead">
+                    <p>Moč nikakor ni samo sila. Je inteligenca.</p>
+                    <p>Je psihofizična kapaciteta, ki jo krepimo.</p>
+                </div>
+
+                <div class="landing-meta">
+                    <span>4 delavnice</span>
+                    <span>julij–avgust</span>
+                    <span>Ljubljana</span>
+                </div>
+
+                <div class="landing-hero-facts">
+                    <div><strong>Začetek:</strong> 13. 7. 2026</div>
+                    <div><strong>Termin:</strong> vsak drugi ponedeljek, 18:00–20:00</div>
+                    <div><strong>Lokacija:</strong> BTC, Leskoškova, Ljubljana</div>
+                    <div><strong>Sklop delavnic:</strong> 129 €</div>
+                </div>
+
+                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Intro -->
+    <section class="landing-section compact intro-section">
+        <div class="landing-container">
+            <div class="text-block">
+                <p>Poletna serija Budokon delavnic raziskuje moč skozi štiri različne teme, ki se posvetijo ključnim segmentom Budokona.</p>
+                <p>Srečali se bomo s stabilnostjo, mobilnostjo, mejami in tokom.</p>
+                <p>Budokon združuje živalsko gibanje, BDK jogo, borilne veščine, mobilnost in kalisteniko v disciplino za sodobnega človeka.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- Za koga -->
+    <section class="landing-section after-divider">
+        <div class="landing-container">
+            <h2 class="section-title">Za koga</h2>
+
+            <div class="text-block">
+                <p>Serija delavnic je primerna za vse, ki želite poglabljati stik s psihofizično močjo in zapustiti idejo, da morate za tak tip prakse že priti močni, agilni ali fleksibilni.</p>
+
+                <p>Budokon gradimo iz temeljev. Praksa omogoča prilagoditve, postopnost in raziskovanje lastnih kapacitet. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje.</p>
+
+                <p><strong>Predznanje Budokona ni pogoj.</strong></p>
+
+                <p>Dobrodošla je pripravljenost za raziskovanje onkraj znanih gibalnih vzorcev. Praksa vabi začetniški um — vedno znova.</p>
+            </div>
+
+            <div class="landing-inline-cta">
+                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- Termini in cena -->
+    <section class="landing-section compact after-divider">
+        <div class="landing-container">
+            <h2 class="section-title">Termini in cena</h2>
+
+            <div class="quick-info">
+                <div class="quick-info-row">
+                    <div class="quick-info-label">Termini</div>
+                    <div class="quick-info-value">13. 7. | 27. 7. | 10. 8. | 24. 8. 2026</div>
+                </div>
+
+                <div class="quick-info-row">
+                    <div class="quick-info-label">Ura</div>
+                    <div class="quick-info-value">18:00–20:00</div>
+                </div>
+
+                <div class="quick-info-row">
+                    <div class="quick-info-label">Lokacija</div>
+                    <div class="quick-info-value">BTC, Leskoškova, Ljubljana</div>
+                </div>
+
+                <div class="quick-info-row">
+                    <div class="quick-info-label">Cena</div>
+                    <div class="quick-info-value">Sklop delavnic: 129 €<br>Posamezne delavnice: 39 €, le v primeru prostih mest.</div>
+                </div>
+            </div>
+
+            <div class="landing-inline-cta">
+                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-band band-one" aria-label="Budokon gibanje"></section>
+
+    <!-- Kaj bomo vadili -->
+    <section class="landing-section compact">
+        <div class="landing-container wide">
+            <h2 class="section-title">Kaj bomo vadili</h2>
+
+            <div class="practice-list">
+                <span>animal locomotion</span>
+                <span>BDK mobility</span>
+                <span>kalisteniko</span>
+                <span>prehode iz tal</span>
+                <span>stabilnost sklepov</span>
+                <span>borilne elemente brez kontakta</span>
+                <span>Budokon joga tranzicije</span>
+                <span>flow</span>
+            </div>
+
+            <div class="practice-note">
+                <p>Poudarek ni na izvedbi popolne forme, ampak na gradnji kapacitete: moči, mobilnosti, stabilnosti, fokusa in toka.</p>
+                <p>Prakso gradimo postopno, z možnostjo prilagoditev.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="gold-divider"></div>
+
+    <!-- Rdeča nit -->
+    <section class="landing-section thread-section">
+        <div class="landing-container">
+            <h2 class="section-title">Opis delavnic</h2>
+
+            <div class="practice-note">
+                <p>Delavnice potekajo <strong> vsak drugi ponedeljek od 18:00 do 20:00</strong>.</p>
+                <p>Lokacija: BTC, Leskoškova, Ljubljana.</p>
+                <p>Podlog ne potrebujete, vadimo bosi, na tatami podlogah.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delavnice -->
+    <section class="landing-section after-thread">
+        <div class="landing-container wide">
+            <div class="workshops">
+
+                <article class="workshop-row">
+                    <div class="workshop-date">13. 7. 2026</div>
+
+                    <div>
+                        <h3 class="workshop-title">Moč temeljev</h3>
+                        <div class="workshop-subtitle">stabilnost kot jedro moči</div>
+
+                        <div class="workshop-text">
+                            <p>Raziskujemo temelje Budokon tehnike skozi delo s tlemi in instinktivno gibanje, ki omogočata moč v premiku.</p>
+                            <p><strong>Gibalna vsebina:</strong><br>
+                            Tehnična baza za stabilno gibanje skozi animal locomotion in kalisteniko.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="workshop-row">
+                    <div class="workshop-date">27. 7. 2026</div>
+
+                    <div>
+                        <h3 class="workshop-title">Moč mobilnosti</h3>
+                        <div class="workshop-subtitle">fleksibilnost je samo ena plat</div>
+
+                        <div class="workshop-text">
+                            <p>Mobilnost kot telesna inteligenca: sposobnost nadzorovanih prehodov, prilagajanja v trenutku in raziskovanja, kaj dejansko omogoča gibalno svobodo.</p>
+                            <p>Fleksibilnost je samo ena plat. Za mobilnost potrebujemo tudi moč.</p>
+                            <p><strong>Gibalna vsebina:</strong><br>
+                            Raziskovanje kapacitete gibanja sklepov skozi BDK mobility verigo.</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="workshop-row">
+                    <div class="workshop-date">10. 8. 2026</div>
+
+                    <div>
+                        <h3 class="workshop-title">Moč meja</h3>
+                        <div class="workshop-subtitle">stik z odločnostjo</div>
+
+                        <div class="workshop-text">
+                            <p>Delavnica na temo jasnosti, fokusa, discipline in namere ostati povezan tudi v bolj intenzivnih okoliščinah.</p>
+                            <p><strong>Gibalna vsebina:</strong><br>
+                            Osnove mešanih borilnih veščin, udarci z rokami in nogami ter orientacijske prakse, ki podpirajo razumevanje brazilskega jiu-jitsuja. Brez kontakta!</p>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="workshop-row">
+                    <div class="workshop-date">24. 8. 2026</div>
+
+                    <div>
+                        <h3 class="workshop-title">Tok moči</h3>
+                        <div class="workshop-subtitle">integracija moči v gibanje in življenje</div>
+
+                        <div class="workshop-text">
+                            <p>Povezovanje stabilnosti, mobilnosti in odločnosti v zavesten tok.</p>
+                            <p>Raziskujemo odnos z močjo, ki ga ne puščamo samo na tatamiju, ampak ga prenašamo iz prakse v vsakdan.</p>
+                            <p><strong>Gibalna vsebina:</strong><br>
+                            Budokon joga tranzicije in reprezentativni elementi skupaj z ostalimi segmenti preteklih delavnic.</p>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="image-band band-two" aria-label="Budokon poletna serija"></section>
+
+    <!-- Prijava -->
+    <section id="prijava" class="landing-section">
+        <div class="landing-container">
+            <h2 class="section-title">Prijava</h2>
+
+            <div class="pricing">
+      
+
+                <div class="price-row">
+                    <span>Sklop delavnic</span>
+                    <strong>129 €</strong>
+                </div>
+
+                <div class="price-row">
+                    <span>Posamezne delavnice</span>
+                    <strong>39 €</strong>
+                </div>
+            </div>
+
+            <div class="pricing-note">
+                <p>Posamezne delavnice so možne le v primeru prostih mest.</p>
+                <p>Mesto v skupini je zagotovljeno s plačilom, ne zgolj s prijavo.</p>
+            </div>
+
+            <div class="signup-steps">
+                <p><strong>Kako poteka prijava</strong></p>
+                <ol>
+                    <li>Izpolnite prijavni obrazec.</li>
+                    <li>Prejmete navodila za plačilo.</li>
+                    <li>Mesto je potrjeno s plačilom.</li>
+                </ol>
+                <p>S plačilom rezervirate mesto v omejeni skupini. Zaradi majhnega števila mest nadomeščanja in vračila za sklop niso možna.</p>
+            </div>
+        </div>
+
+        <div class="cta-image-band" aria-label="Prijava na Budokon moč">
+ <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+        </div>
+    </section>
+
+    <footer class="landing-footer">
+        <div class="footer-logo-mark" aria-label="Budokon Slovenija logo"></div>
+
+        <div class="footer-brand">BUDOKON SLOVENIJA</div>
+        <div class="footer-subtitle">mešane gibalne umetnosti</div>
+
+        <div class="footer-contact">
+            Sanja Zalar Gostimirović | Sanja Somatika<br>
+            <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>
+        </div>
+
+        <div class="footer-links">
+            <a href="/">Domov</a>
+            <span>·</span>
+            <a href="https://www.instagram.com/budokonslovenija/" target="_blank" rel="noopener">Instagram</a>
+        </div>
+
+        <div class="footer-copy">© 2026 Budokon Slovenija</div>
+    </footer>
+
+    <script src="/vendor/jquery/jquery.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="/js/grayscale.min.js"></script>
+
+</body>
+
+</html>
