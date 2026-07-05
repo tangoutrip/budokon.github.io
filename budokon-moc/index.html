@@ -102,6 +102,11 @@
             align-items: center;
         }
 
+
+        .landing-hero-mobile-image {
+            display: none;
+        }
+
         .landing-hero-overlay {
             position: absolute;
             inset: 0;
@@ -201,6 +206,106 @@
             background: var(--bdk-gold-active);
             border-color: var(--bdk-gold-active);
             text-decoration: none;
+        }
+
+
+        /* CONVERSION ADDITIONS */
+        .landing-hero-facts {
+            margin-top: 34px;
+            padding-left: 0;
+            color: var(--bdk-white);
+            font-size: 14px;
+            line-height: 2.0;
+            letter-spacing: 0.13em;
+            text-transform: uppercase;
+        }
+
+        .landing-hero-facts strong {
+            color: var(--bdk-gold-active);
+            font-weight: 400;
+        }
+
+        .landing-inline-cta {
+            margin-top: 44px;
+            text-align: center;
+        }
+
+        .quick-info {
+            max-width: 740px;
+            margin: 0 auto;
+            border-top: 1px solid rgba(185, 166, 106, 0.38);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.38);
+        }
+
+        .quick-info-row {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 44px;
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.20);
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .quick-info-row:last-child {
+            border-bottom: 0;
+        }
+
+        .quick-info-label {
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .quick-info-value {
+            color: var(--bdk-white);
+        }
+
+        .practice-list {
+            max-width: 760px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px 54px;
+            color: var(--bdk-white);
+            font-size: 15px;
+            line-height: 1.8;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .practice-list span {
+            display: block;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.22);
+        }
+
+        .signup-steps {
+            max-width: 640px;
+            margin: 50px auto 0;
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .signup-steps ol {
+            display: inline-block;
+            margin: 18px auto 0;
+            padding-left: 22px;
+            text-align: left;
+        }
+
+        .signup-steps li {
+            margin-bottom: 10px;
+            color: var(--bdk-muted);
+        }
+
+        .signup-steps strong {
+            color: var(--bdk-white);
+            font-weight: 400;
         }
 
         /* GENERAL SECTIONS */
@@ -573,6 +678,18 @@
                 margin: 0;
             }
 
+
+
+            .quick-info-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .practice-list {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
             .section-title:before,
             .section-title:after {
                 width: 34px;
@@ -668,7 +785,806 @@
             .price-row {
                 font-size: 15px;
             }
+
+            .landing-hero {
+                min-height: auto;
+                display: block;
+                background: var(--bdk-black);
+            }
+
+            .landing-hero-overlay {
+                display: none;
+            }
+
+            .landing-hero-mobile-image {
+                display: block;
+                width: 100%;
+                margin-top: 56px;
+                aspect-ratio: 1200 / 630;
+                background:
+                    linear-gradient(to bottom, rgba(5, 5, 5, 0.08), rgba(5, 5, 5, 0.22)),
+                    url("/img/budokon-moc-hero.jpg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+            }
+
+            .landing-hero-inner {
+                width: min(88vw, 430px);
+                padding-top: 42px;
+                padding-bottom: 74px;
+            }
+
+            .landing-hero-copy {
+                max-width: none;
+            }
+
+            .landing-hero-facts {
+                margin-top: 30px;
+                font-size: 12px;
+                line-height: 1.9;
+                letter-spacing: 0.10em;
+            }
+
+            .landing-button {
+                width: 100%;
+                max-width: 360px;
+                text-align: center;
+                padding: 15px 20px;
+                letter-spacing: 0.18em;
+            }
+
+            .quick-info-row {
+                padding: 20px 0;
+            }
+
+            .quick-info-label {
+                font-size: 11px;
+            }
+
+            .practice-list {
+                font-size: 13px;
+                letter-spacing: 0.07em;
+            }
+
+            .price-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+
+            .price-row strong {
+                justify-self: start;
+            }
         }
+
+        @media (max-width: 380px) {
+            .landing-title {
+                font-size: clamp(58px, 19vw, 82px);
+            }
+
+            .section-title {
+                font-size: 16px;
+                letter-spacing: 0.22em;
+            }
+
+            .section-title:before,
+            .section-title:after {
+                width: 22px;
+                margin: 0 8px;
+            }
+        }
+
+        /* REFINED TEST VERSION — cleaner conversion layout */
+        .landing-section.after-divider,
+        .terms-section {
+            padding-top: 88px;
+        }
+
+        .landing-hero-facts {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+            margin-top: 30px;
+            color: var(--bdk-muted);
+            font-size: 12px;
+            line-height: 1.8;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .landing-hero-facts span {
+            display: inline-block;
+        }
+
+        .landing-hero-facts span + span:before {
+            content: "|";
+            color: var(--bdk-gold-active);
+            margin: 0 14px;
+        }
+
+        .landing-hero-facts strong {
+            color: var(--bdk-gold-active);
+            font-weight: 400;
+        }
+
+        .section-intro {
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+
+        .quick-info {
+            max-width: 740px;
+            border-top: 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.26);
+        }
+
+        .quick-info-row {
+            border-top: 1px solid rgba(185, 166, 106, 0.22);
+            border-bottom: 0;
+        }
+
+        .availability-note {
+            margin-top: 34px;
+            font-size: 15px;
+        }
+
+        .practice-overview {
+            max-width: 760px;
+            margin: 0 auto;
+        }
+
+        .signup-steps {
+            max-width: 640px;
+            margin: 0 auto;
+            font-size: 16px;
+            line-height: 2;
+        }
+
+        .signup-steps ol {
+            margin: 24px auto 34px;
+        }
+
+        .signup-steps p {
+            margin-bottom: 16px;
+        }
+
+        @media (max-width: 900px) {
+            .landing-hero-facts {
+                display: block;
+            }
+
+            .landing-hero-facts span {
+                display: block;
+            }
+
+            .landing-hero-facts span + span:before {
+                content: "";
+                margin: 0;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-section.after-divider,
+            .terms-section {
+                padding-top: 72px;
+            }
+
+            .section-intro {
+                margin-bottom: 38px;
+            }
+
+            .signup-steps {
+                font-size: 15px;
+            }
+        }
+
+
+        /* LIVE CLEANUP — final conversion polish */
+        .landing-section.after-divider {
+            padding-top: 88px;
+        }
+
+        .gold-divider {
+            margin: 0 auto;
+        }
+
+        .section-title {
+            margin-bottom: 44px;
+        }
+
+        .terms-section .section-title,
+        .thread-section .section-title,
+        #prijava .section-title {
+            margin-bottom: 42px;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 46px;
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        .quick-info {
+            max-width: 760px;
+            margin: 0 auto;
+            border-top: 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.26);
+        }
+
+        .quick-info-row {
+            grid-template-columns: 190px 1fr;
+            gap: 38px;
+            padding: 21px 0;
+            border-top: 1px solid rgba(185, 166, 106, 0.22);
+            border-bottom: 0;
+            font-size: 16px;
+        }
+
+        .quick-info-label {
+            font-size: 12px;
+        }
+
+        .image-band.band-one {
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.36), rgba(5, 5, 5, 0.18)),
+                url("/img/budokon-moc-pas-1.jpg");
+            background-position: center;
+        }
+
+        .practice-overview {
+            max-width: 790px;
+            margin: 0 auto;
+        }
+
+        .practice-overview p {
+            margin-bottom: 20px;
+        }
+
+        .signup-steps {
+            max-width: 860px;
+            margin: 0 auto;
+            color: var(--bdk-muted);
+            font-size: 18px;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .signup-steps ol {
+            display: block;
+            max-width: 620px;
+            margin: 26px auto 40px;
+            padding-left: 34px;
+            text-align: left;
+        }
+
+        .signup-steps li {
+            margin-bottom: 12px;
+            color: var(--bdk-white);
+        }
+
+        .signup-steps p {
+            margin-bottom: 14px;
+        }
+
+        .signup-steps strong {
+            color: var(--bdk-white);
+            font-weight: 400;
+        }
+
+        @media (max-width: 900px) {
+            .quick-info-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-section.after-divider,
+            .terms-section {
+                padding-top: 72px;
+            }
+
+            .section-intro {
+                margin-bottom: 36px;
+                font-size: 15px;
+            }
+
+            .quick-info-row {
+                font-size: 15px;
+            }
+
+            .signup-steps {
+                font-size: 16px;
+                line-height: 1.9;
+            }
+
+            .signup-steps ol {
+                max-width: 320px;
+                padding-left: 28px;
+            }
+        }
+
+
+        /* FINAL LIVE POLISH — spacing, navigation, tables, mobile */
+        .navbar-custom .nav li.active a,
+        .navbar-custom .nav li.active a:hover,
+        .navbar-custom .nav li.active a:focus,
+        .navbar-custom .nav li a:hover,
+        .navbar-custom .nav li a:focus {
+            background: transparent !important;
+            color: var(--bdk-gold-active) !important;
+        }
+
+        .navbar-custom .nav li.active {
+            background: transparent !important;
+        }
+
+        .landing-section {
+            padding-top: 124px;
+            padding-bottom: 124px;
+        }
+
+        .landing-section.compact {
+            padding-top: 104px;
+            padding-bottom: 104px;
+        }
+
+        .landing-section.after-divider,
+        .terms-section,
+        .thread-section,
+        #prijava {
+            padding-top: 112px;
+        }
+
+        .landing-section.after-thread {
+            padding-top: 72px;
+        }
+
+        .section-title {
+            margin-bottom: 62px !important;
+            font-size: 26px;
+            line-height: 1.45;
+            letter-spacing: 0.34em;
+        }
+
+        .terms-section .section-title,
+        .thread-section .section-title,
+        #prijava .section-title {
+            margin-bottom: 62px !important;
+        }
+
+        .terms-section .section-intro {
+            max-width: 840px;
+            margin-bottom: 72px;
+            font-size: 18px;
+            line-height: 2.05;
+        }
+
+        .quick-info {
+            width: min(760px, 84vw);
+            max-width: none;
+            margin: 0 auto 58px;
+            border-top: 1px solid rgba(185, 166, 106, 0.24);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+        }
+
+        .quick-info-row {
+            grid-template-columns: 200px 1fr;
+            gap: 48px;
+            padding: 25px 0;
+            font-size: 17px;
+            line-height: 1.85;
+        }
+
+        .quick-info-label {
+            font-size: 12px;
+            letter-spacing: 0.24em;
+        }
+
+        .terms-section .landing-inline-cta {
+            width: min(760px, 84vw);
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .signup-steps {
+            max-width: 960px;
+            margin: 0 auto;
+            font-size: 19px;
+            line-height: 2.05;
+            text-align: center;
+        }
+
+        .signup-steps ol {
+            display: block;
+            max-width: none;
+            margin: 0 auto 52px;
+            padding-left: 0;
+            list-style-position: inside;
+            text-align: center;
+        }
+
+        .signup-steps li {
+            margin-bottom: 14px;
+            color: var(--bdk-white);
+        }
+
+        .signup-steps p {
+            max-width: 980px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 18px;
+            color: var(--bdk-muted);
+        }
+
+        .footer-logo-mark {
+            width: 82px;
+            height: 82px;
+            margin-bottom: 32px;
+        }
+
+        @media (max-width: 900px) {
+            .landing-section,
+            .landing-section.compact,
+            .landing-section.after-divider,
+            .terms-section,
+            .thread-section,
+            #prijava {
+                padding-top: 88px;
+                padding-bottom: 88px;
+            }
+
+            .section-title {
+                font-size: 22px;
+                letter-spacing: 0.28em;
+                margin-bottom: 48px !important;
+            }
+
+            .terms-section .section-intro {
+                margin-bottom: 52px;
+                font-size: 16px;
+            }
+
+            .quick-info {
+                width: min(84vw, 620px);
+                margin-bottom: 46px;
+            }
+
+            .quick-info-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+                font-size: 16px;
+            }
+
+            .terms-section .landing-inline-cta {
+                width: min(84vw, 620px);
+            }
+
+            .signup-steps {
+                font-size: 17px;
+                line-height: 1.95;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-section,
+            .landing-section.compact,
+            .landing-section.after-divider,
+            .terms-section,
+            .thread-section,
+            #prijava {
+                padding-top: 74px;
+                padding-bottom: 74px;
+            }
+
+            .section-title {
+                font-size: 19px;
+                letter-spacing: 0.22em;
+                margin-bottom: 40px !important;
+            }
+
+            .section-title:before,
+            .section-title:after {
+                width: 24px;
+                margin: 0 10px;
+            }
+
+            .terms-section .section-intro {
+                margin-bottom: 42px;
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .quick-info,
+            .terms-section .landing-inline-cta {
+                width: min(88vw, 430px);
+            }
+
+            .quick-info-row {
+                padding: 20px 0;
+                font-size: 15px;
+            }
+
+            .signup-steps {
+                width: min(88vw, 430px);
+                font-size: 16px;
+                line-height: 1.9;
+            }
+
+            .signup-steps ol {
+                margin-bottom: 38px;
+            }
+
+            .footer-logo-mark {
+                width: 72px;
+                height: 72px;
+            }
+        }
+
+
+        /* FINAL POLISH — spacing, headings and workshop CTA */
+        .section-title {
+            letter-spacing: 0.24em !important;
+        }
+
+        .practice-description-section {
+            padding-bottom: 46px !important;
+        }
+
+        .practice-description-section .section-title {
+            margin-bottom: 50px !important;
+        }
+
+        .landing-section.after-thread {
+            padding-top: 34px !important;
+        }
+
+        .workshop-row:last-child {
+            border-bottom: 0 !important;
+            padding-bottom: 58px;
+        }
+
+        .workshop-cta-band {
+            margin-top: 0;
+        }
+
+        @media (max-width: 900px) {
+            .section-title {
+                letter-spacing: 0.20em !important;
+            }
+
+            .practice-description-section {
+                padding-bottom: 38px !important;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 28px !important;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .section-title {
+                letter-spacing: 0.16em !important;
+            }
+
+            .practice-description-section {
+                padding-bottom: 30px !important;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 22px !important;
+            }
+
+            .workshop-row:last-child {
+                padding-bottom: 46px;
+            }
+        }
+
+
+        /* FINAL LAYOUT ADJUSTMENT — CTA image placement and calmer spacing */
+        .landing-section {
+            padding-top: 96px !important;
+            padding-bottom: 96px !important;
+        }
+
+        .landing-section.compact {
+            padding-top: 88px !important;
+            padding-bottom: 88px !important;
+        }
+
+        .landing-section.after-divider,
+        .terms-section,
+        .thread-section,
+        #prijava {
+            padding-top: 96px !important;
+            padding-bottom: 96px !important;
+        }
+
+        .landing-section.after-thread {
+            padding-top: 34px !important;
+            padding-bottom: 72px !important;
+        }
+
+        .section-title {
+            margin-bottom: 50px !important;
+        }
+
+        .terms-section .section-intro {
+            margin-bottom: 50px !important;
+        }
+
+        .quick-info {
+            margin-bottom: 0 !important;
+        }
+
+        .practice-description-section {
+            padding-bottom: 34px !important;
+        }
+
+        .practice-description-section .section-title {
+            margin-bottom: 42px !important;
+        }
+
+        .practice-overview p:last-child {
+            margin-bottom: 0;
+        }
+
+        .workshop-row:last-child {
+            padding-bottom: 0 !important;
+        }
+
+        .about-cta-band {
+            margin-top: 0 !important;
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.62), rgba(5, 5, 5, 0.30)),
+                url("/img/budokon-moc-pas-3.jpg") !important;
+            background-position: center !important;
+        }
+
+        .final-cta-band {
+            margin-top: 56px !important;
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.30)),
+                url("/img/budokon-moc-pas-1.jpg") !important;
+            background-position: center !important;
+        }
+
+        #prijava {
+            padding-bottom: 0 !important;
+        }
+
+        @media (max-width: 900px) {
+            .landing-section,
+            .landing-section.compact,
+            .landing-section.after-divider,
+            .terms-section,
+            .thread-section,
+            #prijava {
+                padding-top: 78px !important;
+                padding-bottom: 78px !important;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 28px !important;
+                padding-bottom: 58px !important;
+            }
+
+            .section-title {
+                margin-bottom: 42px !important;
+            }
+
+            .terms-section .section-intro {
+                margin-bottom: 40px !important;
+            }
+
+            .final-cta-band {
+                margin-top: 44px !important;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-section,
+            .landing-section.compact,
+            .landing-section.after-divider,
+            .terms-section,
+            .thread-section,
+            #prijava {
+                padding-top: 66px !important;
+                padding-bottom: 66px !important;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 22px !important;
+                padding-bottom: 48px !important;
+            }
+
+            .section-title {
+                margin-bottom: 34px !important;
+            }
+
+            .terms-section .section-intro {
+                margin-bottom: 34px !important;
+            }
+
+            .cta-image-band {
+                height: 170px !important;
+            }
+
+            .final-cta-band {
+                margin-top: 38px !important;
+            }
+        }
+
+
+        /* FINAL CTA PLACEMENT — post-workshop image CTA, text-only signup CTA and footer divider */
+        .post-workshop-cta-band {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.30)),
+                url("/img/budokon-moc-pas-1.jpg") !important;
+            background-position: center !important;
+        }
+
+        #prijava {
+            padding-top: 96px !important;
+            padding-bottom: 96px !important;
+        }
+
+        #prijava .text-link-cta {
+            margin-top: 44px;
+            margin-bottom: 0;
+            color: var(--bdk-white);
+            font-size: 19px;
+            line-height: 1.9;
+        }
+
+        #prijava .text-link-cta a {
+            color: var(--bdk-gold-active);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.62);
+            padding-bottom: 2px;
+        }
+
+        #prijava .text-link-cta a:hover,
+        #prijava .text-link-cta a:focus {
+            color: var(--bdk-white);
+            border-bottom-color: var(--bdk-white);
+        }
+
+        .full-width-gold-divider {
+            width: 100%;
+            height: 1px;
+            background: rgba(185, 166, 106, 0.48);
+        }
+
+        @media (max-width: 900px) {
+            #prijava {
+                padding-top: 78px !important;
+                padding-bottom: 78px !important;
+            }
+
+            #prijava .text-link-cta {
+                margin-top: 36px;
+                font-size: 17px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            #prijava {
+                padding-top: 66px !important;
+                padding-bottom: 66px !important;
+            }
+
+            #prijava .text-link-cta {
+                margin-top: 32px;
+                font-size: 16px;
+            }
+        }
+
+
     </style>
 
 </head>
@@ -715,6 +1631,7 @@
     <!-- Hero -->
     <header class="landing-hero">
         <div class="landing-hero-overlay"></div>
+        <div class="landing-hero-mobile-image" role="img" aria-label="Budokon moč — poletna gibalna serija"></div>
 
         <div class="landing-hero-inner">
             <div class="landing-hero-copy">
@@ -722,17 +1639,23 @@
                 <div class="landing-subtitle">poletna gibalna serija</div>
 
                 <div class="landing-lead">
-                    <p>Moč nikakor ni samo sila. Je inteligenca.</p>
-                    <p>Je psihofizična kapaciteta, ki jo krepimo.</p>
+                    <p>Moč ni samo sila, je kapaciteta.</p>
+                    <p>Psihofizična inteligenca, ki jo krepimo.</p>
                 </div>
 
                 <div class="landing-meta">
                     <span>4 delavnice</span>
                     <span>julij–avgust</span>
-                    <span>Ljubljana</span>
+                    <span>Ljubljana BTC</span>
                 </div>
 
-                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Prijava na serijo</a>
+                <div class="landing-hero-facts">
+                    <span><strong>Začetek:</strong> 13. 7.</span>
+                    <span>vsak 2. ponedeljek</span>
+                    <span>18:00–20:00</span>
+                </div>
+
+                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
             </div>
         </div>
     </header>
@@ -756,28 +1679,65 @@
             <h2 class="section-title">Za koga</h2>
 
             <div class="text-block">
-                <p>Serija delavnic je primerna za vse, ki želite poglabljati stik s psihofizično močjo in zapustiti idejo, da morate za tak tip prakse že priti močni, agilni ali fleksibilni.</p>
-
-                <p>Budokon gradimo iz temeljev. Praksa omogoča prilagoditve, postopnost in raziskovanje lastnih kapacitet. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje.</p>
+                <p>Serija delavnic je primerna za vas, če želite poglabljati stik s psihofizično močjo in zapustiti idejo, da morate za tak tip prakse že priti močni, agilni ali fleksibilni.</p>
 
                 <p><strong>Predznanje Budokona ni pogoj.</strong></p>
 
-                <p>Dobrodošla je pripravljenost za raziskovanje onkraj znanih gibalnih vzorcev. Praksa vabi začetniški um - vedno znova.</p>
+                <p>Budokon gradimo iz temeljev. Praksa omogoča prilagoditve, postopnost in raziskovanje lastnih kapacitet. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje.</p>
+
+                <p>Dobrodošla je pripravljenost za raziskovanje onkraj znanih gibalnih vzorcev. Praksa vabi začetniški um, vedno znova.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="cta-image-band about-cta-band" aria-label="Rezervacija mesta za Budokon moč">
+        <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+    </div>
+
+    <!-- Termini in cena -->
+    <section class="landing-section compact terms-section">
+        <div class="landing-container">
+            <h2 class="section-title">Termini in cena</h2>
+
+            <div class="text-block section-intro">
+                <p>Delavnice potekajo vsak drugi ponedeljek od 18:00 do 20:00.</p>
+                <p>Podlog ne potrebujete, vadimo bosi, na tatamijih.<br>Potrebujete športna oblačila, ki vam pokrijejo ramena in kolena.</p>
+            </div>
+
+            <div class="quick-info">
+                <div class="quick-info-row">
+                    <div class="quick-info-label">Termini</div>
+                    <div class="quick-info-value">13. 7. | 27. 7. | 10. 8. | 24. 8. 2026</div>
+                </div>
+
+                <div class="quick-info-row">
+                    <div class="quick-info-label">Ura</div>
+                    <div class="quick-info-value">18:00–20:00</div>
+                </div>
+
+                <div class="quick-info-row">
+                    <div class="quick-info-label">Lokacija</div>
+                    <div class="quick-info-value">BTC, Leskoškova, Ljubljana</div>
+                </div>
+
+                <div class="quick-info-row">
+                    <div class="quick-info-label">Cena</div>
+                    <div class="quick-info-value">Sklop delavnic: 129 €<br>Posamezne delavnice: 39 €</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="image-band band-one" aria-label="Budokon gibanje"></section>
-
-    <!-- Rdeča nit -->
-    <section class="landing-section thread-section">
+    <!-- Kaj vadimo | opis delavnic -->
+    <section class="landing-section thread-section practice-description-section">
         <div class="landing-container">
-            <h2 class="section-title">Opis delavnic</h2>
+            <h2 class="section-title">Kaj vadimo | opis delavnic</h2>
 
-            <div class="practice-note">
-                <p>Delavnice potekajo <strong> vsak drugi ponedeljek od 18:00 do 20:00</strong>.</p>
-                <p>Lokacija: BTC, Leskoškova, Ljubljana.</p>
-                <p>Podlog ne potrebujete, vadimo bosi, na tatami podlogah.</p>
+            <div class="text-block practice-overview">
+                <p>Vadili bomo animal locomotion, BDK mobility, kalisteniko, delo s tlemi, borilne elemente brez kontakta in Budokon joga tranzicije.</p>
+                <p>Poudarek prakse ni na popolni izvedbi forme, ampak na gradnji kapacitete: moči, mobilnosti, stabilnosti, fokusa, stika s telesom in prostorom.</p>
+                <p>Prakso gradimo postopno, z možnostjo prilagoditev.</p>
             </div>
         </div>
     </section>
@@ -853,38 +1813,31 @@
         </div>
     </section>
 
-    <section class="image-band band-two" aria-label="Budokon poletna serija"></section>
+    <div class="cta-image-band final-cta-band post-workshop-cta-band" aria-label="Rezervacija mesta za Budokon moč">
+        <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+    </div>
 
-    <!-- Prijava -->
+    <!-- Potek prijave -->
     <section id="prijava" class="landing-section">
-        <div class="landing-container">
-            <h2 class="section-title">Prijava</h2>
+        <div class="landing-container wide">
+            <h2 class="section-title">Potek prijave</h2>
 
-            <div class="pricing">
-      
-
-                <div class="price-row">
-                    <span>Cena sklopa delavnic</span>
-                    <strong>129 €</strong>
-                </div>
-
-                <div class="price-row">
-                    <span>Posamezna delavnica</span>
-                    <strong>39 €</strong>
-                </div>
-            </div>
-
-            <div class="pricing-note">
+            <div class="signup-steps">
+                <ol>
+                    <li>Izpolnite prijavni obrazec.</li>
+                    <li>Prejmete račun za rezervacijo mesta.</li>
+                    <li>Po plačilu prejmete vse informacije.</li>
+                </ol>
 
                 <p>Število mest je omejeno, zagotovite si ga šele s plačilom, ne zgolj s prijavo.</p>
                 <p>Za cikel ni nadomeščanj in vračil, ker s plačilom rezervirate mesto v omejeni skupini.</p>
+
+                <p class="text-link-cta">Če je to praksa za vas, lahko rezervirate mesto v skupini <a href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">tukaj</a>.</p>
             </div>
         </div>
-
-        <div class="cta-image-band" aria-label="Prijava na Budokon moč">
- <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Prijava na Budokon moč</a>
-        </div>
     </section>
+
+    <div class="full-width-gold-divider" aria-hidden="true"></div>
 
     <footer class="landing-footer">
         <div class="footer-logo-mark" aria-label="Budokon Slovenija logo"></div>
