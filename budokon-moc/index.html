@@ -47,1544 +47,968 @@
     <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico"/>
 
     <style>
-        :root {
-            --bdk-black: #050505;
-            --bdk-charcoal: #0b0b0b;
-            --bdk-white: #f4f1ea;
-            --bdk-muted: #cfc8b9;
-            --bdk-gold-fallback: #b9a66a;
-            --bdk-gold-active: var(--bdk-gold, var(--bdk-gold-fallback));
-        }
-
-        html,
-        body {
-            background: var(--bdk-black);
-            color: var(--bdk-white);
-        }
-
-        body.budokon-moc-page {
-            font-family: "Montserrat", "Futura", sans-serif;
-            background: var(--bdk-black);
-            color: var(--bdk-white);
-        }
-
-        .navbar-custom {
-            background: rgba(0, 0, 0, 0.94);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.28);
-        }
-
-        .navbar-custom .navbar-brand,
-        .navbar-custom .nav li a {
-            color: var(--bdk-white);
-        }
-
-        .navbar-custom .nav li a:hover,
-        .navbar-custom .nav li.active a {
-            color: var(--bdk-gold-active);
-        }
-
-        .navbar-custom .navbar-brand .light {
-            color: var(--bdk-muted);
-        }
-
-        /* HERO — FULL WIDTH IMAGE */
-        .landing-hero {
-            position: relative;
-            min-height: 100vh;
-            padding: 0;
-            overflow: hidden;
-            background:
-                linear-gradient(to right, rgba(5, 5, 5, 0.74) 0%, rgba(5, 5, 5, 0.46) 42%, rgba(5, 5, 5, 0.12) 100%),
-                url("/img/budokon-moc-hero.jpg");
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-        }
-
-
-        .landing-hero-mobile-image {
-            display: none;
-        }
-
-        .landing-hero-overlay {
-            position: absolute;
-            inset: 0;
-            z-index: 1;
-            pointer-events: none;
-            background:
-                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 68%),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.28));
-        }
-
-        .landing-hero-inner {
-            position: relative;
-            z-index: 2;
-            width: min(1180px, 88vw);
-            margin: 0 auto;
-            padding-top: 86px;
-        }
-
-        .landing-hero-copy {
-            max-width: 640px;
-        }
-
-        .landing-title {
-            margin: 0;
-            font-family: "Six Caps", "Arial Narrow", sans-serif;
-            font-weight: 400;
-            font-size: clamp(82px, 10vw, 158px);
-            line-height: 1.02;
-            letter-spacing: 0.10em;
-            word-spacing: 0.12em;
-            color: var(--bdk-white);
-            text-transform: uppercase;
-        }
-
-        .landing-subtitle {
-            margin-top: 30px;
-            font-family: "Montserrat", "Futura", sans-serif;
-            font-style: normal;
-            font-weight: 400;
-            font-size: clamp(14px, 1.6vw, 24px);
-            line-height: 1.5;
-            letter-spacing: 0.32em;
-            text-transform: uppercase;
-            color: var(--bdk-gold-active);
-        }
-
-        .landing-lead {
-            margin-top: 46px;
-            max-width: 540px;
-            color: var(--bdk-white);
-            font-size: 17px;
-            line-height: 1.9;
-        }
-
-        .landing-lead p {
-            margin-bottom: 6px;
-            color: var(--bdk-white);
-        }
-
-        .landing-meta {
-            margin-top: 42px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0;
-            color: var(--bdk-muted);
-            font-size: 13px;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
-        .landing-meta span {
-            display: inline-block;
-        }
-
-        .landing-meta span + span:before {
-            content: "·";
-            color: var(--bdk-gold-active);
-            margin: 0 22px;
-        }
-
-        .landing-button {
-            display: inline-block;
-            margin-top: 44px;
-            padding: 16px 34px;
-            border: 1px solid var(--bdk-gold-active);
-            color: var(--bdk-gold-active);
-            background: transparent;
-            font-size: 13px;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            transition: all 0.2s ease;
-        }
-
-        .landing-button:hover,
-        .landing-button:focus {
-            color: var(--bdk-black);
-            background: var(--bdk-gold-active);
-            border-color: var(--bdk-gold-active);
-            text-decoration: none;
-        }
-
-
-        /* CONVERSION ADDITIONS */
-        .landing-hero-facts {
-            margin-top: 34px;
-            padding-left: 0;
-            color: var(--bdk-white);
-            font-size: 14px;
-            line-height: 2.0;
-            letter-spacing: 0.13em;
-            text-transform: uppercase;
-        }
-
-        .landing-hero-facts strong {
-            color: var(--bdk-gold-active);
-            font-weight: 400;
-        }
-
-        .landing-inline-cta {
-            margin-top: 44px;
-            text-align: center;
-        }
-
-        .quick-info {
-            max-width: 740px;
-            margin: 0 auto;
-            border-top: 1px solid rgba(185, 166, 106, 0.38);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.38);
-        }
-
-        .quick-info-row {
-            display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 44px;
-            padding: 22px 0;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.20);
-            color: var(--bdk-muted);
-            font-size: 15px;
-            line-height: 1.8;
-        }
-
-        .quick-info-row:last-child {
-            border-bottom: 0;
-        }
-
-        .quick-info-label {
-            color: var(--bdk-gold-active);
-            font-size: 12px;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-        }
-
-        .quick-info-value {
-            color: var(--bdk-white);
-        }
-
-        .practice-list {
-            max-width: 760px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 18px 54px;
-            color: var(--bdk-white);
-            font-size: 15px;
-            line-height: 1.8;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .practice-list span {
-            display: block;
-            padding-bottom: 14px;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.22);
-        }
-
-        .signup-steps {
-            max-width: 640px;
-            margin: 50px auto 0;
-            color: var(--bdk-muted);
-            font-size: 15px;
-            line-height: 1.9;
-            text-align: center;
-        }
-
-        .signup-steps ol {
-            display: inline-block;
-            margin: 18px auto 0;
-            padding-left: 22px;
-            text-align: left;
-        }
-
-        .signup-steps li {
-            margin-bottom: 10px;
-            color: var(--bdk-muted);
-        }
-
-        .signup-steps strong {
-            color: var(--bdk-white);
-            font-weight: 400;
-        }
-
-        /* GENERAL SECTIONS */
-        .landing-section {
-            padding: 118px 0;
-            background: var(--bdk-black);
-        }
-
-        .landing-section.compact {
-            padding: 82px 0;
-        }
-
-        .landing-section.intro-section {
-            padding-bottom: 54px;
-        }
-
-        .landing-section.after-divider {
-            padding-top: 64px;
-        }
-
-        .landing-section.after-thread {
-            padding-top: 36px;
-        }
-
-        .landing-container {
-            width: min(920px, 84vw);
-            margin: 0 auto;
-        }
-
-        .landing-container.wide {
-            width: min(1120px, 88vw);
-        }
-
-        .gold-divider {
-            width: min(720px, 72vw);
-            height: 1px;
-            margin: 0 auto;
-            background: rgba(185, 166, 106, 0.55);
-        }
-
-        .workshop-end-divider {
-            margin-top: 0;
-            margin-bottom: 0;
-            width: min(1120px, 88vw);
-        }
-
-        .section-title {
-            margin: 0 0 48px;
-            color: var(--bdk-gold-active);
-            font-size: 20px;
-            line-height: 1.5;
-            letter-spacing: 0.30em;
-            text-transform: uppercase;
-            text-align: center;
-        }
-
-        .section-title:before,
-        .section-title:after {
-            content: "";
-            display: inline-block;
-            width: 56px;
-            height: 1px;
-            background: rgba(185, 166, 106, 0.72);
-            vertical-align: middle;
-            margin: 0 22px;
-        }
-
-        .text-block {
-            color: var(--bdk-muted);
-            font-size: 17px;
-            line-height: 2;
-            text-align: center;
-        }
-
-        .text-block p {
-            margin-bottom: 24px;
-            color: var(--bdk-muted);
-        }
-
-        .text-block strong {
-            color: var(--bdk-white);
-            font-weight: 400;
-        }
-
-        /* IMAGE BANDS */
-        .image-band {
-            height: 180px;
-            background-size: cover;
-            background-position: center;
-            border-top: 1px solid rgba(185, 166, 106, 0.20);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.20);
-            opacity: 0.92;
-        }
-
-        .image-band.band-one {
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.40), rgba(5, 5, 5, 0.18)),
-                url("/img/budokon-moc-pas-1.jpg");
-        }
-
-        .image-band.band-two {
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.40), rgba(5, 5, 5, 0.18)),
-                url("/img/budokon-moc-pas-2.jpg");
-        }
-
-        .cta-image-band {
-            height: 210px;
-            margin-top: 62px;
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.28)),
-                url("/img/budokon-moc-pas-3.jpg");
-            background-size: cover;
-            background-position: center;
-            border-top: 1px solid rgba(185, 166, 106, 0.24);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .cta-image-band .landing-button {
-            margin-top: 0;
-            background: rgba(5, 5, 5, 0.56);
-        }
-
-        .cta-image-band .landing-button:hover,
-        .cta-image-band .landing-button:focus {
-            background: var(--bdk-gold-active);
-        }
-
-        /* THREAD */
-        .thread-section {
-            padding-bottom: 62px;
-        }
-
-        .thread-list {
-            max-width: 640px;
-            margin: 0 auto;
-            color: var(--bdk-white);
-            text-align: center;
-            font-size: 20px;
-            line-height: 2.1;
-        }
-
-        .thread-list span {
-            display: block;
-        }
-
-        .practice-note {
-            margin-top: 42px;
-            color: var(--bdk-muted);
-            text-align: center;
-            font-size: 15px;
-            line-height: 1.9;
-        }
-
-        .practice-note p {
-            margin-bottom: 12px;
-        }
-
-        /* WORKSHOPS */
-        .workshops {
-            border-top: 1px solid rgba(185, 166, 106, 0.32);
-        }
-
-        .workshop-row {
-            display: grid;
-            grid-template-columns: 190px 1fr;
-            gap: 58px;
-            padding: 64px 0;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.32);
-            align-items: start;
-        }
-
-        .workshop-date {
-            color: var(--bdk-gold-active);
-            font-family: "Lora", serif;
-            font-size: 24px;
-            line-height: 1.35;
-            letter-spacing: 0.08em;
-            white-space: nowrap;
-        }
-
-        .workshop-title {
-            margin: 0;
-            color: var(--bdk-white);
-            font-size: 21px;
-            line-height: 1.4;
-            letter-spacing: 0.20em;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-
-        .workshop-subtitle {
-            margin-top: 12px;
-            color: var(--bdk-gold-active);
-            font-family: "Lora", serif;
-            font-style: italic;
-            font-size: 18px;
-            line-height: 1.5;
-        }
-
-        .workshop-text {
-            margin-top: 30px;
-            color: var(--bdk-muted);
-            font-size: 15px;
-            line-height: 1.9;
-        }
-
-        .workshop-text p {
-            margin-bottom: 18px;
-            color: var(--bdk-muted);
-        }
-
-        .workshop-text strong {
-            color: var(--bdk-gold-active);
-            font-weight: 400;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            font-size: 12px;
-        }
-
-        /* PRICING */
-        .pricing {
-            max-width: 720px;
-            margin: 0 auto;
-        }
-
-        .price-row {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 40px;
-            padding: 22px 0;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.34);
-            color: var(--bdk-muted);
-            font-size: 17px;
-            line-height: 1.6;
-        }
-
-        .price-row:first-child {
-            border-top: 1px solid rgba(185, 166, 106, 0.34);
-        }
-
-        .price-row strong {
-            color: var(--bdk-gold-active);
-            font-size: 22px;
-            font-weight: 400;
-            white-space: nowrap;
-        }
-
-        .pricing-note {
-            margin-top: 52px;
-            color: var(--bdk-muted);
-            text-align: center;
-            font-size: 15px;
-            line-height: 1.9;
-        }
-
-        .pricing-note p {
-            margin-bottom: 18px;
-        }
-
-        footer.landing-footer {
-            padding: 78px 0 62px;
-            border-top: 1px solid rgba(185, 166, 106, 0.20);
-            color: var(--bdk-muted);
-            text-align: center;
-            background: var(--bdk-black);
-        }
-
-        .footer-logo-mark {
-            width: 58px;
-            height: 58px;
-            margin: 0 auto 26px;
-            background-color: var(--bdk-gold-active);
-            -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
-            mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
-            opacity: 0.92;
-        }
-
-        .footer-brand {
-            color: var(--bdk-white);
-            font-size: 15px;
-            letter-spacing: 0.28em;
-            text-transform: uppercase;
-            margin-bottom: 12px;
-        }
-
-        .footer-subtitle {
-            color: var(--bdk-gold-active);
-            font-size: 12px;
-            letter-spacing: 0.22em;
-            text-transform: lowercase;
-            margin-bottom: 34px;
-        }
-
-        .footer-contact {
-            color: var(--bdk-muted);
-            font-size: 14px;
-            line-height: 1.9;
-            margin-bottom: 28px;
-        }
-
-        .footer-contact a {
-            color: var(--bdk-gold-active);
-            text-decoration: none;
-        }
-
-        .footer-contact a:hover {
-            color: var(--bdk-white);
-            text-decoration: none;
-        }
-
-        .footer-links {
-            font-size: 12px;
-            letter-spacing: 0.18em;
-            text-transform: uppercase;
-            margin-bottom: 28px;
-        }
-
-        .footer-links a {
-            color: var(--bdk-white);
-            text-decoration: none;
-        }
-
-        .footer-links a:hover {
-            color: var(--bdk-gold-active);
-            text-decoration: none;
-        }
-
-        .footer-links span {
-            margin: 0 12px;
-            color: rgba(185, 166, 106, 0.55);
-        }
-
-        .footer-copy {
-            color: rgba(207, 200, 185, 0.55);
-            font-size: 11px;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
-        @media (max-width: 900px) {
-            .landing-hero {
-                min-height: 90vh;
-                background-position: center right;
-            }
-
-            .landing-hero-inner {
-                width: min(92vw, 680px);
-                padding-top: 90px;
-            }
-
-            .landing-hero-copy {
-                max-width: 560px;
-            }
-
-            .landing-meta {
-                display: block;
-                line-height: 2.1;
-            }
-
-            .landing-meta span {
-                display: block;
-            }
-
-            .landing-meta span + span:before {
-                content: "";
-                margin: 0;
-            }
-
-
-
-            .quick-info-row {
-                grid-template-columns: 1fr;
-                gap: 6px;
-            }
-
-            .practice-list {
-                grid-template-columns: 1fr;
-                gap: 10px;
-            }
-
-            .section-title:before,
-            .section-title:after {
-                width: 34px;
-                margin: 0 12px;
-            }
-
-            .workshop-row {
-                grid-template-columns: 1fr;
-                gap: 18px;
-                padding: 58px 0;
-            }
-
-            .workshop-date {
-                font-size: 22px;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .landing-hero {
-                min-height: 92vh;
-                background-position: center right;
-            }
-
-            .landing-title {
-                font-size: clamp(68px, 21vw, 102px);
-                line-height: 1.08;
-                letter-spacing: 0.08em;
-                word-spacing: 0.16em;
-            }
-
-            .landing-subtitle {
-                margin-top: 24px;
-                font-size: 13px;
-                letter-spacing: 0.22em;
-            }
-
-            .landing-lead {
-                margin-top: 36px;
-                font-size: 15px;
-                line-height: 1.8;
-            }
-
-            .landing-section {
-                padding: 88px 0;
-            }
-
-            .landing-section.compact {
-                padding: 66px 0;
-            }
-
-            .landing-section.intro-section {
-                padding-bottom: 42px;
-            }
-
-            .landing-section.after-divider {
-                padding-top: 54px;
-            }
-
-            .landing-section.after-thread {
-                padding-top: 28px;
-            }
-
-            .text-block {
-                font-size: 15px;
-                line-height: 1.9;
-            }
-
-            .image-band {
-                height: 145px;
-            }
-
-            .cta-image-band {
-                height: 170px;
-                margin-top: 48px;
-            }
-
-            .thread-section {
-                padding-bottom: 48px;
-            }
-
-            .thread-list {
-                font-size: 18px;
-            }
-
-            .workshop-title {
-                font-size: 18px;
-            }
-
-            .workshop-date {
-                font-size: 20px;
-            }
-
-            .price-row {
-                font-size: 15px;
-            }
-
-            .landing-hero {
-                min-height: auto;
-                display: block;
-                background: var(--bdk-black);
-            }
-
-            .landing-hero-overlay {
-                display: none;
-            }
-
-            .landing-hero-mobile-image {
-                display: block;
-                width: 100%;
-                margin-top: 56px;
-                aspect-ratio: 1200 / 630;
-                background:
-                    linear-gradient(to bottom, rgba(5, 5, 5, 0.08), rgba(5, 5, 5, 0.22)),
-                    url("/img/budokon-moc-hero.jpg");
-                background-size: contain;
-                background-repeat: no-repeat;
-                background-position: center;
-                border-bottom: 1px solid rgba(185, 166, 106, 0.24);
-            }
-
-            .landing-hero-inner {
-                width: min(88vw, 430px);
-                padding-top: 42px;
-                padding-bottom: 74px;
-            }
-
-            .landing-hero-copy {
-                max-width: none;
-            }
-
-            .landing-hero-facts {
-                margin-top: 30px;
-                font-size: 12px;
-                line-height: 1.9;
-                letter-spacing: 0.10em;
-            }
-
-            .landing-button {
-                width: 100%;
-                max-width: 360px;
-                text-align: center;
-                padding: 15px 20px;
-                letter-spacing: 0.18em;
-            }
-
-            .quick-info-row {
-                padding: 20px 0;
-            }
-
-            .quick-info-label {
-                font-size: 11px;
-            }
-
-            .practice-list {
-                font-size: 13px;
-                letter-spacing: 0.07em;
-            }
-
-            .price-row {
-                grid-template-columns: 1fr;
-                gap: 6px;
-            }
-
-            .price-row strong {
-                justify-self: start;
-            }
-        }
-
-        @media (max-width: 380px) {
-            .landing-title {
-                font-size: clamp(58px, 19vw, 82px);
-            }
-
-            .section-title {
-                font-size: 16px;
-                letter-spacing: 0.22em;
-            }
-
-            .section-title:before,
-            .section-title:after {
-                width: 22px;
-                margin: 0 8px;
-            }
-        }
-
-        /* REFINED TEST VERSION — cleaner conversion layout */
-        .landing-section.after-divider,
-        .terms-section {
-            padding-top: 88px;
-        }
-
-        .landing-hero-facts {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0;
-            margin-top: 30px;
-            color: var(--bdk-muted);
-            font-size: 12px;
-            line-height: 1.8;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
-        .landing-hero-facts span {
-            display: inline-block;
-        }
-
-        .landing-hero-facts span + span:before {
-            content: "|";
-            color: var(--bdk-gold-active);
-            margin: 0 14px;
-        }
-
-        .landing-hero-facts strong {
-            color: var(--bdk-gold-active);
-            font-weight: 400;
-        }
-
-        .section-intro {
-            max-width: 700px;
-            margin: 0 auto 48px;
-        }
-
-        .quick-info {
-            max-width: 740px;
-            border-top: 0;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.26);
-        }
-
-        .quick-info-row {
-            border-top: 1px solid rgba(185, 166, 106, 0.22);
-            border-bottom: 0;
-        }
-
-        .availability-note {
-            margin-top: 34px;
-            font-size: 15px;
-        }
-
-        .practice-overview {
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .signup-steps {
-            max-width: 640px;
-            margin: 0 auto;
-            font-size: 16px;
-            line-height: 2;
-        }
-
-        .signup-steps ol {
-            margin: 24px auto 34px;
-        }
-
-        .signup-steps p {
-            margin-bottom: 16px;
-        }
-
-        @media (max-width: 900px) {
-            .landing-hero-facts {
-                display: block;
-            }
-
-            .landing-hero-facts span {
-                display: block;
-            }
-
-            .landing-hero-facts span + span:before {
-                content: "";
-                margin: 0;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .landing-section.after-divider,
-            .terms-section {
-                padding-top: 72px;
-            }
-
-            .section-intro {
-                margin-bottom: 38px;
-            }
-
-            .signup-steps {
-                font-size: 15px;
-            }
-        }
-
-
-        /* LIVE CLEANUP — final conversion polish */
-        .landing-section.after-divider {
-            padding-top: 88px;
-        }
-
-        .gold-divider {
-            margin: 0 auto;
-        }
-
-        .section-title {
-            margin-bottom: 44px;
-        }
-
-        .terms-section .section-title,
-        .thread-section .section-title,
-        #prijava .section-title {
-            margin-bottom: 42px;
-        }
-
-        .section-intro {
-            max-width: 760px;
-            margin: 0 auto 46px;
-            font-size: 17px;
-            line-height: 2;
-        }
-
-        .quick-info {
-            max-width: 760px;
-            margin: 0 auto;
-            border-top: 0;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.26);
-        }
-
-        .quick-info-row {
-            grid-template-columns: 190px 1fr;
-            gap: 38px;
-            padding: 21px 0;
-            border-top: 1px solid rgba(185, 166, 106, 0.22);
-            border-bottom: 0;
-            font-size: 16px;
-        }
-
-        .quick-info-label {
-            font-size: 12px;
-        }
-
-        .image-band.band-one {
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.36), rgba(5, 5, 5, 0.18)),
-                url("/img/budokon-moc-pas-1.jpg");
-            background-position: center;
-        }
-
-        .practice-overview {
-            max-width: 790px;
-            margin: 0 auto;
-        }
-
-        .practice-overview p {
-            margin-bottom: 20px;
-        }
-
-        .signup-steps {
-            max-width: 860px;
-            margin: 0 auto;
-            color: var(--bdk-muted);
-            font-size: 18px;
-            line-height: 2;
-            text-align: center;
-        }
-
-        .signup-steps ol {
-            display: block;
-            max-width: 620px;
-            margin: 26px auto 40px;
-            padding-left: 34px;
-            text-align: left;
-        }
-
-        .signup-steps li {
-            margin-bottom: 12px;
-            color: var(--bdk-white);
-        }
-
-        .signup-steps p {
-            margin-bottom: 14px;
-        }
-
-        .signup-steps strong {
-            color: var(--bdk-white);
-            font-weight: 400;
-        }
-
-        @media (max-width: 900px) {
-            .quick-info-row {
-                grid-template-columns: 1fr;
-                gap: 6px;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .landing-section.after-divider,
-            .terms-section {
-                padding-top: 72px;
-            }
-
-            .section-intro {
-                margin-bottom: 36px;
-                font-size: 15px;
-            }
-
-            .quick-info-row {
-                font-size: 15px;
-            }
-
-            .signup-steps {
-                font-size: 16px;
-                line-height: 1.9;
-            }
-
-            .signup-steps ol {
-                max-width: 320px;
-                padding-left: 28px;
-            }
-        }
-
-
-        /* FINAL LIVE POLISH — spacing, navigation, tables, mobile */
-        .navbar-custom .nav li.active a,
-        .navbar-custom .nav li.active a:hover,
-        .navbar-custom .nav li.active a:focus,
-        .navbar-custom .nav li a:hover,
-        .navbar-custom .nav li a:focus {
-            background: transparent !important;
-            color: var(--bdk-gold-active) !important;
-        }
-
-        .navbar-custom .nav li.active {
-            background: transparent !important;
-        }
-
-        .landing-section {
-            padding-top: 124px;
-            padding-bottom: 124px;
-        }
-
-        .landing-section.compact {
-            padding-top: 104px;
-            padding-bottom: 104px;
-        }
-
-        .landing-section.after-divider,
-        .terms-section,
-        .thread-section,
-        #prijava {
-            padding-top: 112px;
-        }
-
-        .landing-section.after-thread {
-            padding-top: 72px;
-        }
-
-        .section-title {
-            margin-bottom: 62px !important;
-            font-size: 26px;
-            line-height: 1.45;
-            letter-spacing: 0.34em;
-        }
-
-        .terms-section .section-title,
-        .thread-section .section-title,
-        #prijava .section-title {
-            margin-bottom: 62px !important;
-        }
-
-        .terms-section .section-intro {
-            max-width: 840px;
-            margin-bottom: 72px;
-            font-size: 18px;
-            line-height: 2.05;
-        }
-
-        .quick-info {
-            width: min(760px, 84vw);
-            max-width: none;
-            margin: 0 auto 58px;
-            border-top: 1px solid rgba(185, 166, 106, 0.24);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
-        }
-
-        .quick-info-row {
-            grid-template-columns: 200px 1fr;
-            gap: 48px;
-            padding: 25px 0;
-            font-size: 17px;
-            line-height: 1.85;
-        }
-
-        .quick-info-label {
-            font-size: 12px;
-            letter-spacing: 0.24em;
-        }
-
-        .terms-section .landing-inline-cta {
-            width: min(760px, 84vw);
-            margin: 0 auto;
-            text-align: center;
-        }
-
-        .signup-steps {
-            max-width: 960px;
-            margin: 0 auto;
-            font-size: 19px;
-            line-height: 2.05;
-            text-align: center;
-        }
-
-        .signup-steps ol {
-            display: block;
-            max-width: none;
-            margin: 0 auto 52px;
-            padding-left: 0;
-            list-style-position: inside;
-            text-align: center;
-        }
-
-        .signup-steps li {
-            margin-bottom: 14px;
-            color: var(--bdk-white);
-        }
-
-        .signup-steps p {
-            max-width: 980px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 18px;
-            color: var(--bdk-muted);
-        }
-
-        .footer-logo-mark {
-            width: 82px;
-            height: 82px;
-            margin-bottom: 32px;
-        }
-
-        @media (max-width: 900px) {
-            .landing-section,
-            .landing-section.compact,
-            .landing-section.after-divider,
-            .terms-section,
-            .thread-section,
-            #prijava {
-                padding-top: 88px;
-                padding-bottom: 88px;
-            }
-
-            .section-title {
-                font-size: 22px;
-                letter-spacing: 0.28em;
-                margin-bottom: 48px !important;
-            }
-
-            .terms-section .section-intro {
-                margin-bottom: 52px;
-                font-size: 16px;
-            }
-
-            .quick-info {
-                width: min(84vw, 620px);
-                margin-bottom: 46px;
-            }
-
-            .quick-info-row {
-                grid-template-columns: 1fr;
-                gap: 6px;
-                font-size: 16px;
-            }
-
-            .terms-section .landing-inline-cta {
-                width: min(84vw, 620px);
-            }
-
-            .signup-steps {
-                font-size: 17px;
-                line-height: 1.95;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .landing-section,
-            .landing-section.compact,
-            .landing-section.after-divider,
-            .terms-section,
-            .thread-section,
-            #prijava {
-                padding-top: 74px;
-                padding-bottom: 74px;
-            }
-
-            .section-title {
-                font-size: 19px;
-                letter-spacing: 0.22em;
-                margin-bottom: 40px !important;
-            }
-
-            .section-title:before,
-            .section-title:after {
-                width: 24px;
-                margin: 0 10px;
-            }
-
-            .terms-section .section-intro {
-                margin-bottom: 42px;
-                font-size: 15px;
-                line-height: 1.9;
-            }
-
-            .quick-info,
-            .terms-section .landing-inline-cta {
-                width: min(88vw, 430px);
-            }
-
-            .quick-info-row {
-                padding: 20px 0;
-                font-size: 15px;
-            }
-
-            .signup-steps {
-                width: min(88vw, 430px);
-                font-size: 16px;
-                line-height: 1.9;
-            }
-
-            .signup-steps ol {
-                margin-bottom: 38px;
-            }
-
-            .footer-logo-mark {
-                width: 72px;
-                height: 72px;
-            }
-        }
-
-
-        /* FINAL POLISH — spacing, headings and workshop CTA */
-        .section-title {
-            letter-spacing: 0.24em !important;
-        }
-
-        .practice-description-section {
-            padding-bottom: 46px !important;
-        }
-
-        .practice-description-section .section-title {
-            margin-bottom: 50px !important;
-        }
-
-        .landing-section.after-thread {
-            padding-top: 34px !important;
-        }
-
-        .workshop-row:last-child {
-            border-bottom: 0 !important;
-            padding-bottom: 58px;
-        }
-
-        .workshop-cta-band {
-            margin-top: 0;
-        }
-
-        @media (max-width: 900px) {
-            .section-title {
-                letter-spacing: 0.20em !important;
-            }
-
-            .practice-description-section {
-                padding-bottom: 38px !important;
-            }
-
-            .landing-section.after-thread {
-                padding-top: 28px !important;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .section-title {
-                letter-spacing: 0.16em !important;
-            }
-
-            .practice-description-section {
-                padding-bottom: 30px !important;
-            }
-
-            .landing-section.after-thread {
-                padding-top: 22px !important;
-            }
-
-            .workshop-row:last-child {
-                padding-bottom: 46px;
-            }
-        }
-
-
-        /* FINAL LAYOUT ADJUSTMENT — CTA image placement and calmer spacing */
-        .landing-section {
-            padding-top: 96px !important;
-            padding-bottom: 96px !important;
-        }
-
-        .landing-section.compact {
-            padding-top: 88px !important;
-            padding-bottom: 88px !important;
-        }
-
-        .landing-section.after-divider,
-        .terms-section,
-        .thread-section,
-        #prijava {
-            padding-top: 96px !important;
-            padding-bottom: 96px !important;
-        }
-
-        .landing-section.after-thread {
-            padding-top: 34px !important;
-            padding-bottom: 72px !important;
-        }
-
-        .section-title {
-            margin-bottom: 50px !important;
-        }
-
-        .terms-section .section-intro {
-            margin-bottom: 50px !important;
-        }
-
-        .quick-info {
-            margin-bottom: 0 !important;
-        }
-
-        .practice-description-section {
-            padding-bottom: 34px !important;
-        }
-
-        .practice-description-section .section-title {
-            margin-bottom: 42px !important;
-        }
-
-        .practice-overview p:last-child {
-            margin-bottom: 0;
-        }
-
-        .workshop-row:last-child {
-            padding-bottom: 0 !important;
-        }
-
-        .about-cta-band {
-            margin-top: 0 !important;
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.62), rgba(5, 5, 5, 0.30)),
-                url("/img/budokon-moc-pas-3.jpg") !important;
-            background-position: center !important;
-        }
-
-        .final-cta-band {
-            margin-top: 56px !important;
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.30)),
-                url("/img/budokon-moc-pas-1.jpg") !important;
-            background-position: center !important;
-        }
-
-        #prijava {
-            padding-bottom: 0 !important;
-        }
-
-        @media (max-width: 900px) {
-            .landing-section,
-            .landing-section.compact,
-            .landing-section.after-divider,
-            .terms-section,
-            .thread-section,
-            #prijava {
-                padding-top: 78px !important;
-                padding-bottom: 78px !important;
-            }
-
-            .landing-section.after-thread {
-                padding-top: 28px !important;
-                padding-bottom: 58px !important;
-            }
-
-            .section-title {
-                margin-bottom: 42px !important;
-            }
-
-            .terms-section .section-intro {
-                margin-bottom: 40px !important;
-            }
-
-            .final-cta-band {
-                margin-top: 44px !important;
-            }
-        }
-
-        @media (max-width: 560px) {
-            .landing-section,
-            .landing-section.compact,
-            .landing-section.after-divider,
-            .terms-section,
-            .thread-section,
-            #prijava {
-                padding-top: 66px !important;
-                padding-bottom: 66px !important;
-            }
-
-            .landing-section.after-thread {
-                padding-top: 22px !important;
-                padding-bottom: 48px !important;
-            }
-
-            .section-title {
-                margin-bottom: 34px !important;
-            }
-
-            .terms-section .section-intro {
-                margin-bottom: 34px !important;
-            }
-
-            .cta-image-band {
-                height: 170px !important;
-            }
-
-            .final-cta-band {
-                margin-top: 38px !important;
-            }
-        }
-
-
-        /* FINAL CTA PLACEMENT — post-workshop image CTA, text-only signup CTA and footer divider */
-        .post-workshop-cta-band {
-            margin-top: 0 !important;
-            margin-bottom: 0 !important;
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.30)),
-                url("/img/budokon-moc-pas-1.jpg") !important;
-            background-position: center !important;
-        }
-
-        #prijava {
-            padding-top: 96px !important;
-            padding-bottom: 96px !important;
-        }
-
-        #prijava .text-link-cta {
-            margin-top: 44px;
-            margin-bottom: 0;
-            color: var(--bdk-white);
-            font-size: 19px;
-            line-height: 1.9;
-        }
-
-        #prijava .text-link-cta a {
-            color: var(--bdk-gold-active);
-            text-decoration: none;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.62);
-            padding-bottom: 2px;
-        }
-
-        #prijava .text-link-cta a:hover,
-        #prijava .text-link-cta a:focus {
-            color: var(--bdk-white);
-            border-bottom-color: var(--bdk-white);
-        }
-
-        .full-width-gold-divider {
-            width: 100%;
-            height: 1px;
-            background: rgba(185, 166, 106, 0.48);
-        }
-
-        @media (max-width: 900px) {
-            #prijava {
-                padding-top: 78px !important;
-                padding-bottom: 78px !important;
-            }
-
-            #prijava .text-link-cta {
-                margin-top: 36px;
-                font-size: 17px;
-            }
-        }
-
-        @media (max-width: 560px) {
-            #prijava {
-                padding-top: 66px !important;
-                padding-bottom: 66px !important;
-            }
-
-            #prijava .text-link-cta {
-                margin-top: 32px;
-                font-size: 16px;
-            }
-        }
-
-
+:root {
+    --bdk-black: #050505;
+    --bdk-charcoal: #0b0b0b;
+    --bdk-white: #f4f1ea;
+    --bdk-muted: #cfc8b9;
+    --bdk-gold-fallback: #b9a66a;
+    --bdk-gold-active: var(--bdk-gold, var(--bdk-gold-fallback));
+}
+
+html, body {
+    background: var(--bdk-black);
+    color: var(--bdk-white);
+}
+
+body.budokon-moc-page {
+    font-family: "Montserrat", "Futura", sans-serif;
+    background: var(--bdk-black);
+    color: var(--bdk-white);
+}
+
+.navbar-custom {
+    background: rgba(0, 0, 0, 0.94);
+    border-bottom: 1px solid rgba(185, 166, 106, 0.28);
+}
+
+.navbar-custom .navbar-brand, .navbar-custom .nav li a {
+    color: var(--bdk-white);
+}
+
+.navbar-custom .nav li a:hover, .navbar-custom .nav li.active a {
+    color: var(--bdk-gold-active);
+}
+
+.navbar-custom .navbar-brand .light {
+    color: var(--bdk-muted);
+}
+
+.landing-hero {
+    position: relative;
+    min-height: 100vh;
+    padding: 0;
+    overflow: hidden;
+    background: linear-gradient(to right, rgba(5, 5, 5, 0.74) 0%, rgba(5, 5, 5, 0.46) 42%, rgba(5, 5, 5, 0.12) 100%), url("/img/budokon-moc-hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.landing-hero-mobile-image {
+    display: none;
+}
+
+.landing-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 68%), linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.28));
+}
+
+.landing-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: min(1180px, 88vw);
+    margin: 0 auto;
+    padding-top: 86px;
+}
+
+.landing-hero-copy {
+    max-width: 640px;
+}
+
+.landing-title {
+    margin: 0;
+    font-family: "Six Caps", "Arial Narrow", sans-serif;
+    font-weight: 400;
+    font-size: clamp(82px, 10vw, 158px);
+    line-height: 1.02;
+    letter-spacing: 0.10em;
+    word-spacing: 0.12em;
+    color: var(--bdk-white);
+    text-transform: uppercase;
+}
+
+.landing-subtitle {
+    margin-top: 30px;
+    font-family: "Montserrat", "Futura", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: clamp(14px, 1.6vw, 24px);
+    line-height: 1.5;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    color: var(--bdk-gold-active);
+}
+
+.landing-lead {
+    margin-top: 46px;
+    max-width: 540px;
+    color: var(--bdk-white);
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+.landing-lead p {
+    margin-bottom: 6px;
+    color: var(--bdk-white);
+}
+
+.landing-meta {
+    margin-top: 42px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    color: var(--bdk-muted);
+    font-size: 13px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.landing-meta span {
+    display: inline-block;
+}
+
+.landing-meta span + span:before {
+    content: "·";
+    color: var(--bdk-gold-active);
+    margin: 0 22px;
+}
+
+.landing-button {
+    display: inline-block;
+    margin-top: 44px;
+    padding: 16px 34px;
+    border: 1px solid var(--bdk-gold-active);
+    color: var(--bdk-gold-active);
+    background: transparent;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.landing-button:hover, .landing-button:focus {
+    color: var(--bdk-black);
+    background: var(--bdk-gold-active);
+    border-color: var(--bdk-gold-active);
+    text-decoration: none;
+}
+
+.quick-info-row:last-child {
+    border-bottom: 0;
+}
+
+.quick-info-value {
+    color: var(--bdk-white);
+}
+
+.landing-section.intro-section {
+    padding-bottom: 54px;
+}
+
+.landing-container {
+    width: min(920px, 84vw);
+    margin: 0 auto;
+}
+
+.landing-container.wide {
+    width: min(1120px, 88vw);
+}
+
+.section-title:before, .section-title:after {
+    content: "";
+    display: inline-block;
+    width: 56px;
+    height: 1px;
+    background: rgba(185, 166, 106, 0.72);
+    vertical-align: middle;
+    margin: 0 22px;
+}
+
+.text-block {
+    color: var(--bdk-muted);
+    font-size: 17px;
+    line-height: 2;
+    text-align: center;
+}
+
+.text-block p {
+    margin-bottom: 24px;
+    color: var(--bdk-muted);
+}
+
+.text-block strong {
+    color: var(--bdk-white);
+    font-weight: 400;
+}
+
+.cta-image-band {
+    height: 210px;
+    margin-top: 62px;
+    background-image: linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.28)), url("/img/budokon-moc-pas-3.jpg");
+    background-size: cover;
+    background-position: center;
+    border-top: 1px solid rgba(185, 166, 106, 0.24);
+    border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cta-image-band .landing-button {
+    margin-top: 0;
+    background: rgba(5, 5, 5, 0.56);
+}
+
+.cta-image-band .landing-button:hover, .cta-image-band .landing-button:focus {
+    background: var(--bdk-gold-active);
+}
+
+.thread-section {
+    padding-bottom: 62px;
+}
+
+.workshops {
+    border-top: 1px solid rgba(185, 166, 106, 0.32);
+}
+
+.workshop-row {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 58px;
+    padding: 64px 0;
+    border-bottom: 1px solid rgba(185, 166, 106, 0.32);
+    align-items: start;
+}
+
+.workshop-date {
+    color: var(--bdk-gold-active);
+    font-family: "Lora", serif;
+    font-size: 24px;
+    line-height: 1.35;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.workshop-title {
+    margin: 0;
+    color: var(--bdk-white);
+    font-size: 21px;
+    line-height: 1.4;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.workshop-subtitle {
+    margin-top: 12px;
+    color: var(--bdk-gold-active);
+    font-family: "Lora", serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.workshop-text {
+    margin-top: 30px;
+    color: var(--bdk-muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.workshop-text p {
+    margin-bottom: 18px;
+    color: var(--bdk-muted);
+}
+
+.workshop-text strong {
+    color: var(--bdk-gold-active);
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-size: 12px;
+}
+
+footer.landing-footer {
+    padding: 78px 0 62px;
+    border-top: 1px solid rgba(185, 166, 106, 0.20);
+    color: var(--bdk-muted);
+    text-align: center;
+    background: var(--bdk-black);
+}
+
+.footer-brand {
+    color: var(--bdk-white);
+    font-size: 15px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.footer-subtitle {
+    color: var(--bdk-gold-active);
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    text-transform: lowercase;
+    margin-bottom: 34px;
+}
+
+.footer-contact {
+    color: var(--bdk-muted);
+    font-size: 14px;
+    line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.footer-contact a {
+    color: var(--bdk-gold-active);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: var(--bdk-white);
+    text-decoration: none;
+}
+
+.footer-links {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.footer-links a {
+    color: var(--bdk-white);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--bdk-gold-active);
+    text-decoration: none;
+}
+
+.footer-links span {
+    margin: 0 12px;
+    color: rgba(185, 166, 106, 0.55);
+}
+
+.footer-copy {
+    color: rgba(207, 200, 185, 0.55);
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+    .landing-hero {
+        min-height: 90vh;
+        background-position: center right;
+    }
+
+    .landing-hero-inner {
+        width: min(92vw, 680px);
+        padding-top: 90px;
+    }
+
+    .landing-hero-copy {
+        max-width: 560px;
+    }
+
+    .landing-meta {
+        display: block;
+        line-height: 2.1;
+    }
+
+    .landing-meta span {
+        display: block;
+    }
+
+    .landing-meta span + span:before {
+        content: "";
+        margin: 0;
+    }
+
+    .section-title:before, .section-title:after {
+        width: 34px;
+        margin: 0 12px;
+    }
+
+    .workshop-row {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        padding: 58px 0;
+    }
+
+    .workshop-date {
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .landing-title {
+        font-size: clamp(68px, 21vw, 102px);
+        line-height: 1.08;
+        letter-spacing: 0.08em;
+        word-spacing: 0.16em;
+    }
+
+    .landing-subtitle {
+        margin-top: 24px;
+        font-size: 13px;
+        letter-spacing: 0.22em;
+    }
+
+    .landing-lead {
+        margin-top: 36px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .landing-section {
+        padding: 88px 0;
+    }
+
+    .landing-section.compact {
+        padding: 66px 0;
+    }
+
+    .landing-section.intro-section {
+        padding-bottom: 42px;
+    }
+
+    .landing-section.after-divider {
+        padding-top: 54px;
+    }
+
+    .text-block {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .thread-section {
+        padding-bottom: 48px;
+    }
+
+    .workshop-title {
+        font-size: 18px;
+    }
+
+    .workshop-date {
+        font-size: 20px;
+    }
+
+    .landing-hero {
+        background-position: center right;
+        min-height: auto;
+        display: block;
+        background: var(--bdk-black);
+    }
+
+    .landing-hero-overlay {
+        display: none;
+    }
+
+    .landing-hero-mobile-image {
+        display: block;
+        width: 100%;
+        margin-top: 56px;
+        aspect-ratio: 1200 / 630;
+        background: linear-gradient(to bottom, rgba(5, 5, 5, 0.08), rgba(5, 5, 5, 0.22)), url("/img/budokon-moc-hero.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+    }
+
+    .landing-hero-inner {
+        width: min(88vw, 430px);
+        padding-top: 42px;
+        padding-bottom: 74px;
+    }
+
+    .landing-hero-copy {
+        max-width: none;
+    }
+
+    .landing-hero-facts {
+        margin-top: 30px;
+        font-size: 12px;
+        line-height: 1.9;
+        letter-spacing: 0.10em;
+    }
+
+    .landing-button {
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        padding: 15px 20px;
+        letter-spacing: 0.18em;
+    }
+
+    .quick-info-label {
+        font-size: 11px;
+    }
+
+}
+
+@media (max-width: 380px) {
+    .landing-title {
+        font-size: clamp(58px, 19vw, 82px);
+    }
+
+    .section-title {
+        font-size: 16px;
+        letter-spacing: 0.22em;
+    }
+
+    .section-title:before, .section-title:after {
+        width: 22px;
+        margin: 0 8px;
+    }
+
+}
+
+.landing-section.after-divider, .terms-section {
+    padding-top: 88px;
+}
+
+.landing-hero-facts {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 30px;
+    color: var(--bdk-muted);
+    font-size: 12px;
+    line-height: 1.8;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+}
+
+.landing-hero-facts span {
+    display: inline-block;
+}
+
+.landing-hero-facts span + span:before {
+    content: "|";
+    color: var(--bdk-gold-active);
+    margin: 0 14px;
+}
+
+.landing-hero-facts strong {
+    color: var(--bdk-gold-active);
+    font-weight: 400;
+}
+
+@media (max-width: 900px) {
+    .landing-hero-facts {
+        display: block;
+    }
+
+    .landing-hero-facts span {
+        display: block;
+    }
+
+    .landing-hero-facts span + span:before {
+        content: "";
+        margin: 0;
+    }
+
+}
+
+.landing-section.after-divider {
+    padding-top: 88px;
+}
+
+.gold-divider {
+    width: min(720px, 72vw);
+    height: 1px;
+    background: rgba(185, 166, 106, 0.55);
+    margin: 0 auto;
+}
+
+.section-intro {
+    max-width: 760px;
+    margin: 0 auto 46px;
+    font-size: 17px;
+    line-height: 2;
+}
+
+.practice-overview {
+    max-width: 790px;
+    margin: 0 auto;
+}
+
+.practice-overview p {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 560px) {
+    .landing-section.after-divider, .terms-section {
+        padding-top: 72px;
+    }
+
+    .section-intro {
+        margin-bottom: 36px;
+        font-size: 15px;
+    }
+
+}
+
+.navbar-custom .nav li.active a, .navbar-custom .nav li.active a:hover, .navbar-custom .nav li.active a:focus, .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
+    background: transparent;
+    color: var(--bdk-gold-active);
+}
+
+.navbar-custom .nav li.active {
+    background: transparent;
+}
+
+.terms-section .section-title, .thread-section .section-title, #prijava .section-title {
+    margin-bottom: 62px;
+}
+
+.quick-info-row {
+    display: grid;
+    color: var(--bdk-muted);
+    border-top: 1px solid rgba(185, 166, 106, 0.22);
+    border-bottom: 0;
+    grid-template-columns: 200px 1fr;
+    gap: 48px;
+    padding: 25px 0;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+.quick-info-label {
+    color: var(--bdk-gold-active);
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 0.24em;
+}
+
+.signup-steps {
+    color: var(--bdk-muted);
+    max-width: 960px;
+    margin: 0 auto;
+    font-size: 19px;
+    line-height: 2.05;
+    text-align: center;
+}
+
+.signup-steps ol {
+    display: block;
+    max-width: none;
+    margin: 0 auto 52px;
+    padding-left: 0;
+    list-style-position: inside;
+    text-align: center;
+}
+
+.signup-steps li {
+    margin-bottom: 14px;
+    color: var(--bdk-white);
+}
+
+.signup-steps p {
+    max-width: 980px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 18px;
+    color: var(--bdk-muted);
+}
+
+.footer-logo-mark {
+    margin: 0 auto 26px;
+    background-color: var(--bdk-gold-active);
+    -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    opacity: 0.92;
+    width: 82px;
+    height: 82px;
+    margin-bottom: 32px;
+}
+
+@media (max-width: 900px) {
+    .quick-info {
+        width: min(84vw, 620px);
+        margin-bottom: 46px;
+    }
+
+    .quick-info-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+        font-size: 16px;
+    }
+
+    .signup-steps {
+        font-size: 17px;
+        line-height: 1.95;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .section-title:before, .section-title:after {
+        width: 24px;
+        margin: 0 10px;
+    }
+
+    .quick-info {
+        width: min(88vw, 430px);
+    }
+
+    .quick-info-row {
+        padding: 20px 0;
+        font-size: 15px;
+    }
+
+    .signup-steps {
+        width: min(88vw, 430px);
+        font-size: 16px;
+        line-height: 1.9;
+    }
+
+    .signup-steps ol {
+        max-width: 320px;
+        padding-left: 28px;
+        margin-bottom: 38px;
+    }
+
+    .footer-logo-mark {
+        width: 72px;
+        height: 72px;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .practice-description-section {
+        padding-bottom: 38px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .practice-description-section {
+        padding-bottom: 30px;
+    }
+
+    .workshop-row:last-child {
+        padding-bottom: 46px;
+    }
+
+}
+
+.landing-section {
+    padding: 118px 0;
+    background: var(--bdk-black);
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.landing-section.compact {
+    padding: 82px 0;
+    padding-top: 88px;
+    padding-bottom: 88px;
+}
+
+.landing-section.after-divider, .terms-section, .thread-section, #prijava {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.landing-section.after-thread {
+    padding-top: 34px;
+    padding-bottom: 72px;
+}
+
+.section-title {
+    margin: 0 0 48px;
+    color: var(--bdk-gold-active);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 26px;
+    line-height: 1.45;
+    letter-spacing: 0.24em;
+    margin-bottom: 50px;
+}
+
+.terms-section .section-intro {
+    max-width: 840px;
+    font-size: 18px;
+    line-height: 2.05;
+    margin-bottom: 50px;
+}
+
+.quick-info {
+    width: min(760px, 84vw);
+    max-width: none;
+    margin: 0 auto 58px;
+    border-top: 1px solid rgba(185, 166, 106, 0.24);
+    border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+    margin-bottom: 0;
+}
+
+.practice-description-section {
+    padding-bottom: 34px;
+}
+
+.practice-description-section .section-title {
+    margin-bottom: 42px;
+}
+
+.practice-overview p:last-child {
+    margin-bottom: 0;
+}
+
+.workshop-row:last-child {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.about-cta-band {
+    margin-top: 0;
+    background-image: linear-gradient(to right, rgba(5, 5, 5, 0.62), rgba(5, 5, 5, 0.30)), url("/img/budokon-moc-pas-3.jpg");
+    background-position: center;
+}
+
+.final-cta-band {
+    margin-top: 56px;
+    background-image: linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.30)), url("/img/budokon-moc-pas-1.jpg");
+    background-position: center;
+}
+
+@media (max-width: 900px) {
+    .landing-section, .landing-section.compact, .landing-section.after-divider, .terms-section, .thread-section, #prijava {
+        padding-top: 78px;
+        padding-bottom: 78px;
+    }
+
+    .landing-section.after-thread {
+        padding-top: 28px;
+        padding-bottom: 58px;
+    }
+
+    .section-title {
+        font-size: 22px;
+        letter-spacing: 0.20em;
+        margin-bottom: 42px;
+    }
+
+    .terms-section .section-intro {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    .final-cta-band {
+        margin-top: 44px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .landing-section, .landing-section.compact, .landing-section.after-divider, .terms-section, .thread-section, #prijava {
+        padding-top: 66px;
+        padding-bottom: 66px;
+    }
+
+    .landing-section.after-thread {
+        padding-top: 22px;
+        padding-bottom: 48px;
+    }
+
+    .section-title {
+        font-size: 19px;
+        letter-spacing: 0.16em;
+        margin-bottom: 34px;
+    }
+
+    .terms-section .section-intro {
+        font-size: 15px;
+        line-height: 1.9;
+        margin-bottom: 34px;
+    }
+
+    .cta-image-band {
+        margin-top: 48px;
+        height: 170px;
+    }
+
+    .final-cta-band {
+        margin-top: 38px;
+    }
+
+}
+
+.post-workshop-cta-band {
+    margin-top: 0;
+    margin-bottom: 0;
+    background-image: linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.30)), url("/img/budokon-moc-pas-1.jpg");
+    background-position: center;
+}
+
+#prijava {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+#prijava .text-link-cta {
+    margin-top: 44px;
+    margin-bottom: 0;
+    color: var(--bdk-white);
+    font-size: 19px;
+    line-height: 1.9;
+}
+
+#prijava .text-link-cta a {
+    color: var(--bdk-gold-active);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(185, 166, 106, 0.62);
+    padding-bottom: 2px;
+}
+
+#prijava .text-link-cta a:hover, #prijava .text-link-cta a:focus {
+    color: var(--bdk-white);
+    border-bottom-color: var(--bdk-white);
+}
+
+.full-width-gold-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(185, 166, 106, 0.48);
+}
+
+@media (max-width: 900px) {
+    #prijava {
+        padding-top: 78px;
+        padding-bottom: 78px;
+    }
+
+    #prijava .text-link-cta {
+        margin-top: 36px;
+        font-size: 17px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    #prijava {
+        padding-top: 66px;
+        padding-bottom: 66px;
+    }
+
+    #prijava .text-link-cta {
+        margin-top: 32px;
+        font-size: 16px;
+    }
+
+}
     </style>
 
 </head>
