@@ -1324,6 +1324,65 @@
         }
 
 
+        /* FINAL POLISH — spacing, headings and workshop CTA */
+        .section-title {
+            letter-spacing: 0.24em !important;
+        }
+
+        .practice-description-section {
+            padding-bottom: 46px !important;
+        }
+
+        .practice-description-section .section-title {
+            margin-bottom: 50px !important;
+        }
+
+        .landing-section.after-thread {
+            padding-top: 34px !important;
+        }
+
+        .workshop-row:last-child {
+            border-bottom: 0 !important;
+            padding-bottom: 58px;
+        }
+
+        .workshop-cta-band {
+            margin-top: 0;
+        }
+
+        @media (max-width: 900px) {
+            .section-title {
+                letter-spacing: 0.20em !important;
+            }
+
+            .practice-description-section {
+                padding-bottom: 38px !important;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 28px !important;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .section-title {
+                letter-spacing: 0.16em !important;
+            }
+
+            .practice-description-section {
+                padding-bottom: 30px !important;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 22px !important;
+            }
+
+            .workshop-row:last-child {
+                padding-bottom: 46px;
+            }
+        }
+
+
     </style>
 
 </head>
@@ -1474,10 +1533,10 @@
         </div>
     </section>
 
-    <!-- Kaj bomo vadili | opis delavnic -->
-    <section class="landing-section thread-section">
+    <!-- Kaj vadimo | opis delavnic -->
+    <section class="landing-section thread-section practice-description-section">
         <div class="landing-container">
-            <h2 class="section-title">Kaj bomo vadili | opis delavnic</h2>
+            <h2 class="section-title">Kaj vadimo | opis delavnic</h2>
 
             <div class="text-block practice-overview">
                 <p>Vadili bomo animal locomotion, BDK mobility, kalisteniko, delo s tlemi, borilne elemente brez kontakta in Budokon joga tranzicije.</p>
@@ -1558,7 +1617,9 @@
         </div>
     </section>
 
-    <section class="image-band band-two" aria-label="Budokon poletna serija"></section>
+    <div class="cta-image-band workshop-cta-band" aria-label="Rezervacija mesta za Budokon moč">
+        <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+    </div>
 
     <!-- Potek prijave -->
     <section id="prijava" class="landing-section">
