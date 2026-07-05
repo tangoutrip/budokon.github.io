@@ -73,6 +73,14 @@ body.budokon-moc-page {
     color: var(--bdk-white);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+.section-anchor {
+    scroll-margin-top: 84px;
+}
+
 a {
     color: var(--bdk-gold-active);
     transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
@@ -1497,22 +1505,22 @@ footer.landing-footer {
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="/#budokon">Budokon</a>
-                    </li>
-                    <li class="active">
-                        <a href="/budokon-moc/">Delavnice</a>
+                        <a class="page-scroll" href="#za-koga">Za koga</a>
                     </li>
                     <li>
-                        <a href="/#vteku">Urnik</a>
+                        <a class="page-scroll" href="#prakso-vodi">Vodi prakso</a>
                     </li>
                     <li>
-                        <a href="/#program">Program</a>
+                        <a class="page-scroll" href="#termini">Termini</a>
                     </li>
                     <li>
-                        <a href="/#cenik">Cenik</a>
+                        <a class="page-scroll" href="#delavnice">Delavnice</a>
                     </li>
                     <li>
-                        <a href="/#kontakt">Kontakt</a>
+                        <a class="page-scroll" href="#prijava">Prijava</a>
+                    </li>
+                    <li>
+                        <a href="/">Budokon</a>
                     </li>
                 </ul>
             </div>
@@ -1565,7 +1573,7 @@ footer.landing-footer {
     <div class="gold-divider"></div>
 
     <!-- Za koga -->
-    <section class="landing-section after-divider">
+    <section id="za-koga" class="landing-section after-divider section-anchor">
         <div class="landing-container">
             <h2 class="section-title">Za koga</h2>
 
@@ -1585,7 +1593,7 @@ footer.landing-footer {
 
 
     <!-- Vodi prakso -->
-    <section class="teacher-section" aria-labelledby="teacher-title">
+    <section id="prakso-vodi" class="teacher-section section-anchor" aria-labelledby="teacher-title">
         <div class="teacher-panel">
             <div class="teacher-image">
                 <img src="/img/sanjasomatika.jpg" alt="Sanja Zalar Gostimirović | Sanja Somatika">
@@ -1637,7 +1645,7 @@ footer.landing-footer {
     </div>
 
     <!-- Termini in cena -->
-    <section class="landing-section compact terms-section">
+    <section id="termini" class="landing-section compact terms-section section-anchor">
         <div class="landing-container">
             <h2 class="section-title">Termini in cena</h2>
 
@@ -1683,7 +1691,7 @@ footer.landing-footer {
     </section>
 
     <!-- Delavnice -->
-    <section class="landing-section after-thread">
+    <section id="delavnice" class="landing-section after-thread section-anchor">
         <div class="landing-container wide">
             <div class="workshops">
 
@@ -1758,7 +1766,7 @@ footer.landing-footer {
     </div>
 
     <!-- Potek prijave -->
-    <section id="prijava" class="landing-section">
+    <section id="prijava" class="landing-section section-anchor">
         <div class="landing-container wide">
             <h2 class="section-title">Potek prijave</h2>
 
