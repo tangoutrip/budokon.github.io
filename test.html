@@ -10,8 +10,7 @@
 
     <meta name="description" content="Budokon moč je poletna serija štirih Budokon delavnic v Ljubljani. Stabilnost, mobilnost, meje in tok skozi prakso mešanih gibalnih umetnosti.">
     <meta name="author" content="Sanja Zalar Gostimirović – Sanja Somatika">
-    <meta name="robots" content="noindex, nofollow">
-    <meta name="googlebot" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
     <meta name="theme-color" content="#050505">
 
     <link rel="canonical" href="https://budokon.si/budokon-moc/">
@@ -980,6 +979,133 @@
             }
         }
 
+
+        /* LIVE CLEANUP — final conversion polish */
+        .landing-section.after-divider {
+            padding-top: 88px;
+        }
+
+        .gold-divider {
+            margin: 0 auto;
+        }
+
+        .section-title {
+            margin-bottom: 44px;
+        }
+
+        .terms-section .section-title,
+        .thread-section .section-title,
+        #prijava .section-title {
+            margin-bottom: 42px;
+        }
+
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 46px;
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        .quick-info {
+            max-width: 760px;
+            margin: 0 auto;
+            border-top: 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.26);
+        }
+
+        .quick-info-row {
+            grid-template-columns: 190px 1fr;
+            gap: 38px;
+            padding: 21px 0;
+            border-top: 1px solid rgba(185, 166, 106, 0.22);
+            border-bottom: 0;
+            font-size: 16px;
+        }
+
+        .quick-info-label {
+            font-size: 12px;
+        }
+
+        .image-band.band-one {
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.36), rgba(5, 5, 5, 0.18)),
+                url("/img/budokon-moc-pas-1.jpg");
+            background-position: center;
+        }
+
+        .practice-overview {
+            max-width: 790px;
+            margin: 0 auto;
+        }
+
+        .practice-overview p {
+            margin-bottom: 20px;
+        }
+
+        .signup-steps {
+            max-width: 860px;
+            margin: 0 auto;
+            color: var(--bdk-muted);
+            font-size: 18px;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .signup-steps ol {
+            display: block;
+            max-width: 620px;
+            margin: 26px auto 40px;
+            padding-left: 34px;
+            text-align: left;
+        }
+
+        .signup-steps li {
+            margin-bottom: 12px;
+            color: var(--bdk-white);
+        }
+
+        .signup-steps p {
+            margin-bottom: 14px;
+        }
+
+        .signup-steps strong {
+            color: var(--bdk-white);
+            font-weight: 400;
+        }
+
+        @media (max-width: 900px) {
+            .quick-info-row {
+                grid-template-columns: 1fr;
+                gap: 6px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-section.after-divider,
+            .terms-section {
+                padding-top: 72px;
+            }
+
+            .section-intro {
+                margin-bottom: 36px;
+                font-size: 15px;
+            }
+
+            .quick-info-row {
+                font-size: 15px;
+            }
+
+            .signup-steps {
+                font-size: 16px;
+                line-height: 1.9;
+            }
+
+            .signup-steps ol {
+                max-width: 320px;
+                padding-left: 28px;
+            }
+        }
+
     </style>
 
 </head>
@@ -1066,6 +1192,7 @@
         </div>
     </section>
 
+    <div class="gold-divider"></div>
 
     <!-- Za koga -->
     <section class="landing-section after-divider">
@@ -1073,13 +1200,13 @@
             <h2 class="section-title">Za koga</h2>
 
             <div class="text-block">
-                <p>Serija delavnic je primerna za vse, ki želite poglabljati stik s psihofizično močjo in zapustiti idejo, da morate za tak tip prakse že priti močni, agilni ali fleksibilni.</p>
-
-                <p>Budokon gradimo iz temeljev. Praksa omogoča prilagoditve, postopnost in raziskovanje lastnih kapacitet. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje.</p>
+                <p>Serija delavnic je primerna za vas, če želite poglabljati stik s psihofizično močjo in zapustiti idejo, da morate za tak tip prakse že priti močni, agilni ali fleksibilni.</p>
 
                 <p><strong>Predznanje Budokona ni pogoj.</strong></p>
 
-                <p>Dobrodošla je pripravljenost za raziskovanje onkraj znanih gibalnih vzorcev. Praksa vabi začetniški um — vedno znova.</p>
+                <p>Budokon gradimo iz temeljev. Praksa omogoča prilagoditve, postopnost in raziskovanje lastnih kapacitet. Izziv je del procesa, vendar delo ne temelji na potiskanju čez meje.</p>
+
+                <p>Dobrodošla je pripravljenost za raziskovanje onkraj znanih gibalnih vzorcev. Praksa vabi začetniški um, vedno znova.</p>
             </div>
 
             <div class="landing-inline-cta">
@@ -1088,6 +1215,7 @@
         </div>
     </section>
 
+    <section class="image-band band-one" aria-label="Budokon gibanje"></section>
 
     <!-- Termini in cena -->
     <section class="landing-section compact terms-section">
@@ -1096,7 +1224,7 @@
 
             <div class="text-block section-intro">
                 <p>Delavnice potekajo vsak drugi ponedeljek od 18:00 do 20:00.</p>
-                <p>Podlog ne potrebujete, vadimo bosi, na tatamijih.<br>Potrebujete športna oblačila, ki vam pokrijejo ramena in kolena za več udobja.</p>
+                <p>Podlog ne potrebujete, vadimo bosi, na tatamijih.<br>Potrebujete športna oblačila, ki vam pokrijejo ramena in kolena.</p>
             </div>
 
             <div class="quick-info">
@@ -1121,9 +1249,6 @@
                 </div>
             </div>
 
-            <div class="pricing-note availability-note">
-                <p>Posamezne delavnice so možne le v primeru prostih mest.</p>
-            </div>
 
             <div class="landing-inline-cta">
                 <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
@@ -1131,12 +1256,10 @@
         </div>
     </section>
 
-    <section class="image-band band-one" aria-label="Budokon gibanje"></section>
-
-    <!-- Kaj bomo vadili / opis delavnic -->
+    <!-- Kaj bomo vadili | opis delavnic -->
     <section class="landing-section thread-section">
         <div class="landing-container">
-            <h2 class="section-title">Kaj bomo vadili / opis delavnic</h2>
+            <h2 class="section-title">Kaj bomo vadili | opis delavnic</h2>
 
             <div class="text-block practice-overview">
                 <p>Vadili bomo animal locomotion, BDK mobility, kalisteniko, delo s tlemi, borilne elemente brez kontakta in Budokon joga tranzicije.</p>
@@ -1228,8 +1351,8 @@
                 <p><strong>Kako poteka prijava</strong></p>
                 <ol>
                     <li>Izpolnite prijavni obrazec.</li>
-                    <li>Prejmete navodila za plačilo.</li>
-                    <li>Mesto je potrjeno s plačilom.</li>
+                    <li>Prejmete račun za rezervacijo mesta.</li>
+                    <li>Po plačilu prejmete vse informacije.</li>
                 </ol>
                 <p>Število mest je omejeno, zagotovite si ga šele s plačilom, ne zgolj s prijavo.</p>
                 <p>Za cikel ni nadomeščanj in vračil, ker s plačilom rezervirate mesto v omejeni skupini.</p>
