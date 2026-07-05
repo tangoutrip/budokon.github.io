@@ -1383,6 +1383,141 @@
         }
 
 
+        /* FINAL LAYOUT ADJUSTMENT — CTA image placement and calmer spacing */
+        .landing-section {
+            padding-top: 96px !important;
+            padding-bottom: 96px !important;
+        }
+
+        .landing-section.compact {
+            padding-top: 88px !important;
+            padding-bottom: 88px !important;
+        }
+
+        .landing-section.after-divider,
+        .terms-section,
+        .thread-section,
+        #prijava {
+            padding-top: 96px !important;
+            padding-bottom: 96px !important;
+        }
+
+        .landing-section.after-thread {
+            padding-top: 34px !important;
+            padding-bottom: 72px !important;
+        }
+
+        .section-title {
+            margin-bottom: 50px !important;
+        }
+
+        .terms-section .section-intro {
+            margin-bottom: 50px !important;
+        }
+
+        .quick-info {
+            margin-bottom: 0 !important;
+        }
+
+        .practice-description-section {
+            padding-bottom: 34px !important;
+        }
+
+        .practice-description-section .section-title {
+            margin-bottom: 42px !important;
+        }
+
+        .practice-overview p:last-child {
+            margin-bottom: 0;
+        }
+
+        .workshop-row:last-child {
+            padding-bottom: 0 !important;
+        }
+
+        .about-cta-band {
+            margin-top: 0 !important;
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.62), rgba(5, 5, 5, 0.30)),
+                url("/img/budokon-moc-pas-3.jpg") !important;
+            background-position: center !important;
+        }
+
+        .final-cta-band {
+            margin-top: 56px !important;
+            background-image:
+                linear-gradient(to right, rgba(5, 5, 5, 0.58), rgba(5, 5, 5, 0.30)),
+                url("/img/budokon-moc-pas-1.jpg") !important;
+            background-position: center !important;
+        }
+
+        #prijava {
+            padding-bottom: 0 !important;
+        }
+
+        @media (max-width: 900px) {
+            .landing-section,
+            .landing-section.compact,
+            .landing-section.after-divider,
+            .terms-section,
+            .thread-section,
+            #prijava {
+                padding-top: 78px !important;
+                padding-bottom: 78px !important;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 28px !important;
+                padding-bottom: 58px !important;
+            }
+
+            .section-title {
+                margin-bottom: 42px !important;
+            }
+
+            .terms-section .section-intro {
+                margin-bottom: 40px !important;
+            }
+
+            .final-cta-band {
+                margin-top: 44px !important;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .landing-section,
+            .landing-section.compact,
+            .landing-section.after-divider,
+            .terms-section,
+            .thread-section,
+            #prijava {
+                padding-top: 66px !important;
+                padding-bottom: 66px !important;
+            }
+
+            .landing-section.after-thread {
+                padding-top: 22px !important;
+                padding-bottom: 48px !important;
+            }
+
+            .section-title {
+                margin-bottom: 34px !important;
+            }
+
+            .terms-section .section-intro {
+                margin-bottom: 34px !important;
+            }
+
+            .cta-image-band {
+                height: 170px !important;
+            }
+
+            .final-cta-band {
+                margin-top: 38px !important;
+            }
+        }
+
+
     </style>
 
 </head>
@@ -1486,13 +1621,12 @@
                 <p>Dobrodošla je pripravljenost za raziskovanje onkraj znanih gibalnih vzorcev. Praksa vabi začetniški um, vedno znova.</p>
             </div>
 
-            <div class="landing-inline-cta">
-                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
-            </div>
         </div>
     </section>
 
-    <section class="image-band band-one" aria-label="Budokon gibanje"></section>
+    <div class="cta-image-band about-cta-band" aria-label="Rezervacija mesta za Budokon moč">
+        <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
+    </div>
 
     <!-- Termini in cena -->
     <section class="landing-section compact terms-section">
@@ -1524,11 +1658,6 @@
                     <div class="quick-info-label">Cena</div>
                     <div class="quick-info-value">Sklop delavnic: 129 €<br>Posamezne delavnice: 39 €</div>
                 </div>
-            </div>
-
-
-            <div class="landing-inline-cta">
-                <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
             </div>
         </div>
     </section>
@@ -1617,10 +1746,6 @@
         </div>
     </section>
 
-    <div class="cta-image-band workshop-cta-band" aria-label="Rezervacija mesta za Budokon moč">
-        <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
-    </div>
-
     <!-- Potek prijave -->
     <section id="prijava" class="landing-section">
         <div class="landing-container wide">
@@ -1638,7 +1763,7 @@
             </div>
         </div>
 
-        <div class="cta-image-band" aria-label="Prijava na Budokon moč">
+        <div class="cta-image-band final-cta-band" aria-label="Prijava na Budokon moč">
             <a class="landing-button" href="https://forms.gle/SE8kGyMnm3J4XRoq6" target="_blank" rel="noopener">Rezerviraj mesto</a>
         </div>
     </section>
