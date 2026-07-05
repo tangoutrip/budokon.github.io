@@ -503,36 +503,45 @@ footer.landing-footer {
     }
 
     .landing-hero {
-        background-position: center right;
-        min-height: auto;
-        display: block;
-        background: var(--bdk-black);
+        min-height: calc(100vh - 56px);
+        min-height: calc(100svh - 56px);
+        margin-top: 56px;
+        display: flex;
+        align-items: center;
+        background:
+            linear-gradient(to bottom, rgba(5, 5, 5, 0.12) 0%, rgba(5, 5, 5, 0.34) 42%, rgba(5, 5, 5, 0.82) 100%),
+            linear-gradient(to right, rgba(5, 5, 5, 0.52) 0%, rgba(5, 5, 5, 0.22) 50%, rgba(5, 5, 5, 0.48) 100%),
+            url("/img/budokon-moc-hero.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 34% center;
     }
 
     .landing-hero-overlay {
-        display: none;
+        display: block;
+        background:
+            radial-gradient(circle at 40% 34%, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.10) 48%, rgba(0, 0, 0, 0.38) 100%),
+            linear-gradient(to bottom, rgba(0, 0, 0, 0.00) 0%, rgba(0, 0, 0, 0.18) 52%, rgba(0, 0, 0, 0.54) 100%);
     }
 
     .landing-hero-mobile-image {
-        display: block;
-        width: 100%;
-        margin-top: 56px;
-        aspect-ratio: 1200 / 630;
-        background: linear-gradient(to bottom, rgba(5, 5, 5, 0.08), rgba(5, 5, 5, 0.22)), url("/img/budokon-moc-hero.jpg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
-        border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+        display: none;
     }
 
     .landing-hero-inner {
         width: min(88vw, 430px);
-        padding-top: 42px;
+        padding-top: 84px;
         padding-bottom: 74px;
     }
 
     .landing-hero-copy {
         max-width: none;
+        text-align: center;
+    }
+
+    .landing-lead {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .landing-hero-facts {
