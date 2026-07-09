@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="google-site-verification" content="gQFZ7SeB10l5S4c39J8qOIsf3u0VxB_ciIVTMA2ZQGE" />
+    <meta name="google-site-verification" content="gQFZ7SeB10l5S4c39J8qOIsf3u0VxB_ciIVTMA2ZQGE">
 
     <title>Budokon Slovenija | Mešane gibalne umetnosti v Ljubljani</title>
 
@@ -17,7 +17,6 @@
 
     <link rel="canonical" href="https://budokon.si/">
 
-    <!-- Open Graph / social preview -->
     <meta property="og:locale" content="sl_SI">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://budokon.si/">
@@ -30,7 +29,6 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
 
-    <!-- Social preview fallback -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Budokon Slovenija | Mešane gibalne umetnosti">
     <meta name="twitter:description" content="Prva slovenska Budokon šola. Živalsko gibanje, BDK joga, borilne veščine in mobilnost.">
@@ -38,22 +36,18 @@
 
     <link rel="image_src" href="https://budokon.si/img/og-budokon-slovenija.jpg">
 
-    <!-- Bootstrap Core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
     <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Six+Caps&display=swap" rel="stylesheet">
 
-    <!-- Theme CSS -->
     <link href="css/futura.css" rel="stylesheet">
     <link href="css/grayscale.css" rel="stylesheet">
     <link href="css/budokon.css" rel="stylesheet">
     <link href="css/dark-theme.css" rel="stylesheet">
 
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
 
     <style>
         :root {
@@ -99,8 +93,26 @@
         }
 
         .navbar-custom .nav li a:hover,
-        .navbar-custom .nav li.active a {
+        .navbar-custom .nav li a:focus,
+        .navbar-custom .nav li.active a,
+        .navbar-custom .nav li.active a:hover,
+        .navbar-custom .nav li.active a:focus,
+        .navbar-custom .navbar-nav > .active > a,
+        .navbar-custom .navbar-nav > .active > a:hover,
+        .navbar-custom .navbar-nav > .active > a:focus {
+            background: transparent;
             color: var(--bdk-gold-active);
+        }
+
+        .navbar-custom .nav li.active {
+            background: transparent;
+        }
+
+        .navbar-custom .navbar-toggle:hover,
+        .navbar-custom .navbar-toggle:focus {
+            background: transparent;
+            color: var(--bdk-gold-active);
+            border-color: var(--bdk-gold-active);
         }
 
         .navbar-custom .navbar-brand .light {
@@ -153,7 +165,7 @@
             line-height: 0.82;
             letter-spacing: 0.12em;
             text-transform: uppercase;
-            color: #f4f1ea;
+            color: var(--bdk-white);
         }
 
         .hero-subtitle {
@@ -164,25 +176,26 @@
             line-height: 1.3;
             letter-spacing: 0.42em;
             text-transform: uppercase;
-            color: #f4f1ea;
+            color: var(--bdk-white);
         }
 
         .hero-elements {
-            margin-top: 22px;
+            max-width: 900px;
+            margin: 22px auto 0;
             font-family: "Montserrat", "Futura", sans-serif;
-            font-size: clamp(13px, 1.22vw, 21px);
+            font-size: clamp(11px, 0.95vw, 16px);
             font-weight: 400;
-            line-height: 1.5;
-            letter-spacing: 0.12em;
+            line-height: 1.7;
+            letter-spacing: 0.10em;
             text-transform: none;
-            color: var(--bdk-gold, #b9a66a);
+            color: var(--bdk-gold-active);
         }
 
         .hero-logo-mark {
             width: clamp(54px, 5vw, 92px);
             height: clamp(54px, 5vw, 92px);
             margin: 34px auto 0;
-            background-color: var(--bdk-gold, #b9a66a);
+            background-color: var(--bdk-gold-active);
             -webkit-mask: url("img/bdk-logo-black.png") center / contain no-repeat;
             mask: url("img/bdk-logo-black.png") center / contain no-repeat;
             opacity: 0.95;
@@ -207,11 +220,11 @@
         }
 
         .section-title {
-            margin: 0 0 48px;
+            margin: 0 0 52px;
             color: var(--bdk-gold-active);
-            font-size: 20px;
-            line-height: 1.5;
-            letter-spacing: 0.30em;
+            font-size: 28px;
+            line-height: 1.45;
+            letter-spacing: 0.28em;
             text-transform: uppercase;
             text-align: center;
             font-weight: 400;
@@ -325,7 +338,7 @@
 
         .schedule-day {
             color: var(--bdk-gold-active);
-            font-size: 14px;
+            font-size: 15px;
             letter-spacing: 0.22em;
             text-transform: uppercase;
         }
@@ -370,7 +383,7 @@
         .program-card h3 {
             margin: 0 0 24px;
             color: var(--bdk-white);
-            font-size: 17px;
+            font-size: 19px;
             line-height: 1.5;
             letter-spacing: 0.22em;
             text-transform: uppercase;
@@ -431,7 +444,7 @@
         .price-block h3 {
             margin: 0 0 22px;
             color: var(--bdk-gold-active);
-            font-size: 14px;
+            font-size: 16px;
             letter-spacing: 0.22em;
             text-transform: uppercase;
             font-weight: 400;
@@ -495,7 +508,7 @@
             margin: 0 0 28px;
             color: var(--bdk-white);
             font-family: "Futura", "Montserrat", sans-serif;
-            font-size: clamp(24px, 2.8vw, 36px);
+            font-size: clamp(26px, 3vw, 38px);
             font-weight: 400;
             line-height: 1.24;
             letter-spacing: 0.04em;
@@ -662,6 +675,11 @@
                 padding: 92px 0;
             }
 
+            .section-title {
+                font-size: 24px;
+                letter-spacing: 0.24em;
+            }
+
             .program-grid,
             .pricing-grid {
                 grid-template-columns: 1fr;
@@ -724,10 +742,11 @@
             }
 
             .hero-elements {
+                max-width: 92vw;
                 margin-top: 18px;
-                font-size: 12px;
+                font-size: 11px;
                 line-height: 1.75;
-                letter-spacing: 0.06em;
+                letter-spacing: 0.05em;
             }
 
             .hero-logo-mark {
@@ -747,8 +766,9 @@
             }
 
             .section-title {
-                font-size: 15px;
-                letter-spacing: 0.22em;
+                font-size: 20px;
+                line-height: 1.45;
+                letter-spacing: 0.18em;
             }
 
             .text-block,
@@ -825,7 +845,6 @@
         }
     </style>
 
-    <!-- Structured data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -861,7 +880,7 @@
           "alternateName": "Sanja Somatika",
           "url": "https://sanjasomatika.si/",
           "email": "sanja@budokon.si",
-          "jobTitle": "certificirana Budokon izobraževalka",
+          "jobTitle": "certificirana Budokon učiteljica",
           "worksFor": {
             "@id": "https://budokon.si/#organization"
           },
@@ -883,7 +902,6 @@
     }
     </script>
 
-    <!-- MailerLite Universal -->
     <script>
         (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
         .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
@@ -891,13 +909,11 @@
         (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
         ml('account', '1345870');
     </script>
-    <!-- End MailerLite Universal -->
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
@@ -935,7 +951,6 @@
         </div>
     </nav>
 
-    <!-- Intro Header -->
     <header class="fullwidth budokon hero-header">
         <video playsinline autoplay muted loop id="videohead" preload="true">
             <source src="img/header.mp4" type="video/mp4">
@@ -951,11 +966,8 @@
             </div>
             <div class="hero-logo-mark" aria-label="Budokon Slovenija logo"></div>
         </div>
-
-        <!--<div id="unmute-mute"><button class="muted"><i class="fa fa-fw fa-volume-off"></i><i class="fa fa-fw fa-volume-up"></i></button></div>-->
     </header>
 
-    <!-- Budokon -->
     <section id="budokon" class="home-section compact">
         <div class="home-container">
             <h2 class="section-title">Budokon Slovenija</h2>
@@ -979,7 +991,6 @@
 
     <section class="image-band band-warrior" aria-label="Budokon gibanje"></section>
 
-    <!-- Urnik -->
     <section id="vteku" class="home-section">
         <div class="home-container">
             <h2 class="section-title">BDK Ljubljana</h2>
@@ -1005,7 +1016,6 @@
 
     <section class="image-band band-bridge" aria-label="Budokon prehod"></section>
 
-    <!-- Delavnice -->
     <section id="delavnice" class="home-section compact">
         <div class="home-container">
             <h2 class="section-title">Delavnice</h2>
@@ -1018,7 +1028,6 @@
         </div>
     </section>
 
-    <!-- Program -->
     <section id="program" class="home-section">
         <div class="home-container wide">
             <h2 class="section-title">Program</h2>
@@ -1045,7 +1054,6 @@
         </div>
     </section>
 
-    <!-- Kako se pridružiš -->
     <section id="kako-se-pridruzis" class="home-section compact">
         <div class="home-container">
             <h2 class="section-title">Kako se pridružiš</h2>
@@ -1068,7 +1076,6 @@
         </div>
     </section>
 
-    <!-- Full-width image strip -->
     <section id="image-band" class="gallery-strip" aria-label="Budokon gibanje">
         <div class="mini-grid">
             <img src="img/bdk-mini1.png" alt="Budokon gibanje 1">
@@ -1080,7 +1087,6 @@
         </div>
     </section>
 
-    <!-- Cenik -->
     <section id="cenik" class="home-section">
         <div class="home-container">
             <h2 class="section-title">Cenik</h2>
@@ -1118,7 +1124,6 @@
         </div>
     </section>
 
-    <!-- Kontakt -->
     <section id="kontakt" class="home-section">
         <div class="home-container wide">
             <h2 class="section-title">Sanja Zalar Gostimirović <span>|</span> Sanja Somatika</h2>
@@ -1143,14 +1148,13 @@
 
                     <div class="teacher-stats" aria-label="Izkušnje">
                         <div class="teacher-stats-line">26 let osebne prakse <span>|</span> 12 let poučevanja</div>
-                        <div class="teacher-stats-training">10.500+ ur izobraževanj na področju dela z ljudmi</div>
+                        <div class="teacher-stats-training">10.500+ ur izobrazbe na področju dela z ljudmi</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Novice -->
     <section id="novice" class="home-section compact newsletter-section">
         <div class="home-container">
             <h2 class="section-title">Budokon novice</h2>
