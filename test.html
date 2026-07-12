@@ -129,7 +129,7 @@
             padding: 0;
             overflow: hidden;
             background:
-                linear-gradient(to right, rgba(5, 5, 5, 0.78) 0%, rgba(5, 5, 5, 0.54) 44%, rgba(5, 5, 5, 0.22) 100%),
+                linear-gradient(to right, rgba(5, 5, 5, 0.84) 0%, rgba(5, 5, 5, 0.62) 44%, rgba(5, 5, 5, 0.30) 100%),
                 url("/img/leap.jpg");
             background-size: cover;
             background-position: center;
@@ -221,8 +221,8 @@
             margin-top: 44px;
             padding: 16px 34px;
             border: 1px solid var(--bdk-gold-active);
-            color: var(--bdk-gold-active);
-            background: transparent;
+            color: var(--bdk-black);
+            background: var(--bdk-gold-active);
             font-size: 13px;
             letter-spacing: 0.22em;
             text-transform: uppercase;
@@ -231,23 +231,24 @@
 
         .landing-button:hover,
         .landing-button:focus {
-            color: var(--bdk-black);
-            background: var(--bdk-gold-active);
+            color: var(--bdk-gold-active);
+            background: transparent;
             border-color: var(--bdk-gold-active);
             text-decoration: none;
         }
 
         .landing-button.secondary {
             margin-left: 12px;
-            color: var(--bdk-white);
-            border-color: rgba(244, 241, 234, 0.44);
+            color: var(--bdk-gold-active);
+            background: transparent;
+            border-color: var(--bdk-gold-active);
         }
 
         .landing-button.secondary:hover,
         .landing-button.secondary:focus {
             color: var(--bdk-black);
-            background: var(--bdk-white);
-            border-color: var(--bdk-white);
+            background: var(--bdk-gold-active);
+            border-color: var(--bdk-gold-active);
         }
 
         .landing-section {
@@ -311,13 +312,26 @@
             inset: 0;
             z-index: 1;
             background:
-                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.12) 68%),
-                linear-gradient(to right, rgba(5, 5, 5, 0.78) 0%, rgba(5, 5, 5, 0.54) 44%, rgba(5, 5, 5, 0.22) 100%);
+                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.24) 68%),
+                linear-gradient(to right, rgba(5, 5, 5, 0.84) 0%, rgba(5, 5, 5, 0.62) 44%, rgba(5, 5, 5, 0.30) 100%);
         }
 
         .image-content-section .landing-container {
             position: relative;
             z-index: 2;
+        }
+
+        .image-content-section .section-title {
+            margin: 0 0 42px;
+            font-family: "Six Caps", "Arial Narrow", sans-serif;
+            font-weight: 400;
+            font-size: clamp(78px, 9.2vw, 152px);
+            line-height: 1.02;
+            letter-spacing: 0.10em;
+            word-spacing: 0.12em;
+            color: var(--bdk-white);
+            text-transform: uppercase;
+            text-align: center;
         }
 
         .image-content-section .text-block p,
@@ -505,7 +519,7 @@
             max-width: 760px;
             margin: 0 auto 64px;
             border-top: 1px solid rgba(185, 166, 106, 0.34);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.34);
+            border-bottom: 0;
         }
 
         .schedule-row {
@@ -702,6 +716,48 @@
             letter-spacing: 0.14em;
         }
 
+        .testimonials-section {
+            padding: 96px 0;
+            background: var(--bdk-black);
+        }
+
+        .testimonials-grid {
+            width: min(1060px, 88vw);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .testimonial-card {
+            min-height: 100%;
+            padding: 0 34px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-card + .testimonial-card {
+            border-left: 1px solid rgba(185, 166, 106, 0.34);
+        }
+
+        .testimonial-text {
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            text-align: center;
+            margin: 0 0 28px;
+        }
+
+        .testimonial-name {
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            letter-spacing: 0.22em;
+            line-height: 1.6;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: auto;
+        }
+
         .faq-list {
             width: min(900px, 84vw);
             margin: 0 auto;
@@ -828,6 +884,10 @@
                 padding-left: 32px;
                 padding-right: 32px;
             }
+
+            .testimonial-card {
+                padding: 0 28px;
+            }
         }
 
         @media (max-width: 900px) {
@@ -862,6 +922,7 @@
             .landing-section,
             .landing-section.compact,
             .teacher-section,
+            .testimonials-section,
             .image-content-section {
                 padding-top: 78px;
                 padding-bottom: 78px;
@@ -871,6 +932,10 @@
                 font-size: 24px;
                 letter-spacing: 0.22em;
                 margin-bottom: 44px;
+            }
+
+            .image-content-section .section-title {
+                font-size: clamp(68px, 12vw, 120px);
             }
 
             .build-grid,
@@ -903,6 +968,26 @@
                 border-top: 1px solid rgba(185, 166, 106, 0.24);
                 padding: 44px 38px;
             }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+                width: min(84vw, 680px);
+            }
+
+            .testimonial-card {
+                padding: 32px 0;
+                border-left: 0;
+                border-bottom: 1px solid rgba(185, 166, 106, 0.30);
+            }
+
+            .testimonial-card + .testimonial-card {
+                border-left: 0;
+            }
+
+            .testimonial-card:last-child {
+                border-bottom: 0;
+            }
         }
 
         @media (max-width: 560px) {
@@ -912,8 +997,8 @@
                 margin-top: 56px;
                 align-items: center;
                 background:
-                    linear-gradient(to bottom, rgba(5, 5, 5, 0.18) 0%, rgba(5, 5, 5, 0.42) 42%, rgba(5, 5, 5, 0.86) 100%),
-                    linear-gradient(to right, rgba(5, 5, 5, 0.56) 0%, rgba(5, 5, 5, 0.26) 50%, rgba(5, 5, 5, 0.52) 100%),
+                    linear-gradient(to bottom, rgba(5, 5, 5, 0.22) 0%, rgba(5, 5, 5, 0.48) 42%, rgba(5, 5, 5, 0.88) 100%),
+                    linear-gradient(to right, rgba(5, 5, 5, 0.66) 0%, rgba(5, 5, 5, 0.34) 50%, rgba(5, 5, 5, 0.58) 100%),
                     url("/img/leap.jpg");
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -955,6 +1040,7 @@
             .landing-section,
             .landing-section.compact,
             .teacher-section,
+            .testimonials-section,
             .image-content-section {
                 padding-top: 66px;
                 padding-bottom: 66px;
@@ -965,6 +1051,12 @@
                 line-height: 1.45;
                 letter-spacing: 0.16em;
                 margin-bottom: 36px;
+            }
+
+            .image-content-section .section-title {
+                font-size: clamp(54px, 18vw, 88px);
+                line-height: 1.06;
+                letter-spacing: 0.08em;
             }
 
             .text-block {
@@ -1043,6 +1135,11 @@
             .teacher-stats-training {
                 white-space: normal;
                 letter-spacing: 0.04em;
+            }
+
+            .testimonial-text {
+                font-size: 15px;
+                line-height: 1.85;
             }
 
             .faq-question {
@@ -1196,9 +1293,6 @@
                     </li>
                     <li>
                         <a class="page-scroll" href="#prijava">Prijava</a>
-                    </li>
-                    <li>
-                        <a href="/">Budokon</a>
                     </li>
                 </ul>
             </div>
@@ -1452,6 +1546,29 @@
                     <div class="teacher-stats-training">10.500+ ur izobrazbe na področju dela z ljudmi</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="testimonials-section" aria-labelledby="testimonials-title">
+        <div class="landing-container">
+            <h2 id="testimonials-title" class="section-title">Kaj pravijo udeleženci</h2>
+        </div>
+
+        <div class="testimonials-grid">
+            <article class="testimonial-card">
+                <p class="testimonial-text">“Lansko poletje sem bila na nekaj tvojih Budokon delavnicah v Ljubljani, ki so mi bile eno lepših daril, ki sem si jih podarila. Izkušnja tvojega vodenja pri vzpostavljanju odnosa s svojim telesom je točno to, kar bi priporočila.”</p>
+                <div class="testimonial-name">Nika</div>
+            </article>
+
+            <article class="testimonial-card">
+                <p class="testimonial-text">“Sanja v svoje tečaje vnese sintezo telesa in duha na povsem naraven način. Uspe ji nevsiljivo ustvariti občutek skupnosti in domačnosti; je nepopustljiva in obenem nežna. Dobrih učiteljev je malo in Sanja je eden od njih.”</p>
+                <div class="testimonial-name">Matija</div>
+            </article>
+
+            <article class="testimonial-card">
+                <p class="testimonial-text">“Ti si res srce te prakse. Najbolj všeč pri tvojem vodenju mi je tvoja širina, podpora, sočutje, predvsem pa poudarjanje tega, kako pomembna je pot, majhni koraki, dialog s sabo in ne toliko končna perfektna izvedba.”</p>
+                <div class="testimonial-name">Mateja</div>
+            </article>
         </div>
     </section>
 
