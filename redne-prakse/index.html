@@ -101,9 +101,9 @@
         .navbar-custom .nav li.active a,
         .navbar-custom .nav li.active a:hover,
         .navbar-custom .nav li.active a:focus,
-        .navbar-custom .navbar-nav > .active > a,
-        .navbar-custom .navbar-nav > .active > a:hover,
-        .navbar-custom .navbar-nav > .active > a:focus {
+        .navbar-custom .navbar-nav>.active>a,
+        .navbar-custom .navbar-nav>.active>a:hover,
+        .navbar-custom .navbar-nav>.active>a:focus {
             background: transparent;
             color: var(--bdk-gold-active);
         }
@@ -148,8 +148,8 @@
             z-index: 1;
             pointer-events: none;
             background:
-                radial-gradient(circle at center, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.22) 48%, rgba(0, 0, 0, 0.42) 100%),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.28));
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.26) 46%, rgba(0, 0, 0, 0.50) 100%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.26));
         }
 
         .semester-hero-inner {
@@ -164,7 +164,7 @@
         }
 
         .semester-hero-copy {
-            max-width: 860px;
+            max-width: 980px;
             margin: 0 auto;
             text-align: center;
         }
@@ -173,12 +173,12 @@
             margin: 0;
             font-family: "Six Caps", "Arial Narrow", sans-serif;
             font-weight: 400;
-            font-size: clamp(78px, 9.6vw, 152px);
-            line-height: 1.02;
+            font-size: clamp(72px, 8vw, 128px);
+            line-height: 1;
             letter-spacing: 0.10em;
-            word-spacing: 0.12em;
             color: var(--bdk-white);
             text-transform: uppercase;
+            white-space: nowrap;
         }
 
         .semester-subtitle {
@@ -193,7 +193,7 @@
         }
 
         .semester-lead {
-            margin: 40px auto 0;
+            margin: 38px auto 0;
             max-width: 760px;
             color: var(--bdk-white);
             font-size: 18px;
@@ -202,7 +202,7 @@
         }
 
         .semester-lead p {
-            margin-bottom: 18px;
+            margin-bottom: 0;
             color: var(--bdk-white);
         }
 
@@ -210,7 +210,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin-top: 36px;
+            margin-top: 34px;
             color: var(--bdk-muted);
             font-size: 12px;
             line-height: 1.8;
@@ -222,7 +222,7 @@
             display: inline-block;
         }
 
-        .semester-meta span + span::before {
+        .semester-meta span+span::before {
             content: "|";
             color: var(--bdk-gold-active);
             margin: 0 14px;
@@ -264,7 +264,7 @@
         }
 
         .hero-actions {
-            margin-top: 44px;
+            margin-top: 42px;
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
@@ -340,8 +340,8 @@
             inset: 0;
             z-index: 1;
             background:
-                radial-gradient(circle at center, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.28) 48%, rgba(0, 0, 0, 0.52) 100%),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.24));
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.30) 48%, rgba(0, 0, 0, 0.58) 100%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.26));
         }
 
         .image-content-section .landing-container {
@@ -477,7 +477,7 @@
             object-fit: cover;
             object-position: center 32%;
             margin-bottom: 36px;
-            filter: grayscale(16%) contrast(1.05) brightness(0.80);
+            filter: grayscale(16%) contrast(1.05) brightness(0.78);
         }
 
         .practice-card h3 {
@@ -508,7 +508,7 @@
             text-transform: uppercase;
         }
 
-        .practice-tags span + span::before {
+        .practice-tags span+span::before {
             content: "·";
             color: var(--bdk-gold-active);
             margin: 0 10px;
@@ -748,7 +748,7 @@
             justify-content: space-between;
         }
 
-        .testimonial-card + .testimonial-card {
+        .testimonial-card+.testimonial-card {
             border-left: 1px solid rgba(185, 166, 106, 0.34);
         }
 
@@ -900,6 +900,10 @@
             .testimonial-card {
                 padding: 0 28px;
             }
+
+            .semester-title {
+                white-space: normal;
+            }
         }
 
         @media (max-width: 900px) {
@@ -916,6 +920,10 @@
                 max-width: 680px;
             }
 
+            .semester-title {
+                white-space: normal;
+            }
+
             .semester-meta {
                 display: block;
                 line-height: 2.1;
@@ -925,7 +933,7 @@
                 display: block;
             }
 
-            .semester-meta span + span::before {
+            .semester-meta span+span::before {
                 content: "";
                 margin: 0;
             }
@@ -994,7 +1002,7 @@
                 border-bottom: 1px solid rgba(185, 166, 106, 0.30);
             }
 
-            .testimonial-card + .testimonial-card {
+            .testimonial-card+.testimonial-card {
                 border-left: 0;
             }
 
@@ -1013,8 +1021,8 @@
 
             .semester-hero-overlay {
                 background:
-                    radial-gradient(circle at center, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.30) 46%, rgba(0, 0, 0, 0.58) 100%),
-                    linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.38));
+                    radial-gradient(circle at center, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.34) 48%, rgba(0, 0, 0, 0.62) 100%),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.34));
             }
 
             .semester-hero-inner {
@@ -1029,10 +1037,10 @@
             }
 
             .semester-title {
-                font-size: clamp(60px, 19vw, 92px);
-                line-height: 1.08;
+                font-size: clamp(58px, 18vw, 92px);
+                line-height: 1.05;
                 letter-spacing: 0.08em;
-                word-spacing: 0.16em;
+                white-space: normal;
             }
 
             .semester-subtitle {
@@ -1273,7 +1281,6 @@
       ]
     }
     </script>
-
 </head>
 
 <body id="page-top" class="budokon-semester-page" data-spy="scroll" data-target=".navbar-fixed-top">
@@ -1315,7 +1322,6 @@
 
                 <div class="semester-lead">
                     <p>Budokon je praksa zate, če želiš krepiti moč inteligentno, brez potiskanja preko meja, postopno in somatsko čuječe.</p>
-                    <p>Za Budokon ne potrebuješ nič drugega kot pripravljenost na izziv, ki bo krepil tvojo odpornost in stik s telesom.</p>
                 </div>
 
                 <div class="semester-meta">
