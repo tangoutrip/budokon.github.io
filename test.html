@@ -303,33 +303,50 @@
             background: rgba(185, 166, 106, 0.55);
         }
 
-        .image-band {
-            height: 210px;
+        .image-content-section {
+            position: relative;
+            overflow: hidden;
+            padding: 118px 0;
             background-size: cover;
             background-position: center;
-            border-top: 1px solid rgba(185, 166, 106, 0.20);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.20);
-            opacity: 0.92;
+            background-repeat: no-repeat;
         }
 
-        .image-band.band-warrior {
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.46), rgba(5, 5, 5, 0.20)),
-                url("/leteča bojevnica.jpg");
-            background-position: center 28%;
+        .image-content-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                radial-gradient(circle at 70% 45%, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.64) 72%),
+                linear-gradient(to bottom, rgba(5, 5, 5, 0.60), rgba(5, 5, 5, 0.82));
         }
 
-        .image-band.band-bridge {
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.48), rgba(5, 5, 5, 0.20)),
-                url("/before bridge.jpg");
+        .image-content-section .landing-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .image-panel {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 52px 58px;
+            background: rgba(5, 5, 5, 0.68);
+            border: 1px solid rgba(185, 166, 106, 0.24);
+        }
+
+        .image-za-koga {
+            background-image: url("/before bridge.jpg");
             background-position: center 45%;
         }
 
-        .image-band.band-final {
-            background-image:
-                linear-gradient(to right, rgba(5, 5, 5, 0.52), rgba(5, 5, 5, 0.22)),
-                url("/img/fly3.jpg");
+        .image-semester {
+            background-image: url("/leteča bojevnica.jpg");
+            background-position: center 28%;
+        }
+
+        .image-test {
+            background-image: url("/img/fly3.jpg");
             background-position: center 30%;
         }
 
@@ -390,7 +407,7 @@
         }
 
         .semester-panel {
-            width: min(820px, 84vw);
+            width: min(820px, 100%);
             margin: 0 auto;
             border-top: 1px solid rgba(185, 166, 106, 0.30);
             border-bottom: 1px solid rgba(185, 166, 106, 0.30);
@@ -398,7 +415,7 @@
 
         .semester-row {
             display: grid;
-            grid-template-columns: 260px 1fr;
+            grid-template-columns: 240px 1fr;
             gap: 42px;
             padding: 28px 0;
             border-bottom: 1px solid rgba(185, 166, 106, 0.22);
@@ -464,6 +481,24 @@
             text-transform: uppercase;
         }
 
+        .practice-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .practice-tags span {
+            display: inline-block;
+            padding: 7px 10px;
+            border: 1px solid rgba(185, 166, 106, 0.30);
+            color: var(--bdk-muted);
+            font-size: 10px;
+            line-height: 1.4;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
         .practice-card p {
             color: var(--bdk-muted);
             font-size: 15px;
@@ -477,37 +512,85 @@
             text-align: center;
         }
 
-        .quick-info {
-            width: min(780px, 84vw);
-            margin: 0 auto;
-            border-top: 1px solid rgba(185, 166, 106, 0.24);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
-        }
-
-        .quick-info-row {
+        .terms-grid {
+            max-width: 860px;
+            margin: 0 auto 58px;
             display: grid;
-            grid-template-columns: 220px 1fr;
-            gap: 48px;
-            padding: 25px 0;
-            border-top: 1px solid rgba(185, 166, 106, 0.22);
-            color: var(--bdk-muted);
-            font-size: 17px;
-            line-height: 1.85;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1px;
+            border: 1px solid rgba(185, 166, 106, 0.28);
+            background: rgba(185, 166, 106, 0.28);
         }
 
-        .quick-info-row:first-child {
-            border-top: 0;
+        .term-card {
+            padding: 34px 30px;
+            background: var(--bdk-black);
+            text-align: center;
         }
 
-        .quick-info-label {
+        .term-label {
+            margin-bottom: 14px;
             color: var(--bdk-gold-active);
             font-size: 12px;
-            letter-spacing: 0.24em;
+            line-height: 1.7;
+            letter-spacing: 0.22em;
             text-transform: uppercase;
         }
 
-        .quick-info-value {
+        .term-value {
             color: var(--bdk-white);
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        .price-grid {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1px;
+            border: 1px solid rgba(185, 166, 106, 0.28);
+            background: rgba(185, 166, 106, 0.28);
+        }
+
+        .price-card {
+            padding: 38px 30px;
+            background: var(--bdk-black);
+            text-align: center;
+        }
+
+        .price-card h3 {
+            margin: 0 0 20px;
+            color: var(--bdk-gold-active);
+            font-size: 13px;
+            line-height: 1.6;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .price-card .price {
+            display: block;
+            margin-bottom: 14px;
+            color: var(--bdk-white);
+            font-size: 32px;
+            line-height: 1.4;
+        }
+
+        .price-card p {
+            margin: 0;
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .price-note {
+            max-width: 760px;
+            margin: 42px auto 0;
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            text-align: center;
         }
 
         .teacher-section {
@@ -779,7 +862,8 @@
 
             .landing-section,
             .landing-section.compact,
-            .teacher-section {
+            .teacher-section,
+            .image-content-section {
                 padding-top: 78px;
                 padding-bottom: 78px;
             }
@@ -790,8 +874,14 @@
                 margin-bottom: 44px;
             }
 
+            .image-panel {
+                padding: 46px 40px;
+            }
+
             .build-grid,
-            .practice-grid {
+            .practice-grid,
+            .terms-grid,
+            .price-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -799,8 +889,7 @@
                 height: 300px;
             }
 
-            .semester-row,
-            .quick-info-row {
+            .semester-row {
                 grid-template-columns: 1fr;
                 gap: 8px;
             }
@@ -870,7 +959,8 @@
 
             .landing-section,
             .landing-section.compact,
-            .teacher-section {
+            .teacher-section,
+            .image-content-section {
                 padding-top: 66px;
                 padding-bottom: 66px;
             }
@@ -887,6 +977,10 @@
                 line-height: 1.9;
             }
 
+            .image-panel {
+                padding: 38px 26px;
+            }
+
             .landing-button {
                 width: 100%;
                 max-width: 360px;
@@ -898,10 +992,6 @@
             .landing-button.secondary {
                 margin-left: 0;
                 margin-top: 16px;
-            }
-
-            .image-band {
-                height: 160px;
             }
 
             .for-whom-item {
@@ -918,9 +1008,7 @@
                 height: 240px;
             }
 
-            .quick-info,
-            .faq-list,
-            .semester-panel {
+            .faq-list {
                 width: min(88vw, 430px);
             }
 
@@ -1026,6 +1114,60 @@
             "kalistenika",
             "živalsko gibanje"
           ]
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://budokon.si/redne-prakse/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Ali potrebujem predznanje Budokona?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ne. Predznanje Budokona ni pogoj. Prakso gradimo postopno in z možnostjo prilagoditev."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ali moram biti že močan, agilen ali fleksibilen?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ne. Za Budokon ne rabiš priti že pripravljen. Praksa je namenjena prav grajenju kapacitete in sreča te, kje si. Pomembna pa je pripravljenost za raziskovanje in spoštovanje telesnih meja s prilagajanjem prakse telesu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ali je praksa naporna?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Lahko je izzivalna. Vendar izziv ni isto kot potiskanje preko meja. Prakso vodimo somatsko čuječe, progresivno, da vsak lahko sledi praksi znotraj svojih zmožnosti in s pozornostjo do telesnih mej."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kaj če imam izkušnje z jogo, plesom, fitnesom ali borilnimi veščinami?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Gibalne izkušnje vam bodo olajšale začetek, niso pa pogoj. Budokon ima svoj jezik gibanja, zato prakso vedno raziskujemo z začetniškim umom."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ali lahko hodim občasno?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Prakse potekajo le v obliki semestra. Skupina se po testnih praksah zapre, ker namen je kontinuiteta, postopnost in poglabljanje procesa skozi zavezo do sebe."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Kako se prijavim?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Najprej se prijaviš na testno lekcijo, če pa že veš, da je to zate, se lahko prijaviš na semester. Po prijavi prejmeš e-pošto z vsemi informacijami. Če se po testnem obisku odločiš za semester, se cena testnega obiska odšteje od šolnine in plačaš razliko."
+              }
+            }
+          ]
         }
       ]
     }
@@ -1112,24 +1254,24 @@
 
     <div class="gold-divider"></div>
 
-    <section id="za-koga" class="landing-section section-anchor">
+    <section id="za-koga" class="image-content-section image-za-koga section-anchor">
         <div class="landing-container">
-            <h2 class="section-title">Za koga</h2>
+            <div class="image-panel">
+                <h2 class="section-title">Za koga</h2>
 
-            <div class="for-whom-list">
-                <div class="for-whom-item">Ta praksa je zate, če želiš graditi moč inteligentno, brez potiskanja preko meja.</div>
-                <div class="for-whom-item">Želiš več mobilnosti, ne samo več fleksibilnosti.</div>
-                <div class="for-whom-item">Želiš razvijati koordinacijo, stabilnost in somatsko inteligenco.</div>
-                <div class="for-whom-item">Čutiš, da telo potrebuje več kot samo raztezanje ali krepitev.</div>
-                <div class="for-whom-item">Zanima te praksa, ki vključuje izziv, ampak ne temelji na dokazovanju.</div>
-                <div class="for-whom-item">Želiš raziskovati gibanje v odnosu do telesa.</div>
+                <div class="for-whom-list">
+                    <div class="for-whom-item">Ta praksa je zate, če želiš graditi moč inteligentno, brez potiskanja preko meja.</div>
+                    <div class="for-whom-item">Želiš več mobilnosti, ne samo več fleksibilnosti.</div>
+                    <div class="for-whom-item">Želiš razvijati koordinacijo, stabilnost in somatsko inteligenco.</div>
+                    <div class="for-whom-item">Čutiš, da telo potrebuje več kot samo raztezanje ali krepitev.</div>
+                    <div class="for-whom-item">Zanima te praksa, ki vključuje izziv, ampak ne temelji na dokazovanju.</div>
+                    <div class="for-whom-item">Želiš raziskovati gibanje v odnosu do telesa.</div>
+                </div>
+
+                <div class="for-whom-note">Predznanje Budokona ni pogoj.</div>
             </div>
-
-            <div class="for-whom-note">Predznanje Budokona ni pogoj.</div>
         </div>
     </section>
-
-    <section class="image-band band-warrior" aria-label="Budokon gibanje"></section>
 
     <section id="gradimo" class="landing-section section-anchor">
         <div class="landing-container wide">
@@ -1163,35 +1305,35 @@
         </div>
     </section>
 
-    <section class="image-band band-bridge" aria-label="Budokon prehod"></section>
-
-    <section id="semester" class="landing-section section-anchor">
+    <section id="semester" class="image-content-section image-semester section-anchor">
         <div class="landing-container">
-            <h2 class="section-title">Kako poteka semester</h2>
+            <div class="image-panel">
+                <h2 class="section-title">Kako poteka semester</h2>
 
-            <div class="text-block">
-                <p>Redne prakse Budokona potekajo v obliki dveh semestrov (cca 5 mesecev):</p>
-            </div>
-
-            <div class="semester-panel">
-                <div class="semester-row">
-                    <div class="semester-label">Jesensko-zimski</div>
-                    <div class="semester-value">od 18. septembra do 29. januarja</div>
+                <div class="text-block">
+                    <p>Redne prakse Budokona potekajo v obliki dveh semestrov (cca 5 mesecev):</p>
                 </div>
 
-                <div class="semester-row">
-                    <div class="semester-label">Pomladni</div>
-                    <div class="semester-value">od 10. februarja do 23. junija</div>
-                </div>
+                <div class="semester-panel">
+                    <div class="semester-row">
+                        <div class="semester-label">Jesensko-zimski</div>
+                        <div class="semester-value">od 18. septembra do 29. januarja</div>
+                    </div>
 
-                <div class="semester-row">
-                    <div class="semester-label">Proces</div>
-                    <div class="semester-value">Kontinuiran proces omogoča postopno progresijo in globlje razumevanje.</div>
-                </div>
+                    <div class="semester-row">
+                        <div class="semester-label">Pomladni</div>
+                        <div class="semester-value">od 10. februarja do 23. junija</div>
+                    </div>
 
-                <div class="semester-row">
-                    <div class="semester-label">Šolnina</div>
-                    <div class="semester-value">S šolnino rezerviraš svoje mesto v skupini in ne posameznih obiskov. Posamezen obisk je sicer vrednoten v višini 25 eur.</div>
+                    <div class="semester-row">
+                        <div class="semester-label">Proces</div>
+                        <div class="semester-value">Kontinuiran proces omogoča postopno progresijo in globlje razumevanje.</div>
+                    </div>
+
+                    <div class="semester-row">
+                        <div class="semester-label">Šolnina</div>
+                        <div class="semester-value">S šolnino rezerviraš svoje mesto v skupini in ne posameznih obiskov.</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1207,6 +1349,12 @@
                     <h3>BDK slow flow</h3>
                     <div class="practice-time">sreda · 19:00 · Vič</div>
 
+                    <div class="practice-tags">
+                        <span>počasneje</span>
+                        <span>tehnično</span>
+                        <span>introspektivno</span>
+                    </div>
+
                     <p>BDK slow flow je povezan in tekoč tip prakse na vadbeni podlogi.</p>
                     <p>Fokus je na vzdržljivosti, stabilnosti, nadzoru, prehodih in tekoči Budokon joga praksi. Praksa je počasnejša, vendar ni nezahtevna. Gradi odpornost in krepi moč skozi počasno gibanje in tehnično natančnost.</p>
                     <p>Ta tip prakse je zate, če želiš razvijati nadzor nad gibanjem in krepiti kapaciteto za ostajanje z neprijetnim, kar gradi psihosomatsko odpornost. Globlje, bolj introspektivno, usmerjeno na notranjost.</p>
@@ -1217,73 +1365,81 @@
                     <h3>BDK tatami</h3>
                     <div class="practice-time">petek · 18:00 · BTC</div>
 
+                    <div class="practice-tags">
+                        <span>dinamično</span>
+                        <span>prostorsko</span>
+                        <span>odzivno</span>
+                    </div>
+
                     <p>BDK tatami poteka na tatamijih v doju.</p>
                     <p>Vključuje vse jezike Budokona: živalsko gibanje, mobilnost, kalisteniko, BDK jogo in osnove mešanih borilnih veščin brez kontakta. Fokus je na gibanju po prostoru, agilnosti, orientaciji, stabilnosti, odzivnosti in moči.</p>
-                    <p>Ta tip prakse je zate, če si želiš bolj dinamične in prostorsko orientirane prakse, ki te izziva s širšim spektrom gibanja. Razvija več koordinacije, agilnosti in prilagodljivosti na okoliščine. Bolj interaktivno, odnosno in tudi na ven usmerjeno.</p>
+                    <p>Ta tip prakse je zate, če si želiš bolj dinamične in prostorsko orientirane prakse, ki te izziva s širšim spektrom gibanja. Razvija več koordinacije, agilnosti in prilagodljivosti na okoliščine. Bolj interaktivno, odzivno in navzven usmerjeno.</p>
                 </article>
             </div>
         </div>
     </section>
 
-    <section id="prijava" class="landing-section section-anchor">
+    <section id="prijava" class="image-content-section image-test section-anchor">
         <div class="landing-container">
-            <h2 class="section-title">Testna lekcija</h2>
+            <div class="image-panel">
+                <h2 class="section-title">Testna lekcija</h2>
 
-            <div class="test-class-panel text-block">
-                <p>Testna lekcija je namenjena temu, da doživiš prakso nezavezujoče.</p>
-                <p>Da začutiš prostor, moj način vodenja, tempo, skupino in svoje telo v tem gibalnem jeziku.</p>
-                <p>Če se po testnem obisku odločiš za vpis v semester, se cena testne lekcije odšteje od šolnine.</p>
-                <p>Po oddani prijavi prejmeš e-pošto s podatki za plačilo in po plačilu e-mail z vsemi potrebnimi informacijami.</p>
+                <div class="test-class-panel text-block">
+                    <p>Testna lekcija je namenjena temu, da doživiš prakso nezavezujoče.</p>
+                    <p>Da začutiš prostor, moj način vodenja, tempo, skupino in svoje telo v tem gibalnem jeziku.</p>
+                    <p>Če se po testnem obisku odločiš za vpis v semester, se cena testne lekcije odšteje od šolnine.</p>
+                    <p>Po oddani prijavi prejmeš e-pošto s podatki za plačilo in po plačilu e-mail z vsemi potrebnimi informacijami.</p>
 
-                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
+                    <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="termini" class="landing-section compact section-anchor">
-        <div class="landing-container">
+        <div class="landing-container wide">
             <h2 class="section-title">Termini in cena</h2>
 
-            <div class="quick-info">
-                <div class="quick-info-row">
-                    <div class="quick-info-label">BDK slow flow</div>
-                    <div class="quick-info-value">sreda · 19:00 - 20:00 · Vič</div>
+            <div class="terms-grid">
+                <div class="term-card">
+                    <div class="term-label">BDK slow flow</div>
+                    <div class="term-value">sreda · 19:00 - 20:00 · Vič</div>
                 </div>
 
-                <div class="quick-info-row">
-                    <div class="quick-info-label">BDK tatami</div>
-                    <div class="quick-info-value">petek · 18:00 · BTC</div>
+                <div class="term-card">
+                    <div class="term-label">BDK tatami</div>
+                    <div class="term-value">petek · 18:00 · BTC</div>
+                </div>
+            </div>
+
+            <div class="price-grid">
+                <div class="price-card">
+                    <h3>Testna praksa</h3>
+                    <span class="price">25 €</span>
+                    <p>možne le ob začetku semestra</p>
                 </div>
 
-                <div class="quick-info-row">
-                    <div class="quick-info-label">Vpis</div>
-                    <div class="quick-info-value">Vpis v redne Budokon skupine poteka dvakrat letno: septembra in februarja.</div>
+                <div class="price-card">
+                    <h3>Semester 1x tedensko</h3>
+                    <span class="price">270 €</span>
+                    <p>5-mesečni semester</p>
                 </div>
 
-                <div class="quick-info-row">
-                    <div class="quick-info-label">Testna praksa</div>
-                    <div class="quick-info-value">25 € (možne le ob začetku semestra)</div>
+                <div class="price-card">
+                    <h3>Semester 2x tedensko</h3>
+                    <span class="price">420 €</span>
+                    <p>5-mesečni semester</p>
                 </div>
+            </div>
 
-                <div class="quick-info-row">
-                    <div class="quick-info-label">1x tedensko</div>
-                    <div class="quick-info-value">5-mesečni semester · 270 €</div>
-                </div>
+            <div class="price-note">
+                <p>Vpis v redne Budokon skupine poteka dvakrat letno: septembra in februarja.</p>
+                <p>Če se po testnem obisku odločiš za vpis v semester, se cena testnega obiska odšteje od šolnine.</p>
 
-                <div class="quick-info-row">
-                    <div class="quick-info-label">2x tedensko</div>
-                    <div class="quick-info-value">5-mesečni semester · 420 €</div>
-                </div>
-
-                <div class="quick-info-row">
-                    <div class="quick-info-label">Po testni lekciji</div>
-                    <div class="quick-info-value">Če se po testnem obisku odločiš za vpis v semester, se cena testnega obiska odšteje od šolnine.</div>
-                </div>
+                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
             </div>
         </div>
     </section>
-
-    <section class="image-band band-final" aria-label="Budokon Slovenija"></section>
 
     <section class="teacher-section" aria-labelledby="teacher-title">
         <div class="teacher-panel">
