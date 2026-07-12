@@ -186,7 +186,7 @@
             margin-top: 44px;
             max-width: 630px;
             color: var(--bdk-white);
-            font-size: 17px;
+            font-size: 18px;
             line-height: 1.9;
         }
 
@@ -252,12 +252,12 @@
         }
 
         .landing-section {
-            padding: 96px 0;
+            padding: 118px 0;
             background: var(--bdk-black);
         }
 
         .landing-section.compact {
-            padding: 84px 0;
+            padding: 104px 0;
         }
 
         .landing-container {
@@ -270,7 +270,7 @@
         }
 
         .section-title {
-            margin: 0 0 52px;
+            margin: 0 0 56px;
             color: var(--bdk-gold-active);
             font-size: 28px;
             line-height: 1.45;
@@ -300,7 +300,7 @@
         .image-content-section {
             position: relative;
             overflow: hidden;
-            padding: 118px 0;
+            padding: 128px 0;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -312,8 +312,8 @@
             inset: 0;
             z-index: 1;
             background:
-                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.24) 68%),
-                linear-gradient(to right, rgba(5, 5, 5, 0.84) 0%, rgba(5, 5, 5, 0.62) 44%, rgba(5, 5, 5, 0.30) 100%);
+                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.22) 68%),
+                linear-gradient(to right, rgba(5, 5, 5, 0.82) 0%, rgba(5, 5, 5, 0.58) 44%, rgba(5, 5, 5, 0.26) 100%);
         }
 
         .image-content-section .landing-container {
@@ -322,16 +322,21 @@
         }
 
         .image-content-section .section-title {
-            margin: 0 0 42px;
-            font-family: "Six Caps", "Arial Narrow", sans-serif;
-            font-weight: 400;
-            font-size: clamp(78px, 9.2vw, 152px);
-            line-height: 1.02;
-            letter-spacing: 0.10em;
-            word-spacing: 0.12em;
-            color: var(--bdk-white);
+            color: var(--bdk-gold-active);
+            font-family: "Montserrat", "Futura", sans-serif;
+            font-size: 28px;
+            line-height: 1.45;
+            letter-spacing: 0.26em;
             text-transform: uppercase;
             text-align: center;
+            font-weight: 400;
+        }
+
+        .image-content-section .text-block,
+        .image-content-section .for-whom-item,
+        .image-content-section .semester-value {
+            font-size: 19px;
+            line-height: 1.9;
         }
 
         .image-content-section .text-block p,
@@ -356,7 +361,7 @@
         }
 
         .for-whom-list {
-            max-width: 820px;
+            max-width: 860px;
             margin: 0 auto;
             border-top: 1px solid rgba(185, 166, 106, 0.28);
         }
@@ -364,13 +369,11 @@
         .for-whom-item {
             padding: 22px 0;
             border-bottom: 1px solid rgba(185, 166, 106, 0.24);
-            font-size: 17px;
-            line-height: 1.9;
             text-align: center;
         }
 
         .for-whom-note {
-            margin-top: 38px;
+            margin-top: 42px;
             color: var(--bdk-gold-active);
             font-size: 13px;
             letter-spacing: 0.20em;
@@ -389,7 +392,7 @@
 
         .build-card {
             min-height: 360px;
-            padding: 44px 42px;
+            padding: 48px 44px;
             background: var(--bdk-black);
         }
 
@@ -438,11 +441,6 @@
             text-transform: uppercase;
         }
 
-        .semester-value {
-            font-size: 17px;
-            line-height: 1.85;
-        }
-
         .practice-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -453,15 +451,15 @@
 
         .practice-card {
             background: var(--bdk-black);
-            padding: 48px 42px;
+            padding: 52px 44px;
         }
 
         .practice-card img {
             width: 100%;
-            height: 260px;
+            height: 270px;
             object-fit: cover;
             object-position: center 32%;
-            margin-bottom: 34px;
+            margin-bottom: 36px;
             filter: grayscale(16%) contrast(1.05) brightness(0.80);
         }
 
@@ -476,7 +474,7 @@
         }
 
         .practice-time {
-            margin-bottom: 28px;
+            margin-bottom: 16px;
             color: var(--bdk-gold-active);
             font-size: 12px;
             line-height: 1.7;
@@ -485,21 +483,18 @@
         }
 
         .practice-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 28px;
+            margin-bottom: 30px;
+            color: var(--bdk-muted);
+            font-size: 11px;
+            line-height: 1.7;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
         }
 
-        .practice-tags span {
-            display: inline-block;
-            padding: 7px 10px;
-            border: 1px solid rgba(185, 166, 106, 0.30);
-            color: var(--bdk-muted);
-            font-size: 10px;
-            line-height: 1.4;
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
+        .practice-tags span + span::before {
+            content: "·";
+            color: var(--bdk-gold-active);
+            margin: 0 10px;
         }
 
         .practice-card p {
@@ -517,7 +512,7 @@
 
         .schedule-panel {
             max-width: 760px;
-            margin: 0 auto 64px;
+            margin: 0 auto 66px;
             border-top: 1px solid rgba(185, 166, 106, 0.34);
             border-bottom: 0;
         }
@@ -567,7 +562,7 @@
         }
 
         .price-card {
-            padding: 38px 30px;
+            padding: 42px 30px;
             background: var(--bdk-black);
             text-align: center;
         }
@@ -586,7 +581,7 @@
             display: block;
             margin-bottom: 14px;
             color: var(--bdk-white);
-            font-size: 32px;
+            font-size: 34px;
             line-height: 1.4;
         }
 
@@ -599,7 +594,7 @@
 
         .price-note {
             max-width: 760px;
-            margin: 42px auto 0;
+            margin: 46px auto 0;
             color: var(--bdk-muted);
             font-size: 15px;
             line-height: 1.9;
@@ -607,7 +602,7 @@
         }
 
         .teacher-section {
-            padding: 96px 0;
+            padding: 118px 0;
             background: var(--bdk-black);
         }
 
@@ -634,7 +629,7 @@
         }
 
         .teacher-copy {
-            padding: 50px 58px;
+            padding: 54px 60px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -717,7 +712,7 @@
         }
 
         .testimonials-section {
-            padding: 96px 0;
+            padding: 118px 0;
             background: var(--bdk-black);
         }
 
@@ -765,7 +760,7 @@
         }
 
         .faq-item {
-            padding: 26px 0;
+            padding: 28px 0;
             border-bottom: 1px solid rgba(185, 166, 106, 0.28);
         }
 
@@ -924,18 +919,21 @@
             .teacher-section,
             .testimonials-section,
             .image-content-section {
-                padding-top: 78px;
-                padding-bottom: 78px;
+                padding-top: 90px;
+                padding-bottom: 90px;
             }
 
-            .section-title {
+            .section-title,
+            .image-content-section .section-title {
                 font-size: 24px;
                 letter-spacing: 0.22em;
-                margin-bottom: 44px;
+                margin-bottom: 46px;
             }
 
-            .image-content-section .section-title {
-                font-size: clamp(68px, 12vw, 120px);
+            .image-content-section .text-block,
+            .image-content-section .for-whom-item,
+            .image-content-section .semester-value {
+                font-size: 17px;
             }
 
             .build-grid,
@@ -976,7 +974,7 @@
             }
 
             .testimonial-card {
-                padding: 32px 0;
+                padding: 34px 0;
                 border-left: 0;
                 border-bottom: 1px solid rgba(185, 166, 106, 0.30);
             }
@@ -1042,24 +1040,26 @@
             .teacher-section,
             .testimonials-section,
             .image-content-section {
-                padding-top: 66px;
-                padding-bottom: 66px;
+                padding-top: 78px;
+                padding-bottom: 78px;
             }
 
-            .section-title {
+            .section-title,
+            .image-content-section .section-title {
                 font-size: 20px;
                 line-height: 1.45;
                 letter-spacing: 0.16em;
-                margin-bottom: 36px;
-            }
-
-            .image-content-section .section-title {
-                font-size: clamp(54px, 18vw, 88px);
-                line-height: 1.06;
-                letter-spacing: 0.08em;
+                margin-bottom: 38px;
             }
 
             .text-block {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .image-content-section .text-block,
+            .image-content-section .for-whom-item,
+            .image-content-section .semester-value {
                 font-size: 15px;
                 line-height: 1.9;
             }
@@ -1078,13 +1078,12 @@
             }
 
             .for-whom-item {
-                font-size: 15px;
                 line-height: 1.85;
             }
 
             .build-card,
             .practice-card {
-                padding: 38px 28px;
+                padding: 40px 28px;
             }
 
             .practice-card img {
@@ -1279,21 +1278,11 @@
 
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
-                    <li>
-                        <a class="page-scroll" href="#za-koga">Za koga</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#gradimo">Kaj gradimo</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#semester">Semester</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#prakse">Prakse</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#prijava">Prijava</a>
-                    </li>
+                    <li><a class="page-scroll" href="#za-koga">Za koga</a></li>
+                    <li><a class="page-scroll" href="#gradimo">Kaj gradimo</a></li>
+                    <li><a class="page-scroll" href="#semester">Semester</a></li>
+                    <li><a class="page-scroll" href="#prakse">Prakse</a></li>
+                    <li><a class="page-scroll" href="#prijava">Prijava</a></li>
                 </ul>
             </div>
         </div>
@@ -1344,11 +1333,12 @@
 
             <div class="for-whom-list">
                 <div class="for-whom-item">Ta praksa je zate, če želiš graditi moč inteligentno, brez potiskanja preko meja.</div>
+                <div class="for-whom-item">Čutiš, da telo potrebuje več kot samo raztezanje, krepitev ali ponavljanje vaj.</div>
                 <div class="for-whom-item">Želiš več mobilnosti, ne samo več fleksibilnosti.</div>
                 <div class="for-whom-item">Želiš razvijati koordinacijo, stabilnost in somatsko inteligenco.</div>
-                <div class="for-whom-item">Čutiš, da telo potrebuje več kot samo raztezanje ali krepitev.</div>
-                <div class="for-whom-item">Zanima te praksa, ki vključuje izziv, ampak ne temelji na dokazovanju.</div>
-                <div class="for-whom-item">Želiš raziskovati gibanje v odnosu do telesa.</div>
+                <div class="for-whom-item">Te zanima praksa, ki vključuje izziv, ampak ne temelji na dokazovanju.</div>
+                <div class="for-whom-item">Se želiš učiti ostajati s sabo tudi takrat, ko je gibanje zahtevno, neprijetno ali novo.</div>
+                <div class="for-whom-item">Želiš raziskovati gibanje v odnosu do telesa, ne skozi primerjanje.</div>
             </div>
 
             <div class="for-whom-note">Predznanje Budokona ni pogoj.</div>
