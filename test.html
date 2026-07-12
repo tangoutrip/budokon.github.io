@@ -296,13 +296,6 @@
             font-weight: 400;
         }
 
-        .gold-divider {
-            width: min(720px, 72vw);
-            height: 1px;
-            margin: 0 auto;
-            background: rgba(185, 166, 106, 0.55);
-        }
-
         .image-content-section {
             position: relative;
             overflow: hidden;
@@ -318,8 +311,8 @@
             inset: 0;
             z-index: 1;
             background:
-                radial-gradient(circle at 70% 45%, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.64) 72%),
-                linear-gradient(to bottom, rgba(5, 5, 5, 0.60), rgba(5, 5, 5, 0.82));
+                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.12) 68%),
+                linear-gradient(to right, rgba(5, 5, 5, 0.78) 0%, rgba(5, 5, 5, 0.54) 44%, rgba(5, 5, 5, 0.22) 100%);
         }
 
         .image-content-section .landing-container {
@@ -327,12 +320,10 @@
             z-index: 2;
         }
 
-        .image-panel {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 52px 58px;
-            background: rgba(5, 5, 5, 0.68);
-            border: 1px solid rgba(185, 166, 106, 0.24);
+        .image-content-section .text-block p,
+        .image-content-section .for-whom-item,
+        .image-content-section .semester-value {
+            color: var(--bdk-white);
         }
 
         .image-za-koga {
@@ -359,7 +350,6 @@
         .for-whom-item {
             padding: 22px 0;
             border-bottom: 1px solid rgba(185, 166, 106, 0.24);
-            color: var(--bdk-white);
             font-size: 17px;
             line-height: 1.9;
             text-align: center;
@@ -435,7 +425,6 @@
         }
 
         .semester-value {
-            color: var(--bdk-white);
             font-size: 17px;
             line-height: 1.85;
         }
@@ -512,35 +501,45 @@
             text-align: center;
         }
 
-        .terms-grid {
-            max-width: 860px;
-            margin: 0 auto 58px;
+        .schedule-panel {
+            max-width: 760px;
+            margin: 0 auto 64px;
+            border-top: 1px solid rgba(185, 166, 106, 0.34);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.34);
+        }
+
+        .schedule-row {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 1px;
-            border: 1px solid rgba(185, 166, 106, 0.28);
-            background: rgba(185, 166, 106, 0.28);
+            grid-template-columns: 180px 1fr;
+            gap: 42px;
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.22);
+            align-items: start;
         }
 
-        .term-card {
-            padding: 34px 30px;
-            background: var(--bdk-black);
-            text-align: center;
+        .schedule-row:last-child {
+            border-bottom: 0;
         }
 
-        .term-label {
-            margin-bottom: 14px;
+        .schedule-day {
             color: var(--bdk-gold-active);
-            font-size: 12px;
-            line-height: 1.7;
+            font-size: 14px;
             letter-spacing: 0.22em;
             text-transform: uppercase;
         }
 
-        .term-value {
+        .schedule-info {
             color: var(--bdk-white);
             font-size: 18px;
-            line-height: 1.8;
+            line-height: 1.75;
+        }
+
+        .schedule-info em {
+            display: block;
+            margin-top: 24px;
+            color: var(--bdk-muted);
+            font-size: 16px;
+            line-height: 1.85;
         }
 
         .price-grid {
@@ -874,13 +873,8 @@
                 margin-bottom: 44px;
             }
 
-            .image-panel {
-                padding: 46px 40px;
-            }
-
             .build-grid,
             .practice-grid,
-            .terms-grid,
             .price-grid {
                 grid-template-columns: 1fr;
             }
@@ -889,9 +883,10 @@
                 height: 300px;
             }
 
-            .semester-row {
+            .semester-row,
+            .schedule-row {
                 grid-template-columns: 1fr;
-                gap: 8px;
+                gap: 10px;
             }
 
             .teacher-panel {
@@ -977,10 +972,6 @@
                 line-height: 1.9;
             }
 
-            .image-panel {
-                padding: 38px 26px;
-            }
-
             .landing-button {
                 width: 100%;
                 max-width: 360px;
@@ -1008,6 +999,7 @@
                 height: 240px;
             }
 
+            .schedule-panel,
             .faq-list {
                 width: min(88vw, 430px);
             }
@@ -1252,24 +1244,20 @@
         </div>
     </section>
 
-    <div class="gold-divider"></div>
-
     <section id="za-koga" class="image-content-section image-za-koga section-anchor">
         <div class="landing-container">
-            <div class="image-panel">
-                <h2 class="section-title">Za koga</h2>
+            <h2 class="section-title">Za koga</h2>
 
-                <div class="for-whom-list">
-                    <div class="for-whom-item">Ta praksa je zate, če želiš graditi moč inteligentno, brez potiskanja preko meja.</div>
-                    <div class="for-whom-item">Želiš več mobilnosti, ne samo več fleksibilnosti.</div>
-                    <div class="for-whom-item">Želiš razvijati koordinacijo, stabilnost in somatsko inteligenco.</div>
-                    <div class="for-whom-item">Čutiš, da telo potrebuje več kot samo raztezanje ali krepitev.</div>
-                    <div class="for-whom-item">Zanima te praksa, ki vključuje izziv, ampak ne temelji na dokazovanju.</div>
-                    <div class="for-whom-item">Želiš raziskovati gibanje v odnosu do telesa.</div>
-                </div>
-
-                <div class="for-whom-note">Predznanje Budokona ni pogoj.</div>
+            <div class="for-whom-list">
+                <div class="for-whom-item">Ta praksa je zate, če želiš graditi moč inteligentno, brez potiskanja preko meja.</div>
+                <div class="for-whom-item">Želiš več mobilnosti, ne samo več fleksibilnosti.</div>
+                <div class="for-whom-item">Želiš razvijati koordinacijo, stabilnost in somatsko inteligenco.</div>
+                <div class="for-whom-item">Čutiš, da telo potrebuje več kot samo raztezanje ali krepitev.</div>
+                <div class="for-whom-item">Zanima te praksa, ki vključuje izziv, ampak ne temelji na dokazovanju.</div>
+                <div class="for-whom-item">Želiš raziskovati gibanje v odnosu do telesa.</div>
             </div>
+
+            <div class="for-whom-note">Predznanje Budokona ni pogoj.</div>
         </div>
     </section>
 
@@ -1307,33 +1295,31 @@
 
     <section id="semester" class="image-content-section image-semester section-anchor">
         <div class="landing-container">
-            <div class="image-panel">
-                <h2 class="section-title">Kako poteka semester</h2>
+            <h2 class="section-title">Kako poteka semester</h2>
 
-                <div class="text-block">
-                    <p>Redne prakse Budokona potekajo v obliki dveh semestrov (cca 5 mesecev):</p>
+            <div class="text-block">
+                <p>Redne prakse Budokona potekajo v obliki dveh semestrov (cca 5 mesecev):</p>
+            </div>
+
+            <div class="semester-panel">
+                <div class="semester-row">
+                    <div class="semester-label">Jesensko-zimski</div>
+                    <div class="semester-value">od 18. septembra do 29. januarja</div>
                 </div>
 
-                <div class="semester-panel">
-                    <div class="semester-row">
-                        <div class="semester-label">Jesensko-zimski</div>
-                        <div class="semester-value">od 18. septembra do 29. januarja</div>
-                    </div>
+                <div class="semester-row">
+                    <div class="semester-label">Pomladni</div>
+                    <div class="semester-value">od 10. februarja do 23. junija</div>
+                </div>
 
-                    <div class="semester-row">
-                        <div class="semester-label">Pomladni</div>
-                        <div class="semester-value">od 10. februarja do 23. junija</div>
-                    </div>
+                <div class="semester-row">
+                    <div class="semester-label">Proces</div>
+                    <div class="semester-value">Kontinuiran proces omogoča postopno progresijo in globlje razumevanje.</div>
+                </div>
 
-                    <div class="semester-row">
-                        <div class="semester-label">Proces</div>
-                        <div class="semester-value">Kontinuiran proces omogoča postopno progresijo in globlje razumevanje.</div>
-                    </div>
-
-                    <div class="semester-row">
-                        <div class="semester-label">Šolnina</div>
-                        <div class="semester-value">S šolnino rezerviraš svoje mesto v skupini in ne posameznih obiskov.</div>
-                    </div>
+                <div class="semester-row">
+                    <div class="semester-label">Šolnina</div>
+                    <div class="semester-value">S šolnino rezerviraš svoje mesto v skupini in ne posameznih obiskov.</div>
                 </div>
             </div>
         </div>
@@ -1381,17 +1367,15 @@
 
     <section id="prijava" class="image-content-section image-test section-anchor">
         <div class="landing-container">
-            <div class="image-panel">
-                <h2 class="section-title">Testna lekcija</h2>
+            <h2 class="section-title">Testna lekcija</h2>
 
-                <div class="test-class-panel text-block">
-                    <p>Testna lekcija je namenjena temu, da doživiš prakso nezavezujoče.</p>
-                    <p>Da začutiš prostor, moj način vodenja, tempo, skupino in svoje telo v tem gibalnem jeziku.</p>
-                    <p>Če se po testnem obisku odločiš za vpis v semester, se cena testne lekcije odšteje od šolnine.</p>
-                    <p>Po oddani prijavi prejmeš e-pošto s podatki za plačilo in po plačilu e-mail z vsemi potrebnimi informacijami.</p>
+            <div class="test-class-panel text-block">
+                <p>Testna lekcija je namenjena temu, da doživiš prakso nezavezujoče.</p>
+                <p>Da začutiš prostor, moj način vodenja, tempo, skupino in svoje telo v tem gibalnem jeziku.</p>
+                <p>Če se po testnem obisku odločiš za vpis v semester, se cena testne lekcije odšteje od šolnine.</p>
+                <p>Po oddani prijavi prejmeš e-pošto s podatki za plačilo in po plačilu e-mail z vsemi potrebnimi informacijami.</p>
 
-                    <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
-                </div>
+                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
             </div>
         </div>
     </section>
@@ -1400,15 +1384,21 @@
         <div class="landing-container wide">
             <h2 class="section-title">Termini in cena</h2>
 
-            <div class="terms-grid">
-                <div class="term-card">
-                    <div class="term-label">BDK slow flow</div>
-                    <div class="term-value">sreda · 19:00 - 20:00 · Vič</div>
+            <div class="schedule-panel">
+                <div class="schedule-row">
+                    <div class="schedule-day">Sreda</div>
+                    <div class="schedule-info">
+                        BDK slow flow · 19:00 · Vič
+                        <em>Povezan in tekoč tip prakse na vadbeni podlogi, fokus na vzdržljivosti, stabilnosti, nadzoru, prehodih in tekoči Budokon joga praksi.</em>
+                    </div>
                 </div>
 
-                <div class="term-card">
-                    <div class="term-label">BDK tatami</div>
-                    <div class="term-value">petek · 18:00 · BTC</div>
+                <div class="schedule-row">
+                    <div class="schedule-day">Petek</div>
+                    <div class="schedule-info">
+                        BDK tatami · 18:00 · BTC
+                        <em>Vsi jeziki Budokona, delo na tatamijih, gibanje po prostoru, fokus na moči, agilnosti, orientaciji, stabilnosti in odzivnosti.</em>
+                    </div>
                 </div>
             </div>
 
