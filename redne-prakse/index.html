@@ -148,9 +148,8 @@
             z-index: 1;
             pointer-events: none;
             background:
-                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.24) 68%),
-                linear-gradient(to right, rgba(5, 5, 5, 0.84) 0%, rgba(5, 5, 5, 0.62) 44%, rgba(5, 5, 5, 0.30) 100%),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.34));
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.22) 48%, rgba(0, 0, 0, 0.42) 100%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.28));
         }
 
         .semester-hero-inner {
@@ -159,10 +158,15 @@
             width: min(1180px, 88vw);
             margin: 0 auto;
             padding-top: 86px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .semester-hero-copy {
-            max-width: 720px;
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
         }
 
         .semester-title {
@@ -189,11 +193,12 @@
         }
 
         .semester-lead {
-            margin-top: 44px;
-            max-width: 660px;
+            margin: 40px auto 0;
+            max-width: 760px;
             color: var(--bdk-white);
             font-size: 18px;
             line-height: 1.9;
+            text-align: center;
         }
 
         .semester-lead p {
@@ -204,6 +209,7 @@
         .semester-meta {
             display: flex;
             flex-wrap: wrap;
+            justify-content: center;
             margin-top: 36px;
             color: var(--bdk-muted);
             font-size: 12px;
@@ -255,6 +261,22 @@
             color: var(--bdk-black);
             background: var(--bdk-gold-active);
             border-color: var(--bdk-gold-active);
+        }
+
+        .hero-actions {
+            margin-top: 44px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-actions .landing-button {
+            margin-top: 0;
+        }
+
+        .hero-actions .landing-button.secondary {
+            margin-left: 0;
         }
 
         .landing-section {
@@ -318,8 +340,8 @@
             inset: 0;
             z-index: 1;
             background:
-                radial-gradient(circle at 72% 46%, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.24) 68%),
-                linear-gradient(to right, rgba(5, 5, 5, 0.86) 0%, rgba(5, 5, 5, 0.64) 44%, rgba(5, 5, 5, 0.34) 100%);
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.28) 48%, rgba(0, 0, 0, 0.52) 100%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.24));
         }
 
         .image-content-section .landing-container {
@@ -891,7 +913,7 @@
             }
 
             .semester-hero-copy {
-                max-width: 560px;
+                max-width: 680px;
             }
 
             .semester-meta {
@@ -989,6 +1011,12 @@
                 align-items: center;
             }
 
+            .semester-hero-overlay {
+                background:
+                    radial-gradient(circle at center, rgba(0, 0, 0, 0.12) 0%, rgba(0, 0, 0, 0.30) 46%, rgba(0, 0, 0, 0.58) 100%),
+                    linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.38));
+            }
+
             .semester-hero-inner {
                 width: min(88vw, 430px);
                 padding-top: 84px;
@@ -1059,7 +1087,7 @@
 
             .landing-button.secondary {
                 margin-left: 0;
-                margin-top: 16px;
+                margin-top: 0;
             }
 
             .for-whom-item {
@@ -1287,7 +1315,7 @@
 
                 <div class="semester-lead">
                     <p>Budokon je praksa zate, če želiš krepiti moč inteligentno, brez potiskanja preko meja, postopno in somatsko čuječe.</p>
-                    <p>Za Budokon ne potrebuješ moči, agilnosti ali fleksibilnosti, to dobiš v procesu. Potrebuješ pa pripravljenost na izziv, ki bo krepil tvojo odpornost in stik s telesom.</p>
+                    <p>Za Budokon ne potrebuješ nič drugega kot pripravljenost na izziv, ki bo krepil tvojo odpornost in stik s telesom.</p>
                 </div>
 
                 <div class="semester-meta">
@@ -1296,8 +1324,10 @@
                     <span>vpisi septembra</span>
                 </div>
 
-                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
-                <a class="landing-button secondary page-scroll" href="#termini">Poglej termine</a>
+                <div class="hero-actions">
+                    <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
+                    <a class="landing-button secondary page-scroll" href="#termini">Poglej termine</a>
+                </div>
             </div>
         </div>
     </header>
