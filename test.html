@@ -480,10 +480,6 @@
             padding: 44px 40px;
         }
 
-        .practice-card + .practice-card {
-            border-left: 1px solid rgba(185, 166, 106, 0.28);
-        }
-
         .practice-card img {
             width: 100%;
             height: 270px;
@@ -555,6 +551,7 @@
         .schedule-day {
             color: var(--bdk-gold-active);
             font-size: 14px;
+            font-weight: 700;
             letter-spacing: 0.22em;
             text-transform: uppercase;
         }
@@ -595,8 +592,8 @@
             inset: 0;
             z-index: 0;
             background:
-                radial-gradient(circle at center, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.56) 100%),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.30) 58%, rgba(5, 5, 5, 0.66) 84%, var(--bdk-black) 100%);
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.44) 58%, rgba(0, 0, 0, 0.64) 100%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.30) 0%, rgba(0, 0, 0, 0.40) 58%, rgba(5, 5, 5, 0.72) 84%, var(--bdk-black) 100%);
         }
 
         .terms-image-panel .landing-container {
@@ -1087,8 +1084,6 @@
         .registration-steps {
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
-            border-top: 1px solid rgba(185, 166, 106, 0.30);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.30);
         }
 
         .registration-step {
@@ -1144,7 +1139,6 @@
             grid-template-columns: 180px 1fr;
             gap: 28px;
             padding: 14px 0;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.20);
             text-align: left;
             align-items: baseline;
         }
@@ -1164,13 +1158,6 @@
             font-weight: 400;
         }
 
-        .test-date-note {
-            margin: 20px 0 0;
-            color: var(--bdk-muted);
-            font-size: 14px;
-            line-height: 1.8;
-        }
-
         .practice-choice-action .landing-button {
             margin-top: 34px;
         }
@@ -1186,7 +1173,6 @@
 
             .registration-step + .registration-step {
                 border-left: 0;
-                border-top: 1px solid rgba(185, 166, 106, 0.30);
             }
 
             .test-date-row {
@@ -1734,11 +1720,6 @@
                 padding-bottom: 90px;
             }
 
-            .practice-card + .practice-card {
-                border-left: 0;
-                border-top: 1px solid rgba(185, 166, 106, 0.28);
-            }
-
             .practice-choice-card {
                 min-height: 360px;
             }
@@ -2120,7 +2101,7 @@
 <div class="registration-step">
 <span class="registration-number">01</span>
 <h4>Izberi termin</h4>
-<p>Izberi testno prakso slow flow ali tatami in oddaj prijavo prek obrazca.</p>
+<p>Izberi testno prakso slow flow ali tatami in oddaj prijavo prek obrazca (eno ali več praks).</p>
 </div>
 <div class="registration-step">
 <span class="registration-number">02</span>
@@ -2143,7 +2124,6 @@
 <span>BDK slow flow</span>
 <strong>23. in 30. 9. 2026 · 19:10</strong>
 </div>
-<p class="test-date-note">Udeležiš se lahko ene ali več testnih praks.</p>
 </div>
 <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
       Prijava na testno prakso | Vpis v semester
