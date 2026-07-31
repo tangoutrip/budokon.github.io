@@ -144,8 +144,14 @@
             z-index: 1;
             pointer-events: none;
             background:
-                radial-gradient(circle at center, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.26) 48%, rgba(0, 0, 0, 0.52) 100%),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.44));
+                linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.18) 0%,
+                    rgba(0, 0, 0, 0.24) 58%,
+                    rgba(5, 5, 5, 0.62) 84%,
+                    var(--bdk-black) 100%
+                ),
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.24) 48%, rgba(0, 0, 0, 0.50) 100%);
         }
 
         .semester-hero-inner {
@@ -336,8 +342,16 @@
             inset: 0;
             z-index: 1;
             background:
-                radial-gradient(circle at center, rgba(0, 0, 0, 0.28) 0%, rgba(0, 0, 0, 0.48) 48%, rgba(0, 0, 0, 0.74) 100%),
-                linear-gradient(to bottom, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.38));
+                linear-gradient(
+                    to bottom,
+                    var(--bdk-black) 0%,
+                    rgba(5, 5, 5, 0.70) 9%,
+                    rgba(0, 0, 0, 0.30) 28%,
+                    rgba(0, 0, 0, 0.32) 72%,
+                    rgba(5, 5, 5, 0.78) 91%,
+                    var(--bdk-black) 100%
+                ),
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.38) 52%, rgba(0, 0, 0, 0.60) 100%);
         }
 
         .image-content-section .landing-container {
@@ -366,13 +380,16 @@
         .for-whom-list {
             max-width: 860px;
             margin: 0 auto;
-            border-top: 1px solid rgba(185, 166, 106, 0.28);
         }
 
         .for-whom-item {
             padding: 22px 0;
             border-bottom: 1px solid rgba(185, 166, 106, 0.24);
             text-align: center;
+        }
+
+        .for-whom-item:last-child {
+            border-bottom: 0;
         }
 
         .for-whom-note {
@@ -383,6 +400,15 @@
             line-height: 1.8;
             text-align: center;
             text-transform: uppercase;
+        }
+
+        .build-intro {
+            max-width: 760px;
+            margin: -18px auto 48px;
+        }
+
+        .build-intro p {
+            margin-bottom: 0;
         }
 
         .build-grid {
@@ -416,11 +442,9 @@
             line-height: 1.9;
             margin: 0 0 18px;
         }
-.semester-panel {
+        .semester-panel {
             width: min(820px, 100%);
             margin: 44px auto 0;
-            border-top: 1px solid rgba(185, 166, 106, 0.30);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.30);
         }
 
         .semester-row {
@@ -516,8 +540,6 @@
         .schedule-panel {
             max-width: 760px;
             margin: 0 auto 66px;
-            border-top: 1px solid rgba(185, 166, 106, 0.34);
-            border-bottom: 0;
         }
 
         .schedule-row {
@@ -937,7 +959,7 @@
 
         .practice-choice-intro {
             max-width: 860px;
-            margin: 0 auto 52px;
+            margin: 0 auto 64px;
         }
 
         .practice-choice-intro p {
@@ -1051,7 +1073,7 @@
 
         .practice-choice-action {
             max-width: 790px;
-            margin: 48px auto 0;
+            margin: 64px auto 0;
         }
 
         .practice-choice-action .landing-button {
@@ -1059,7 +1081,7 @@
         }
 
         .quote-strip {
-            padding: 48px 0;
+            padding: 86px 0 96px;
             background: var(--bdk-black);
             text-align: center;
         }
@@ -1069,8 +1091,10 @@
             margin: 0 auto;
             padding: 0;
             border: 0;
+            font-size: inherit;
         }
-.quote-strip p {
+
+        .quote-strip blockquote p {
             margin: 0;
             color: var(--bdk-white);
             font-family: "Montserrat", "Futura", sans-serif;
@@ -1080,18 +1104,18 @@
             line-height: 2;
         }
 
-        .quote-strip p::before,
-.quote-strip p::after {
-            content: "\"";
-            margin-left: 0.12em;
+        .quote-strip blockquote p::before,
+        .quote-strip blockquote p::after {
+            color: var(--bdk-gold-active);
         }
-.quote-strip p::before {
-            content: "\"";
+
+        .quote-strip blockquote p::before {
+            content: "“";
             margin-right: 0.12em;
         }
 
-        .quote-strip p::after {
-            content: "«";
+        .quote-strip blockquote p::after {
+            content: "”";
             margin-left: 0.12em;
         }
 
@@ -1308,8 +1332,14 @@
 
             .semester-hero-overlay {
                 background:
-                    radial-gradient(circle at center, rgba(0, 0, 0, 0.22) 0%, rgba(0, 0, 0, 0.44) 48%, rgba(0, 0, 0, 0.72) 100%),
-                    linear-gradient(to bottom, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.44));
+                    linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 0.22) 0%,
+                        rgba(0, 0, 0, 0.36) 56%,
+                        rgba(5, 5, 5, 0.72) 84%,
+                        var(--bdk-black) 100%
+                    ),
+                    radial-gradient(circle at center, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.38) 48%, rgba(0, 0, 0, 0.66) 100%);
             }
 
             .semester-hero-inner {
@@ -1467,7 +1497,7 @@
         @media (max-width: 900px) {
             .practice-choice-section {
                 padding-top: 90px;
-                padding-bottom: 48px;
+                padding-bottom: 64px;
             }
 
             .budokon-intro-section {
@@ -1483,15 +1513,15 @@
                 max-width: 680px;
             }
             .quote-strip {
-                padding-top: 46px;
-                padding-bottom: 46px;
+                padding-top: 72px;
+                padding-bottom: 78px;
             }
         }
 
         @media (max-width: 560px) {
             .practice-choice-section {
                 padding-top: 78px;
-                padding-bottom: 42px;
+                padding-bottom: 56px;
             }
 
             .budokon-intro-section {
@@ -1507,7 +1537,7 @@
             }
 
             .practice-choice-intro {
-                margin-bottom: 38px;
+                margin-bottom: 48px;
             }
 
             .practice-choice-grid {
@@ -1538,15 +1568,15 @@
             }
             .practice-choice-action {
                 width: min(88vw, 430px);
-                margin-top: 40px;
+                margin-top: 50px;
             }
 
             .quote-strip {
-                padding-top: 42px;
-                padding-bottom: 42px;
+                padding-top: 64px;
+                padding-bottom: 68px;
             }
 
-            .quote-strip p {
+            .quote-strip blockquote p {
                 font-size: 15px;
                 line-height: 1.9;
             }
@@ -1909,9 +1939,6 @@
 <p>
       Budokon združuje živalsko gibanje, BDK jogo, mobilnost, kalisteniko in osnove borilnih veščin v disciplino mešanih gibalnih umetnosti. Praksa razvija moč, stabilnost, koordinacijo, gibljivost, agilnost in prisotnost.
      </p>
-<p>
-      Osrednji fokus ni popolna izvedba. Fokus je odnos do telesa, napora, meja in trenutka, ko bi najraje pobegnili ali odnehali.
-     </p>
 </div>
 </div>
 </section>
@@ -2074,6 +2101,9 @@
 <h2 class="section-title">
      Kaj gradimo
     </h2>
+<div class="text-block build-intro">
+<p>Osrednji fokus ni popolna izvedba. Fokus je odnos do telesa, napora, meja in trenutka, ko bi najraje pobegnili ali odnehali.</p>
+</div>
 <div class="build-grid">
 <article class="build-card">
 <h3>
