@@ -1,1 +1,2611 @@
+<!DOCTYPE html>
 
+<html lang="sl">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Budokon Ljubljana: redne prakse in 5-mesečni semester</title>
+<meta content="Vpis v 5-mesečni Budokon semester v Ljubljani: slow flow na Viču in tatami v BTC-ju. Moč, mobilnost in koordinacija brez forsiranja." name="description"/>
+<meta content="Sanja Zalar Gostimirović | Sanja Somatika" name="author"/>
+<meta content="index, follow" name="robots"/>
+<meta content="#050505" name="theme-color"/>
+<link href="https://budokon.si/redne-prakse/" rel="canonical"/><link as="image" href="/redne-prakse-testna-lekcija.jpg" rel="preload"/>
+<meta content="sl_SI" property="og:locale"/>
+<meta content="website" property="og:type"/>
+<meta content="https://budokon.si/redne-prakse/" property="og:url"/>
+<meta content="Budokon Slovenija" property="og:site_name"/>
+<meta content="Budokon Ljubljana: redne prakse in 5-mesečni semester" property="og:title"/>
+<meta content="Vpis v 5-mesečni Budokon semester v Ljubljani: slow flow na Viču in tatami v BTC-ju. Moč, mobilnost in koordinacija brez forsiranja." property="og:description"/>
+<meta content="https://budokon.si/img/og-budokon-slovenija.jpg" property="og:image"/>
+<meta content="Redne Budokon prakse v Ljubljani" property="og:image:alt"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<link href="https://budokon.si/img/og-budokon-slovenija.jpg" rel="image_src"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Budokon Ljubljana: redne prakse in 5-mesečni semester" name="twitter:title"/>
+<meta content="Slow flow na Viču in tatami v BTC-ju. Moč, mobilnost in koordinacija skozi 5-mesečni Budokon semester." name="twitter:description"/>
+<meta content="https://budokon.si/img/og-budokon-slovenija.jpg" name="twitter:image"/><meta content="Redne Budokon prakse v Ljubljani" name="twitter:image:alt"/>
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" rel="stylesheet"/>
+<link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+
+
+
+<link href="/css/futura.css" rel="stylesheet"/>
+<link href="/css/grayscale.css" rel="stylesheet"/>
+<link href="/css/budokon.css" rel="stylesheet"/>
+<link href="/css/dark-theme.css" rel="stylesheet"/>
+<link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
+<style>
+:root {
+            --bdk-black: #050505;
+            --bdk-charcoal: #0b0b0b;
+            --bdk-white: #f4f1ea;
+            --bdk-muted: #cfc8b9;
+            --bdk-gold-fallback: #b9a66a;
+            --bdk-gold-active: var(--bdk-gold, var(--bdk-gold-fallback));
+        }
+
+        html,
+        body {
+            background: var(--bdk-black);
+            color: var(--bdk-white);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body.budokon-semester-page {
+            font-family: "Montserrat", "Futura", sans-serif;
+            background: var(--bdk-black);
+            color: var(--bdk-white);
+        }
+
+        .section-anchor {
+            scroll-margin-top: 84px;
+        }
+
+        a {
+            color: var(--bdk-gold-active);
+            transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--bdk-white);
+            text-decoration: none;
+        }
+
+        .navbar-custom {
+            background: rgba(0, 0, 0, 0.94);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.28);
+        }
+
+        .navbar-custom .navbar-brand,
+        .navbar-custom .nav li a {
+            color: var(--bdk-white);
+        }
+
+        .navbar-custom .nav li a:hover,
+        .navbar-custom .nav li a:focus,
+        .navbar-custom .nav li.active a,
+        .navbar-custom .nav li.active a:hover,
+        .navbar-custom .nav li.active a:focus,
+        .navbar-custom .navbar-nav > .active > a,
+        .navbar-custom .navbar-nav > .active > a:hover,
+        .navbar-custom .navbar-nav > .active > a:focus {
+            background: transparent;
+            color: var(--bdk-gold-active);
+        }
+
+        .navbar-custom .nav li.active {
+            background: transparent;
+        }
+
+        .navbar-custom .navbar-toggle:hover,
+        .navbar-custom .navbar-toggle:focus {
+            background: transparent;
+            color: var(--bdk-gold-active);
+            border-color: var(--bdk-gold-active);
+        }
+
+        .navbar-custom .navbar-brand .light {
+            color: var(--bdk-muted);
+        }
+
+        .semester-hero {
+            position: relative;
+            min-height: 100vh;
+            padding: 0;
+            overflow: hidden;
+            background:
+                linear-gradient(rgba(5, 5, 5, 0.42), rgba(5, 5, 5, 0.42)),
+                url("/redne-prakse-testna-lekcija.jpg") center 44% / cover no-repeat;
+            display: flex;
+            align-items: center;
+        }
+
+        .semester-hero-video {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .semester-hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+                linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.18) 0%,
+                    rgba(0, 0, 0, 0.24) 58%,
+                    rgba(5, 5, 5, 0.62) 84%,
+                    var(--bdk-black) 100%
+                ),
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.08) 0%, rgba(0, 0, 0, 0.24) 48%, rgba(0, 0, 0, 0.50) 100%);
+        }
+
+        .semester-hero-inner {
+            position: relative;
+            z-index: 2;
+            width: min(1180px, 88vw);
+            margin: 0 auto;
+            padding-top: 86px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .semester-hero-copy {
+            max-width: 980px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .semester-title {
+            margin: 0;
+            font-family: "Six Caps", "Arial Narrow", sans-serif;
+            font-weight: 400;
+            font-size: clamp(72px, 8vw, 128px);
+            line-height: 1;
+            letter-spacing: 0.10em;
+            color: var(--bdk-white);
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .semester-subtitle {
+            margin-top: 30px;
+            font-family: "Montserrat", "Futura", sans-serif;
+            font-weight: 400;
+            font-size: clamp(14px, 1.5vw, 23px);
+            line-height: 1.55;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            color: var(--bdk-gold-active);
+        }
+
+        .semester-lead {
+            margin: 38px auto 0;
+            max-width: 760px;
+            color: var(--bdk-white);
+            font-size: 18px;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .semester-lead p {
+            margin-bottom: 0;
+            color: var(--bdk-white);
+        }
+
+        .semester-meta {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 34px;
+            color: var(--bdk-muted);
+            font-size: 12px;
+            line-height: 1.8;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .semester-meta span {
+            display: inline-block;
+        }
+
+        .semester-meta span + span::before {
+            content: "|";
+            color: var(--bdk-gold-active);
+            margin: 0 14px;
+        }
+
+        .landing-button {
+            display: inline-block;
+            margin-top: 44px;
+            padding: 16px 34px;
+            border: 1px solid var(--bdk-gold-active);
+            color: var(--bdk-black);
+            background: var(--bdk-gold-active);
+            font-size: 13px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+        }
+
+        .landing-button:hover,
+        .landing-button:focus {
+            color: var(--bdk-gold-active);
+            background: transparent;
+            border-color: var(--bdk-gold-active);
+            text-decoration: none;
+        }
+
+        .landing-button.secondary {
+            margin-left: 12px;
+            color: var(--bdk-gold-active);
+            background: transparent;
+            border-color: var(--bdk-gold-active);
+        }
+
+        .landing-button.secondary:hover,
+        .landing-button.secondary:focus {
+            color: var(--bdk-black);
+            background: var(--bdk-gold-active);
+            border-color: var(--bdk-gold-active);
+        }
+
+        .hero-actions {
+            margin-top: 42px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .hero-actions .landing-button {
+            margin-top: 0;
+        }
+
+        .hero-actions .landing-button.secondary {
+            margin-left: 0;
+        }
+
+        .landing-section {
+            padding: 118px 0;
+            background: var(--bdk-black);
+        }
+
+        .landing-section.compact {
+            padding: 104px 0;
+        }
+
+        .landing-container {
+            width: min(920px, 84vw);
+            margin: 0 auto;
+        }
+
+        .landing-container.wide {
+            width: min(1120px, 88vw);
+        }
+
+        .section-title {
+            margin: 0 0 56px;
+            color: var(--bdk-gold-active);
+            font-size: 28px;
+            line-height: 1.45;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .text-block {
+            color: var(--bdk-muted);
+            font-size: 17px;
+            line-height: 2;
+            text-align: center;
+        }
+
+        .text-block p {
+            margin-bottom: 24px;
+            color: var(--bdk-muted);
+        }
+
+        .text-block strong {
+            color: var(--bdk-white);
+            font-weight: 400;
+        }
+
+        .image-content-section {
+            position: relative;
+            overflow: hidden;
+            padding: 128px 0;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .image-content-section::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background:
+                linear-gradient(
+                    to bottom,
+                    var(--bdk-black) 0%,
+                    rgba(5, 5, 5, 0.70) 9%,
+                    rgba(0, 0, 0, 0.30) 28%,
+                    rgba(0, 0, 0, 0.32) 72%,
+                    rgba(5, 5, 5, 0.78) 91%,
+                    var(--bdk-black) 100%
+                ),
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.38) 52%, rgba(0, 0, 0, 0.60) 100%);
+        }
+
+        .image-content-section .landing-container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .image-content-section .text-block,
+        .image-content-section .for-whom-item,
+        .image-content-section .semester-value {
+            font-size: 19px;
+            line-height: 1.9;
+        }
+
+        .image-content-section .text-block p,
+        .image-content-section .for-whom-item,
+        .image-content-section .semester-value {
+            color: var(--bdk-white);
+        }
+
+        .image-za-koga {
+            background-image: url("/before bridge.jpg");
+            background-position: center 45%;
+        }
+
+        .for-whom-list {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .for-whom-item {
+            padding: 22px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
+            text-align: center;
+        }
+
+        .for-whom-item:last-child {
+            border-bottom: 0;
+        }
+
+        .for-whom-note {
+            margin-top: 42px;
+            color: var(--bdk-gold-active);
+            font-size: 13px;
+            letter-spacing: 0.20em;
+            line-height: 1.8;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .build-intro {
+            max-width: 760px;
+            margin: -18px auto 48px;
+        }
+
+        .build-intro p {
+            margin-bottom: 0;
+        }
+
+        .build-grid {
+            width: min(960px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1px;
+            border: 1px solid rgba(185, 166, 106, 0.28);
+            background: rgba(185, 166, 106, 0.28);
+        }
+
+        .build-card {
+            padding: 38px 36px;
+            background: var(--bdk-black);
+        }
+
+        .build-card h3 {
+            margin: 0 0 24px;
+            color: var(--bdk-white);
+            font-size: 18px;
+            line-height: 1.5;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .build-card p {
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            margin: 0 0 18px;
+        }
+        .semester-panel {
+            width: min(820px, 100%);
+            margin: 44px auto 0;
+        }
+
+        .semester-row {
+            display: grid;
+            grid-template-columns: 240px 1fr;
+            gap: 42px;
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.22);
+            align-items: baseline;
+        }
+
+        .semester-row:last-child {
+            border-bottom: 0;
+        }
+
+        .semester-label {
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            line-height: 1.7;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .practice-grid {
+            width: min(1040px, 100%);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0;
+            border: 0;
+            background: transparent;
+        }
+
+        .practice-card {
+            background: var(--bdk-black);
+            padding: 44px 40px;
+        }
+
+        .practice-card + .practice-card {
+            border-left: 1px solid rgba(185, 166, 106, 0.28);
+        }
+
+        .practice-card img {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            object-position: center 32%;
+            margin-bottom: 36px;
+            filter: grayscale(16%) contrast(1.05) brightness(0.78);
+        }
+
+        .practice-card h3 {
+            margin: 0 0 12px;
+            color: var(--bdk-white);
+            font-size: 20px;
+            line-height: 1.45;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .practice-time {
+            margin-bottom: 16px;
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            line-height: 1.7;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .practice-tags {
+            margin-bottom: 30px;
+            color: var(--bdk-muted);
+            font-size: 11px;
+            line-height: 1.7;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .practice-tags span + span::before {
+            content: "·";
+            color: var(--bdk-gold-active);
+            margin: 0 10px;
+        }
+
+        .practice-card p {
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            margin-bottom: 18px;
+        }
+
+        .schedule-panel {
+            max-width: 760px;
+            margin: 0 auto 66px;
+        }
+
+        .schedule-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 42px;
+            padding: 30px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.22);
+            align-items: start;
+        }
+
+        .schedule-row:last-child {
+            border-bottom: 0;
+        }
+
+        .schedule-day {
+            color: var(--bdk-gold-active);
+            font-size: 14px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .schedule-info {
+            color: var(--bdk-white);
+            font-size: 18px;
+            line-height: 1.75;
+        }
+
+        .schedule-info em {
+            display: block;
+            margin-top: 24px;
+            color: var(--bdk-muted);
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+
+        /* Terms over image, with a gradual transition into the black price area */
+
+        .terms-price-section {
+            background: var(--bdk-black);
+        }
+.terms-image-panel {
+            position: relative;
+            min-height: 700px;
+            overflow: hidden;
+            padding: 124px 0 190px;
+            background-image: url("/redne-prakse-semester.jpg");
+            background-position: center 44%;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+.terms-image-panel::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            background:
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.34) 58%, rgba(0, 0, 0, 0.56) 100%),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.30) 58%, rgba(5, 5, 5, 0.66) 84%, var(--bdk-black) 100%);
+        }
+
+        .terms-image-panel .landing-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .terms-image-panel .schedule-info {
+            color: var(--bdk-white);
+        }
+
+        .terms-image-panel .schedule-info em {
+            color: var(--bdk-white);
+        }
+.price-section {
+            padding: 48px 0 104px;
+            background: var(--bdk-black);
+        }
+
+        .price-grid {
+            max-width: 960px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1px;
+            border: 1px solid rgba(185, 166, 106, 0.28);
+            background: rgba(185, 166, 106, 0.28);
+        }
+
+        .price-card {
+            padding: 42px 30px;
+            background: var(--bdk-black);
+            text-align: center;
+        }
+
+        .price-card h3 {
+            margin: 0 0 20px;
+            color: var(--bdk-gold-active);
+            font-size: 13px;
+            line-height: 1.6;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .price-card .price {
+            display: block;
+            margin-bottom: 14px;
+            color: var(--bdk-white);
+            font-size: 34px;
+            line-height: 1.4;
+        }
+
+        .price-card p {
+            margin: 0;
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .price-note {
+            max-width: 760px;
+            margin: 46px auto 0;
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            text-align: center;
+        }
+
+        .teacher-section {
+            padding: 118px 0;
+            background: var(--bdk-black);
+        }
+
+        .teacher-panel {
+            width: min(980px, 88vw);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+            background: var(--bdk-charcoal);
+        }
+
+        .teacher-image {
+            min-height: 420px;
+            overflow: hidden;
+        }
+
+        .teacher-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: 60% center;
+            filter: grayscale(16%) contrast(1.04) brightness(0.74);
+        }
+
+        .teacher-copy {
+            padding: 54px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            border-left: 1px solid rgba(185, 166, 106, 0.24);
+        }
+
+        .teacher-kicker {
+            margin-bottom: 18px;
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            line-height: 1.5;
+            letter-spacing: 0.26em;
+            text-transform: uppercase;
+        }
+
+        .teacher-name {
+            margin: 0 0 28px;
+            color: var(--bdk-white);
+            font-family: "Futura", "Montserrat", sans-serif;
+            font-size: clamp(26px, 3vw, 38px);
+            font-weight: 400;
+            line-height: 1.24;
+            letter-spacing: 0.04em;
+        }
+
+        .teacher-name span {
+            color: var(--bdk-gold-active);
+        }
+
+        .teacher-text {
+            color: var(--bdk-muted);
+            font-family: "Futura", "Montserrat", sans-serif;
+            font-size: 15px;
+            line-height: 1.9;
+        }
+
+        .teacher-text p {
+            margin-bottom: 22px;
+            color: var(--bdk-muted);
+        }
+
+        .teacher-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .teacher-text strong {
+            color: var(--bdk-white);
+            font-weight: 400;
+        }
+
+        .teacher-text a {
+            color: var(--bdk-gold-active);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.46);
+        }
+
+        .teacher-text a:hover,
+        .teacher-text a:focus {
+            color: var(--bdk-white);
+            border-bottom-color: var(--bdk-white);
+        }
+
+        .teacher-stats {
+            margin-top: 26px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(185, 166, 106, 0.24);
+            color: var(--bdk-gold-active);
+            font-family: "Futura", "Montserrat", sans-serif;
+            font-size: 12px;
+            line-height: 1.7;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .teacher-stats-line,
+        .teacher-stats-training {
+            white-space: nowrap;
+        }
+
+        .teacher-stats-line span {
+            color: var(--bdk-white);
+            margin: 0 12px;
+        }
+
+        .teacher-stats-training {
+            margin-top: 8px;
+            color: var(--bdk-muted);
+            letter-spacing: 0.14em;
+        }
+
+        .testimonials-section {
+            padding: 118px 0;
+            background: var(--bdk-black);
+        }
+
+        .testimonials-grid {
+            width: min(1060px, 88vw);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .testimonial-card {
+            min-height: 100%;
+            padding: 0 34px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .testimonial-card + .testimonial-card {
+            border-left: 1px solid rgba(185, 166, 106, 0.34);
+        }
+
+        .testimonial-text {
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.9;
+            text-align: center;
+            margin: 0 0 28px;
+        }
+
+        .testimonial-name {
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            letter-spacing: 0.22em;
+            line-height: 1.6;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .faq-list {
+            width: min(900px, 84vw);
+            margin: 0 auto;
+            border-top: 1px solid rgba(185, 166, 106, 0.28);
+        }
+
+        .faq-item {
+            padding: 28px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.28);
+        }
+
+        .faq-item:last-child {
+            border-bottom: 0;
+        }
+
+        .faq-question {
+            margin: 0 0 12px;
+            color: var(--bdk-white);
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 1.6;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        .faq-answer {
+            margin: 0;
+            color: var(--bdk-muted);
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .final-cta {
+            text-align: center;
+        }
+
+        footer.landing-footer {
+            padding: 78px 0 62px;
+            border-top: 1px solid rgba(185, 166, 106, 0.20);
+            color: var(--bdk-muted);
+            text-align: center;
+            background: var(--bdk-black);
+        }
+
+        .footer-logo-mark {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 28px;
+            background-color: var(--bdk-gold-active);
+            -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+            mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+            opacity: 0.92;
+        }
+
+        .footer-brand {
+            color: var(--bdk-white);
+            font-size: 15px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .footer-subtitle {
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            letter-spacing: 0.22em;
+            text-transform: lowercase;
+            margin-bottom: 34px;
+        }
+
+        .footer-contact {
+            color: var(--bdk-muted);
+            font-size: 14px;
+            line-height: 1.9;
+            margin-bottom: 28px;
+        }
+
+        .footer-contact a {
+            color: var(--bdk-gold-active);
+            text-decoration: none;
+        }
+
+        .footer-contact a:hover {
+            color: var(--bdk-white);
+            text-decoration: none;
+        }
+
+        .footer-links {
+            font-size: 12px;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            margin-bottom: 28px;
+        }
+
+        .footer-links a {
+            color: var(--bdk-white);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--bdk-gold-active);
+            text-decoration: none;
+        }
+
+        .footer-links span {
+            margin: 0 12px;
+            color: rgba(185, 166, 106, 0.55);
+        }
+
+        .footer-copy {
+            color: rgba(207, 200, 185, 0.55);
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+
+        /* Quick comparison of the two regular practices */
+.practice-choice-section {
+            padding: 112px 0 56px;
+            background: var(--bdk-black);
+        }
+
+        .practice-choice-section .section-title {
+            margin-bottom: 34px;
+        }
+
+        .practice-choice-intro {
+            max-width: 860px;
+            margin: 0 auto 64px;
+        }
+
+        .practice-choice-intro p {
+            margin-bottom: 18px;
+        }
+
+        .practice-choice-intro p:last-child {
+            margin-bottom: 0;
+        }
+
+        .practice-choice-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 20px;
+            max-width: 940px;
+            margin: 0 auto;
+        }
+
+        .practice-choice-card {
+            min-height: 390px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            background: var(--bdk-gold-active);
+            color: var(--bdk-black);
+        }
+
+        .practice-choice-copy {
+            flex: 1;
+            padding: 38px 36px 26px;
+        }
+
+        .practice-choice-copy h3 {
+            margin: 0 0 14px;
+            color: var(--bdk-black);
+            font-size: 22px;
+            line-height: 1.4;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .practice-choice-time {
+            margin-bottom: 16px;
+            color: rgba(5, 5, 5, 0.82);
+            font-size: 12px;
+            line-height: 1.7;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        .practice-choice-tags {
+            margin-bottom: 24px;
+            color: rgba(5, 5, 5, 0.68);
+            font-size: 10px;
+            line-height: 1.8;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .practice-choice-tags span + span::before {
+            content: "·";
+            margin: 0 9px;
+            color: rgba(5, 5, 5, 0.52);
+        }
+
+        .practice-choice-copy p {
+            margin: 0;
+            color: var(--bdk-black);
+            font-size: 15px;
+            line-height: 1.85;
+        }
+
+        .practice-choice-image {
+            position: relative;
+            height: 124px;
+            overflow: hidden;
+            background: var(--bdk-black);
+        }
+
+        .practice-choice-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+                linear-gradient(
+                    to bottom,
+                    var(--bdk-gold-active) 0%,
+                    rgba(185, 166, 106, 0.74) 24%,
+                    rgba(185, 166, 106, 0.14) 64%,
+                    rgba(5, 5, 5, 0.16) 100%
+                );
+        }
+
+        .practice-choice-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 38%;
+            filter: grayscale(18%) contrast(1.05) brightness(0.62);
+            transform: scale(1);
+            transition: transform 0.6s ease;
+        }
+
+        .practice-choice-card:hover .practice-choice-image img {
+            transform: scale(1.035);
+        }
+
+        .practice-choice-action {
+            max-width: 940px;
+            margin: 64px auto 0;
+            text-align: center;
+        }
+
+        .practice-choice-action-title {
+            margin: 0 0 38px;
+            color: var(--bdk-gold-active);
+            font-size: 20px;
+            line-height: 1.45;
+            letter-spacing: 0.24em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .registration-steps {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            border-top: 1px solid rgba(185, 166, 106, 0.30);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.30);
+        }
+
+        .registration-step {
+            padding: 34px 30px 36px;
+        }
+
+        .registration-step + .registration-step {
+            border-left: 1px solid rgba(185, 166, 106, 0.30);
+        }
+
+        .registration-number {
+            display: block;
+            margin-bottom: 16px;
+            color: var(--bdk-gold-active);
+            font-size: 13px;
+            line-height: 1;
+            letter-spacing: 0.18em;
+        }
+
+        .registration-step h4 {
+            margin: 0 0 14px;
+            color: var(--bdk-white);
+            font-size: 14px;
+            line-height: 1.55;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .registration-step p {
+            margin: 0;
+            color: var(--bdk-muted);
+            font-size: 14px;
+            line-height: 1.85;
+        }
+
+        .test-date-panel {
+            max-width: 760px;
+            margin: 42px auto 0;
+        }
+
+        .test-date-title {
+            margin-bottom: 18px;
+            color: var(--bdk-gold-active);
+            font-size: 12px;
+            line-height: 1.6;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        .test-date-row {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 28px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.20);
+            text-align: left;
+            align-items: baseline;
+        }
+
+        .test-date-row span {
+            color: var(--bdk-white);
+            font-size: 14px;
+            line-height: 1.7;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .test-date-row strong {
+            color: var(--bdk-muted);
+            font-size: 15px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .test-date-note {
+            margin: 20px 0 0;
+            color: var(--bdk-muted);
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .practice-choice-action .landing-button {
+            margin-top: 34px;
+        }
+
+        @media (max-width: 760px) {
+            .registration-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .registration-step {
+                padding: 28px 22px;
+            }
+
+            .registration-step + .registration-step {
+                border-left: 0;
+                border-top: 1px solid rgba(185, 166, 106, 0.30);
+            }
+
+            .test-date-row {
+                grid-template-columns: 1fr;
+                gap: 4px;
+                text-align: center;
+            }
+        }
+
+        .quote-strip {
+            padding: 70px 0 42px;
+            background: var(--bdk-black);
+            text-align: center;
+        }
+
+        .quote-strip blockquote {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+
+        .quote-strip blockquote p {
+            margin: 0;
+            color: var(--bdk-white);
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        #semester {
+            padding-top: 62px;
+        }
+
+        .quote-strip blockquote p::before,
+        .quote-strip blockquote p::after {
+            color: var(--bdk-gold-active);
+        }
+
+        .quote-strip blockquote p::before {
+            content: "“";
+            margin-right: 0.12em;
+        }
+
+        .quote-strip blockquote p::after {
+            content: "”";
+            margin-left: 0.12em;
+        }
+
+        .quote-strip cite {
+            display: block;
+            margin-top: 18px;
+            color: var(--bdk-gold-active);
+            font-size: 11px;
+            font-style: normal;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+        }
+
+        .practice-detail-action {
+            margin-top: 44px;
+            text-align: center;
+        }
+
+        .practice-detail-action .landing-button {
+            margin-top: 0;
+        }
+
+        
+
+        .budokon-intro-section {
+            padding-top: 58px;
+        }
+
+        .terms-image-panel .section-title {
+            margin-bottom: 54px;
+        }
+
+        .price-section .section-title {
+            margin-bottom: 54px;
+        }
+
+        .schedule-practice-name {
+            color: var(--bdk-white);
+        }
+
+        .schedule-location {
+            display: inline-block;
+            margin-top: 10px;
+            color: var(--bdk-gold-active);
+            font-size: 14px;
+            line-height: 1.7;
+            letter-spacing: 0.04em;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.48);
+        }
+
+        .schedule-location:hover,
+        .schedule-location:focus {
+            color: var(--bdk-white);
+            border-bottom-color: var(--bdk-white);
+        }
+
+        .schedule-test-date {
+            margin-top: 10px;
+            color: var(--bdk-gold-active);
+            font-size: 11px;
+            line-height: 1.7;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+        }
+
+        .inline-location {
+            color: inherit;
+            border-bottom: 1px solid currentColor;
+        }
+
+        .practice-choice-time .inline-location {
+            color: rgba(5, 5, 5, 0.82);
+        }
+
+        .practice-choice-time .inline-location:hover,
+        .practice-choice-time .inline-location:focus {
+            color: var(--bdk-black);
+            border-bottom-color: var(--bdk-black);
+        }
+
+        .practice-time .inline-location {
+            color: var(--bdk-gold-active);
+        }
+
+        .practice-time .inline-location:hover,
+        .practice-time .inline-location:focus {
+            color: var(--bdk-white);
+            border-bottom-color: var(--bdk-white);
+        }
+
+        @media (max-width: 1060px) {
+            .teacher-copy {
+                padding: 48px 44px;
+            }
+
+            .build-card,
+            .practice-card {
+                padding-left: 32px;
+                padding-right: 32px;
+            }
+
+            .testimonial-card {
+                padding: 0 28px;
+            }
+
+            .semester-title {
+                white-space: normal;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .semester-hero {
+                min-height: 90vh;
+            }
+
+            .semester-hero-inner {
+                width: min(92vw, 680px);
+                padding-top: 90px;
+            }
+
+            .semester-hero-copy {
+                max-width: 680px;
+            }
+
+            .semester-title {
+                white-space: normal;
+            }
+
+            .semester-meta {
+                display: block;
+                line-height: 2.1;
+            }
+
+            .semester-meta span {
+                display: block;
+            }
+
+            .semester-meta span + span::before {
+                content: "";
+                margin: 0;
+            }
+
+            .landing-section,
+            .landing-section.compact,
+            .teacher-section,
+            .testimonials-section,
+            .image-content-section {
+                padding-top: 90px;
+                padding-bottom: 90px;
+            }
+
+            .section-title {
+                font-size: 24px;
+                letter-spacing: 0.22em;
+                margin-bottom: 46px;
+            }
+
+            .image-content-section .text-block,
+            .image-content-section .for-whom-item,
+            .image-content-section .semester-value {
+                font-size: 17px;
+            }
+
+            .build-grid,
+            .practice-grid,
+            .price-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .practice-card img {
+                height: 300px;
+            }
+
+            .semester-row,
+            .schedule-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .teacher-panel {
+                grid-template-columns: 1fr;
+                width: min(88vw, 680px);
+            }
+
+            .teacher-image {
+                min-height: 380px;
+            }
+
+            .teacher-copy {
+                border-left: 0;
+                border-top: 1px solid rgba(185, 166, 106, 0.24);
+                padding: 44px 38px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 0;
+                width: min(84vw, 680px);
+            }
+
+            .testimonial-card {
+                padding: 34px 0;
+                border-left: 0;
+                border-bottom: 1px solid rgba(185, 166, 106, 0.30);
+            }
+
+            .testimonial-card + .testimonial-card {
+                border-left: 0;
+            }
+
+            .testimonial-card:last-child {
+                border-bottom: 0;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .semester-hero {
+                min-height: calc(100vh - 56px);
+                min-height: calc(100svh - 56px);
+                margin-top: 56px;
+                align-items: center;
+            }
+
+            .semester-hero-overlay {
+                background:
+                    linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 0.22) 0%,
+                        rgba(0, 0, 0, 0.36) 56%,
+                        rgba(5, 5, 5, 0.72) 84%,
+                        var(--bdk-black) 100%
+                    ),
+                    radial-gradient(circle at center, rgba(0, 0, 0, 0.16) 0%, rgba(0, 0, 0, 0.38) 48%, rgba(0, 0, 0, 0.66) 100%);
+            }
+
+            .semester-hero-inner {
+                width: min(88vw, 430px);
+                padding-top: 84px;
+                padding-bottom: 74px;
+            }
+
+            .semester-hero-copy {
+                max-width: none;
+                text-align: center;
+            }
+
+            .semester-title {
+                font-size: clamp(58px, 18vw, 92px);
+                line-height: 1.05;
+                letter-spacing: 0.08em;
+                white-space: normal;
+            }
+
+            .semester-subtitle {
+                margin-top: 24px;
+                font-size: 13px;
+                letter-spacing: 0.20em;
+            }
+
+            .semester-lead {
+                margin-top: 34px;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 15px;
+                line-height: 1.8;
+            }
+
+            .landing-section,
+            .landing-section.compact,
+            .teacher-section,
+            .testimonials-section,
+            .image-content-section {
+                padding-top: 78px;
+                padding-bottom: 78px;
+            }
+
+            .section-title {
+                font-size: 20px;
+                line-height: 1.45;
+                letter-spacing: 0.16em;
+                margin-bottom: 38px;
+            }
+
+            .text-block {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .image-content-section .text-block,
+            .image-content-section .for-whom-item,
+            .image-content-section .semester-value {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .landing-button {
+                width: 100%;
+                max-width: 360px;
+                text-align: center;
+                padding: 15px 20px;
+                letter-spacing: 0.18em;
+            }
+
+            .landing-button.secondary {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            .for-whom-item {
+                line-height: 1.85;
+            }
+
+            .build-card,
+            .practice-card {
+                padding: 40px 28px;
+            }
+
+            .practice-card img {
+                height: 240px;
+            }
+
+            .schedule-panel,
+            .faq-list {
+                width: min(88vw, 430px);
+            }
+
+            .teacher-panel {
+                width: min(88vw, 430px);
+            }
+
+            .teacher-image {
+                min-height: 340px;
+            }
+
+            .teacher-copy {
+                padding: 44px 28px;
+            }
+
+            .teacher-kicker {
+                margin-bottom: 18px;
+                font-size: 11px;
+            }
+
+            .teacher-name {
+                margin-bottom: 28px;
+                font-size: 32px;
+            }
+
+            .teacher-text {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .teacher-stats {
+                font-size: 10px;
+                letter-spacing: 0.05em;
+            }
+
+            .teacher-stats-line span {
+                margin: 0 8px;
+            }
+
+            .teacher-stats-training {
+                white-space: normal;
+                letter-spacing: 0.04em;
+            }
+
+            .testimonial-text {
+                font-size: 15px;
+                line-height: 1.85;
+            }
+
+            .faq-question {
+                font-size: 13px;
+                letter-spacing: 0.13em;
+            }
+
+            .faq-answer {
+                font-size: 15px;
+            }
+
+            .footer-logo-mark {
+                width: 64px;
+                height: 64px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .practice-choice-section {
+                padding-top: 90px;
+                padding-bottom: 64px;
+            }
+
+            .budokon-intro-section {
+                padding-top: 54px;
+            }
+
+            .semester-panel {
+                margin-top: 36px;
+            }
+
+            .practice-choice-grid {
+                grid-template-columns: 1fr;
+                max-width: 680px;
+            }
+            .quote-strip {
+                padding-top: 64px;
+                padding-bottom: 36px;
+            }
+
+            #semester {
+                padding-top: 56px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .practice-choice-section {
+                padding-top: 78px;
+                padding-bottom: 56px;
+            }
+
+            .budokon-intro-section {
+                padding-top: 46px;
+            }
+
+            .semester-panel {
+                margin-top: 32px;
+            }
+
+            .practice-choice-section .section-title {
+                margin-bottom: 30px;
+            }
+
+            .practice-choice-intro {
+                margin-bottom: 48px;
+            }
+
+            .practice-choice-grid {
+                width: min(88vw, 430px);
+                gap: 20px;
+            }
+            .practice-choice-copy {
+                padding: 38px 28px 30px;
+            }
+
+            .practice-choice-copy h3 {
+                font-size: 20px;
+                letter-spacing: 0.15em;
+            }
+
+            .practice-choice-tags {
+                font-size: 9px;
+                letter-spacing: 0.10em;
+            }
+
+            .practice-choice-tags span + span::before {
+                margin: 0 6px;
+            }
+
+            .practice-choice-copy p {
+                font-size: 15px;
+                line-height: 1.8;
+            }
+            .practice-choice-action {
+                width: min(88vw, 430px);
+                margin-top: 50px;
+            }
+
+            .practice-choice-action-title {
+                margin-bottom: 30px;
+                font-size: 18px;
+                letter-spacing: 0.18em;
+            }
+
+            .quote-strip {
+                padding-top: 56px;
+                padding-bottom: 30px;
+            }
+
+            #semester {
+                padding-top: 48px;
+            }
+
+            .practice-detail-action {
+                width: min(88vw, 430px);
+                margin: 38px auto 0;
+            }
+        }
+
+
+        @media (max-width: 900px) {
+            .terms-image-panel {
+                min-height: 640px;
+                padding-top: 90px;
+                padding-bottom: 168px;
+            }
+
+            .price-section {
+                padding-top: 42px;
+                padding-bottom: 90px;
+            }
+
+            .practice-card + .practice-card {
+                border-left: 0;
+                border-top: 1px solid rgba(185, 166, 106, 0.28);
+            }
+
+            .practice-choice-card {
+                min-height: 360px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .terms-image-panel {
+                min-height: 590px;
+                padding-top: 78px;
+                padding-bottom: 146px;
+            }
+
+            .price-section {
+                padding-top: 36px;
+                padding-bottom: 78px;
+            }
+
+            .practice-choice-card {
+                min-height: 0;
+            }
+
+            .practice-choice-image {
+                height: 116px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .semester-hero-video {
+                display: none;
+            }
+
+            .practice-choice-image img,
+            .landing-button,
+            a {
+                transition: none;
+            }
+
+            .practice-choice-card:hover .practice-choice-image img {
+                transform: none;
+            }
+        }
+    
+
+        .contact-prompt {
+            margin-top: 18px;
+            margin-bottom: 0;
+        }
+
+        .contact-prompt a {
+            border-bottom: 1px solid rgba(185, 166, 106, 0.46);
+        }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://budokon.si/#website",
+      "url": "https://budokon.si/",
+      "name": "Budokon Slovenija",
+      "publisher": {
+        "@id": "https://budokon.si/#organization"
+      },
+      "inLanguage": "sl-SI"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://budokon.si/redne-prakse/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Budokon Slovenija",
+          "item": "https://budokon.si/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Redne Budokon prakse",
+          "item": "https://budokon.si/redne-prakse/"
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://budokon.si/redne-prakse/#primaryimage",
+      "url": "https://budokon.si/img/og-budokon-slovenija.jpg",
+      "width": 1200,
+      "height": 630
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://budokon.si/redne-prakse/#webpage",
+      "url": "https://budokon.si/redne-prakse/",
+      "name": "Budokon Ljubljana: redne prakse in 5-mesečni semester",
+      "isPartOf": {
+        "@id": "https://budokon.si/#website"
+      },
+      "about": {
+        "@id": "https://budokon.si/#organization"
+      },
+      "inLanguage": "sl-SI",
+      "description": "Vpis v 5-mesečni Budokon semester v Ljubljani: slow flow na Viču in tatami v BTC-ju.",
+      "breadcrumb": {
+        "@id": "https://budokon.si/redne-prakse/#breadcrumb"
+      },
+      "primaryImageOfPage": {
+        "@id": "https://budokon.si/redne-prakse/#primaryimage"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://budokon.si/#organization",
+      "name": "Budokon Slovenija",
+      "url": "https://budokon.si/",
+      "founder": {
+        "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
+      },
+      "email": "sanja@budokon.si",
+      "description": "Budokon Slovenija ponuja redne Budokon prakse in somatsko čuječe mešane gibalne umetnosti v Ljubljani.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://budokon.si/img/bdk-logo-black.png"
+      },
+      "sameAs": [
+        "https://www.instagram.com/budokonslovenija/"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://budokon.si/#sanja-zalar-gostimirovic",
+      "name": "Sanja Zalar Gostimirović",
+      "alternateName": "Sanja Somatika",
+      "url": "https://sanjasomatika.si/",
+      "email": "sanja@budokon.si",
+      "worksFor": {
+        "@id": "https://budokon.si/#organization"
+      },
+      "knowsAbout": [
+        "Budokon",
+        "mešane gibalne umetnosti",
+        "somatska čuječnost",
+        "mobilnost",
+        "BDK joga",
+        "kalistenika",
+        "živalsko gibanje"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://budokon.si/redne-prakse/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Ali potrebujem predznanje ali posebno telesno pripravljenost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ne. Predznanje Budokona, velika gibljivost ali visoka telesna pripravljenost niso pogoj. Prakso gradimo postopno in jo prilagajamo trenutnim zmožnostim."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Katero prakso naj izberem?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "BDK slow flow je počasnejša, tehnična in bolj introspektivna praksa na vadbeni podlogi. BDK tatami je bolj dinamična in prostorsko usmerjena praksa na tatamijih. Če izbire še nimaš, se lahko prijaviš na obe testni praksi."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ali je praksa naporna?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Lahko je izzivalna. Intenzivnost gradimo postopno, z možnostjo prilagoditev in s pozornostjo do telesnih meja. Izziv ni isto kot potiskanje preko zmožnosti."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kako poteka posamezna praksa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Posamezna praksa traja 75 minut. Praksa se začne s pripravo telesa in drže do prakse. Nato se posvetimo tehniki, prehodom in povezovanju gibanja v krajše ali daljše sekvence. Zahtevnost stopnjujemo postopno, z različicami in prilagoditvami, da lahko vsi ves čas sodelujejo pri praksi. Zaključek je namenjen integraciji in pomiritvi živčnega sistema."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kaj potrebujem za prakso?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Za obe praksi potrebuješ udobna oblačila, ki pri predklonu ne lezejo čez glavo. Za petkove prakse priporočam oblačila, ki pokrijejo ramena in kolena, saj delamo na tatami podlogah. Za prakso ob sredah potrebuješ svojo joga podlogo za maksimalno udobje in higieno; podlogo si lahko tudi izposodiš v dvorani."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ali lahko hodim občasno?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Ne. Redne prakse potekajo v obliki semestra. Po začetnih testnih praksah se skupina zapre, saj kontinuiteta omogoča postopno progresijo in poglabljanje procesa."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Ali je možno plačilo šolnine na obroke?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plačilo šolnine na obroke je možno po predhodnem dogovoru. Pred prijavo piši na sanja@budokon.si."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Kako poteka prijava?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "V prijavnem obrazcu izbereš testno prakso ali neposreden vpis v semester. Testna praksa je nezavezujoča in stane 25 €. Če se nato vpišeš v semester, se plačani znesek v celoti odšteje od šolnine. Po oddani prijavi prejmeš e-pošto s QR-kodo za plačilo. Mesto je rezervirano po prejetem plačilu."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="budokon-semester-page" data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
+<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+<div class="container">
+<div class="navbar-header">
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Odpri glavni meni" class="navbar-toggle" data-target="#main-navigation" data-toggle="collapse" type="button">
+      Meni
+      <i class="fa fa-bars">
+</i>
+</button>
+<a class="navbar-brand" href="/">
+      BUDOKON
+      <span class="light">
+       SLOVENIJA
+      </span>
+</a>
+</div>
+<div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="main-navigation">
+<ul class="nav navbar-nav">
+<li>
+<a class="page-scroll" href="#za-koga">
+        Za koga
+       </a>
+</li>
+<li>
+<a class="page-scroll" href="#semester">
+        Semester
+       </a>
+</li>
+<li>
+<a class="page-scroll" href="#gradimo">
+        Kaj gradimo
+       </a>
+</li>
+<li>
+<a class="page-scroll" href="#prakse">
+        Prakse
+       </a>
+</li>
+<li>
+<a class="page-scroll" href="#prijava">Vpis</a>
+</li>
+</ul>
+</div>
+</div>
+</nav>
+<header class="semester-hero">
+<video aria-hidden="true" autoplay="" class="semester-hero-video" loop="" muted="" playsinline="" poster="/redne-prakse-testna-lekcija.jpg" preload="metadata">
+<source src="/img/header.mp4" type="video/mp4"/>
+</video>
+<div class="semester-hero-overlay">
+</div>
+<div class="semester-hero-inner">
+<div class="semester-hero-copy">
+<h1 class="semester-title">
+      REDNE BUDOKON PRAKSE
+     </h1>
+<div class="semester-subtitle">
+      vpis v 5-mesečni semester v ljubjani
+     </div>
+<div class="semester-lead">
+<p>
+       Za moč, mobilnost in koordinacijo brez forsiranja.
+      </p>
+<p>
+       Izzivalna praksa, ki jo prilagajamo telesu, ne telesa praksi.
+      </p>
+</div>
+<div class="semester-meta">
+<span>Srede · Vič · 75 min</span>
+<span>Petki · BTC · 75 min</span>
+<span>Testni praksi: 18. in 23. 9. 2026</span>
+</div>
+<div class="hero-actions">
+<a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
+       Prijava na testno prakso | Vpis v semester
+      </a>
+<a class="landing-button secondary page-scroll" href="#prakse">O praksah</a>
+</div>
+</div>
+</div>
+</header>
+<section aria-labelledby="practice-choice-title" class="practice-choice-section section-anchor">
+<div class="landing-container wide">
+<h2 class="section-title" id="practice-choice-title">
+     Dva tipa rednih praks
+    </h2>
+<div class="practice-choice-intro text-block">
+<p>
+<strong>
+       Atletsko zahteven Budokon, poučevan somatsko, postopno in brez forsiranja.
+      </strong>
+</p>
+<p>
+      Obe praksi razvijata moč, mobilnost in koordinacijo. Razlikujeta se predvsem v tempu, uporabi prostora in načinu, kako se gibanje gradi.
+     </p>
+</div>
+<div class="practice-choice-grid">
+<article class="practice-choice-card">
+<div class="practice-choice-copy">
+<h3>
+        BDK slow flow
+       </h3>
+<div class="practice-choice-time">sreda · 19:10–20:25 · <a aria-label="Odpri lokacijo Aho studio na Google Maps" class="inline-location" href="https://maps.app.goo.gl/N4k57vRkPEgUtDi6A" rel="noopener" target="_blank">Aho studio, Vič</a></div>
+<div aria-label="Značilnosti BDK slow flow" class="practice-choice-tags">
+<span>
+         počasneje
+        </span>
+<span>
+         tehnično
+        </span>
+<span>
+         introspektivno
+        </span>
+</div>
+<p>
+        Povezana praksa na podlogi, ki razvija moč skozi nadzor, zadrževanje, natančnost in tekoče prehode.
+       </p>
+</div>
+<div aria-hidden="true" class="practice-choice-image">
+<img alt="" decoding="async" height="461" loading="lazy" src="/leteča bojevnica.jpg" width="1000"/>
+</div>
+</article>
+<article class="practice-choice-card">
+<div class="practice-choice-copy">
+<h3>
+        BDK tatami
+       </h3>
+<div class="practice-choice-time">petek · 18:00–19:15 · <a aria-label="Odpri lokacijo Gendai dojo na Google Maps" class="inline-location" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4765326a84d1aed5:0xd434e4edce2bfd68?sa=X&amp;ved=1t:8290&amp;ictx=111" rel="noopener" target="_blank">Gendai dojo, BTC</a></div>
+<div aria-label="Značilnosti BDK tatami" class="practice-choice-tags">
+<span>
+         dinamično
+        </span>
+<span>
+         prostorsko
+        </span>
+<span>
+         agilno
+        </span>
+</div>
+<p>
+        Dinamična praksa na tatamijih, ki razvija agilnost, odzivnost, stabilnost in koordinacijo skozi gibanje po prostoru.
+       </p>
+</div>
+<div aria-hidden="true" class="practice-choice-image">
+<img alt="" decoding="async" height="837" loading="lazy" src="/img/gorilaw.jpg" width="1000"/>
+</div>
+</article>
+</div>
+<div class="practice-choice-action">
+<h3 class="practice-choice-action-title">Kako se prijaviš</h3>
+<div class="registration-steps">
+<div class="registration-step">
+<span class="registration-number">01</span>
+<h4>Izberi termin</h4>
+<p>Izberi testno prakso slow flow ali tatami in oddaj prijavo prek obrazca.</p>
+</div>
+<div class="registration-step">
+<span class="registration-number">02</span>
+<h4>Potrdi mesto</h4>
+<p>Po prijavi prejmeš e-pošto s QR-kodo za plačilo. Mesto je rezervirano po prejetem plačilu.</p>
+</div>
+<div class="registration-step">
+<span class="registration-number">03</span>
+<h4>Spoznaj prakso</h4>
+<p>Testna praksa traja 75 minut in stane 25 €. Ob vpisu v semester se znesek v celoti odšteje od šolnine.</p>
+</div>
+</div>
+<div class="test-date-panel">
+<div class="test-date-title">Testne prakse</div>
+<div class="test-date-row">
+<span>BDK tatami</span>
+<strong>18. in 25. 9. 2026 · 18:00</strong>
+</div>
+<div class="test-date-row">
+<span>BDK slow flow</span>
+<strong>23. in 30. 9. 2026 · 19:10</strong>
+</div>
+<p class="test-date-note">Udeležiš se lahko ene ali več testnih praks.</p>
+</div>
+<a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
+      Prijava na testno prakso | Vpis v semester
+     </a>
+</div>
+</div>
+</section>
+<section aria-labelledby="what-is-budokon-title" class="landing-section compact budokon-intro-section">
+<div class="landing-container">
+<h2 class="section-title" id="what-is-budokon-title">
+     Kaj je Budokon?
+    </h2>
+<div class="text-block">
+<p>
+      Morda ne iščeš še ene telovadbe, ampak prakso, ki telesa ne obravnava kot projekt, ki se ga popravlja, ampak kot prostor doživljanja, raziskovanja in krepitve moči.
+     </p>
+<p>
+      Budokon združuje živalsko gibanje, BDK jogo, mobilnost, kalisteniko in osnove borilnih veščin v disciplino mešanih gibalnih umetnosti. Praksa razvija moč, stabilnost, koordinacijo, gibljivost, agilnost in prisotnost.
+     </p>
+</div>
+</div>
+</section>
+<section class="image-content-section image-za-koga section-anchor" id="za-koga">
+<div class="landing-container">
+<h2 class="section-title">
+     Za koga
+    </h2>
+<div class="for-whom-list">
+<div class="for-whom-item">
+      Želiš graditi moč inteligentno, brez potiskanja preko meja.
+     </div>
+<div class="for-whom-item">
+      Želiš razvijati mobilnost, stabilnost, koordinacijo in boljši občutek za telo v prostoru.
+     </div>
+<div class="for-whom-item">
+      Veš, da telo potrebuje več kot ponavljanje vaj ali pasivno raztezanje.
+     </div>
+<div class="for-whom-item">
+      Zanima te izziv, ki ne temelji na dokazovanju ali primerjanju.
+     </div>
+<div class="for-whom-item">
+      Želiš bolje razlikovati med naporom, odporom, nelagodjem in mejami.
+     </div>
+</div>
+<div class="for-whom-note">
+     Predznanje Budokona ni pogoj.
+    </div>
+</div>
+</section>
+<aside aria-label="Izkušnja udeleženke" class="quote-strip">
+<div class="landing-container">
+<blockquote class="text-block">
+<p>Kar odneseš s prakse, je novo odkrita moč. Vsaka mala zmaga priliva na ogenj.</p>
+<cite>
+      Tea
+     </cite>
+</blockquote>
+</div>
+</aside>
+<section class="landing-section compact section-anchor" id="semester">
+<div class="landing-container">
+<h2 class="section-title">
+     Kako poteka semester
+    </h2>
+<div class="text-block">
+<p>
+      Redne prakse Budokona potekajo v obliki dveh semestrov, ki trajata približno pet mesecev:
+     </p>
+</div>
+<div class="semester-panel">
+<div class="semester-row">
+<div class="semester-label">Jesensko-zimski 2026/27</div>
+<div class="semester-value">od 18. septembra 2026 do 29. januarja 2027</div>
+</div>
+<div class="semester-row">
+<div class="semester-label">Pomladni 2027</div>
+<div class="semester-value">od 10. februarja do 23. junija 2027</div>
+</div>
+<div class="semester-row">
+<div class="semester-label">
+       Proces
+      </div>
+<div class="semester-value">
+       Kontinuiran proces omogoča postopno progresijo in globlje razumevanje.
+      </div>
+</div>
+<div class="semester-row">
+<div class="semester-label">
+       Šolnina
+      </div>
+<div class="semester-value">
+       S šolnino rezerviraš svoje mesto v skupini in ne posameznih obiskov.
+      </div>
+</div>
+</div>
+</div>
+</section>
+<section class="terms-price-section section-anchor" id="termini">
+<div class="terms-image-panel">
+<div class="landing-container wide">
+<h2 class="section-title">Termini</h2>
+<div class="schedule-panel">
+<div class="schedule-row">
+<div class="schedule-day">
+        Sreda
+       </div>
+<div class="schedule-info"><div class="schedule-practice-name">BDK slow flow · 19:10–20:25 · 75 min</div><a aria-label="Odpri lokacijo Aho studio, Koprska ulica 52, na Google Maps" class="schedule-location" href="https://maps.app.goo.gl/N4k57vRkPEgUtDi6A" rel="noopener" target="_blank">Aho studio · Koprska ulica 52, 1000 Ljubljana</a><div class="schedule-test-date">Testni praksi: 23. in 30. 9. 2026</div><em>Povezan in tekoč tip prakse na vadbeni podlogi, fokus na vzdržljivosti, stabilnosti, nadzoru, prehodih in tekoči Budokon joga praksi.</em></div>
+</div>
+<div class="schedule-row">
+<div class="schedule-day">
+        Petek
+       </div>
+<div class="schedule-info"><div class="schedule-practice-name">BDK tatami · 18:00–19:15 · 75 min</div><a aria-label="Odpri lokacijo Gendai dojo, Leskoškova cesta 6, na Google Maps" class="schedule-location" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4765326a84d1aed5:0xd434e4edce2bfd68?sa=X&amp;ved=1t:8290&amp;ictx=111" rel="noopener" target="_blank">Gendai dojo · Leskoškova cesta 6, Ljubljana</a><div class="schedule-test-date">Testni praksi: 18. in 25. 9. 2026</div><em>Vsi jeziki Budokona, delo na tatamijih, gibanje po prostoru, fokus na moči, agilnosti, orientaciji, stabilnosti in odzivnosti.</em></div>
+</div>
+</div>
+</div>
+</div>
+<div class="price-section section-anchor" id="prijava">
+<div class="landing-container wide"><h2 class="section-title">Cena</h2>
+<div class="price-grid">
+<div class="price-card">
+<h3>
+        Testna praksa
+       </h3>
+<span class="price">
+        25 €
+       </span>
+<p>
+        možna le ob začetku semestra
+       </p>
+</div>
+<div class="price-card">
+<h3>
+        Semester 1x tedensko
+       </h3>
+<span class="price">
+        270 €
+       </span>
+<p>
+        5-mesečni semester
+       </p>
+</div>
+<div class="price-card">
+<h3>Obe praksi · 2x tedensko</h3>
+<span class="price">
+        420 €
+       </span>
+<p>
+        5-mesečni semester
+       </p>
+</div>
+</div>
+<div class="price-note">
+<p>
+       Vpis v redne Budokon skupine poteka dvakrat letno: septembra in februarja.
+      </p>
+<p>
+       Če se po testni praksi odločiš za vpis v semester, se cena testne prakse v celoti odšteje od šolnine.
+      </p>
+<a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
+       Prijava na testno prakso | Vpis v semester
+      </a>
+</div>
+</div>
+</div>
+</section>
+<section class="landing-section section-anchor" id="gradimo">
+<div class="landing-container wide">
+<h2 class="section-title">
+     Kaj gradimo
+    </h2>
+<div class="text-block build-intro">
+<p>Osrednji fokus ni popolna izvedba. Fokus je odnos do telesa, napora, meja in trenutka, ko bi najraje pobegnili ali odnehali.</p>
+</div>
+<div class="build-grid">
+<article class="build-card">
+<h3>
+       Moč kot kapaciteto
+      </h3>
+<p>
+       Moč ni samo mišična sila. Je kapaciteta, da pri naporu ostaneš v stiku s sabo. Da ne greš takoj v primerjanje, dokazovanje ali umik iz izziva. Gradimo jo postopno, z izzivom in brez forsiranja.
+      </p>
+</article>
+<article class="build-card">
+<h3>
+       Mobilnost kot telesno inteligenco
+      </h3>
+<p>
+       Mobilnost ni samo obseg gibanja. Je sposobnost, da gib čutiš, nadzoruješ in se v njem znajdeš. V Budokonu raziskujemo prehode, prilagajanje in gibanje skozi prostor.
+      </p>
+</article>
+<article class="build-card">
+<h3>
+       Koordinacijo kot jasnost
+      </h3>
+<p>
+       Budokon zahteva pozornost. Gibanje povezuje roke, noge, hrbtenico, pogled, dih in orientacijo v prostoru. Sčasoma se telo začne gibati bolj celostno, manj fragmentirano.
+      </p>
+</article>
+<article class="build-card">
+<h3>
+       Meje kot del prakse
+      </h3>
+<p>
+       Praksa ni namenjena potiskanju preko meja, kjer telo utišamo zato, da bi nekaj dosegli. Izziv je prisoten, vendar znotraj jasnega odnosa do meja.
+      </p>
+</article>
+</div>
+</div>
+</section>
+<section class="landing-section compact section-anchor" id="prakse">
+<div class="landing-container wide">
+<h2 class="section-title">
+     Podrobneje o praksah
+    </h2>
+<div class="practice-grid">
+<article class="practice-card">
+<img alt="BDK slow flow Budokon praksa na vadbeni podlogi" decoding="async" height="461" loading="lazy" src="/leteča bojevnica.jpg" width="1000"/>
+<h3>
+       BDK slow flow
+      </h3>
+<div class="practice-time">sreda · 19:10–20:25 · 75 min · <a aria-label="Odpri lokacijo Aho studio na Google Maps" class="inline-location" href="https://maps.app.goo.gl/N4k57vRkPEgUtDi6A" rel="noopener" target="_blank">Aho studio, Vič</a></div>
+<div class="practice-tags">
+<span>
+        počasneje
+       </span>
+<span>
+        tehnično
+       </span>
+<span>
+        introspektivno
+       </span>
+</div>
+<p>
+       BDK slow flow je povezan in tekoč tip prakse na vadbeni podlogi.
+      </p>
+<p>
+       Počasneje ne pomeni lažje. Slow flow gradi moč skozi nadzor, zadrževanje, prehode in natančnost. Primeren je, če želiš bolj introspektivno prakso, kjer se intenzivnost ne meri s hitrostjo, ampak s kakovostjo prisotnosti v gibu.
+      </p>
+</article>
+<article class="practice-card">
+<img alt="BDK tatami Budokon praksa na tatamijih" decoding="async" height="837" loading="lazy" src="/img/gorilaw.jpg" width="1000"/>
+<h3>
+       BDK tatami
+      </h3>
+<div class="practice-time">petek · 18:00–19:15 · 75 min · <a aria-label="Odpri lokacijo Gendai dojo na Google Maps" class="inline-location" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4765326a84d1aed5:0xd434e4edce2bfd68?sa=X&amp;ved=1t:8290&amp;ictx=111" rel="noopener" target="_blank">Gendai dojo, BTC</a></div>
+<div class="practice-tags">
+<span>
+        dinamično
+       </span>
+<span>
+        prostorsko
+       </span>
+<span>
+        agilno
+       </span>
+</div>
+<p>
+       BDK tatami je bolj dinamična in prostorsko orientirana praksa. Vključuje živalsko gibanje, mobilnost, kalisteniko, BDK jogo in osnove borilnih veščin brez kontakta. Fokus je na agilnosti, orientaciji, stabilnosti, odzivnosti in moči.
+      </p>
+<p>
+       Ta tip prakse je zate, če si želiš širšega spektra gibanja, več izziva za koordinacijo in več prilagajanja na okoliščine. Bolj interaktivno, agilno in navzven usmerjeno.
+      </p>
+</article>
+</div>
+<div class="practice-detail-action">
+<a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
+      Prijava na testno prakso | Vpis v semester
+     </a>
+</div>
+</div>
+</section>
+<section aria-labelledby="testimonials-title" class="testimonials-section">
+<div class="landing-container">
+<h2 class="section-title" id="testimonials-title">
+     Kaj pravijo udeleženci
+    </h2>
+</div>
+<div class="testimonials-grid">
+<article class="testimonial-card">
+<p class="testimonial-text">"Budokon me je navdušil, ker vsebuje moč in mehkobo hkrati. Pusti ti, da raziskuješ, kaj zmore tvoje telo, po drugi strani pa spoznaš svoje občutke in ljubezen do sebe. Gibanje skozi Budokon je kot ples, kjer se dopolnjujejo nežnost, moč, vzdržljivost, koncentracija in mobilnost."</p>
+<div class="testimonial-name">
+      Ana
+     </div>
+</article>
+<article class="testimonial-card">
+<p class="testimonial-text">"Sanja v svoje tečaje vnese sintezo telesa in duha na povsem naraven način. Uspe ji nevsiljivo ustvariti občutek skupnosti in domačnosti; je nepopustljiva in obenem nežna. Dobrih učiteljev je malo in Sanja je eden od njih."</p>
+<div class="testimonial-name">
+      Matija
+     </div>
+</article>
+<article class="testimonial-card">
+<p class="testimonial-text">"Sanja je odlična pedagoginja z izrednim čutom za ljudi, njihove potrebe in zmožnosti. Njeni tečaji in delavnice so sistematični in dodelani do potankosti. Je natančna, strokovna, njena razlaga jasna in bogata, njena demonstracija pa osupljiva."</p>
+<div class="testimonial-name">
+      Mateja
+     </div>
+</article>
+</div>
+</section><section aria-labelledby="teacher-title" class="teacher-section">
+<div class="teacher-panel">
+<div class="teacher-image">
+<img alt="Sanja Zalar Gostimirović | Sanja Somatika" decoding="async" height="460" loading="lazy" src="/img/sanjasomatika.jpg" width="1000"/>
+</div>
+<div class="teacher-copy">
+<div class="teacher-kicker">
+      Prakso vodi
+     </div>
+<h2 class="teacher-name" id="teacher-title">
+      Sanja Zalar Gostimirović
+      <span>
+       |
+      </span>
+      Sanja Somatika
+     </h2>
+<div class="teacher-text">
+<p>
+<a href="https://sanjasomatika.si/sanja.html" rel="noopener" target="_blank">
+        Sanja
+       </a>
+       je prva slovenska certificirana učiteljica Budokona® in ustanoviteljica šole Budokon Slovenija. Budokon je v Slovenijo pripeljala leta 2016 kot edukantka, licenco pa je pridobila leta 2017, ko je tudi odprla šolo.
+      </p>
+<p>
+       Vsa Budokon izobraževanja je opravila v živo pri avtorju metode Cameronu Shaynu.
+      </p>
+<p>
+       Je avtorica metode Somatska čuječnost, RYT joga učiteljica, učiteljica argentinskega tanga, psihosocialna svetovalka in praktikantka Somatic Experiencing.
+      </p>
+<p>
+<strong>
+        Budokon poučuje kot atletsko zahtevno in somatsko čuječo gibalno prakso.
+       </strong>
+</p>
+</div>
+<div aria-label="Izkušnje" class="teacher-stats">
+<div class="teacher-stats-line">
+       26 let osebne prakse
+       <span>
+        |
+       </span>
+       12 let poučevanja
+      </div>
+<div class="teacher-stats-training">
+       10.500+ ur izobrazbe na področju dela z ljudmi
+      </div>
+</div>
+</div>
+</div>
+</section>
+<section aria-labelledby="faq-title" class="landing-section compact">
+<div class="landing-container">
+<h2 class="section-title" id="faq-title">
+     Vprašanja
+    </h2>
+</div>
+<div class="faq-list">
+<article class="faq-item">
+<h3 class="faq-question">
+      Ali potrebujem predznanje ali posebno telesno pripravljenost?
+     </h3>
+<p class="faq-answer">
+      Ne. Predznanje Budokona, velika gibljivost ali visoka telesna pripravljenost niso pogoj. Prakso gradimo postopno in jo prilagajamo trenutnim zmožnostim.
+     </p>
+</article>
+<article class="faq-item">
+<h3 class="faq-question">
+      Katero prakso naj izberem?
+     </h3>
+<p class="faq-answer">
+      BDK slow flow je počasnejša, tehnična in bolj introspektivna praksa na vadbeni podlogi. BDK tatami je bolj dinamična in prostorsko usmerjena praksa na tatamijih. Če izbire še nimaš, se lahko prijaviš na obe testni praksi.
+     </p>
+</article>
+<article class="faq-item">
+<h3 class="faq-question">
+      Ali je praksa naporna?
+     </h3>
+<p class="faq-answer">
+      Lahko je izzivalna. Intenzivnost gradimo postopno, z možnostjo prilagoditev in s pozornostjo do telesnih meja. Izziv ni isto kot potiskanje preko zmožnosti.
+     </p>
+</article>
+<article class="faq-item">
+<h3 class="faq-question">
+      Kako poteka posamezna praksa?
+     </h3>
+<p class="faq-answer">Posamezna praksa traja 75 minut. Praksa se začne s pripravo telesa in drže do prakse. Nato se posvetimo tehniki, prehodom in povezovanju gibanja v krajše ali daljše sekvence. Zahtevnost stopnjujemo postopno, z različicami in prilagoditvami, da lahko vsi ves čas sodelujejo pri praksi. Zaključek je namenjen integraciji in pomiritvi živčnega sistema.</p>
+</article>
+<article class="faq-item">
+<h3 class="faq-question">
+      Kaj potrebujem za prakso?
+     </h3>
+<p class="faq-answer">
+      Za obe praksi potrebuješ udobna oblačila, ki pri predklonu ne lezejo čez glavo. Za petkove prakse priporočam oblačila, ki pokrijejo ramena in kolena, saj delamo na tatami podlogah. Za prakso ob sredah potrebuješ svojo joga podlogo za maksimalno udobje in higieno; podlogo si lahko tudi izposodiš v dvorani.
+     </p>
+</article>
+<article class="faq-item">
+<h3 class="faq-question">
+      Ali lahko hodim občasno?
+     </h3>
+<p class="faq-answer">
+      Ne. Redne prakse potekajo v obliki semestra. Po začetnih testnih praksah se skupina zapre, saj kontinuiteta omogoča postopno progresijo in poglabljanje procesa.
+     </p>
+</article>
+<article class="faq-item"><h3 class="faq-question">Ali je možno plačilo šolnine na obroke?</h3><p class="faq-answer">Plačilo šolnine na obroke je možno po predhodnem dogovoru. Pred prijavo piši na <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>.</p></article><article class="faq-item">
+<h3 class="faq-question">
+      Kako poteka prijava?
+     </h3>
+<p class="faq-answer">V prijavnem obrazcu izbereš testno prakso ali neposreden vpis v semester. Testna praksa je nezavezujoča in stane 25 €. Če se nato vpišeš v semester, se plačani znesek v celoti odšteje od šolnine. Po oddani prijavi prejmeš e-pošto s QR-kodo za plačilo. Mesto je rezervirano po prejetem plačilu.</p>
+</article>
+</div>
+</section>
+<section class="landing-section compact final-cta">
+<div class="landing-container">
+<h2 class="section-title">
+     Pridruži se
+    </h2>
+<div class="text-block">
+<p>
+      Če želiš razvijati moč, mobilnost in koordinacijo skozi izzivalno, somatsko čuječo prakso, je testna praksa dober prvi korak.
+     </p>
+<p class="contact-prompt">Imaš vprašanje pred prijavo? Piši na <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>.</p><a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
+      Prijava na testno prakso | Vpis v semester
+     </a>
+</div>
+</div>
+</section>
+<footer class="landing-footer">
+<div aria-label="Budokon Slovenija logo" class="footer-logo-mark" role="img">
+</div>
+<div class="footer-brand">
+    BUDOKON SLOVENIJA
+   </div>
+<div class="footer-subtitle">
+    mešane gibalne umetnosti
+   </div>
+<div class="footer-contact">
+    Sanja Zalar Gostimirović | Sanja Somatika
+    <br/>
+<a href="mailto:sanja@budokon.si">
+     sanja@budokon.si
+    </a>
+</div>
+<div class="footer-links">
+<a href="/">
+     Domov
+    </a>
+<span>
+     ·
+    </span>
+<a href="https://www.instagram.com/budokonslovenija/" rel="noopener" target="_blank">
+     Instagram
+    </a>
+<span>·</span><a href="/politika-zasebnosti/">Politika zasebnosti</a></div>
+<div class="footer-copy">
+    © 2026 Budokon Slovenija
+   </div>
+</footer>
+<script src="/vendor/jquery/jquery.js">
+</script>
+<script src="/vendor/bootstrap/js/bootstrap.min.js">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js">
+</script>
+<script src="/js/grayscale.min.js">
+</script>
+</body>
+</html>
