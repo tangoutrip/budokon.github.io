@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Politika zasebnosti | Budokon Slovenija</title>
+    <meta name="description" content="Informacije o obdelavi osebnih podatkov pri uporabi spletne strani Budokon Slovenija ter prijavi na testne in redne Budokon prakse.">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#050505">
+
+    <link rel="canonical" href="https://budokon.si/politika-zasebnosti/">
+    <link rel="shortcut icon" type="image/x-icon" href="/img/favicon.ico">
+
+    <meta property="og:locale" content="sl_SI">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://budokon.si/politika-zasebnosti/">
+    <meta property="og:site_name" content="Budokon Slovenija">
+    <meta property="og:title" content="Politika zasebnosti | Budokon Slovenija">
+    <meta property="og:description" content="Informacije o obdelavi osebnih podatkov pri uporabi spletne strani in prijavi na Budokon prakse.">
+
+    <style>
+        :root {
+            --bdk-black: #050505;
+            --bdk-charcoal: #0b0b0b;
+            --bdk-white: #f4f1ea;
+            --bdk-muted: #cfc8b9;
+            --bdk-gold: #b9a66a;
+            --bdk-line: rgba(185, 166, 106, 0.28);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bdk-black);
+            color: var(--bdk-white);
+            font-family: Montserrat, Futura, "Helvetica Neue", Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.85;
+        }
+
+        a {
+            color: var(--bdk-gold);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(185, 166, 106, 0.46);
+        }
+
+        a:hover,
+        a:focus {
+            color: var(--bdk-white);
+            border-bottom-color: var(--bdk-white);
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.96);
+            border-bottom: 1px solid var(--bdk-line);
+        }
+
+        .header-inner {
+            width: min(1080px, 88vw);
+            min-height: 66px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+        }
+
+        .brand {
+            color: var(--bdk-white);
+            border: 0;
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .brand span {
+            color: var(--bdk-muted);
+            font-weight: 400;
+        }
+
+        .back-link {
+            border: 0;
+            font-size: 11px;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        main {
+            width: min(900px, 86vw);
+            margin: 0 auto;
+            padding: 108px 0 120px;
+        }
+
+        .eyebrow {
+            margin: 0 0 18px;
+            color: var(--bdk-gold);
+            font-size: 12px;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0 0 32px;
+            color: var(--bdk-white);
+            font-size: clamp(38px, 6vw, 72px);
+            line-height: 1.12;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .lead {
+            max-width: 760px;
+            margin: 0 0 64px;
+            color: var(--bdk-muted);
+            font-size: 18px;
+        }
+
+        section {
+            padding: 38px 0;
+            border-top: 1px solid var(--bdk-line);
+        }
+
+        h2 {
+            margin: 0 0 20px;
+            color: var(--bdk-gold);
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: 400;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin: 0 0 18px;
+            color: var(--bdk-muted);
+        }
+
+        ul {
+            margin: 0 0 18px;
+            padding-left: 22px;
+            color: var(--bdk-muted);
+        }
+
+        li {
+            margin-bottom: 9px;
+        }
+
+        strong {
+            color: var(--bdk-white);
+            font-weight: 400;
+        }
+
+        .contact-card {
+            margin-top: 24px;
+            padding: 26px;
+            background: var(--bdk-charcoal);
+            border-left: 2px solid var(--bdk-gold);
+        }
+
+        .contact-card p:last-child,
+        section p:last-child,
+        section ul:last-child {
+            margin-bottom: 0;
+        }
+
+        .updated {
+            margin-top: 52px;
+            color: rgba(207, 200, 185, 0.65);
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        footer {
+            border-top: 1px solid var(--bdk-line);
+            padding: 42px 0;
+            text-align: center;
+            color: rgba(207, 200, 185, 0.65);
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 640px) {
+            .header-inner {
+                min-height: 58px;
+            }
+
+            .brand {
+                font-size: 13px;
+            }
+
+            .back-link {
+                font-size: 10px;
+            }
+
+            main {
+                width: min(88vw, 520px);
+                padding: 78px 0 90px;
+            }
+
+            .lead {
+                margin-bottom: 48px;
+                font-size: 16px;
+            }
+
+            section {
+                padding: 32px 0;
+            }
+
+            h2 {
+                font-size: 16px;
+                letter-spacing: 0.13em;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="header-inner">
+            <a class="brand" href="/">Budokon <span>Slovenija</span></a>
+            <a class="back-link" href="/redne-prakse/">Nazaj na redne prakse</a>
+        </div>
+    </header>
+
+    <main>
+        <p class="eyebrow">Varstvo osebnih podatkov</p>
+        <h1>Politika zasebnosti</h1>
+
+        <p class="lead">
+            V tej politiki pojasnjujemo, katere osebne podatke obdelujemo,
+            zakaj jih potrebujemo, komu jih lahko posredujemo, kako dolgo jih
+            hranimo in katere pravice imaš.
+        </p>
+
+        <section>
+            <h2>1. Upravljavec osebnih podatkov</h2>
+
+            <div class="contact-card">
+                <p>
+                    <strong>Sanja Somatika, Sanja Zalar Gostimirović s.p.</strong><br>
+                    Brniška cesta 40<br>
+                    1217 Vodice<br>
+                    Slovenija<br>
+                    E-pošta: <a href="mailto:sanja@budokon.si">sanja@budokon.si</a><br>
+                    Spletni strani:
+                    <a href="https://budokon.si/">budokon.si</a> in
+                    <a href="https://sanjasomatika.si/">sanjasomatika.si</a>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>2. Katere osebne podatke obdelujemo</h2>
+
+            <p>Glede na način uporabe spletne strani in prijavnega obrazca lahko obdelujemo:</p>
+
+            <ul>
+                <li>ime in priimek;</li>
+                <li>e-poštni naslov;</li>
+                <li>telefonsko številko za nujna obvestila o spremembi ali odpovedi termina;</li>
+                <li>podatke o izbrani testni praksi, redni skupini ali vpisu v semester;</li>
+                <li>podatke o oddani prijavi, plačilnem statusu, rezervaciji mesta in izdanem računu;</li>
+                <li>vsebino sporočil in vprašanj, ki jih pošlješ po e-pošti ali prek obrazca;</li>
+                <li>tehnične podatke, ki lahko nastanejo ob obisku spletne strani, na primer IP-naslov, podatke o brskalniku in strežniške dnevnike.</li>
+            </ul>
+
+            <p>
+                Prijavni obrazec ne zahteva zdravstvenih podatkov. Prosimo, da
+                diagnoz in drugih podrobnih zdravstvenih informacij ne vpisuješ
+                v obrazec ali običajno e-pošto. Za individualni dogovor zadostuje
+                kratek opis okoliščin brez zdravstvenih podrobnosti.
+            </p>
+        </section>
+
+        <section>
+            <h2>3. Nameni in pravne podlage</h2>
+
+            <p>Osebne podatke obdelujemo za:</p>
+
+            <ul>
+                <li>odgovor na vprašanje ter izvedbo korakov pred prijavo ali vpisom;</li>
+                <li>obdelavo prijave na testno prakso ali vpisa v semester;</li>
+                <li>organizacijo, komunikacijo in izvedbo praks;</li>
+                <li>pošiljanje avtomatske e-pošte z navodili za plačilo, QR-kodo in drugimi informacijami;</li>
+                <li>evidentiranje plačila in rezervacije mesta;</li>
+                <li>izdajo računov, knjigovodstvo ter izpolnjevanje davčnih in drugih zakonskih obveznosti;</li>
+                <li>varovanje spletne strani, preprečevanje zlorab ter uveljavljanje ali obrambo pravnih zahtevkov.</li>
+            </ul>
+
+            <p>
+                Pravne podlage so izvajanje pogodbe oziroma ukrepi pred sklenitvijo
+                pogodbe na tvojo zahtevo, izpolnjevanje zakonskih obveznosti ter
+                zakoniti interesi za varnost, dokazovanje poslovnih dogodkov in
+                zaščito pravnih interesov.
+            </p>
+
+            <p>
+                Če bi bilo pozneje uvedeno pošiljanje neobveznih tržnih sporočil
+                ali novic, bo zanj zahtevana ločena in prostovoljna privolitev.
+            </p>
+        </section>
+
+        <section>
+            <h2>4. Zunanji ponudniki in prejemniki podatkov</h2>
+
+            <p>
+                Pri obdelavi osebnih podatkov uporabljamo naslednje zunanje ponudnike
+                oziroma kategorije zunanjih ponudnikov:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Google Ireland Limited in povezane družbe, vključno z Google LLC</strong>,
+                    za uporabo Google Forms, Google Sheets, Google Drive, Gmail in
+                    Google Apps Script, kjer se zbirajo prijave, hranijo odgovori in
+                    pošiljajo avtomatska obvestila o plačilu.
+                </li>
+                <li>
+                    <strong>GitHub Pages oziroma GitHub</strong> za gostovanje spletne
+                    strani in zagotavljanje varnosti ter delovanja gostovanja.
+                </li>
+                <li>
+                    <strong>Ponudnik e-poštnega gostovanja</strong> za prejemanje in
+                    obdelavo poslovne komunikacije.
+                </li>
+                <li>
+                    <strong>Banka oziroma ponudniki plačilnih storitev</strong> za
+                    izvedbo in evidentiranje bančnih nakazil.
+                </li>
+                <li>
+                    <strong>PayPal (Europe) S.à r.l. et Cie, S.C.A.</strong>, če
+                    uporabnik izbere plačilo prek PayPala.
+                </li>
+                <li>
+                    <strong>Računovodski program in/ali računovodski servis</strong>,
+                    kadar je to potrebno za izdajo računov, knjigovodstvo in
+                    izpolnjevanje davčnih obveznosti.
+                </li>
+                <li>
+                    <strong>Pristojni državni organi</strong>, kadar posredovanje
+                    zahteva zakon, na primer davčni organ.
+                </li>
+            </ul>
+
+            <p>
+                Zunanji ponudniki osebne podatke obdelujejo v obsegu, ki je potreben
+                za izvedbo posamezne storitve, in skladno z njihovimi pogoji uporabe,
+                pogodbami o obdelavi podatkov oziroma zakonskimi obveznostmi.
+            </p>
+
+            <p>
+                Več informacij:
+                <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Googlova politika zasebnosti</a>,
+                <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener noreferrer">GitHubova izjava o zasebnosti</a> in
+                <a href="https://www.paypal.com/si/legalhub/paypal/privacy-full" target="_blank" rel="noopener noreferrer">PayPalova izjava o zasebnosti</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>5. Prenosi osebnih podatkov izven EGP</h2>
+
+            <p>
+                Nekateri zunanji ponudniki lahko podatke obdelujejo tudi zunaj
+                Evropskega gospodarskega prostora. V takih primerih se prenosi
+                izvajajo na podlagi mehanizmov, ki jih predvideva veljavna zakonodaja,
+                na primer sklepa o ustreznosti, standardnih pogodbenih določil ali
+                drugih ustreznih zaščitnih ukrepov, ki jih uporablja posamezni ponudnik.
+            </p>
+        </section>
+
+        <section>
+            <h2>6. Čas hrambe</h2>
+
+            <p>
+                Podatke o prijavi, komunikaciji in sodelovanju hranimo toliko časa,
+                kolikor je potrebno za izvedbo testne prakse ali semestra, izpolnitev
+                medsebojnih obveznosti, obravnavo morebitnih vprašanj ter uveljavljanje
+                ali obrambo pravnih zahtevkov. Po prenehanju namena jih izbrišemo ali
+                anonimiziramo, razen če je nadaljnja hramba potrebna zaradi zakona.
+            </p>
+
+            <p>
+                Račune, evidence plačil in druge računovodske oziroma davčne listine
+                hranimo v rokih, ki jih določajo veljavni predpisi. Podatke, obdelane
+                na podlagi morebitne privolitve, hranimo do njenega preklica oziroma
+                do izpolnitve namena, za katerega je bila podana.
+            </p>
+        </section>
+
+        <section>
+            <h2>7. Spletna stran, piškotki in tehnični podatki</h2>
+
+            <p>
+                Spletna stran po trenutni izvedbi ne uporablja lastnih analitičnih
+                ali oglaševalskih piškotkov. Ponudnik gostovanja GitHub Pages lahko
+                zaradi varnosti, preprečevanja zlorab in delovanja storitve beleži
+                tehnične podatke, vključno z IP-naslovom obiskovalca.
+            </p>
+
+            <p>
+                Spletna stran lahko nalaga zunanje pisave Google Fonts, pri čemer
+                se lahko Googlu posredujejo tehnični podatki, kot sta IP-naslov in
+                podatek o brskalniku. Povezave na Google Forms, Google Maps, PayPal
+                in druge zunanje strani se odprejo šele, ko jih uporabnik izbere.
+            </p>
+
+            <p>
+                Če bodo pozneje dodana analitika, oglaševalska orodja ali drugi
+                nenujni piškotki, bo ta politika posodobljena in po potrebi uvedeno
+                ustrezno upravljanje privolitev.
+            </p>
+        </section>
+
+        <section>
+            <h2>8. Varnost osebnih podatkov</h2>
+
+            <p>
+                Za varovanje podatkov uporabljamo razumne tehnične in organizacijske
+                ukrepe, kot so omejevanje dostopa, uporaba zaščitenih uporabniških
+                računov, varne povezave in redno preverjanje dostopov. Kljub temu
+                popolne varnosti prenosa ali hrambe podatkov ni mogoče zagotoviti.
+            </p>
+        </section>
+
+        <section>
+            <h2>9. Tvoje pravice</h2>
+
+            <p>V skladu z veljavno zakonodajo lahko zahtevaš:</p>
+
+            <ul>
+                <li>dostop do svojih osebnih podatkov;</li>
+                <li>popravek netočnih ali nepopolnih podatkov;</li>
+                <li>izbris podatkov, kadar so izpolnjeni zakonski pogoji;</li>
+                <li>omejitev obdelave;</li>
+                <li>prenosljivost podatkov, kadar je ta pravica uporabna;</li>
+                <li>ugovor obdelavi, ki temelji na zakonitem interesu;</li>
+                <li>preklic morebitne privolitve, ne da bi to vplivalo na zakonitost obdelave pred preklicem.</li>
+            </ul>
+
+            <p>
+                Zahtevo pošlji na
+                <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>.
+                Pred odgovorom lahko zaradi zaščite podatkov zahtevamo razumno
+                potrditev identitete.
+            </p>
+        </section>
+
+        <section>
+            <h2>10. Pravica do pritožbe</h2>
+
+            <p>
+                Če meniš, da osebne podatke obdelujemo v nasprotju s predpisi,
+                se lahko obrneš na Informacijskega pooblaščenca Republike Slovenije:
+                <a href="https://www.ip-rs.si/" target="_blank" rel="noopener noreferrer">www.ip-rs.si</a>.
+            </p>
+        </section>
+
+        <section>
+            <h2>11. Spremembe politike zasebnosti</h2>
+
+            <p>
+                Politiko lahko posodobimo zaradi sprememb storitev, prijavnih
+                obrazcev, zunanjih ponudnikov ali veljavnih predpisov. Veljavna
+                različica je vedno objavljena na tej strani.
+            </p>
+        </section>
+
+        <p class="updated">Zadnja posodobitev: 31. julij 2026</p>
+    </main>
+
+    <footer>
+        © 2026 Budokon Slovenija
+    </footer>
+</body>
+</html>
