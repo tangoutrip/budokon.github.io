@@ -128,7 +128,9 @@
             min-height: 100vh;
             padding: 0;
             overflow: hidden;
-            background: var(--bdk-black);
+            background:
+                linear-gradient(rgba(5, 5, 5, 0.42), rgba(5, 5, 5, 0.42)),
+                url("/redne-prakse-semester.jpg") center / cover no-repeat;
             display: flex;
             align-items: center;
         }
@@ -684,8 +686,17 @@
         }
 
         .teacher-text p {
-            margin-bottom: 18px;
+            margin-bottom: 22px;
             color: var(--bdk-muted);
+        }
+
+        .teacher-text p:last-child {
+            margin-bottom: 0;
+        }
+
+        .teacher-text strong {
+            color: var(--bdk-white);
+            font-weight: 400;
         }
 
         .teacher-text a {
@@ -887,9 +898,7 @@
         }
 
 
-        /* =========================================================
-           HITRA PRIMERJAVA REDNIH PRAKS
-           ========================================================= */
+        /* Quick comparison of the two regular practices */
 
         .practice-choice-section {
             padding: 112px 0 118px;
@@ -900,91 +909,45 @@
             margin-bottom: 34px;
         }
 
-        .practice-choice-positioning {
-            max-width: 880px;
-            margin: 0 auto 18px;
-            color: var(--bdk-white);
-            font-size: clamp(20px, 2.2vw, 28px);
-            line-height: 1.55;
-            text-align: center;
-            font-weight: 400;
+        .practice-choice-intro {
+            max-width: 860px;
+            margin: 0 auto 52px;
         }
 
-        .practice-choice-intro {
-            max-width: 760px;
-            margin: 0 auto 54px;
-            color: var(--bdk-muted);
-            font-size: 16px;
-            line-height: 1.9;
-            text-align: center;
+        .practice-choice-intro p {
+            margin-bottom: 18px;
+        }
+
+        .practice-choice-intro p:last-child {
+            margin-bottom: 0;
         }
 
         .practice-choice-grid {
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
-            gap: 22px;
+            gap: 24px;
             max-width: 1080px;
             margin: 0 auto;
         }
 
         .practice-choice-card {
-            position: relative;
             min-height: 520px;
+            display: flex;
+            flex-direction: column;
             overflow: hidden;
             background: var(--bdk-gold-active);
             color: var(--bdk-black);
-            isolation: isolate;
         }
 
-        .practice-choice-photo {
-            position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            z-index: 0;
-            height: 34%;
-            overflow: hidden;
-            pointer-events: none;
-            -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.30) 25%, #000 72%);
-            mask-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.30) 25%, #000 72%);
+        .practice-choice-copy {
+            flex: 1;
+            padding: 46px 42px 34px;
         }
 
-        .practice-choice-photo img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            opacity: 0.38;
-            filter: grayscale(24%) contrast(1.08) brightness(0.76);
-            transform: scale(1.01);
-            transition: transform 0.7s ease, opacity 0.7s ease;
-        }
-
-        .practice-choice-card-slow .practice-choice-photo img {
-            object-position: center 37%;
-        }
-
-        .practice-choice-card-tatami .practice-choice-photo img {
-            object-position: center 42%;
-        }
-
-        .practice-choice-card:hover .practice-choice-photo img,
-        .practice-choice-card:focus-within .practice-choice-photo img {
-            opacity: 0.46;
-            transform: scale(1.045);
-        }
-
-        .practice-choice-content {
-            position: relative;
-            z-index: 1;
-            padding: 48px 42px 205px;
-            text-align: left;
-        }
-
-        .practice-choice-content h3 {
+        .practice-choice-copy h3 {
             margin: 0 0 14px;
             color: var(--bdk-black);
-            font-size: 23px;
+            font-size: 22px;
             line-height: 1.4;
             letter-spacing: 0.18em;
             text-transform: uppercase;
@@ -992,7 +955,7 @@
         }
 
         .practice-choice-time {
-            margin-bottom: 17px;
+            margin-bottom: 16px;
             color: rgba(5, 5, 5, 0.82);
             font-size: 12px;
             line-height: 1.7;
@@ -1001,57 +964,113 @@
         }
 
         .practice-choice-tags {
-            margin-bottom: 25px;
+            margin-bottom: 24px;
             color: rgba(5, 5, 5, 0.68);
             font-size: 10px;
             line-height: 1.8;
-            letter-spacing: 0.15em;
+            letter-spacing: 0.14em;
             text-transform: uppercase;
         }
 
         .practice-choice-tags span + span::before {
             content: "·";
-            color: rgba(5, 5, 5, 0.48);
-            margin: 0 10px;
+            margin: 0 9px;
+            color: rgba(5, 5, 5, 0.52);
         }
 
-        .practice-choice-content p {
-            max-width: 460px;
+        .practice-choice-copy p {
             margin: 0;
             color: var(--bdk-black);
             font-size: 15px;
             line-height: 1.85;
         }
 
+        .practice-choice-image {
+            position: relative;
+            height: 172px;
+            overflow: hidden;
+            background: var(--bdk-black);
+        }
+
+        .practice-choice-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            background:
+                linear-gradient(
+                    to bottom,
+                    var(--bdk-gold-active) 0%,
+                    rgba(185, 166, 106, 0.74) 24%,
+                    rgba(185, 166, 106, 0.14) 64%,
+                    rgba(5, 5, 5, 0.16) 100%
+                );
+        }
+
+        .practice-choice-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 38%;
+            filter: grayscale(18%) contrast(1.05) brightness(0.62);
+            transform: scale(1);
+            transition: transform 0.6s ease;
+        }
+
+        .practice-choice-card:hover .practice-choice-image img {
+            transform: scale(1.035);
+        }
+
         .practice-choice-action {
-            max-width: 760px;
+            max-width: 790px;
             margin: 48px auto 0;
-            text-align: center;
-        }
-
-        .practice-choice-action p {
-            margin: 0 auto;
-            color: var(--bdk-muted);
-            font-size: 15px;
-            line-height: 1.9;
-        }
-
-        .practice-choice-action strong {
-            color: var(--bdk-white);
-            font-weight: 400;
         }
 
         .practice-choice-action .landing-button {
-            margin-top: 30px;
+            margin-top: 28px;
         }
 
-        .practice-choice-microcopy {
-            margin-top: 15px;
-            color: rgba(207, 200, 185, 0.72);
+        .quote-strip {
+            padding: 52px 0;
+            border-top: 1px solid rgba(185, 166, 106, 0.30);
+            border-bottom: 1px solid rgba(185, 166, 106, 0.30);
+            background: var(--bdk-charcoal);
+            text-align: center;
+        }
+
+        .quote-strip blockquote {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0;
+            border: 0;
+        }
+
+        .quote-strip p {
+            margin: 0;
+            color: var(--bdk-white);
+            font-size: 17px;
+            line-height: 2;
+        }
+
+        .quote-strip cite {
+            display: block;
+            margin-top: 18px;
+            color: var(--bdk-gold-active);
             font-size: 11px;
-            line-height: 1.7;
-            letter-spacing: 0.10em;
+            font-style: normal;
+            letter-spacing: 0.20em;
             text-transform: uppercase;
+        }
+
+        .practice-detail-action {
+            margin-top: 44px;
+            text-align: center;
+        }
+
+        .practice-detail-action .landing-button {
+            margin-top: 0;
         }
 
         @media (max-width: 1060px) {
@@ -1075,30 +1094,6 @@
         }
 
         @media (max-width: 900px) {
-            .practice-choice-section {
-                padding-top: 90px;
-                padding-bottom: 94px;
-            }
-
-            .practice-choice-positioning {
-                max-width: 680px;
-                font-size: 22px;
-            }
-
-            .practice-choice-intro {
-                max-width: 650px;
-                margin-bottom: 44px;
-            }
-
-            .practice-choice-grid {
-                grid-template-columns: 1fr;
-                max-width: 680px;
-            }
-
-            .practice-choice-card {
-                min-height: 500px;
-            }
-
             .semester-hero {
                 min-height: 90vh;
             }
@@ -1204,75 +1199,6 @@
         }
 
         @media (max-width: 560px) {
-            .practice-choice-section {
-                padding-top: 78px;
-                padding-bottom: 82px;
-            }
-
-            .practice-choice-section .section-title {
-                margin-bottom: 28px;
-            }
-
-            .practice-choice-positioning {
-                font-size: 19px;
-                line-height: 1.6;
-            }
-
-            .practice-choice-intro {
-                margin-bottom: 36px;
-                font-size: 15px;
-                line-height: 1.85;
-            }
-
-            .practice-choice-grid {
-                width: min(88vw, 430px);
-            }
-
-            .practice-choice-card {
-                min-height: 470px;
-            }
-
-            .practice-choice-photo {
-                height: 32%;
-            }
-
-            .practice-choice-content {
-                padding: 38px 28px 168px;
-            }
-
-            .practice-choice-content h3 {
-                font-size: 20px;
-                letter-spacing: 0.15em;
-            }
-
-            .practice-choice-tags {
-                font-size: 9px;
-                letter-spacing: 0.10em;
-            }
-
-            .practice-choice-tags span + span::before {
-                margin: 0 6px;
-            }
-
-            .practice-choice-content p {
-                font-size: 14px;
-                line-height: 1.8;
-            }
-
-            .practice-choice-action {
-                width: min(88vw, 430px);
-                margin-top: 40px;
-            }
-
-            .practice-choice-action p {
-                font-size: 14px;
-            }
-
-            .practice-choice-microcopy {
-                font-size: 10px;
-                letter-spacing: 0.07em;
-            }
-
             .semester-hero {
                 min-height: calc(100vh - 56px);
                 min-height: calc(100svh - 56px);
@@ -1438,121 +1364,222 @@
             }
         }
 
+        @media (max-width: 900px) {
+            .practice-choice-section {
+                padding-top: 90px;
+                padding-bottom: 94px;
+            }
+
+            .practice-choice-grid {
+                grid-template-columns: 1fr;
+                max-width: 680px;
+            }
+
+            .practice-choice-card {
+                min-height: 500px;
+            }
+
+            .quote-strip {
+                padding-top: 46px;
+                padding-bottom: 46px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .practice-choice-section {
+                padding-top: 78px;
+                padding-bottom: 82px;
+            }
+
+            .practice-choice-section .section-title {
+                margin-bottom: 30px;
+            }
+
+            .practice-choice-intro {
+                margin-bottom: 38px;
+            }
+
+            .practice-choice-grid {
+                width: min(88vw, 430px);
+                gap: 20px;
+            }
+
+            .practice-choice-card {
+                min-height: 440px;
+            }
+
+            .practice-choice-copy {
+                padding: 38px 28px 30px;
+            }
+
+            .practice-choice-copy h3 {
+                font-size: 20px;
+                letter-spacing: 0.15em;
+            }
+
+            .practice-choice-tags {
+                font-size: 9px;
+                letter-spacing: 0.10em;
+            }
+
+            .practice-choice-tags span + span::before {
+                margin: 0 6px;
+            }
+
+            .practice-choice-copy p {
+                font-size: 14px;
+                line-height: 1.8;
+            }
+
+            .practice-choice-image {
+                height: 148px;
+            }
+
+            .practice-choice-action {
+                width: min(88vw, 430px);
+                margin-top: 40px;
+            }
+
+            .quote-strip {
+                padding-top: 42px;
+                padding-bottom: 42px;
+            }
+
+            .quote-strip p {
+                font-size: 15px;
+                line-height: 1.9;
+            }
+
+            .practice-detail-action {
+                width: min(88vw, 430px);
+                margin: 38px auto 0;
+            }
+        }
+
         @media (prefers-reduced-motion: reduce) {
-            .practice-choice-photo img {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .semester-hero-video {
+                display: none;
+            }
+
+            .practice-choice-image img,
+            .landing-button,
+            a {
                 transition: none;
             }
 
-            .practice-choice-card:hover .practice-choice-photo img,
-            .practice-choice-card:focus-within .practice-choice-photo img {
-                opacity: 0.38;
-                transform: scale(1.01);
+            .practice-choice-card:hover .practice-choice-image img {
+                transform: none;
             }
         }
+
     </style>
 
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@graph": [
-        {
-          "@type": "WebPage",
-          "@id": "https://budokon.si/redne-prakse/#webpage",
-          "url": "https://budokon.si/redne-prakse/",
-          "name": "Redne Budokon prakse v Ljubljani",
-          "isPartOf": {
-            "@id": "https://budokon.si/#website"
-          },
-          "about": {
-            "@id": "https://budokon.si/#organization"
-          },
-          "inLanguage": "sl-SI"
-        },
-        {
-          "@type": "Organization",
-          "@id": "https://budokon.si/#organization",
-          "name": "Budokon Slovenija",
-          "url": "https://budokon.si/",
-          "founder": {
-            "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
-          }
-        },
-        {
-          "@type": "Person",
-          "@id": "https://budokon.si/#sanja-zalar-gostimirovic",
-          "name": "Sanja Zalar Gostimirović",
-          "alternateName": "Sanja Somatika",
-          "url": "https://sanjasomatika.si/",
-          "email": "sanja@budokon.si",
-          "worksFor": {
-            "@id": "https://budokon.si/#organization"
-          },
-          "knowsAbout": [
-            "Budokon",
-            "mešane gibalne umetnosti",
-            "somatska čuječnost",
-            "mobilnost",
-            "BDK joga",
-            "kalistenika",
-            "živalsko gibanje"
-          ]
-        },
-        {
-          "@type": "FAQPage",
-          "@id": "https://budokon.si/redne-prakse/#faq",
-          "mainEntity": [
             {
-              "@type": "Question",
-              "name": "Ali potrebujem predznanje Budokona?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ne. Predznanje Budokona ni pogoj. Prakso gradimo postopno in z možnostjo prilagoditev."
-              }
+                  "@type": "WebPage",
+                  "@id": "https://budokon.si/redne-prakse/#webpage",
+                  "url": "https://budokon.si/redne-prakse/",
+                  "name": "Redne Budokon prakse v Ljubljani",
+                  "isPartOf": {
+                        "@id": "https://budokon.si/#website"
+                  },
+                  "about": {
+                        "@id": "https://budokon.si/#organization"
+                  },
+                  "inLanguage": "sl-SI"
             },
             {
-              "@type": "Question",
-              "name": "Ali je za prakso potrebna moč, agilnost ali fleksibilnost?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Ne. Za Budokon ne potrebuješ moči, agilnosti ali fleksibilnosti, to dobiš v procesu. Pomembna pa je pripravljenost za raziskovanje in spoštovanje telesnih meja s prilagajanjem prakse telesu."
-              }
+                  "@type": "Organization",
+                  "@id": "https://budokon.si/#organization",
+                  "name": "Budokon Slovenija",
+                  "url": "https://budokon.si/",
+                  "founder": {
+                        "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
+                  }
             },
             {
-              "@type": "Question",
-              "name": "Ali je praksa naporna?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Lahko je izzivalna. Vendar izziv ni isto kot potiskanje preko meja. Prakso vodimo somatsko čuječe, progresivno, da vsak lahko sledi praksi znotraj svojih zmožnosti in s pozornostjo do telesnih mej."
-              }
+                  "@type": "Person",
+                  "@id": "https://budokon.si/#sanja-zalar-gostimirovic",
+                  "name": "Sanja Zalar Gostimirović",
+                  "alternateName": "Sanja Somatika",
+                  "url": "https://sanjasomatika.si/",
+                  "email": "sanja@budokon.si",
+                  "worksFor": {
+                        "@id": "https://budokon.si/#organization"
+                  },
+                  "knowsAbout": [
+                        "Budokon",
+                        "mešane gibalne umetnosti",
+                        "somatska čuječnost",
+                        "mobilnost",
+                        "BDK joga",
+                        "kalistenika",
+                        "živalsko gibanje"
+                  ]
             },
             {
-              "@type": "Question",
-              "name": "Kaj če imam izkušnje z jogo, plesom, fitnesom ali borilnimi veščinami?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Gibalne izkušnje vam bodo olajšale začetek, niso pa pogoj. Budokon ima svoj jezik gibanja, zato prakso vedno raziskujemo z začetniškim umom."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Ali lahko hodim občasno?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Prakse potekajo le v obliki semestra. Skupina se po testnih praksah zapre, ker je namen kontinuiteta, postopnost in poglabljanje procesa skozi zavezo do sebe."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Kako se prijavim?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Najprej se prijaviš na testno lekcijo, če pa že veš, da je to zate, se lahko prijaviš na semester. Po prijavi prejmeš e-pošto z vsemi informacijami. Če se po testnem obisku odločiš za semester, se cena testnega obiska odšteje od šolnine in plačaš razliko."
-              }
+                  "@type": "FAQPage",
+                  "@id": "https://budokon.si/redne-prakse/#faq",
+                  "mainEntity": [
+                        {
+                              "@type": "Question",
+                              "name": "Ali potrebujem predznanje ali posebno telesno pripravljenost?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Ne. Predznanje Budokona, velika gibljivost ali visoka telesna pripravljenost niso pogoj. Prakso gradimo postopno in jo prilagajamo trenutnim zmožnostim."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Katero prakso naj izberem?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "BDK slow flow je počasnejša, tehnična in bolj introspektivna praksa na vadbeni podlogi. BDK tatami je bolj dinamična in prostorsko usmerjena praksa na tatamijih. Če izbire še nimaš, se lahko prijaviš na obe testni praksi."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Ali je praksa naporna?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Lahko je izzivalna. Intenzivnost gradimo postopno, z možnostjo prilagoditev in s pozornostjo do telesnih meja. Izziv ni isto kot potiskanje preko zmožnosti."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Kaj potrebujem za prakso?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Za obe praksi potrebuješ udobna oblačila, ki pri predklonu ne lezejo čez glavo. Za petkove prakse priporočam oblačila, ki pokrijejo ramena in kolena, saj delamo na tatami podlogah. Za prakso ob sredah potrebuješ svojo joga podlogo za maksimalno udobje in higieno; podlogo si lahko tudi izposodiš v dvorani."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Ali lahko hodim občasno?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "Ne. Redne prakse potekajo v obliki semestra. Po začetnih testnih praksah se skupina zapre, saj kontinuiteta omogoča postopno progresijo in poglabljanje procesa."
+                              }
+                        },
+                        {
+                              "@type": "Question",
+                              "name": "Kako poteka prijava?",
+                              "acceptedAnswer": {
+                                    "@type": "Answer",
+                                    "text": "V prijavnem obrazcu izbereš testno prakso ali neposreden vpis v semester. Testna praksa je nezavezujoča in stane 25 €. Če se nato vpišeš v semester, se plačani znesek v celoti odšteje od šolnine. Po oddani prijavi prejmeš podatke za plačilo in vse nadaljnje informacije po e-pošti."
+                              }
+                        }
+                  ]
             }
-          ]
-        }
       ]
-    }
+}
     </script>
 </head>
 
@@ -1572,8 +1599,8 @@
             <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
                 <ul class="nav navbar-nav">
                     <li><a class="page-scroll" href="#za-koga">Za koga</a></li>
-                    <li><a class="page-scroll" href="#gradimo">Kaj gradimo</a></li>
                     <li><a class="page-scroll" href="#semester">Semester</a></li>
+                    <li><a class="page-scroll" href="#gradimo">Kaj gradimo</a></li>
                     <li><a class="page-scroll" href="#prakse">Prakse</a></li>
                     <li><a class="page-scroll" href="#prijava">Prijava</a></li>
                 </ul>
@@ -1601,35 +1628,31 @@
                 <div class="semester-meta">
                     <span>Srede · Vič</span>
                     <span>Petki · BTC</span>
-                    <span>Testne prakse: 18. in 23.9. </span>
+                    <span>Testni praksi: 18. in 23. 9.</span>
                 </div>
 
                 <div class="hero-actions">
-                    <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno prakso</a>
-                    <a class="landing-button secondary page-scroll" href="#primerjava-praks">Primerjaj praksi</a>
+                    <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno prakso | Vpis v semester</a>
+                    <a class="landing-button secondary page-scroll" href="#prakse">Podrobneje o praksah</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <section id="primerjava-praks" class="practice-choice-section section-anchor" aria-labelledby="practice-choice-title">
+    <section class="practice-choice-section section-anchor" aria-labelledby="practice-choice-title">
         <div class="landing-container wide">
             <h2 id="practice-choice-title" class="section-title">Dva tipa rednih praks</h2>
 
-            <p class="practice-choice-positioning">
-                Atletsko zahteven Budokon, poučevan somatsko, postopno in brez nasilja nad telesom.
-            </p>
-
-            <p class="practice-choice-intro">
-                Obe praksi razvijata moč, mobilnost in koordinacijo. Razlikujeta se predvsem v tempu,
-                uporabi prostora in načinu, kako se gibanje gradi.
-            </p>
+            <div class="practice-choice-intro text-block">
+                <p><strong>Atletsko zahteven Budokon, poučevan somatsko, postopno in brez forsiranja.</strong></p>
+                <p>Obe praksi razvijata moč, mobilnost in koordinacijo. Razlikujeta se predvsem v tempu, uporabi prostora in načinu, kako se gibanje gradi.</p>
+            </div>
 
             <div class="practice-choice-grid">
-                <article class="practice-choice-card practice-choice-card-slow">
-                    <div class="practice-choice-content">
+                <article class="practice-choice-card">
+                    <div class="practice-choice-copy">
                         <h3>BDK slow flow</h3>
-                        <div class="practice-choice-time">Sreda · 19.00 · Vič</div>
+                        <div class="practice-choice-time">sreda · 19:00 · Vič</div>
 
                         <div class="practice-choice-tags" aria-label="Značilnosti BDK slow flow">
                             <span>počasneje</span>
@@ -1637,21 +1660,18 @@
                             <span>introspektivno</span>
                         </div>
 
-                        <p>
-                            Povezana praksa na podlogi, ki razvija moč skozi nadzor, zadrževanje,
-                            natančnost in tekoče prehode.
-                        </p>
+                        <p>Povezana praksa na podlogi, ki razvija moč skozi nadzor, zadrževanje, natančnost in tekoče prehode.</p>
                     </div>
 
-                    <div class="practice-choice-photo" aria-hidden="true">
+                    <div class="practice-choice-image" aria-hidden="true">
                         <img src="/leteča bojevnica.jpg" alt="" loading="lazy">
                     </div>
                 </article>
 
-                <article class="practice-choice-card practice-choice-card-tatami">
-                    <div class="practice-choice-content">
+                <article class="practice-choice-card">
+                    <div class="practice-choice-copy">
                         <h3>BDK tatami</h3>
-                        <div class="practice-choice-time">Petek · 18.00 · BTC</div>
+                        <div class="practice-choice-time">petek · 18:00 · BTC</div>
 
                         <div class="practice-choice-tags" aria-label="Značilnosti BDK tatami">
                             <span>dinamično</span>
@@ -1659,45 +1679,42 @@
                             <span>agilno</span>
                         </div>
 
-                        <p>
-                            Dinamična praksa na tatamijih, ki razvija agilnost, odzivnost, stabilnost
-                            in koordinacijo skozi gibanje po prostoru.
-                        </p>
+                        <p>Dinamična praksa na tatamijih, ki razvija agilnost, odzivnost, stabilnost in koordinacijo skozi gibanje po prostoru.</p>
                     </div>
 
-                    <div class="practice-choice-photo" aria-hidden="true">
+                    <div class="practice-choice-image" aria-hidden="true">
                         <img src="/img/gorilaw.jpg" alt="" loading="lazy">
                     </div>
                 </article>
             </div>
 
-            <div class="practice-choice-action">
-                <p>
-                    <strong>Predznanje ni potrebno.</strong> V prijavnem obrazcu izbereš slow flow
-                    ali tatami ter testno prakso ali neposreden vpis v semester.
-                </p>
+            <div class="practice-choice-action text-block">
+                <p><strong>Testna praksa je nezavezujoč prvi korak</strong>, na katerem spoznaš izbrano prakso, način vodenja in skupino. Cena je 25 €; ob vpisu v semester se v celoti odšteje od šolnine.</p>
 
-                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">
-                    Prijava / vpis
-                </a>
-
-                <div class="practice-choice-microcopy">
-                    Testna praksa in neposreden vpis sta v istem obrazcu.
-                </div>
+                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno prakso | Vpis v semester</a>
             </div>
         </div>
     </section>
 
-    <section class="landing-section compact">
+    <aside class="quote-strip" aria-label="Izkušnja udeleženke">
         <div class="landing-container">
+            <blockquote>
+                <p>»Kar odneseš s prakse, je novo odkrita moč. Vsaka mala zmaga priliva na ogenj.«</p>
+                <cite>Tea</cite>
+            </blockquote>
+        </div>
+    </aside>
+
+    <section class="landing-section compact" aria-labelledby="what-is-budokon-title">
+        <div class="landing-container">
+            <h2 id="what-is-budokon-title" class="section-title">Kaj je Budokon?</h2>
+
             <div class="text-block">
                 <p>Morda ne iščeš še ene telovadbe, ampak prakso, ki telesa ne obravnava kot projekt, ki se ga popravlja, ampak kot prostor doživljanja, raziskovanja in krepitve moči.</p>
 
                 <p>Budokon združuje živalsko gibanje, BDK jogo, mobilnost, kalisteniko in osnove borilnih veščin v disciplino mešanih gibalnih umetnosti. Praksa razvija moč, stabilnost, koordinacijo, gibljivost, agilnost in prisotnost.</p>
 
                 <p>Osrednji fokus ni popolna izvedba. Fokus je odnos do telesa, napora, meja in trenutka, ko bi najraje pobegnili ali odnehali.</p>
-
-                <p><strong>Prakso prilagajamo telesu, ne telesa praksi.</strong></p>
             </div>
         </div>
     </section>
@@ -1707,45 +1724,14 @@
             <h2 class="section-title">Za koga</h2>
 
             <div class="for-whom-list">
-                <div class="for-whom-item">Ta praksa je zate, če želiš graditi moč inteligentno, brez potiskanja preko meja.</div>
-                <div class="for-whom-item">Čutiš, da telo potrebuje več kot samo raztezanje, krepitev ali ponavljanje vaj.</div>
-                <div class="for-whom-item">Želiš več mobilnosti, ne samo več fleksibilnosti.</div>
-                <div class="for-whom-item">Želiš razvijati koordinacijo, stabilnost in boljši občutek za telo v prostoru.</div>
-                <div class="for-whom-item">Te zanima praksa, ki vključuje izziv, ampak ne temelji na dokazovanju.</div>
-                <div class="for-whom-item">Se želiš učiti ostajati s sabo tudi takrat, ko je gibanje zahtevno, neprijetno ali novo.</div>
-                <div class="for-whom-item">Želiš raziskovati gibanje v odnosu do telesa, ne skozi primerjanje.</div>
+                <div class="for-whom-item">Želiš graditi moč inteligentno, brez potiskanja preko meja.</div>
+                <div class="for-whom-item">Želiš razvijati mobilnost, stabilnost, koordinacijo in boljši občutek za telo v prostoru.</div>
+                <div class="for-whom-item">Veš, da telo potrebuje več kot ponavljanje vaj ali pasivno raztezanje.</div>
+                <div class="for-whom-item">Zanima te izziv, ki ne temelji na dokazovanju ali primerjanju.</div>
+                <div class="for-whom-item">Želiš bolje razlikovati med naporom, odporom, nelagodjem in mejami.</div>
             </div>
 
             <div class="for-whom-note">Predznanje Budokona ni pogoj.</div>
-        </div>
-    </section>
-
-    <section id="gradimo" class="landing-section section-anchor">
-        <div class="landing-container wide">
-            <h2 class="section-title">Kaj gradimo</h2>
-
-            <div class="build-grid">
-                <article class="build-card">
-                    <h3>Moč kot kapaciteto</h3>
-                    <p>Moč ni samo mišična sila. Je kapaciteta, da pri naporu ostaneš v stiku s sabo. Da ne greš takoj v primerjanje, dokazovanje ali umik iz izziva. Gradimo jo postopno, z izzivom in brez forsiranja.</p>
-                </article>
-
-                <article class="build-card">
-                    <h3>Mobilnost kot telesno inteligenco</h3>
-                    <p>Mobilnost ni samo obseg gibanja. Je sposobnost, da gib čutiš, nadzoruješ in se v njem znajdeš. V Budokonu raziskujemo prehode, prilagajanje in gibanje skozi prostor.</p>
-                </article>
-
-                <article class="build-card">
-                    <h3>Koordinacijo kot jasnost</h3>
-                    <p>Budokon zahteva pozornost. Gibanje povezuje roke, noge, hrbtenico, pogled, dih in orientacijo v prostoru. Sčasoma se telo začne gibati bolj celostno, manj fragmentirano.</p>
-                </article>
-
-                <article class="build-card">
-                    <h3>Meje kot del prakse</h3>
-                    <p>Praksa ni namenjena potiskanju preko meja, kjer telo utišamo zato, da bi nekaj dosegli. Izziv je prisoten, vendar znotraj jasnega odnosa do meja.</p>
-                    <p>Učimo se zaznati razliko med nelagodjem, naporom, odporom in preobremenitvijo ter ostajati v dialogu s telesom tudi takrat, ko se pojavi izziv.</p>
-                </article>
-            </div>
         </div>
     </section>
 
@@ -1754,7 +1740,7 @@
             <h2 class="section-title">Kako poteka semester</h2>
 
             <div class="text-block">
-                <p>Redne prakse Budokona potekajo v obliki dveh semestrov (cca 5 mesecev):</p>
+                <p>Redne prakse Budokona potekajo v obliki dveh semestrov, ki trajata približno pet mesecev:</p>
             </div>
 
             <div class="semester-panel">
@@ -1777,59 +1763,6 @@
                     <div class="semester-label">Šolnina</div>
                     <div class="semester-value">S šolnino rezerviraš svoje mesto v skupini in ne posameznih obiskov.</div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="prakse" class="landing-section compact section-anchor">
-        <div class="landing-container wide">
-            <h2 class="section-title">Podrobneje o praksah</h2>
-
-            <div class="practice-grid">
-                <article class="practice-card">
-                    <img src="/leteča bojevnica.jpg" alt="BDK slow flow Budokon praksa na vadbeni podlogi">
-                    <h3>BDK slow flow</h3>
-                    <div class="practice-time">sreda · 19:00 · Vič</div>
-
-                    <div class="practice-tags">
-                        <span>počasneje</span>
-                        <span>tehnično</span>
-                        <span>introspektivno</span>
-                    </div>
-
-                    <p>BDK slow flow je povezan in tekoč tip prakse na vadbeni podlogi.</p>
-                    <p>Počasneje ne pomeni lažje. Slow flow gradi moč skozi nadzor, zadrževanje, prehode in natančnost. Primeren je, če želiš bolj introspektivno prakso, kjer se intenzivnost ne meri s hitrostjo, ampak s kakovostjo prisotnosti v gibu.</p>
-                </article>
-
-                <article class="practice-card">
-                    <img src="/img/gorilaw.jpg" alt="BDK tatami Budokon praksa na tatamijih">
-                    <h3>BDK tatami</h3>
-                    <div class="practice-time">petek · 18:00 · BTC</div>
-
-                    <div class="practice-tags">
-                        <span>dinamično</span>
-                        <span>prostorsko</span>
-                        <span>agilno</span>
-                    </div>
-
-                    <p>BDK tatami je bolj dinamična in prostorsko orientirana praksa. Vključuje živalsko gibanje, mobilnost, kalisteniko, BDK jogo in osnove borilnih veščin brez kontakta. Fokus je na agilnosti, orientaciji, stabilnosti, odzivnosti in moči.</p>
-                    <p>Ta tip prakse je zate, če si želiš širšega spektra gibanja, več izziva za koordinacijo in več prilagajanja na okoliščine. Bolj interaktivno, agilno in navzven usmerjeno.</p>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <section id="prijava" class="image-content-section image-test section-anchor">
-        <div class="landing-container">
-            <h2 class="section-title">Testna lekcija</h2>
-
-            <div class="test-class-panel text-block">
-                <p>Testna lekcija je namenjena temu, da doživiš prakso nezavezujoče.</p>
-                <p>Da začutiš prostor, moj način vodenja, tempo, skupino in svoje telo v tem gibalnem jeziku.</p>
-                <p>Če se po testnem obisku odločiš za vpis v semester, se cena testne lekcije odšteje od šolnine.</p>
-                <p>Po oddani prijavi prejmeš e-pošto s podatki za plačilo in po plačilu e-mail z vsemi potrebnimi informacijami.</p>
-
-                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
             </div>
         </div>
     </section>
@@ -1860,7 +1793,7 @@
                 <div class="price-card">
                     <h3>Testna praksa</h3>
                     <span class="price">25 €</span>
-                    <p>možne le ob začetku semestra</p>
+                    <p>možna le ob začetku semestra</p>
                 </div>
 
                 <div class="price-card">
@@ -1878,9 +1811,93 @@
 
             <div class="price-note">
                 <p>Vpis v redne Budokon skupine poteka dvakrat letno: septembra in februarja.</p>
-                <p>Če se po testnem obisku odločiš za vpis v semester, se cena testnega obiska odšteje od šolnine.</p>
+                <p>Če se po testni praksi odločiš za vpis v semester, se cena testne prakse v celoti odšteje od šolnine.</p>
 
-                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
+                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno prakso | Vpis v semester</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gradimo" class="landing-section section-anchor">
+        <div class="landing-container wide">
+            <h2 class="section-title">Kaj gradimo</h2>
+
+            <div class="build-grid">
+                <article class="build-card">
+                    <h3>Moč kot kapaciteto</h3>
+                    <p>Moč ni samo mišična sila. Je kapaciteta, da pri naporu ostaneš v stiku s sabo. Da ne greš takoj v primerjanje, dokazovanje ali umik iz izziva. Gradimo jo postopno, z izzivom in brez forsiranja.</p>
+                </article>
+
+                <article class="build-card">
+                    <h3>Mobilnost kot telesno inteligenco</h3>
+                    <p>Mobilnost ni samo obseg gibanja. Je sposobnost, da gib čutiš, nadzoruješ in se v njem znajdeš. V Budokonu raziskujemo prehode, prilagajanje in gibanje skozi prostor.</p>
+                </article>
+
+                <article class="build-card">
+                    <h3>Koordinacijo kot jasnost</h3>
+                    <p>Budokon zahteva pozornost. Gibanje povezuje roke, noge, hrbtenico, pogled, dih in orientacijo v prostoru. Sčasoma se telo začne gibati bolj celostno, manj fragmentirano.</p>
+                </article>
+
+                <article class="build-card">
+                    <h3>Meje kot del prakse</h3>
+                    <p>Praksa ni namenjena potiskanju preko meja, kjer telo utišamo zato, da bi nekaj dosegli. Izziv je prisoten, vendar znotraj jasnega odnosa do meja.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="prakse" class="landing-section compact section-anchor">
+        <div class="landing-container wide">
+            <h2 class="section-title">Podrobneje o praksah</h2>
+
+            <div class="practice-grid">
+                <article class="practice-card">
+                    <img src="/leteča bojevnica.jpg" alt="BDK slow flow Budokon praksa na vadbeni podlogi" loading="lazy">
+                    <h3>BDK slow flow</h3>
+                    <div class="practice-time">sreda · 19:00 · Vič</div>
+
+                    <div class="practice-tags">
+                        <span>počasneje</span>
+                        <span>tehnično</span>
+                        <span>introspektivno</span>
+                    </div>
+
+                    <p>BDK slow flow je povezan in tekoč tip prakse na vadbeni podlogi.</p>
+                    <p>Počasneje ne pomeni lažje. Slow flow gradi moč skozi nadzor, zadrževanje, prehode in natančnost. Primeren je, če želiš bolj introspektivno prakso, kjer se intenzivnost ne meri s hitrostjo, ampak s kakovostjo prisotnosti v gibu.</p>
+                </article>
+
+                <article class="practice-card">
+                    <img src="/img/gorilaw.jpg" alt="BDK tatami Budokon praksa na tatamijih" loading="lazy">
+                    <h3>BDK tatami</h3>
+                    <div class="practice-time">petek · 18:00 · BTC</div>
+
+                    <div class="practice-tags">
+                        <span>dinamično</span>
+                        <span>prostorsko</span>
+                        <span>agilno</span>
+                    </div>
+
+                    <p>BDK tatami je bolj dinamična in prostorsko orientirana praksa. Vključuje živalsko gibanje, mobilnost, kalisteniko, BDK jogo in osnove borilnih veščin brez kontakta. Fokus je na agilnosti, orientaciji, stabilnosti, odzivnosti in moči.</p>
+                    <p>Ta tip prakse je zate, če si želiš širšega spektra gibanja, več izziva za koordinacijo in več prilagajanja na okoliščine. Bolj interaktivno, agilno in navzven usmerjeno.</p>
+                </article>
+            </div>
+
+            <div class="practice-detail-action">
+                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno prakso | Vpis v semester</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="prijava" class="image-content-section image-test section-anchor">
+        <div class="landing-container">
+            <h2 class="section-title">Testna praksa</h2>
+
+            <div class="test-class-panel text-block">
+                <p>Testna praksa je nezavezujoč način, da doživiš izbrano prakso, spoznaš prostor, moj način vodenja, tempo in skupino ter začutiš svoje telo v tem gibalnem jeziku.</p>
+                <p>Cena testne prakse je 25 €. Če se nato vpišeš v semester, se plačani znesek v celoti odšteje od šolnine.</p>
+                <p>Po oddani prijavi prejmeš po e-pošti podatke za plačilo in vse nadaljnje informacije.</p>
+
+                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno prakso | Vpis v semester</a>
             </div>
         </div>
     </section>
@@ -1888,7 +1905,7 @@
     <section class="teacher-section" aria-labelledby="teacher-title">
         <div class="teacher-panel">
             <div class="teacher-image">
-                <img src="/img/sanjasomatika.jpg" alt="Sanja Zalar Gostimirović | Sanja Somatika">
+                <img src="/img/sanjasomatika.jpg" alt="Sanja Zalar Gostimirović | Sanja Somatika" loading="lazy">
             </div>
 
             <div class="teacher-copy">
@@ -1896,9 +1913,13 @@
                 <h2 id="teacher-title" class="teacher-name">Sanja Zalar Gostimirović <span>|</span> Sanja Somatika</h2>
 
                 <div class="teacher-text">
-                    <p><a href="https://sanjasomatika.si/sanja.html" target="_blank" rel="noopener">Sanja</a> je prva slovenska certificirana učiteljica Budokona®, izvornih mešanih gibalnih umetnosti, in ustanoviteljica Budokon Slovenija šole. Budokon je v Slovenijo pripeljala leta 2016 kot edukantka, licenco pa je pridobila 2017 in odprla šolo. Vsa BDK izobraževanja je opravila v živo pri avtorju metode, Cameronu Shaynu.</p>
+                    <p><a href="https://sanjasomatika.si/sanja.html" target="_blank" rel="noopener">Sanja</a> je prva slovenska certificirana učiteljica Budokona® in ustanoviteljica šole Budokon Slovenija. Budokon je v Slovenijo pripeljala leta 2016 kot edukantka, licenco pa je pridobila leta 2017, ko je tudi odprla šolo.</p>
 
-                    <p>Je avtorica metode Somatska čuječnost, RYT joga učiteljica, učiteljica argentinskega tanga, psihosocialna svetovalka in praktikantka Somatic Experiencing. Budokon poučuje kot somatsko gibalno prakso.</p>
+                    <p>Vsa Budokon izobraževanja je opravila v živo pri avtorju metode Cameronu Shaynu.</p>
+
+                    <p>Je avtorica metode Somatska čuječnost, RYT joga učiteljica, učiteljica argentinskega tanga, psihosocialna svetovalka in praktikantka Somatic Experiencing.</p>
+
+                    <p><strong>Budokon poučuje kot atletsko zahtevno in somatsko čuječo gibalno prakso.</strong></p>
                 </div>
 
                 <div class="teacher-stats" aria-label="Izkušnje">
@@ -1916,8 +1937,8 @@
 
         <div class="testimonials-grid">
             <article class="testimonial-card">
-                <p class="testimonial-text">“Lansko poletje sem bila na nekaj tvojih Budokon delavnicah v Ljubljani, ki so mi bile eno lepših daril, ki sem si jih podarila. Izkušnja tvojega vodenja pri vzpostavljanju odnosa s svojim telesom je točno to, kar bi priporočila.”</p>
-                <div class="testimonial-name">Nika</div>
+                <p class="testimonial-text">“Budokon me je navdušil, ker vsebuje moč in mehkobo hkrati. Pusti ti, da raziskuješ, kaj zmore tvoje telo, po drugi strani pa spoznaš svoje občutke in ljubezen do sebe. Gibanje skozi Budokon je kot ples, kjer se dopolnjujejo nežnost, moč, vzdržljivost, koncentracija in mobilnost.”</p>
+                <div class="testimonial-name">Ana</div>
             </article>
 
             <article class="testimonial-card">
@@ -1926,7 +1947,7 @@
             </article>
 
             <article class="testimonial-card">
-                <p class="testimonial-text">“Ti si res srce te prakse. Najbolj všeč pri tvojem vodenju mi je tvoja širina, podpora, sočutje, predvsem pa poudarjanje tega, kako pomembna je pot, majhni koraki, dialog s sabo in ne toliko končna perfektna izvedba.”</p>
+                <p class="testimonial-text">“Sanja je neverjetna gibalka najvišjega kova. Poleg svojih fantastičnih motoričnih sposobnosti je odlična pedagoginja z izrednim čutom za ljudi, njihove potrebe in zmožnosti. Njeni tečaji in delavnice so sistematični in dodelani do potankosti. Sanja je natančna, strokovna, njena razlaga jasna in bogata, njena demonstracija pa osupljiva.”</p>
                 <div class="testimonial-name">Mateja</div>
             </article>
         </div>
@@ -1939,33 +1960,33 @@
 
         <div class="faq-list">
             <article class="faq-item">
-                <h3 class="faq-question">Ali potrebujem predznanje Budokona?</h3>
-                <p class="faq-answer">Ne. Predznanje Budokona ni pogoj. Prakso gradimo postopno in z možnostjo prilagoditev.</p>
+                <h3 class="faq-question">Ali potrebujem predznanje ali posebno telesno pripravljenost?</h3>
+                <p class="faq-answer">Ne. Predznanje Budokona, velika gibljivost ali visoka telesna pripravljenost niso pogoj. Prakso gradimo postopno in jo prilagajamo trenutnim zmožnostim.</p>
             </article>
 
             <article class="faq-item">
-                <h3 class="faq-question">Ali je za prakso potrebna moč, agilnost ali fleksibilnost?</h3>
-                <p class="faq-answer">Ne. Za Budokon ne potrebuješ moči, agilnosti ali fleksibilnosti, to dobiš v procesu. Pomembna pa je pripravljenost za raziskovanje in spoštovanje telesnih meja s prilagajanjem prakse telesu.</p>
+                <h3 class="faq-question">Katero prakso naj izberem?</h3>
+                <p class="faq-answer">BDK slow flow je počasnejša, tehnična in bolj introspektivna praksa na vadbeni podlogi. BDK tatami je bolj dinamična in prostorsko usmerjena praksa na tatamijih. Če izbire še nimaš, se lahko prijaviš na obe testni praksi.</p>
             </article>
 
             <article class="faq-item">
                 <h3 class="faq-question">Ali je praksa naporna?</h3>
-                <p class="faq-answer">Lahko je izzivalna. Vendar izziv ni isto kot potiskanje preko meja. Prakso vodimo somatsko čuječe, progresivno, da vsak lahko sledi praksi znotraj svojih zmožnosti in s pozornostjo do telesnih mej.</p>
+                <p class="faq-answer">Lahko je izzivalna. Intenzivnost gradimo postopno, z možnostjo prilagoditev in s pozornostjo do telesnih meja. Izziv ni isto kot potiskanje preko zmožnosti.</p>
             </article>
 
             <article class="faq-item">
-                <h3 class="faq-question">Kaj če imam izkušnje z jogo, plesom, fitnesom ali borilnimi veščinami?</h3>
-                <p class="faq-answer">Gibalne izkušnje vam bodo olajšale začetek, niso pa pogoj. Budokon ima svoj jezik gibanja, zato prakso vedno raziskujemo z začetniškim umom.</p>
+                <h3 class="faq-question">Kaj potrebujem za prakso?</h3>
+                <p class="faq-answer">Za obe praksi potrebuješ udobna oblačila, ki pri predklonu ne lezejo čez glavo. Za petkove prakse priporočam oblačila, ki pokrijejo ramena in kolena, saj delamo na tatami podlogah. Za prakso ob sredah potrebuješ svojo joga podlogo za maksimalno udobje in higieno; podlogo si lahko tudi izposodiš v dvorani.</p>
             </article>
 
             <article class="faq-item">
                 <h3 class="faq-question">Ali lahko hodim občasno?</h3>
-                <p class="faq-answer">Prakse potekajo le v obliki semestra. Skupina se po testnih praksah zapre, ker je namen kontinuiteta, postopnost in poglabljanje procesa skozi zavezo do sebe.</p>
+                <p class="faq-answer">Ne. Redne prakse potekajo v obliki semestra. Po začetnih testnih praksah se skupina zapre, saj kontinuiteta omogoča postopno progresijo in poglabljanje procesa.</p>
             </article>
 
             <article class="faq-item">
-                <h3 class="faq-question">Kako se prijavim?</h3>
-                <p class="faq-answer">Najprej se prijaviš na testno lekcijo, če pa že veš, da je to zate, se lahko prijaviš na semester. Po prijavi prejmeš e-pošto z vsemi informacijami. Če se po testnem obisku odločiš za semester, se cena testnega obiska odšteje od šolnine in plačaš razliko.</p>
+                <h3 class="faq-question">Kako poteka prijava?</h3>
+                <p class="faq-answer">V prijavnem obrazcu izbereš testno prakso ali neposreden vpis v semester. Testna praksa je nezavezujoča in stane 25 €. Če se nato vpišeš v semester, se plačani znesek v celoti odšteje od šolnine. Po oddani prijavi prejmeš podatke za plačilo in vse nadaljnje informacije po e-pošti.</p>
             </article>
         </div>
     </section>
@@ -1975,11 +1996,9 @@
             <h2 class="section-title">Pridruži se</h2>
 
             <div class="text-block">
-                <p>Če želiš prakso, ki razvija moč, mobilnost, koordinacijo in stik s telesom brez dokazovanja in potiskanja preko meja, je testna lekcija dober prvi korak.</p>
+                <p>Če želiš razvijati moč, mobilnost in koordinacijo skozi izzivalno, somatsko čuječo prakso, je testna praksa dober prvi korak.</p>
 
-                <p>Budokon vodim kot izzivalno, a somatsko čuječo prakso, kjer se telo ne popravlja, ampak uči, krepi, prilagaja in postopoma gradi več kapacitete.</p>
-
-                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno lekcijo</a>
+                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" target="_blank" rel="noopener">Prijava na testno prakso | Vpis v semester</a>
             </div>
         </div>
     </section>
