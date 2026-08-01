@@ -860,6 +860,77 @@
             text-align: center;
         }
 
+        .tea-quote-band {
+            position: relative;
+            min-height: 160px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: url("/leteča bojevnica.jpg") center 36% / cover no-repeat;
+        }
+
+        .tea-quote-band::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.60)),
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.30));
+        }
+
+        .tea-quote-content {
+            position: relative;
+            z-index: 1;
+            width: min(920px, 84vw);
+            margin: 0 auto;
+            padding: 34px 0;
+            text-align: center;
+        }
+
+        .tea-quote-content blockquote {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        .tea-quote-content p {
+            margin: 0;
+            color: var(--bdk-white);
+            font-size: 18px;
+            line-height: 1.65;
+            font-style: normal;
+            font-weight: 400;
+        }
+
+        .tea-quote-content cite {
+            display: block;
+            margin-top: 12px;
+            color: var(--bdk-gold-active);
+            font-size: 11px;
+            line-height: 1.5;
+            font-style: normal;
+            letter-spacing: 0.20em;
+            text-transform: uppercase;
+        }
+
+        @media (max-width: 560px) {
+            .tea-quote-band {
+                min-height: 150px;
+                background-position: center 40%;
+            }
+
+            .tea-quote-content {
+                width: min(88vw, 430px);
+                padding: 30px 0;
+            }
+
+            .tea-quote-content p {
+                font-size: 16px;
+                line-height: 1.65;
+            }
+        }
+
         footer.landing-footer {
             padding: 78px 0 62px;
             border-top: 1px solid rgba(185, 166, 106, 0.20);
@@ -1121,12 +1192,13 @@
         }
 
         .test-date-panel {
-            max-width: 760px;
+            max-width: 1040px;
             margin: 42px auto 0;
+            text-align: center;
         }
 
         .test-date-title {
-            margin-bottom: 18px;
+            margin-bottom: 20px;
             color: var(--bdk-gold-active);
             font-size: 12px;
             line-height: 1.6;
@@ -1134,28 +1206,24 @@
             text-transform: uppercase;
         }
 
-        .test-date-row {
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 28px;
-            padding: 14px 0;
-            text-align: left;
-            align-items: baseline;
-        }
-
-        .test-date-row span {
-            color: var(--bdk-white);
-            font-size: 14px;
-            line-height: 1.7;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        .test-date-row strong {
+        .test-date-line {
+            margin: 0;
             color: var(--bdk-muted);
-            font-size: 15px;
-            line-height: 1.7;
+            font-size: 14px;
+            line-height: 1.8;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .test-date-line strong {
+            color: var(--bdk-white);
             font-weight: 400;
+            letter-spacing: 0.08em;
+        }
+
+        .test-date-divider {
+            margin: 0 14px;
+            color: var(--bdk-gold-active);
         }
 
         .practice-choice-action .landing-button {
@@ -1175,61 +1243,18 @@
                 border-left: 0;
             }
 
-            .test-date-row {
-                grid-template-columns: 1fr;
-                gap: 4px;
-                text-align: center;
+            .test-date-line {
+                white-space: normal;
+            }
+
+            .test-date-divider {
+                display: block;
+                height: 0;
+                margin: 8px 0;
+                overflow: hidden;
             }
         }
 
-        .quote-strip {
-            padding: 70px 0 42px;
-            background: var(--bdk-black);
-            text-align: center;
-        }
-
-        .quote-strip blockquote {
-            max-width: 820px;
-            margin: 0 auto;
-            padding: 0;
-            border: 0;
-        }
-
-        .quote-strip blockquote p {
-            margin: 0;
-            color: var(--bdk-white);
-            font-style: normal;
-            font-weight: 400;
-        }
-
-        #semester {
-            padding-top: 62px;
-        }
-
-        .quote-strip blockquote p::before,
-        .quote-strip blockquote p::after {
-            color: var(--bdk-gold-active);
-        }
-
-        .quote-strip blockquote p::before {
-            content: "“";
-            margin-right: 0.12em;
-        }
-
-        .quote-strip blockquote p::after {
-            content: "”";
-            margin-left: 0.12em;
-        }
-
-        .quote-strip cite {
-            display: block;
-            margin-top: 18px;
-            color: var(--bdk-gold-active);
-            font-size: 11px;
-            font-style: normal;
-            letter-spacing: 0.20em;
-            text-transform: uppercase;
-        }
 
         .practice-detail-action {
             margin-top: 44px;
@@ -1623,14 +1648,6 @@
                 grid-template-columns: 1fr;
                 max-width: 680px;
             }
-            .quote-strip {
-                padding-top: 64px;
-                padding-bottom: 36px;
-            }
-
-            #semester {
-                padding-top: 56px;
-            }
         }
 
         @media (max-width: 560px) {
@@ -1690,15 +1707,6 @@
                 margin-bottom: 30px;
                 font-size: 18px;
                 letter-spacing: 0.18em;
-            }
-
-            .quote-strip {
-                padding-top: 56px;
-                padding-bottom: 30px;
-            }
-
-            #semester {
-                padding-top: 48px;
             }
 
             .practice-detail-action {
@@ -2040,10 +2048,7 @@
       </strong>
 </p>
 <p>
-      Obe praksi razvijata moč, mobilnost in koordinacijo.
-     </p>
-            <p>
-   Razlikujeta se predvsem v tempu, uporabi prostora in elementih.
+      Obe praksi razvijata moč, mobilnost in koordinacijo. Razlikujeta se predvsem v tempu, uporabi prostora in načinu, kako se gibanje gradi.
      </p>
 </div>
 <div class="practice-choice-grid">
@@ -2099,7 +2104,7 @@
 </article>
 </div>
 <div class="practice-choice-action">
-<h3 class="practice-choice-action-title">Kako se prijaviš na testne prakse</h3>
+<h3 class="practice-choice-action-title">Kako se prijaviš</h3>
 <div class="registration-steps">
 <div class="registration-step">
 <span class="registration-number">01</span>
@@ -2113,20 +2118,13 @@
 </div>
 <div class="registration-step">
 <span class="registration-number">03</span>
-<h4>Izkusi prakso</h4>
-<p>Testna praksa traja 75 minut in stane 25 €. Ob vpisu v semester se znesek odšteje od šolnine.</p>
+<h4>Spoznaj prakso</h4>
+<p>Testna praksa traja 75 minut in stane 25 €. Ob vpisu v semester se znesek v celoti odšteje od šolnine.</p>
 </div>
 </div>
 <div class="test-date-panel">
-<div class="test-date-title">urnik testnih praks</div>
-<div class="test-date-row">
-<span>BDK tatami</span>
-<strong>18. in 25. 9. 2026 · 18:00</strong>
-</div>
-<div class="test-date-row">
-<span>BDK slow flow</span>
-<strong>23. in 30. 9. 2026 · 19:10</strong>
-</div>
+<div class="test-date-title">Urnik testnih praks</div>
+<p class="test-date-line"><strong>BDK TATAMI</strong> 18. in 25. 9. 2026 · 18:00 <span class="test-date-divider">|</span> <strong>BDK SLOW FLOW</strong> 23. in 30. 9. 2026 · 19:10</p>
 </div>
 <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
       Prijava na testno prakso | Vpis v semester
@@ -2176,16 +2174,6 @@
     </div>
 </div>
 </section>
-<aside aria-label="Izkušnja udeleženke" class="quote-strip">
-<div class="landing-container">
-<blockquote class="text-block">
-<p>Kar odneseš s prakse, je novo odkrita moč. Vsaka mala zmaga priliva na ogenj.</p>
-<cite>
-      Tea
-     </cite>
-</blockquote>
-</div>
-</aside>
 <section class="landing-section compact section-anchor" id="semester">
 <div class="landing-container">
 <h2 class="section-title">
@@ -2536,6 +2524,14 @@
 </article>
 </div>
 </section>
+<aside aria-label="Izkušnja udeleženke Tee" class="tea-quote-band">
+<div class="tea-quote-content">
+<blockquote>
+<p>"Kar odneseš s prakse, je novo odkrita moč. Vsaka mala zmaga priliva na ogenj."</p>
+<cite>Tea</cite>
+</blockquote>
+</div>
+</aside>
 <section class="landing-section compact final-cta">
 <div class="landing-container">
 <h2 class="section-title">
