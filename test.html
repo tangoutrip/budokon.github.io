@@ -129,7 +129,7 @@
             color: var(--bdk-muted);
         }
 
-        /* HERO — original proportions */
+        /* HERO */
 
         .semester-hero {
             position: relative;
@@ -316,7 +316,7 @@
         }
 
         .landing-container.extra-wide {
-            width: min(1240px, 90vw);
+            width: min(1220px, 90vw);
         }
 
         .section-title {
@@ -354,51 +354,67 @@
         /* TRI KARTICE */
 
         .practice-choice-section {
-            padding: 96px 0 82px;
+            padding: 88px 0 72px;
             background: var(--bdk-black);
         }
 
         .practice-choice-section .section-title {
-            margin-bottom: 46px;
+            margin-bottom: 42px;
         }
 
         .practice-choice-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1fr) minmax(280px, 0.74fr) minmax(0, 1fr);
+            grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 18px;
-            max-width: 1240px;
+            max-width: 1220px;
             margin: 0 auto;
             align-items: stretch;
         }
 
         .practice-choice-card {
-            min-height: 470px;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-            background: var(--bdk-black);
-            border: 1px solid rgba(185, 166, 106, 0.24);
+            min-height: 520px;
+            height: 100%;
         }
 
-        .practice-choice-card.info-card {
+        .practice-choice-card-inner {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .practice-side-card {
+            background: var(--bdk-charcoal);
+            border: 1px solid rgba(185, 166, 106, 0.20);
+        }
+
+        .practice-center-card {
             background: var(--bdk-gold-active);
-            border-color: var(--bdk-gold-active);
-            color: var(--bdk-black);
-            justify-content: center;
-            text-align: center;
+            border: 1px solid var(--bdk-gold-active);
         }
 
         .practice-choice-copy {
-            flex: 1;
-            padding: 42px 38px 34px;
+            padding: 34px 32px 28px;
         }
 
-        .practice-choice-card.info-card .practice-choice-copy {
-            padding: 46px 36px;
+        .practice-side-card .practice-choice-copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            flex: 1 1 auto;
+        }
+
+        .practice-center-card .practice-choice-copy {
+            height: 100%;
+            min-height: 520px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 42px 34px;
         }
 
         .practice-choice-copy h3 {
-            margin: 0 0 16px;
+            margin: 0 0 18px;
             color: var(--bdk-white);
             font-size: 19px;
             line-height: 1.45;
@@ -407,25 +423,22 @@
             font-weight: 400;
         }
 
-        .practice-choice-card.info-card h3 {
+        .practice-center-card .practice-choice-copy h3 {
             color: var(--bdk-black);
+            margin-bottom: 26px;
         }
 
         .practice-choice-time {
-            margin-bottom: 18px;
+            margin-bottom: 16px;
             color: var(--bdk-gold-active);
-            font-size: 12px;
-            line-height: 1.7;
-            letter-spacing: 0.18em;
+            font-size: 11px;
+            line-height: 1.8;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
         }
 
-        .practice-choice-card.info-card .practice-choice-time {
-            color: rgba(5, 5, 5, 0.78);
-        }
-
         .practice-choice-tags {
-            margin-bottom: 24px;
+            margin-bottom: 22px;
             color: var(--bdk-muted);
             font-size: 10px;
             line-height: 1.8;
@@ -435,35 +448,61 @@
 
         .practice-choice-tags span + span::before {
             content: "·";
-            margin: 0 9px;
+            margin: 0 8px;
             color: var(--bdk-gold-active);
         }
 
         .practice-choice-copy p {
-            margin: 0 0 16px;
+            margin: 0 0 14px;
             color: var(--bdk-muted);
             font-size: 15px;
-            line-height: 1.85;
+            line-height: 1.8;
         }
 
         .practice-choice-copy p:last-child {
             margin-bottom: 0;
         }
 
-        .practice-choice-card.info-card p {
+        .practice-center-card .practice-choice-copy p {
             color: rgba(5, 5, 5, 0.88);
+            font-size: 16px;
+            line-height: 1.85;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 18px;
         }
 
-        .practice-choice-card.info-card strong {
-            color: var(--bdk-black);
-            font-weight: 400;
+        .practice-choice-logo {
+            width: 54px;
+            height: 54px;
+            margin: 0 auto 24px;
+            background-color: rgba(5, 5, 5, 0.72);
+            -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+            mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+        }
+
+        .practice-choice-facts {
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px solid rgba(5, 5, 5, 0.20);
+            color: rgba(5, 5, 5, 0.82);
+            font-size: 12px;
+            line-height: 2;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .practice-choice-facts div + div {
+            margin-top: 4px;
         }
 
         .practice-choice-image {
-            position: relative;
-            height: 138px;
+            margin-top: auto;
+            height: 190px;
             overflow: hidden;
-            background: var(--bdk-black);
+            position: relative;
+            border-top: 1px solid rgba(185, 166, 106, 0.16);
         }
 
         .practice-choice-image::before {
@@ -471,14 +510,12 @@
             position: absolute;
             inset: 0;
             z-index: 1;
-            pointer-events: none;
-            background:
-                linear-gradient(
-                    to bottom,
-                    rgba(5, 5, 5, 0.06) 0%,
-                    rgba(5, 5, 5, 0.12) 42%,
-                    rgba(5, 5, 5, 0.42) 100%
-                );
+            background: linear-gradient(
+                to bottom,
+                rgba(5, 5, 5, 0.06) 0%,
+                rgba(5, 5, 5, 0.16) 35%,
+                rgba(5, 5, 5, 0.42) 100%
+            );
         }
 
         .practice-choice-image img {
@@ -486,47 +523,27 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: center 38%;
-            filter: grayscale(18%) contrast(1.05) brightness(0.70);
+            object-position: center 36%;
+            filter: grayscale(12%) contrast(1.03) brightness(0.76);
             transition: transform 0.6s ease;
         }
 
-        .practice-choice-card:first-child .practice-choice-image img {
-            object-position: 30% 38%;
+        .practice-side-card:first-child .practice-choice-image img {
+            object-position: center 30%;
         }
 
         .practice-choice-card:hover .practice-choice-image img {
             transform: scale(1.03);
         }
 
-        .practice-choice-logo {
-            width: 58px;
-            height: 58px;
-            margin: 0 auto 28px;
-            background-color: rgba(5, 5, 5, 0.72);
-            -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
-            mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
-        }
-
-        .practice-choice-facts {
-            margin-top: 30px;
-            padding-top: 24px;
-            border-top: 1px solid rgba(5, 5, 5, 0.22);
-            color: rgba(5, 5, 5, 0.78);
-            font-size: 11px;
-            line-height: 2;
-            letter-spacing: 0.16em;
-            text-transform: uppercase;
-        }
-
         .practice-choice-action {
             max-width: 940px;
-            margin: 52px auto 0;
+            margin: 54px auto 0;
             text-align: center;
         }
 
         .practice-choice-action-title {
-            margin: 0 0 34px;
+            margin: 0 0 32px;
             color: var(--bdk-gold-active);
             font-size: 18px;
             line-height: 1.45;
@@ -663,11 +680,6 @@
         .image-za-koga {
             background-image: url("/before bridge.jpg");
             background-position: center 45%;
-        }
-
-        .image-test {
-            background-image: url("/redne-prakse-testna-lekcija.jpg");
-            background-position: center 44%;
         }
 
         .for-whom-list {
@@ -1410,12 +1422,13 @@
                 max-width: 680px;
             }
 
-            .practice-choice-card {
+            .practice-choice-card,
+            .practice-center-card .practice-choice-copy {
                 min-height: 0;
             }
 
-            .practice-choice-card.info-card {
-                order: -1;
+            .practice-choice-image {
+                height: 220px;
             }
         }
 
@@ -1661,35 +1674,36 @@
                 margin-top: 0;
             }
 
-            .practice-choice-copy {
-                padding: 34px 28px 28px;
+            .practice-choice-grid {
+                gap: 14px;
             }
 
-            .practice-choice-card.info-card .practice-choice-copy {
-                padding: 38px 28px;
+            .practice-choice-copy {
+                padding: 28px 24px 22px;
+            }
+
+            .practice-center-card .practice-choice-copy {
+                padding: 34px 24px;
             }
 
             .practice-choice-copy h3 {
-                font-size: 18px;
+                font-size: 17px;
                 letter-spacing: 0.14em;
             }
 
-            .practice-choice-tags {
-                font-size: 9px;
-                letter-spacing: 0.10em;
-            }
-
-            .practice-choice-tags span + span::before {
-                margin: 0 6px;
-            }
-
-            .practice-choice-copy p {
+            .practice-choice-copy p,
+            .practice-center-card .practice-choice-copy p {
                 font-size: 15px;
                 line-height: 1.8;
             }
 
             .practice-choice-image {
-                height: 116px;
+                height: 180px;
+            }
+
+            .practice-choice-facts {
+                font-size: 11px;
+                line-height: 1.9;
             }
 
             .practice-choice-action {
@@ -2070,65 +2084,73 @@
             <h2 class="section-title" id="practice-choice-title">Dva tipa rednih praks</h2>
 
             <div class="practice-choice-grid">
-                <article class="practice-choice-card">
-                    <div class="practice-choice-copy">
-                        <h3>BDK slow flow</h3>
+                <article class="practice-choice-card practice-side-card">
+                    <div class="practice-choice-card-inner">
+                        <div class="practice-choice-copy">
+                            <h3>BDK slow flow</h3>
 
-                        <div class="practice-choice-time">
-                            sreda · 19:10–20:25 · <a aria-label="Odpri lokacijo Aho studio na Google Maps" class="inline-location" href="https://maps.app.goo.gl/N4k57vRkPEgUtDi6A" rel="noopener" target="_blank">Vič</a>
+                            <div class="practice-choice-time">
+                                sreda · 19:10–20:25 ·
+                                <a aria-label="Odpri lokacijo Aho studio na Google Maps" class="inline-location" href="https://maps.app.goo.gl/N4k57vRkPEgUtDi6A" rel="noopener" target="_blank">Vič</a>
+                            </div>
+
+                            <div class="practice-choice-tags" aria-label="Značilnosti BDK slow flow">
+                                <span>počasneje</span>
+                                <span>tehnično</span>
+                                <span>introspektivno</span>
+                            </div>
+
+                            <p>Povezana praksa na podlogi, ki razvija moč skozi nadzor, zadrževanje, natančnost in tekoče prehode.</p>
                         </div>
 
-                        <div class="practice-choice-tags" aria-label="Značilnosti BDK slow flow">
-                            <span>počasneje</span>
-                            <span>tehnično</span>
-                            <span>introspektivno</span>
-                        </div>
-
-                        <p>Povezana praksa na podlogi, ki razvija moč skozi nadzor, zadrževanje, natančnost in tekoče prehode.</p>
-                    </div>
-
-                    <div aria-hidden="true" class="practice-choice-image">
-                        <img alt="" decoding="async" height="461" loading="lazy" src="/leteča bojevnica.jpg" width="1000">
-                    </div>
-                </article>
-
-                <article class="practice-choice-card info-card">
-                    <div class="practice-choice-copy">
-                        <div class="practice-choice-logo" aria-hidden="true"></div>
-
-                        <h3>Budokon semester</h3>
-
-                        <p><strong>Atletsko zahteven Budokon, poučevan somatsko, postopno in brez forsiranja.</strong></p>
-                        <p>Obe praksi razvijata moč, mobilnost in koordinacijo.</p>
-                        <p>Razlikujeta se predvsem v tempu, uporabi prostora in razmerju med gibalnimi elementi.</p>
-
-                        <div class="practice-choice-facts">
-                            testna praksa · 25 €<br>
-                            1x tedensko · 270 €<br>
-                            2x tedensko · 420 €
+                        <div aria-hidden="true" class="practice-choice-image">
+                            <img alt="" decoding="async" loading="lazy" src="/leteča bojevnica.jpg">
                         </div>
                     </div>
                 </article>
 
-                <article class="practice-choice-card">
-                    <div class="practice-choice-copy">
-                        <h3>BDK tatami</h3>
+                <article class="practice-choice-card practice-center-card">
+                    <div class="practice-choice-card-inner">
+                        <div class="practice-choice-copy">
+                            <div class="practice-choice-logo" aria-hidden="true"></div>
 
-                        <div class="practice-choice-time">
-                            petek · 18:00–19:15 · <a aria-label="Odpri lokacijo Gendai dojo na Google Maps" class="inline-location" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4765326a84d1aed5:0xd434e4edce2bfd68?sa=X&amp;ved=1t:8290&amp;ictx=111" rel="noopener" target="_blank">Gendai dojo, BTC</a>
+                            <h3>Budokon semester</h3>
+
+                            <p>Obe praksi razvijata moč, mobilnost in koordinacijo.</p>
+
+                            <p>Razlikujeta se predvsem v tempu, uporabi prostora in razmerju med gibalnimi elementi.</p>
+
+                            <div class="practice-choice-facts">
+                                <div>testna praksa · 25 €</div>
+                                <div>1x tedensko · 270 €</div>
+                                <div>2x tedensko · 420 €</div>
+                            </div>
                         </div>
-
-                        <div class="practice-choice-tags" aria-label="Značilnosti BDK tatami">
-                            <span>dinamično</span>
-                            <span>prostorsko</span>
-                            <span>agilno</span>
-                        </div>
-
-                        <p>Dinamična praksa na tatamijih, ki razvija agilnost, odzivnost, stabilnost in koordinacijo skozi gibanje po prostoru.</p>
                     </div>
+                </article>
 
-                    <div aria-hidden="true" class="practice-choice-image">
-                        <img alt="" decoding="async" height="837" loading="lazy" src="/img/gorilaw.jpg" width="1000">
+                <article class="practice-choice-card practice-side-card">
+                    <div class="practice-choice-card-inner">
+                        <div class="practice-choice-copy">
+                            <h3>BDK tatami</h3>
+
+                            <div class="practice-choice-time">
+                                petek · 18:00–19:15 ·
+                                <a aria-label="Odpri lokacijo Gendai dojo na Google Maps" class="inline-location" href="https://www.google.com/maps/place//data=!4m2!3m1!1s0x4765326a84d1aed5:0xd434e4edce2bfd68?sa=X&amp;ved=1t:8290&amp;ictx=111" rel="noopener" target="_blank">Gendai dojo, BTC</a>
+                            </div>
+
+                            <div class="practice-choice-tags" aria-label="Značilnosti BDK tatami">
+                                <span>dinamično</span>
+                                <span>prostorsko</span>
+                                <span>agilno</span>
+                            </div>
+
+                            <p>Dinamična praksa na tatamijih, ki razvija agilnost, odzivnost, stabilnost in koordinacijo skozi gibanje po prostoru.</p>
+                        </div>
+
+                        <div aria-hidden="true" class="practice-choice-image">
+                            <img alt="" decoding="async" loading="lazy" src="/img/gorilaw.jpg">
+                        </div>
                     </div>
                 </article>
             </div>
@@ -2158,10 +2180,16 @@
 
                 <div class="test-date-panel">
                     <div class="test-date-title">Urnik testnih praks</div>
-                    <p class="test-date-line"><strong>BDK TATAMI</strong> 18. in 25. 9. 2026 · 18:00 <span class="test-date-divider">|</span> <strong>BDK SLOW FLOW</strong> 23. in 30. 9. 2026 · 19:10</p>
+                    <p class="test-date-line">
+                        <strong>BDK TATAMI</strong> 18. in 25. 9. 2026 · 18:00
+                        <span class="test-date-divider">|</span>
+                        <strong>BDK SLOW FLOW</strong> 23. in 30. 9. 2026 · 19:10
+                    </p>
                 </div>
 
-                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">Prijava na testno prakso | Vpis v semester</a>
+                <a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
+                    Prijava na testno prakso | Vpis v semester
+                </a>
             </div>
         </div>
     </section>
