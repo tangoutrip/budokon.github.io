@@ -2025,6 +2025,222 @@
         padding-bottom: 72px;
     }
 }
+
+/* POPRAVEK: off-white sredinska kartica, Za koga in zgodnje zaporedje */
+
+/* Sredinska kartica */
+.triptych-panel,
+.triptych-panel-gray {
+    background: #f1efe9 !important;
+    color: #050505 !important;
+    padding: 62px 54px !important;
+}
+
+.triptych-panel::before,
+.triptych-panel-gray::before {
+    display: none !important;
+}
+
+.triptych-panel .logo-mark,
+.triptych-panel-gray .logo-mark {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 30px;
+    background-color: #050505 !important;
+    opacity: 0.82;
+}
+
+.triptych-panel h2,
+.triptych-panel-gray h2 {
+    margin: 0 0 22px;
+    color: #050505 !important;
+    font-size: 24px;
+    line-height: 1.34;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.triptych-panel p,
+.triptych-panel-gray p,
+.triptych-panel strong,
+.triptych-panel-gray strong {
+    color: #050505 !important;
+}
+
+.triptych-panel .triptych-claim {
+    max-width: 380px;
+    margin: 0 auto 24px !important;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.triptych-panel > p:not(.triptych-claim) {
+    max-width: 360px;
+    margin: 0 auto 18px;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.triptych-panel .panel-facts {
+    margin: 24px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(5, 5, 5, 0.28);
+    color: #050505 !important;
+    font-size: 11px;
+    line-height: 1.9;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.triptych-panel .panel-button {
+    margin: 28px auto 0;
+    padding: 14px 30px;
+    border: 1px solid #050505;
+    background: #050505;
+    color: #f1efe9;
+}
+
+.triptych-panel .panel-button:hover,
+.triptych-panel .panel-button:focus {
+    background: transparent;
+    color: #050505;
+    border-color: #050505;
+}
+
+/* Za koga — isti test2 občutek, tri enakovredna polja */
+.audience-section {
+    padding: 94px 0 104px;
+}
+
+.audience-title {
+    max-width: 980px;
+    margin: 0 auto 64px;
+    color: var(--bdk-white);
+    text-align: center;
+    font-size: 24px;
+    line-height: 1.58;
+    letter-spacing: 0.07em;
+    text-transform: none;
+    font-weight: 400;
+}
+
+.audience-grid,
+.audience-grid-five {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 0 !important;
+    background: transparent;
+}
+
+.audience-card {
+    min-height: 300px;
+    padding: 58px 42px;
+    display: flex;
+    align-items: center;
+    background: #0c0c0c;
+}
+
+.audience-card:nth-child(2) {
+    background: #111111;
+}
+
+.audience-card:nth-child(3) {
+    background: #151515;
+}
+
+.audience-card + .audience-card {
+    border-left: 1px solid rgba(185, 166, 106, 0.30);
+    border-top: 0 !important;
+}
+
+.audience-card p {
+    margin: 0;
+    color: var(--bdk-muted);
+    font-size: 16px;
+    line-height: 1.95;
+}
+
+.audience-note {
+    margin-top: 40px;
+}
+
+/* Testna praksa + prijava */
+.test-section {
+    padding: 0;
+}
+
+.test-hero {
+    min-height: 680px;
+}
+
+.test-copy {
+    width: min(640px, 86vw);
+    padding: 94px 0;
+}
+
+.registration-steps-section {
+    padding-top: 92px;
+    padding-bottom: 96px;
+}
+
+/* Enoten ritem zgodnjih sekcij */
+.triptych-section,
+.audience-section,
+.split-feature-section,
+.test-section,
+.registration-steps-section {
+    margin: 0;
+}
+
+.split-feature-section {
+    padding-bottom: 96px;
+}
+
+@media (max-width: 1180px) {
+    .audience-grid,
+    .audience-grid-five {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-card + .audience-card {
+        border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.30) !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .triptych-panel,
+    .triptych-panel-gray {
+        padding: 48px 28px !important;
+    }
+
+    .audience-section {
+        padding-top: 72px;
+        padding-bottom: 76px;
+    }
+
+    .audience-title {
+        margin-bottom: 44px;
+        font-size: 18px;
+        line-height: 1.65;
+        letter-spacing: 0.03em;
+    }
+
+    .audience-card {
+        min-height: auto;
+        padding: 42px 28px;
+    }
+
+    .audience-card p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+    .test-hero {
+        min-height: 620px;
+    }
+}
 </style>
 <script type="application/ld+json">
     {
@@ -2243,25 +2459,7 @@
 </div>
 </div>
 </div>
-</header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<section aria-labelledby="practice-choice-title" class="triptych-section section-anchor" id="izbira-prakse">
+</header><section aria-labelledby="practice-choice-title" class="triptych-section section-anchor" id="izbira-prakse">
 <div class="editorial-shell">
 <div class="triptych-grid">
 <article class="triptych-image triptych-practice-card left">
@@ -2277,10 +2475,11 @@
 </article>
 <article class="triptych-panel triptych-panel-gray">
 <div aria-hidden="true" class="logo-mark"></div>
-<p class="triptych-claim"><strong>Atletsko zahteven Budokon, poučevan somatsko, postopno in brez forsiranja.</strong></p>
-<h2 id="practice-choice-title">Dva tipa rednih praks</h2>
-<p>Obe praksi razvijata moč, mobilnost in koordinacijo.</p>
-<p>Razlikujeta se predvsem v tempu, uporabi prostora in elementi.</p>
+<p class="triptych-claim">
+<strong>Atletsko zahteven Budokon, voden somatsko, dostopno in brez forsiranja.</strong>
+</p>
+<h2 id="practice-choice-title">Dva tipa<br/>rednih praks</h2>
+<p>Obe praksi razvijata moč<br/>mobilnost in koordinacijo.</p>
 <div class="panel-facts">testna praksa · 25 €</div>
 <a class="panel-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">Prijava</a>
 </article>
@@ -2296,6 +2495,27 @@
 </div>
 </article>
 </div>
+</div>
+</section><section aria-labelledby="audience-title" class="audience-section section-anchor" id="za-koga">
+<div class="editorial-shell">
+<h2 class="audience-title" id="audience-title">Ta praksa je zate, če ne iščeš samo telovadbe, ampak gibalni proces, ki krepi psihofizično odpornost brez povožanja tvojih mej.</h2>
+<div class="audience-grid audience-grid-five"><article class="audience-card">
+
+<p>Želiš graditi moč inteligentno, brez potiskanja preko meja.</p>
+</article><article class="audience-card">
+
+<p>Želiš razvijati mobilnost, stabilnost, koordinacijo in boljši občutek za telo v prostoru.</p>
+</article><article class="audience-card">
+
+<p>Veš, da telo potrebuje več kot ponavljanje vaj ali pasivno raztezanje.</p>
+</article><article class="audience-card">
+
+<p>Zanima te izziv, ki ne temelji na dokazovanju ali primerjanju.</p>
+</article><article class="audience-card">
+
+<p>Želiš bolje razlikovati med naporom, odporom, nelagodjem in mejami.</p>
+</article></div>
+<div class="audience-note">Predznanje Budokona ni pogoj.</div>
 </div>
 </section><section aria-labelledby="what-is-budokon-title" class="split-feature-section">
 <div class="editorial-shell">
@@ -2314,28 +2534,47 @@
 </div>
 </div>
 </div>
-</section><section aria-labelledby="audience-title" class="audience-section section-anchor" id="za-koga">
-<div class="editorial-shell">
-<h2 class="section-title" id="audience-title">Za koga</h2>
-<div class="audience-grid audience-grid-five"><article class="audience-card">
-<div aria-hidden="true" class="audience-icon"></div>
-<p>Želiš graditi moč inteligentno, brez potiskanja preko meja.</p>
-</article><article class="audience-card">
-<div aria-hidden="true" class="audience-icon"></div>
-<p>Želiš razvijati mobilnost, stabilnost, koordinacijo in boljši občutek za telo v prostoru.</p>
-</article><article class="audience-card">
-<div aria-hidden="true" class="audience-icon"></div>
-<p>Veš, da telo potrebuje več kot ponavljanje vaj ali pasivno raztezanje.</p>
-</article><article class="audience-card">
-<div aria-hidden="true" class="audience-icon"></div>
-<p>Zanima te izziv, ki ne temelji na dokazovanju ali primerjanju.</p>
-</article><article class="audience-card">
-<div aria-hidden="true" class="audience-icon"></div>
-<p>Želiš bolje razlikovati med naporom, odporom, nelagodjem in mejami.</p>
-</article></div>
-<div class="audience-note">Predznanje Budokona ni pogoj.</div>
+</section><section class="test-section section-anchor" id="testna-praksa">
+<div class="test-hero">
+<div class="test-copy">
+<div class="editorial-kicker">testna praksa</div>
+<h2 class="editorial-title">Najprej izkusi prakso</h2>
+<p>Testna praksa je nezavezujoča in stane 25 €.</p>
+<p>Če se nato vpišeš v semester, se plačani znesek v celoti odšteje od šolnine.</p>
+<p>Posamezna testna praksa traja 75 minut.</p>
+<a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">Prijava na testno prakso</a>
 </div>
-</section><section class="semester-section section-anchor" id="semester">
+</div>
+</section><section class="registration-steps-section section-anchor" id="prijava">
+<div class="editorial-shell narrow">
+<h2 class="section-title">Kako se prijaviš na testno prakso</h2>
+<div class="registration-steps">
+<div class="registration-step">
+<span class="registration-number">01</span>
+<h4>Izberi termin</h4>
+<p>Izberi testno prakso slow flow ali tatami in oddaj prijavo prek obrazca (za eno ali več praks).</p>
+</div>
+<div class="registration-step">
+<span class="registration-number">02</span>
+<h4>Potrdi mesto</h4>
+<p>Po prijavi prejmeš e-pošto s QR kodo za plačilo. Mesto je rezervirano po prejetem plačilu.</p>
+</div>
+<div class="registration-step">
+<span class="registration-number">03</span>
+<h4>Izkusi prakso</h4>
+<p>Posamezna testna praksa traja 75 minut in stane 25 €, dobrodošli na več praks. Ob vpisu v semester se znesek v celoti odšteje od šolnine.</p>
+</div>
+</div>
+<div class="test-date-panel">
+<div class="test-date-title">Urnik testnih praks</div>
+<p class="test-date-line"><strong>BDK TATAMI</strong> 18. in 25. 9. 2026 · 18:00 <span class="test-date-divider">|</span> <strong>BDK SLOW FLOW</strong> 23. in 30. 9. 2026 · 19:10</p>
+</div>
+<div class="registration-action"><a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
+      Prijava na testno prakso | Vpis v semester
+     </a></div>
+</div>
+</section>
+<section class="semester-section section-anchor" id="semester">
 <div class="editorial-shell">
 <div class="semester-editorial">
 <div class="semester-intro">
@@ -2440,34 +2679,6 @@
       </a>
 </div>
 </div>
-</div>
-</section><section class="registration-steps-section section-anchor" id="prijava">
-<div class="editorial-shell narrow">
-<h2 class="section-title">Kako se prijaviš na testno prakso</h2>
-<div class="registration-steps">
-<div class="registration-step">
-<span class="registration-number">01</span>
-<h4>Izberi termin</h4>
-<p>Izberi testno prakso slow flow ali tatami in oddaj prijavo prek obrazca (za eno ali več praks).</p>
-</div>
-<div class="registration-step">
-<span class="registration-number">02</span>
-<h4>Potrdi mesto</h4>
-<p>Po prijavi prejmeš e-pošto s QR kodo za plačilo. Mesto je rezervirano po prejetem plačilu.</p>
-</div>
-<div class="registration-step">
-<span class="registration-number">03</span>
-<h4>Izkusi prakso</h4>
-<p>Posamezna testna praksa traja 75 minut in stane 25 €, dobrodošli na več praks. Ob vpisu v semester se znesek v celoti odšteje od šolnine.</p>
-</div>
-</div>
-<div class="test-date-panel">
-<div class="test-date-title">Urnik testnih praks</div>
-<p class="test-date-line"><strong>BDK TATAMI</strong> 18. in 25. 9. 2026 · 18:00 <span class="test-date-divider">|</span> <strong>BDK SLOW FLOW</strong> 23. in 30. 9. 2026 · 19:10</p>
-</div>
-<div class="registration-action"><a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">
-      Prijava na testno prakso | Vpis v semester
-     </a></div>
 </div>
 </section><section class="build-section section-anchor" id="gradimo">
 <div class="editorial-shell">
