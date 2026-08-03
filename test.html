@@ -32,7 +32,6 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-
 <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -4044,6 +4043,70 @@ body.budokon-semester-page .semester-intro .editorial-title {
 
     body.budokon-semester-page .teacher-image img {
         object-position: 44% center;
+    }
+}
+
+
+
+/* =========================================================
+   KONČNI POPRAVEK NAVIGACIJE IN MOBILNEGA HEROJA
+   ========================================================= */
+
+/* Popolnoma odstrani sivo ozadje iz navigacije v vseh stanjih. */
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li:hover,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li:focus,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.open {
+    background: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+}
+
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:link,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:visited,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:hover,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:focus,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:active,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active > a,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active > a:hover,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active > a:focus,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.open > a {
+    background: transparent;
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:hover,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:focus,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:active,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active > a,
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.open > a {
+    color: var(--bdk-gold-active);
+}
+
+/* Mobilni hero: dodan črn premaz za boljšo berljivost besedila. */
+@media (max-width: 767px) {
+    body.budokon-semester-page .semester-hero-overlay {
+        background:
+            linear-gradient(
+                to right,
+                rgba(5, 5, 5, 0.58) 0%,
+                rgba(5, 5, 5, 0.36) 58%,
+                rgba(5, 5, 5, 0.24) 100%
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(5, 5, 5, 0.34) 0%,
+                rgba(5, 5, 5, 0.48) 56%,
+                rgba(5, 5, 5, 0.80) 88%,
+                #050505 100%
+            );
     }
 }
 </style></head>
