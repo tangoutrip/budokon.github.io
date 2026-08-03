@@ -29,14 +29,14 @@
 <meta content="https://budokon.si/img/og-budokon-slovenija.jpg" name="twitter:image"/>
 <meta content="Redne Budokon prakse v Ljubljani" name="twitter:image:alt"/>
 <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-<link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link as="style" href="/vendor/font-awesome/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload" type="text/css"/><noscript><link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"/></noscript>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" rel="stylesheet"/>
-<link href="/css/futura.css" rel="stylesheet"/>
-<link href="/css/grayscale.css" rel="stylesheet"/>
-<link href="/css/budokon.css" rel="stylesheet"/>
-<link href="/css/dark-theme.css" rel="stylesheet"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" rel="stylesheet"/></noscript>
+<link as="style" href="/css/futura.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/css/futura.css" rel="stylesheet"/></noscript>
+<link as="style" href="/css/grayscale.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/css/grayscale.css" rel="stylesheet"/></noscript>
+<link as="style" href="/css/budokon.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/css/budokon.css" rel="stylesheet"/></noscript>
+<link as="style" href="/css/dark-theme.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/css/dark-theme.css" rel="stylesheet"/></noscript>
 <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <style>
         :root {
@@ -236,7 +236,7 @@
             overflow: hidden;
             background:
                 linear-gradient(rgba(5, 5, 5, 0.34), rgba(5, 5, 5, 0.34)),
-                url("/redne-prakse-testna-lekcija.jpg") center 44% / cover no-repeat;
+                url("/redne-prakse-testna-lekcija.webp") center 44% / cover no-repeat;
             display: flex;
             align-items: center;
         }
@@ -664,7 +664,7 @@
             min-height: 700px;
             overflow: hidden;
             padding: 124px 0 190px;
-            background-image: url("/redne-prakse-semester.jpg");
+            background-image: url("/redne-prakse-semester.webp");
             background-position: center 44%;
             background-size: cover;
             background-repeat: no-repeat;
@@ -988,7 +988,7 @@
             display: flex;
             align-items: center;
             overflow: hidden;
-            background: url("/redne-prakse-testna-lekcija.jpg") center 44% / cover no-repeat;
+            background: url("/redne-prakse-testna-lekcija.webp") center 44% / cover no-repeat;
         }
 
         .test-hero::before {
@@ -1309,7 +1309,7 @@
             overflow: hidden;
             background:
                 linear-gradient(rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 0.78)),
-                url("/leteča bojevnica.jpg") center 36% / cover no-repeat;
+                url("/leteca-bojevnica.webp") center 36% / cover no-repeat;
         }
 
         .final-cta .editorial-shell {
@@ -3412,7 +3412,7 @@
 
 .test-hero {
     min-height: 720px;
-    background-image: url("/redne-prakse-testna-lekcija.jpg");
+    background-image: url("/redne-prakse-testna-lekcija.webp");
     background-position: center 44%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -3877,6 +3877,74 @@
 
     .teacher-image img {
         object-position: 38% center;
+    }
+}
+
+/* =========================================================
+   FINALNI POPRAVKI PO ZADNJEM PREGLEDU
+   ========================================================= */
+
+/* Testna praksa: enoten premaz čez celotno sliko brez trdega pasu. */
+.test-hero {
+    position: relative;
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("/redne-prakse-testna-lekcija.webp");
+    background-position: center 44%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.test-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            to right,
+            rgba(5, 5, 5, 0.78) 0%,
+            rgba(5, 5, 5, 0.46) 44%,
+            rgba(5, 5, 5, 0.16) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(5, 5, 5, 0.36) 0%,
+            rgba(5, 5, 5, 0.48) 70%,
+            rgba(5, 5, 5, 0.88) 92%,
+            #050505 100%
+        );
+}
+
+.test-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.test-copy .editorial-title {
+    margin-bottom: 52px;
+}
+
+/* Enak razmik naslov–copy kot pri "Kaj je Budokon". */
+.semester-intro .editorial-title {
+    margin-bottom: 52px;
+}
+
+/* Na mobilnem premaknemo le dve zahtevani sliki bolj levo. */
+@media (max-width: 767px) {
+    .split-feature-image img {
+        object-position: left center;
+    }
+
+    .teacher-image img {
+        object-position: left center;
+    }
+
+    .semester-intro .editorial-title {
+        margin-bottom: 38px;
     }
 }
 </style>
