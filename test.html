@@ -478,7 +478,7 @@ a:hover, a:focus {
     grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
     gap: 0;
     min-height: 620px;
-    background: var(--bdk-charcoal);
+    background: var(--uniform-card);
 }
 
 .split-feature.reverse {
@@ -702,7 +702,7 @@ a:hover, a:focus {
 }
 
 .practice-editorial-card {
-    background: var(--bdk-charcoal);
+    background: var(--uniform-card);
 }
 
 .practice-editorial-image {
@@ -1709,23 +1709,13 @@ footer.landing-footer {
     min-height: 300px;
     padding: 58px 42px;
     align-items: center;
-    background: #0c0c0c;
+    background: var(--uniform-card);
     min-height: 360px;
     padding: 64px 44px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    background: #0b0b0b;
-}
-
-.audience-card:nth-child(2) {
-    background: #111111;
-    background: #101010;
-}
-
-.audience-card:nth-child(3) {
-    background: #151515;
 }
 
 .audience-card + .audience-card {
@@ -1983,7 +1973,7 @@ footer.landing-footer {
 
 .price-card {
     padding: 46px 34px;
-    background: var(--bdk-black);
+    background: var(--uniform-card);
     text-align: center;
     min-height: 320px;
     padding: 60px 42px;
@@ -1991,16 +1981,7 @@ footer.landing-footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: #0b0b0b;
     border: 0;
-}
-
-.price-card:nth-child(2) {
-    background: #101010;
-}
-
-.price-card:nth-child(3) {
-    background: #151515;
 }
 
 .price-card + .price-card {
@@ -2052,26 +2033,13 @@ footer.landing-footer {
 .build-card {
     min-height: 360px;
     padding: 48px 38px;
-    background: var(--bdk-black);
+    background: var(--uniform-card);
     min-height: 390px;
     padding: 56px 38px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: #0b0b0b;
     border: 0;
-}
-
-.build-card:nth-child(2) {
-    background: #0f0f0f;
-}
-
-.build-card:nth-child(3) {
-    background: #131313;
-}
-
-.build-card:nth-child(4) {
-    background: #171717;
 }
 
 .build-card + .build-card {
@@ -2115,7 +2083,7 @@ footer.landing-footer {
 .teacher-panel {
     display: grid;
     grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
-    background: var(--bdk-charcoal);
+    background: var(--uniform-card);
     grid-template-columns: minmax(280px, 0.36fr) minmax(0, 0.64fr);
     align-items: stretch;
 }
@@ -2295,7 +2263,7 @@ footer.landing-footer {
 
 .triptych-panel-dark {
     padding: 62px 54px;
-    background: var(--card-black);
+    background: var(--uniform-card);
     color: var(--bdk-white);
 }
 
@@ -2438,7 +2406,7 @@ footer.landing-footer {
 }
 
 .registration-card {
-    background: #0b0b0b;
+    background: var(--uniform-card);
     min-height: 360px;
     padding: 64px 44px;
     display: flex;
@@ -2446,17 +2414,6 @@ footer.landing-footer {
     align-items: flex-start;
     justify-content: center;
     border: 0;
-    background: var(--card-black);
-}
-
-.registration-card:nth-child(2) {
-    background: #101010;
-    background: var(--card-black-2);
-}
-
-.registration-card:nth-child(3) {
-    background: #151515;
-    background: var(--card-black-3);
 }
 
 .registration-card + .registration-card {
@@ -2623,10 +2580,6 @@ footer.landing-footer {
     --section-rhythm: 108px;
     --uniform-card: #101010;
     --uniform-card-soft: #121212;
-}
-
-.uniform-dark-card, .audience-card:nth-child(2), .audience-card:nth-child(3), .registration-card:nth-child(2), .registration-card:nth-child(3), .price-card:nth-child(2), .price-card:nth-child(3), .build-card:nth-child(2), .build-card:nth-child(3), .build-card:nth-child(4) {
-    background: var(--uniform-card);
 }
 
 .audience-card + .audience-card, .registration-card + .registration-card, .price-card + .price-card, .build-card + .build-card {
