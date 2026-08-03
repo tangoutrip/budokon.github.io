@@ -11,7 +11,7 @@
 <meta content="index, follow" name="robots"/>
 <meta content="#050505" name="theme-color"/>
 <link href="https://budokon.si/redne-prakse/" rel="canonical"/>
-<link as="image" fetchpriority="high" href="/redne-prakse-testna-lekcija.jpg" media="(max-width: 767px)" rel="preload"/>
+<link as="image" fetchpriority="high" href="/redne-prakse-mobile.webp" media="(max-width: 767px)" rel="preload"/>
 <meta content="sl_SI" property="og:locale"/>
 <meta content="website" property="og:type"/>
 <meta content="https://budokon.si/redne-prakse/" property="og:url"/>
@@ -3364,6 +3364,415 @@
         padding: 46px 28px;
     }
 }
+
+/* =========================================================
+   FINALNI VIZUALNI IN MOBILNI POPRAVKI
+   ========================================================= */
+
+:root {
+    --section-rhythm: 108px;
+    --uniform-card: #101010;
+    --uniform-card-soft: #121212;
+}
+
+/* Vse vsebinske kartice uporabljajo isti črno-siv odtenek. */
+.uniform-dark-card,
+.audience-card:nth-child(2),
+.audience-card:nth-child(3),
+.registration-card:nth-child(2),
+.registration-card:nth-child(3),
+.price-card:nth-child(2),
+.price-card:nth-child(3),
+.build-card:nth-child(2),
+.build-card:nth-child(3),
+.build-card:nth-child(4) {
+    background: var(--uniform-card);
+}
+
+/* Vertikalne ločnice ostanejo subtilne. */
+.audience-card + .audience-card,
+.registration-card + .registration-card,
+.price-card + .price-card,
+.build-card + .build-card {
+    border-left-color: rgba(185, 166, 106, 0.28);
+}
+
+/* Mobilna hero slika */
+.semester-hero-mobile-image {
+    object-position: center center;
+}
+
+/* Najprej izkusi prakso:
+   enakomeren temen premaz čez celo sliko in mehka fade-a zgoraj/spodaj. */
+.test-section {
+    padding-top: var(--section-rhythm);
+    padding-bottom: 0;
+    background: var(--bdk-black);
+}
+
+.test-hero {
+    min-height: 720px;
+    background-image: url("/redne-prakse-testna-lekcija.jpg");
+    background-position: center 44%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.test-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background:
+        linear-gradient(
+            to bottom,
+            #050505 0%,
+            rgba(5, 5, 5, 0.90) 9%,
+            rgba(5, 5, 5, 0.54) 26%,
+            rgba(5, 5, 5, 0.48) 68%,
+            rgba(5, 5, 5, 0.84) 90%,
+            #050505 100%
+        ),
+        linear-gradient(
+            to right,
+            rgba(5, 5, 5, 0.72) 0%,
+            rgba(5, 5, 5, 0.50) 48%,
+            rgba(5, 5, 5, 0.34) 100%
+        ),
+        rgba(5, 5, 5, 0.18);
+}
+
+.test-copy {
+    position: relative;
+    z-index: 1;
+    padding-top: 136px;
+    padding-bottom: 136px;
+}
+
+.test-copy .editorial-title {
+    margin-bottom: 52px;
+}
+
+/* Termini uporabljajo optimizirano WebP sliko. */
+.terms-image-panel {
+    background-image: url("/redne-prakse-semester.webp");
+}
+
+/* FAQ: brez črte nad prvim in pod zadnjim vprašanjem. */
+.faq-list {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.faq-item.faq-first {
+    border-top: 0;
+}
+
+.faq-item.faq-last {
+    border-bottom: 0;
+}
+
+/* ---------------------------------------------------------
+   MOBILNI PREGLED
+   --------------------------------------------------------- */
+
+@media (max-width: 767px) {
+    :root {
+        --section-rhythm: 76px;
+    }
+
+    /* Hero je dovolj visok za celotno vsebino in se ne odreže. */
+    .semester-hero {
+        min-height: 100svh;
+        height: auto;
+        margin-top: 56px;
+        padding: 0;
+        align-items: stretch;
+        background: #050505;
+    }
+
+    .semester-hero-mobile-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 52% center;
+    }
+
+    .semester-hero-overlay {
+        background:
+            linear-gradient(
+                to bottom,
+                rgba(5, 5, 5, 0.30) 0%,
+                rgba(5, 5, 5, 0.42) 44%,
+                rgba(5, 5, 5, 0.76) 82%,
+                #050505 100%
+            );
+    }
+
+    .semester-hero::after {
+        height: 150px;
+    }
+
+    .semester-hero-inner {
+        width: min(88vw, 430px);
+        min-height: calc(100svh - 56px);
+        padding-top: 86px;
+        padding-bottom: 88px;
+        display: flex;
+        align-items: center;
+    }
+
+    .semester-hero-copy {
+        width: 100%;
+        max-width: none;
+    }
+
+    .semester-title {
+        margin: 0;
+        font-size: clamp(54px, 17vw, 82px);
+        line-height: 1.02;
+        letter-spacing: 0.065em;
+        white-space: normal;
+    }
+
+    .semester-subtitle {
+        margin-top: 22px;
+        font-size: 12px;
+        line-height: 1.65;
+        letter-spacing: 0.17em;
+    }
+
+    .semester-lead {
+        margin-top: 28px;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    /* Na mobilnem odstranimo drugi stavek, da hero ostane jasen. */
+    .semester-lead p:nth-child(2) {
+        display: none;
+    }
+
+    .semester-meta {
+        margin-top: 26px;
+        font-size: 10px;
+        line-height: 1.9;
+        letter-spacing: 0.11em;
+    }
+
+    .hero-actions {
+        margin-top: 30px;
+        gap: 10px;
+    }
+
+    .hero-actions .landing-button {
+        width: 100%;
+        max-width: 360px;
+        padding: 14px 15px;
+        font-size: 10px;
+        line-height: 1.55;
+        letter-spacing: 0.12em;
+    }
+
+    /* Prvi triptih se na telefonu zloži pravilno. */
+    .triptych-section {
+        padding-top: 90px;
+        padding-bottom: var(--section-rhythm);
+    }
+
+    .triptych-grid {
+        width: min(88vw, 430px);
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .triptych-image,
+    .triptych-panel {
+        min-height: 0;
+        height: auto;
+    }
+
+    .triptych-practice-card {
+        height: 520px;
+    }
+
+    .triptych-practice-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 20% center;
+    }
+
+    .triptych-card-overlay {
+        padding: 32px 26px 28px;
+    }
+
+    .triptych-panel-dark {
+        min-height: 500px;
+        padding: 48px 28px;
+    }
+
+    /* Kartice čez celo razpoložljivo mobilno širino. */
+    .audience-grid,
+    .registration-steps,
+    .price-grid,
+    .build-mosaic {
+        width: min(92vw, 520px);
+        margin-right: auto;
+        margin-left: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .audience-card,
+    .registration-card,
+    .price-card,
+    .build-card {
+        min-height: auto;
+        padding: 46px 28px;
+    }
+
+    .audience-card + .audience-card,
+    .registration-card + .registration-card,
+    .price-card + .price-card,
+    .build-card + .build-card {
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+        border-left: 0;
+    }
+
+    .audience-title {
+        width: min(88vw, 430px);
+        margin-bottom: 44px;
+        font-size: 18px;
+        line-height: 1.62;
+        letter-spacing: 0.075em;
+    }
+
+    /* Kaj je Budokon: slika se ne reže nenaravno. */
+    .split-feature {
+        grid-template-columns: 1fr;
+    }
+
+    .split-feature-image {
+        min-height: 420px;
+    }
+
+    .split-feature-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 32% center;
+    }
+
+    .split-feature-copy {
+        padding: 46px 28px 54px;
+    }
+
+    .split-feature-copy .editorial-title {
+        margin-bottom: 38px;
+    }
+
+    /* Testna praksa: tudi mobilno brez trdega roba. */
+    .test-hero {
+        min-height: 680px;
+        background-position: 46% center;
+    }
+
+    .test-hero::before {
+        background:
+            linear-gradient(
+                to bottom,
+                #050505 0%,
+                rgba(5, 5, 5, 0.86) 10%,
+                rgba(5, 5, 5, 0.58) 28%,
+                rgba(5, 5, 5, 0.54) 70%,
+                rgba(5, 5, 5, 0.88) 91%,
+                #050505 100%
+            ),
+            rgba(5, 5, 5, 0.22);
+    }
+
+    .test-copy {
+        width: min(88vw, 430px);
+        margin: 0 auto;
+        padding-top: 118px;
+        padding-bottom: 118px;
+        text-align: left;
+    }
+
+    .test-copy .editorial-title {
+        margin-bottom: 38px;
+        font-size: 42px;
+    }
+
+    /* Semester in termini na telefonu ostanejo logično zloženi. */
+    .semester-editorial,
+    .terms-image-panel .editorial-shell {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .semester-panel,
+    .schedule-panel {
+        width: 100%;
+    }
+
+    .terms-image-panel .section-title {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+    }
+
+    .terms-image-panel .schedule-panel {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    /* Podrobneje o praksah: slike so poravnane in ne uidejo iz kartic. */
+    .practice-editorial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-editorial-image {
+        height: 320px;
+    }
+
+    .practice-editorial-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 22% center;
+    }
+
+    .practice-editorial-card:nth-child(2) .practice-editorial-image img {
+        object-position: 48% center;
+    }
+
+    /* Sanja: slika ne postane preveč visoka. */
+    .teacher-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-image {
+        min-height: 360px;
+        max-height: 460px;
+    }
+
+    .teacher-image img {
+        object-position: 58% center;
+    }
+
+    .teacher-copy {
+        padding: 40px 28px;
+    }
+
+    /* FAQ brez zunanjih črt tudi na mobilnem. */
+    .faq-list {
+        border-top: 0;
+        border-bottom: 0;
+    }
+}
 </style>
 <script type="application/ld+json">
     {
@@ -3547,7 +3956,7 @@
 </div>
 </div>
 </nav>
-<header class="semester-hero"><img alt="" aria-hidden="true" class="semester-hero-mobile-image" decoding="async" fetchpriority="high" loading="eager" src="/redne-prakse-testna-lekcija.jpg"/>
+<header class="semester-hero"><img alt="" aria-hidden="true" class="semester-hero-mobile-image" decoding="async" fetchpriority="high" loading="eager" src="/redne-prakse-mobile.webp"/>
 <video aria-hidden="true" autoplay="" class="semester-hero-video" loop="" muted="" playsinline="" poster="/redne-prakse-testna-lekcija.jpg" preload="none">
 <source data-src="/img/header.mp4" type="video/mp4"/>
 </video>
@@ -3616,17 +4025,17 @@
 <div class="editorial-shell">
 <h2 class="audience-title" id="audience-title">TA PRAKSA JE ZATE, ČE NE IŠČEŠ SAMO TELOVADBE, AMPAK GIBALNI PROCES, KI KREPI PSIHOFIZIČNO ODPORNOST BREZ POVOŽANJA TVOJIH MEJ.</h2>
 <div class="audience-grid">
-<article class="audience-card">
+<article class="audience-card uniform-dark-card">
 <div aria-hidden="true" class="audience-icon"></div>
 <h3>Za telo, ki potrebuje več kot raztezanje</h3>
 <p>Želiš razvijati mobilnost, stabilnost, koordinacijo in boljši občutek za telo v prostoru.</p>
 </article>
-<article class="audience-card">
+<article class="audience-card uniform-dark-card">
 <div aria-hidden="true" class="audience-icon"></div>
 <h3>Za človeka, ki ne želi več forsiranja</h3>
 <p>Želiš graditi moč inteligentno, brez potiskanja preko meja in brez primerjanja.</p>
 </article>
-<article class="audience-card">
+<article class="audience-card uniform-dark-card">
 <div aria-hidden="true" class="audience-icon"></div>
 <h3>Za prakso, ki te uči ostati</h3>
 <p>Zanima te izziv, v katerem se učiš razlikovati med naporom, odporom, nelagodjem in mejami.</p>
@@ -3637,7 +4046,7 @@
 <div class="editorial-shell">
 <div class="split-feature">
 <div class="split-feature-image">
-<img alt="Budokon gibanje" decoding="async" loading="lazy" src="/before bridge.jpg"/>
+<img alt="Budokon gibanje" decoding="async" loading="lazy" src="/before-bridge.webp"/>
 </div>
 <div class="split-feature-copy">
 <div class="editorial-kicker">mešane gibalne umetnosti</div>
@@ -3663,17 +4072,17 @@
 <div class="editorial-shell narrow">
 <h2 class="section-title">Kako se prijaviš na testno prakso</h2>
 <div class="registration-steps">
-<div class="registration-step registration-card">
+<div class="registration-step registration-card uniform-dark-card">
 <span class="registration-number">01</span>
 <h4>Izberi termin</h4>
 <p>Izberi testno prakso slow flow ali tatami in oddaj prijavo prek obrazca (za eno ali več praks).</p>
 </div>
-<div class="registration-step registration-card">
+<div class="registration-step registration-card uniform-dark-card">
 <span class="registration-number">02</span>
 <h4>Potrdi mesto</h4>
 <p>Po prijavi prejmeš e-pošto s QR kodo za plačilo. Mesto je rezervirano po prejetem plačilu.</p>
 </div>
-<div class="registration-step registration-card">
+<div class="registration-step registration-card uniform-dark-card">
 <span class="registration-number">03</span>
 <h4>Izkusi prakso</h4>
 <p>Posamezna testna praksa traja 75 minut in stane 25 €, dobrodošli na več praks. Ob vpisu v semester se znesek v celoti odšteje od šolnine.</p>
@@ -3746,10 +4155,10 @@
 </div>
 </div>
 </div>
-<div class="price-section section-anchor" id="prijava">
+<div class="price-section section-anchor">
 <div class="editorial-shell narrow"><h2 class="section-title small-space white-editorial-heading">Cena</h2>
 <div class="price-grid">
-<div class="price-card">
+<div class="price-card uniform-dark-card">
 <h3>
         Testna praksa
        </h3>
@@ -3760,7 +4169,7 @@
         možna le ob začetku semestra
        </p>
 </div>
-<div class="price-card">
+<div class="price-card uniform-dark-card">
 <h3>
         Semester 1x tedensko
        </h3>
@@ -3771,7 +4180,7 @@
         5-mesečni semester
        </p>
 </div>
-<div class="price-card">
+<div class="price-card uniform-dark-card">
 <h3>Obe praksi · 2x tedensko</h3>
 <span class="price">
         420 €
@@ -3803,28 +4212,28 @@
 </div>
 <div class="text-block"><p>Osrednji fokus ni popolna izvedba. Fokus je odnos do telesa, napora, meja in trenutka, ko bi najraje pobegnili ali odnehali.</p></div>
 </div>
-<div class="build-mosaic"><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
+<div class="build-mosaic"><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>
        Moč kot kapaciteto
       </h3>
 <p>
        Moč ni samo mišična sila. Je kapaciteta, da pri naporu ostaneš v stiku s sabo. Da ne greš takoj v primerjanje, dokazovanje ali umik iz izziva. Gradimo jo postopno, z izzivom in brez forsiranja.
       </p>
-</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
+</article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>
        Mobilnost kot telesno inteligenco
       </h3>
 <p>
        Mobilnost ni samo obseg gibanja. Je sposobnost, da gib čutiš, nadzoruješ in se v njem znajdeš. V Budokonu raziskujemo prehode, prilagajanje in gibanje skozi prostor.
       </p>
-</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
+</article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>
        Koordinacijo kot jasnost
       </h3>
 <p>
        Budokon zahteva pozornost. Gibanje povezuje roke, noge, hrbtenico, pogled, dih in orientacijo v prostoru. Sčasoma se telo začne gibati bolj celostno, manj fragmentirano.
       </p>
-</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
+</article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>
        Meje kot del prakse
       </h3>
@@ -3972,7 +4381,7 @@
 <div class="editorial-kicker">pogosta vprašanja</div>
 <h2 class="editorial-title" id="faq-title">Vprašanja</h2>
 </div>
-<div class="faq-list"><article class="faq-item">
+<div class="faq-list"><article class="faq-item faq-first">
 <h3 class="faq-question">
       Ali potrebujem predznanje ali posebno telesno pripravljenost?
      </h3>
@@ -4012,7 +4421,7 @@
 <p class="faq-answer">
       Ne. Redne prakse potekajo v obliki semestra. Po začetnih testnih praksah se skupina zapre, saj kontinuiteta omogoča postopno progresijo in poglabljanje procesa.
      </p>
-</article><article class="faq-item"><h3 class="faq-question">Ali je možno plačilo šolnine na obroke?</h3><p class="faq-answer">Plačilo šolnine na obroke je možno po predhodnem dogovoru. Pred prijavo piši na <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>.</p></article><article class="faq-item">
+</article><article class="faq-item"><h3 class="faq-question">Ali je možno plačilo šolnine na obroke?</h3><p class="faq-answer">Plačilo šolnine na obroke je možno po predhodnem dogovoru. Pred prijavo piši na <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>.</p></article><article class="faq-item faq-last">
 <h3 class="faq-question">
       Kako poteka prijava?
      </h3>
