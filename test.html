@@ -29,14 +29,8 @@
 <meta content="https://budokon.si/img/og-budokon-slovenija.jpg" name="twitter:image"/>
 <meta content="Redne Budokon prakse v Ljubljani" name="twitter:image:alt"/>
 <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-
-
-
-
-
 <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <style>
         :root{
@@ -3639,9 +3633,10 @@
 
 
 /* =========================================================
-   OČIŠČENA FINALNA PRAVILA
+   ZAKLJUČNI POPRAVKI
    ========================================================= */
 
+/* Hamburger brez Font Awesome. */
 .menu-icon {
     position: relative;
     display: inline-block;
@@ -3660,7 +3655,25 @@
     border-top: 2px solid currentColor;
 }
 
-/* Najprej izkusi prakso: ena sama definicija, brez prepisov. */
+/* Navigacija: brez sivih aktivnih okenc. */
+.navbar-custom .nav li a,
+.navbar-custom .navbar-nav > li > a,
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+    background: transparent;
+    box-shadow: none;
+}
+
+.navbar-custom .nav li a:hover,
+.navbar-custom .nav li a:focus,
+.navbar-custom .navbar-nav > .active > a,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus {
+    color: var(--bdk-gold-active);
+}
+
+/* Najprej izkusi prakso: enoten premaz in pravilna poravnava. */
 .test-section {
     padding-top: 108px;
     padding-bottom: 0;
@@ -3688,16 +3701,17 @@
     background:
         linear-gradient(
             to right,
-            rgba(5, 5, 5, 0.80) 0%,
-            rgba(5, 5, 5, 0.52) 46%,
+            rgba(5, 5, 5, 0.82) 0%,
+            rgba(5, 5, 5, 0.54) 46%,
             rgba(5, 5, 5, 0.30) 100%
         ),
         linear-gradient(
             to bottom,
-            rgba(5, 5, 5, 0.58) 0%,
-            rgba(5, 5, 5, 0.32) 26%,
-            rgba(5, 5, 5, 0.32) 72%,
-            rgba(5, 5, 5, 0.78) 91%,
+            #050505 0%,
+            rgba(5, 5, 5, 0.92) 8%,
+            rgba(5, 5, 5, 0.48) 27%,
+            rgba(5, 5, 5, 0.36) 68%,
+            rgba(5, 5, 5, 0.80) 91%,
             #050505 100%
         );
 }
@@ -3705,9 +3719,14 @@
 .test-copy {
     position: relative;
     z-index: 1;
-    width: min(640px, 86vw);
+    width: min(1280px, 92vw);
+    margin: 0 auto;
     padding-top: 128px;
     padding-bottom: 128px;
+}
+
+.test-copy > * {
+    max-width: 610px;
 }
 
 .test-copy .editorial-title {
@@ -3715,7 +3734,6 @@
 }
 
 .test-copy p {
-    max-width: 610px;
     margin-bottom: 24px;
     color: var(--bdk-white);
     line-height: 1.9;
@@ -3734,7 +3752,6 @@
     margin-bottom: 52px;
 }
 
-/* Mobilno: samo ti dve sliki sta rahlo pomaknjeni proti sredini. */
 @media (max-width: 767px) {
     .test-section {
         padding-top: 76px;
@@ -3747,25 +3764,27 @@
 
     .test-copy {
         width: min(88vw, 430px);
-        margin: 0 auto;
         padding-top: 112px;
         padding-bottom: 112px;
     }
 
-    .test-copy .editorial-title {
-        margin-bottom: 38px;
-    }
-
+    .test-copy .editorial-title,
     .semester-intro .editorial-title {
         margin-bottom: 38px;
     }
 
+    /* Samo ti dve sliki ostajata rahlo proti sredini. */
     .split-feature-image img {
         object-position: 38% center;
     }
 
     .teacher-image img {
         object-position: 44% center;
+    }
+
+    /* Mobilni hero pokaže več levega dela fotografije. */
+    .semester-hero-mobile-image {
+        object-position: 20% center;
     }
 }
 </style>
