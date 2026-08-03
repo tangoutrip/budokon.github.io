@@ -1071,297 +1071,10 @@ footer.landing-footer {
     text-transform: uppercase;
 }
 
-@media (max-width: 1180px) {
-    .triptych-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .triptych-image, .triptych-panel {
-        min-height: 420px;
-    }
-
-    .triptych-panel {
-        padding: 58px 42px;
-    }
-
-    .build-mosaic {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .semester-editorial, .build-heading-row, .faq-layout {
-        grid-template-columns: 1fr;
-        gap: 44px;
-    }
-
-    .schedule-panel {
-        margin-left: 0;
-        width: 100%;
-    }
-
-}
-
-@media (max-width: 900px) {
-    .semester-hero {
-        min-height: 90vh;
-    }
-
-    .semester-hero-inner {
-        width: min(92vw, 680px);
-        padding-top: 90px;
-    }
-
-    .semester-meta {
-        display: block;
-        line-height: 2.1;
-    }
-
-    .semester-meta span {
-        display: block;
-    }
-
-    .semester-meta span + span::before {
-        content: "";
-        margin: 0;
-    }
-
-    .audience-grid, .price-grid, .practice-editorial-grid, .testimonials-grid, .registration-steps {
-        grid-template-columns: 1fr;
-    }
-
-    .audience-card + .audience-card, .testimonial-card + .testimonial-card, .registration-step + .registration-step {
-        border-left: 0;
-        border-top: 1px solid var(--bdk-line);
-    }
-
-    .split-feature, .split-feature.reverse, .teacher-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .split-feature-copy, .split-feature.reverse .split-feature-copy, .teacher-copy {
-        border-left: 0;
-        border-right: 0;
-        border-top: 1px solid var(--bdk-line-soft);
-    }
-
-    .split-feature-image, .teacher-image {
-        min-height: 460px;
-    }
-
-    .split-feature-copy, .teacher-copy {
-        padding: 58px 46px;
-    }
-
-    .schedule-row, .semester-row {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .terms-image-panel {
-        min-height: 640px;
-        padding-top: 90px;
-        padding-bottom: 168px;
-    }
-
-    .price-section {
-        padding-top: 42px;
-        padding-bottom: 90px;
-    }
-
-}
-
-@media (max-width: 560px) {
-    .editorial-shell, .editorial-shell.narrow {
-        width: min(88vw, 430px);
-    }
-
-    .navbar-custom .navbar-brand {
-        font-size: 16px;
-    }
-
-    .semester-hero {
-        min-height: calc(100vh - 56px);
-        min-height: calc(100svh - 56px);
-        margin-top: 56px;
-    }
-
-    .semester-hero-overlay {
-        background: linear-gradient(
-                        to bottom,
-                        rgba(0, 0, 0, 0.16) 0%,
-                        rgba(0, 0, 0, 0.30) 56%,
-                        rgba(5, 5, 5, 0.70) 86%,
-                        var(--bdk-black) 100%
-                    ),
-                    radial-gradient(circle at center, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.30) 50%, rgba(0, 0, 0, 0.58) 100%);
-    }
-
-    .semester-hero-inner {
-        padding-top: 78px;
-        padding-bottom: 74px;
-    }
-
-    .semester-subtitle {
-        margin-top: 24px;
-        font-size: 13px;
-        letter-spacing: 0.20em;
-    }
-
-    .semester-lead {
-        margin-top: 32px;
-        font-size: 15px;
-        line-height: 1.8;
-    }
-
-    .hero-actions {
-        margin-top: 34px;
-    }
-
-    .landing-button {
-        width: 100%;
-        max-width: 360px;
-        text-align: center;
-        padding: 15px 20px;
-        letter-spacing: 0.16em;
-    }
-
-    .triptych-image, .triptych-panel {
-        min-height: 360px;
-    }
-
-    .triptych-panel::before {
-        inset: 22px;
-    }
-
-    .section-title, .section-title.left {
-        font-size: 20px;
-        letter-spacing: 0.16em;
-        margin-bottom: 36px;
-        text-align: center;
-    }
-
-    .editorial-title {
-        font-size: 34px;
-        text-align: center;
-    }
-
-    .editorial-kicker {
-        text-align: center;
-    }
-
-    .split-feature-image, .teacher-image {
-        min-height: 340px;
-    }
-
-    .split-feature-copy, .teacher-copy {
-        padding: 46px 28px;
-    }
-
-    .build-heading-row {
-        margin-bottom: 46px;
-    }
-
-    .build-mosaic {
-        grid-template-columns: 1fr;
-    }
-
-    .build-card {
-        min-height: auto;
-        padding: 40px 28px;
-    }
-
-    .practice-editorial-image {
-        height: 270px;
-    }
-
-    .practice-editorial-copy {
-        padding: 40px 28px 46px;
-    }
-
-    .practice-editorial-copy h3 {
-        font-size: 20px;
-        letter-spacing: 0.15em;
-    }
-
-    .registration-step {
-        padding: 30px 0;
-    }
-
-    .test-date-divider {
-        display: block;
-        height: 0;
-        margin: 8px 0;
-        overflow: hidden;
-    }
-
-    .terms-image-panel {
-        min-height: 590px;
-        padding-top: 78px;
-        padding-bottom: 146px;
-    }
-
-    .price-section {
-        padding-top: 36px;
-        padding-bottom: 78px;
-    }
-
-    .teacher-name {
-        font-size: 32px;
-    }
-
-    .teacher-stats {
-        font-size: 10px;
-        letter-spacing: 0.05em;
-    }
-
-    .teacher-stats-line, .teacher-stats-training {
-        white-space: normal;
-    }
-
-    .teacher-stats-line span {
-        margin: 0 8px;
-    }
-
-    .testimonial-card {
-        padding: 34px 0;
-    }
-
-    .faq-question {
-        font-size: 13px;
-        letter-spacing: 0.13em;
-    }
-
-    .faq-answer {
-        font-size: 15px;
-    }
-
-    .footer-logo-mark {
-        width: 64px;
-        height: 64px;
-    }
-
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
-
-    .semester-hero-video {
-        display: none;
-    }
-
-    .landing-button, a {
-        transition: none;
-    }
-
-}
-
 .semester-hero-inner {
     position: relative;
     z-index: 2;
-    width: min(1480px, 91vw);
     margin: 0 auto;
-    padding-top: 92px;
     width: min(1180px, 88vw);
     padding-top: 86px;
 }
@@ -1377,8 +1090,6 @@ footer.landing-footer {
     margin: 0;
     font-family: "Six Caps", "Arial Narrow", sans-serif;
     font-weight: 400;
-    font-size: clamp(82px, 9.6vw, 176px);
-    line-height: 0.86;
     letter-spacing: 0.10em;
     color: var(--bdk-white);
     text-transform: uppercase;
@@ -1390,9 +1101,7 @@ footer.landing-footer {
 .semester-subtitle {
     margin-top: 30px;
     color: var(--bdk-gold-active);
-    font-size: clamp(13px, 1.55vw, 24px);
     line-height: 1.55;
-    letter-spacing: 0.32em;
     text-transform: uppercase;
     font-weight: 400;
     font-size: clamp(14px, 1.5vw, 23px);
@@ -1534,61 +1243,6 @@ footer.landing-footer {
     padding-bottom: 96px;
 }
 
-@media (max-width: 1180px) {
-    .audience-grid-five {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .audience-grid-five .audience-card + .audience-card {
-        border-left: 0;
-        border-top: 1px solid var(--bdk-line);
-    }
-
-}
-
-@media (max-width: 900px) {
-    .semester-title {
-        font-size: clamp(68px, 18vw, 116px);
-        letter-spacing: 0.08em;
-        white-space: normal;
-    }
-
-    .audience-grid-five {
-        grid-template-columns: 1fr;
-    }
-
-}
-
-@media (max-width: 560px) {
-    .semester-title {
-        line-height: 1.05;
-        letter-spacing: 0.08em;
-        font-size: clamp(58px, 18vw, 92px);
-        white-space: normal;
-    }
-
-    .triptych-card-overlay {
-        padding: 30px 26px 27px;
-    }
-
-    .triptych-panel {
-        padding: 52px 30px;
-    }
-
-    .triptych-section, .audience-section, .semester-section, .build-section, .teacher-section, .testimonials-section, .faq-section, .registration-steps-section {
-        padding-top: 78px;
-        padding-bottom: 78px;
-        padding-top: 72px;
-        padding-bottom: 72px;
-    }
-
-    .split-feature-section, .practices-section {
-        padding-bottom: 78px;
-        padding-bottom: 72px;
-    }
-
-}
-
 .triptych-panel, .triptych-panel-gray {
     background: #f1efe9;
     color: #050505;
@@ -1614,9 +1268,6 @@ footer.landing-footer {
 }
 
 .triptych-panel .panel-button:hover, .triptych-panel .panel-button:focus {
-    background: var(--bdk-black);
-    color: var(--bdk-gold-active);
-    border-color: var(--bdk-black);
     background: transparent;
     color: #050505;
     border-color: #050505;
@@ -1630,7 +1281,6 @@ footer.landing-footer {
 }
 
 .audience-note {
-    margin-top: 38px;
     color: var(--bdk-gold-active);
     text-align: center;
     font-size: 12px;
@@ -1640,41 +1290,10 @@ footer.landing-footer {
     margin-top: 40px;
 }
 
-@media (max-width: 1180px) {
-    .audience-grid, .audience-grid-five {
-        grid-template-columns: 1fr;
-    }
-
-    .audience-card + .audience-card {
-        border-left: 0;
-        border-top: 1px solid rgba(185, 166, 106, 0.30);
-    }
-
-}
-
-@media (max-width: 560px) {
-    .triptych-panel, .triptych-panel-gray {
-        padding: 48px 28px;
-    }
-
-    .audience-section {
-        padding-top: 72px;
-        padding-bottom: 76px;
-    }
-
-    .audience-card p {
-        font-size: 15px;
-        line-height: 1.9;
-    }
-
-}
-
 .triptych-panel .logo-mark, .triptych-panel-gray .logo-mark {
     width: 58px;
     height: 58px;
     margin: 0 auto 30px;
-    background-color: #050505;
-    opacity: 0.82;
     background-color: var(--bdk-gold-active);
     opacity: 1;
 }
@@ -1704,11 +1323,6 @@ footer.landing-footer {
 }
 
 .audience-card {
-    min-height: 210px;
-    padding: 38px 38px 34px;
-    min-height: 300px;
-    padding: 58px 42px;
-    align-items: center;
     background: var(--uniform-card);
     min-height: 360px;
     padding: 64px 44px;
@@ -1719,15 +1333,11 @@ footer.landing-footer {
 }
 
 .audience-card + .audience-card {
-    border-left: 1px solid var(--bdk-line);
-    border-left: 1px solid rgba(185, 166, 106, 0.30);
     border-left: 1px solid rgba(185, 166, 106, 0.28);
     border-top: 0;
 }
 
 .audience-icon {
-    width: 38px;
-    height: 38px;
     margin-bottom: 26px;
     border: 1px solid var(--bdk-gold-active);
     border-radius: 50%;
@@ -1742,9 +1352,6 @@ footer.landing-footer {
 }
 
 .audience-card h3 {
-    margin: 0 0 18px;
-    font-size: 14px;
-    letter-spacing: 0.18em;
     margin: 0 0 22px;
     color: var(--bdk-white);
     font-size: 17px;
@@ -1755,42 +1362,10 @@ footer.landing-footer {
 }
 
 .audience-card p {
-    font-size: 16px;
-    line-height: 1.95;
     margin: 0;
     color: var(--bdk-muted);
     font-size: 15px;
     line-height: 1.9;
-}
-
-@media (max-width: 1000px) {
-    .audience-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .audience-card + .audience-card {
-        border-left: 0;
-        border-top: 1px solid rgba(185, 166, 106, 0.28);
-    }
-
-}
-
-@media (max-width: 560px) {
-    .audience-card {
-        padding: 34px 0;
-        padding: 42px 28px;
-        min-height: auto;
-        padding: 46px 28px;
-    }
-
-    .audience-card h3 {
-        font-size: 15px;
-    }
-
-    .split-feature-copy .editorial-title {
-        margin-bottom: 38px;
-    }
-
 }
 
 .triptych-panel .logo-mark {
@@ -1832,12 +1407,6 @@ footer.landing-footer {
 
 .triptych-panel .panel-facts {
     position: relative;
-    margin: 34px 0 0;
-    padding-top: 28px;
-    border-top: 1px solid rgba(5, 5, 5, 0.22);
-    color: rgba(5, 5, 5, 0.78);
-    line-height: 2;
-    letter-spacing: 0.18em;
     margin: 24px 0 0;
     padding-top: 24px;
     border-top: 1px solid rgba(5, 5, 5, 0.28);
@@ -1852,11 +1421,6 @@ footer.landing-footer {
 .triptych-panel .panel-button {
     position: relative;
     display: inline-block;
-    margin: 34px auto 0;
-    padding: 14px 28px;
-    border: 1px solid rgba(5, 5, 5, 0.70);
-    color: var(--bdk-black);
-    background: transparent;
     font-size: 12px;
     line-height: 1.4;
     letter-spacing: 0.18em;
@@ -1870,7 +1434,6 @@ footer.landing-footer {
 }
 
 .audience-section {
-    padding: 78px 0 112px;
     background: var(--bdk-black);
     padding: 94px 0 104px;
     padding-top: var(--section-rhythm);
@@ -1880,7 +1443,6 @@ footer.landing-footer {
 .split-feature-section {
     padding: 0 0 118px;
     background: var(--bdk-black);
-    padding-bottom: 96px;
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
@@ -1957,11 +1519,7 @@ footer.landing-footer {
 }
 
 .price-grid {
-    max-width: 1080px;
     margin: 0 auto;
-    gap: 1px;
-    border: 1px solid var(--bdk-line);
-    background: var(--bdk-line);
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
@@ -1972,7 +1530,6 @@ footer.landing-footer {
 }
 
 .price-card {
-    padding: 46px 34px;
     background: var(--uniform-card);
     text-align: center;
     min-height: 320px;
@@ -2010,7 +1567,6 @@ footer.landing-footer {
     grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.2fr);
     gap: 86px;
     align-items: end;
-    margin-bottom: 70px;
     margin-bottom: 64px;
 }
 
@@ -2019,9 +1575,6 @@ footer.landing-footer {
 }
 
 .build-mosaic {
-    gap: 1px;
-    border: 1px solid var(--bdk-line);
-    background: var(--bdk-line);
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0;
@@ -2031,8 +1584,6 @@ footer.landing-footer {
 }
 
 .build-card {
-    min-height: 360px;
-    padding: 48px 38px;
     background: var(--uniform-card);
     min-height: 390px;
     padding: 56px 38px;
@@ -2082,14 +1633,12 @@ footer.landing-footer {
 
 .teacher-panel {
     display: grid;
-    grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
     background: var(--uniform-card);
     grid-template-columns: minmax(280px, 0.36fr) minmax(0, 0.64fr);
     align-items: stretch;
 }
 
 .teacher-image {
-    min-height: 620px;
     overflow: hidden;
     min-height: 0;
     height: auto;
@@ -2101,11 +1650,9 @@ footer.landing-footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 60% center;
 }
 
 .teacher-copy {
-    padding: 76px 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -2135,81 +1682,12 @@ footer.landing-footer {
 }
 
 .final-cta .section-title {
-    color: var(--bdk-gold-active);
     color: var(--bdk-white);
     font-size: clamp(34px, 4.2vw, 58px);
     line-height: 1.08;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     font-weight: 400;
-}
-
-@media (max-width: 1100px) {
-    .build-mosaic {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .build-card:nth-child(3) {
-        border-left: 0;
-        border-top: 1px solid rgba(185, 166, 106, 0.28);
-    }
-
-    .build-card:nth-child(4) {
-        border-top: 1px solid rgba(185, 166, 106, 0.28);
-    }
-
-}
-
-@media (max-width: 900px) {
-    .registration-steps, .price-grid, .build-mosaic {
-        grid-template-columns: 1fr;
-    }
-
-    .registration-card + .registration-card, .price-card + .price-card, .build-card + .build-card {
-        border-left: 0;
-        border-top: 1px solid rgba(185, 166, 106, 0.28);
-    }
-
-    .terms-image-panel .editorial-shell {
-        grid-template-columns: 1fr;
-        gap: 52px;
-    }
-
-    .terms-image-panel .section-title {
-        grid-column: 1;
-        grid-row: 1;
-        text-align: left;
-    }
-
-    .terms-image-panel .schedule-panel {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .teacher-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .teacher-image {
-        min-height: 380px;
-    }
-
-}
-
-@media (max-width: 560px) {
-    .registration-card, .price-card, .build-card {
-        min-height: auto;
-        padding: 46px 28px;
-    }
-
-    .terms-image-panel .section-title, .price-section .section-title, .practices-section .section-title, .final-cta .section-title {
-        font-size: 32px;
-    }
-
-    .teacher-copy {
-        padding: 38px 28px;
-    }
-
 }
 
 .semester-hero-mobile-image {
@@ -2222,22 +1700,7 @@ footer.landing-footer {
     object-fit: cover;
 }
 
-@media (max-width: 767px) {
-    .semester-hero-video {
-        display: none;
-    }
-
-}
-
 .semester-hero::after {
-    height: 180px;
-    background: linear-gradient(
-        to bottom,
-        rgba(5, 5, 5, 0) 0%,
-        rgba(5, 5, 5, 0.38) 48%,
-        rgba(5, 5, 5, 0.82) 78%,
-        var(--bdk-black) 100%
-    );
     content: "";
     position: absolute;
     left: 0;
@@ -2340,15 +1803,6 @@ footer.landing-footer {
 }
 
 .audience-title {
-    max-width: 860px;
-    margin: 0 auto 62px;
-    line-height: 1.6;
-    letter-spacing: 0.08em;
-    max-width: 980px;
-    margin: 0 auto 64px;
-    line-height: 1.58;
-    letter-spacing: 0.07em;
-    text-transform: none;
     max-width: 1040px;
     margin: 0 auto 68px;
     color: var(--bdk-white);
@@ -2368,7 +1822,6 @@ footer.landing-footer {
     color: var(--bdk-muted);
     font-size: 16px;
     line-height: 2;
-    margin-bottom: 22px;
     margin-bottom: 24px;
 }
 
@@ -2378,8 +1831,6 @@ footer.landing-footer {
 
 .registration-steps-section {
     padding: 96px 0 118px;
-    padding-top: 92px;
-    padding-bottom: 96px;
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
     background: var(--bdk-black);
@@ -2424,8 +1875,6 @@ footer.landing-footer {
 .registration-number {
     display: block;
     margin-bottom: 18px;
-    font-size: 13px;
-    letter-spacing: 0.18em;
     margin: 0 0 28px;
     color: var(--bdk-gold-active);
     font-size: 18px;
@@ -2458,7 +1907,6 @@ footer.landing-footer {
 }
 
 .test-date-title {
-    margin-bottom: 20px;
     color: var(--bdk-gold-active);
     font-size: 12px;
     line-height: 1.6;
@@ -2468,14 +1916,11 @@ footer.landing-footer {
 }
 
 .registration-action {
-    margin-top: 38px;
     text-align: center;
     margin-top: 50px;
 }
 
 .semester-panel {
-    border-top: 1px solid var(--bdk-line);
-    border-bottom: 1px solid var(--bdk-line);
     border-top: 0;
     border-bottom: 0;
 }
@@ -2492,7 +1937,6 @@ footer.landing-footer {
 .schedule-panel {
     width: min(820px, 100%);
     margin-left: auto;
-    border-top: 1px solid var(--bdk-line);
     border-top: 0;
     border-bottom: 0;
 }
@@ -2518,50 +1962,6 @@ footer.landing-footer {
 .testimonials-section, .testimonials-grid {
     border-top: 0;
     border-bottom: 0;
-}
-
-@media (max-width: 900px) {
-    .registration-steps {
-        grid-template-columns: 1fr;
-    }
-
-    .registration-card + .registration-card {
-        border-top: 1px solid rgba(185, 166, 106, 0.28);
-        border-left: 0;
-    }
-
-}
-
-@media (max-width: 560px) {
-    :root {
-        --section-rhythm: 76px;
-    }
-
-    .triptych-section {
-        padding-top: 92px;
-        padding-top: 94px;
-    }
-
-    .triptych-panel-dark {
-        padding: 48px 28px;
-    }
-
-    .audience-title {
-        letter-spacing: 0.06em;
-        margin-bottom: 44px;
-        line-height: 1.65;
-        letter-spacing: 0.03em;
-        margin-bottom: 46px;
-        font-size: 18px;
-        line-height: 1.6;
-        letter-spacing: 0.08em;
-    }
-
-    .registration-card {
-        min-height: auto;
-        padding: 46px 28px;
-    }
-
 }
 
 :root {
@@ -2600,7 +2000,6 @@ footer.landing-footer {
 }
 
 .faq-list {
-    border-top: 1px solid var(--bdk-line);
     border-top: 0;
     border-bottom: 0;
 }
@@ -2613,236 +2012,9 @@ footer.landing-footer {
     border-bottom: 0;
 }
 
-@media (max-width: 767px) {
-    :root {
-        --section-rhythm: 76px;
-    }
-
-    .semester-hero {
-        min-height: 100svh;
-        height: auto;
-        margin-top: 56px;
-        padding: 0;
-        align-items: stretch;
-        background: #050505;
-    }
-
-    .semester-hero-overlay {
-        background: linear-gradient(
-                to bottom,
-                rgba(5, 5, 5, 0.30) 0%,
-                rgba(5, 5, 5, 0.42) 44%,
-                rgba(5, 5, 5, 0.76) 82%,
-                #050505 100%
-            );
-    }
-
-    .semester-hero::after {
-        height: 150px;
-    }
-
-    .semester-hero-inner {
-        width: min(88vw, 430px);
-        min-height: calc(100svh - 56px);
-        padding-top: 86px;
-        padding-bottom: 88px;
-        display: flex;
-        align-items: center;
-    }
-
-    .semester-hero-copy {
-        width: 100%;
-        max-width: none;
-    }
-
-    .semester-title {
-        margin: 0;
-        font-size: clamp(54px, 17vw, 82px);
-        line-height: 1.02;
-        letter-spacing: 0.065em;
-        white-space: normal;
-    }
-
-    .semester-subtitle {
-        margin-top: 22px;
-        font-size: 12px;
-        line-height: 1.65;
-        letter-spacing: 0.17em;
-    }
-
-    .semester-lead {
-        margin-top: 28px;
-        font-size: 15px;
-        line-height: 1.75;
-    }
-
-    .semester-lead p:nth-child(2) {
-        display: none;
-    }
-
-    .semester-meta {
-        margin-top: 26px;
-        font-size: 10px;
-        line-height: 1.9;
-        letter-spacing: 0.11em;
-    }
-
-    .hero-actions {
-        margin-top: 30px;
-        gap: 10px;
-    }
-
-    .hero-actions .landing-button {
-        width: 100%;
-        max-width: 360px;
-        padding: 14px 15px;
-        font-size: 10px;
-        line-height: 1.55;
-        letter-spacing: 0.12em;
-    }
-
-    .triptych-section {
-        padding-top: 90px;
-        padding-bottom: var(--section-rhythm);
-    }
-
-    .triptych-grid {
-        width: min(88vw, 430px);
-        margin: 0 auto;
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-
-    .triptych-image, .triptych-panel {
-        min-height: 0;
-        height: auto;
-    }
-
-    .triptych-practice-card {
-        height: 520px;
-    }
-
-    .triptych-practice-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    .triptych-card-overlay {
-        padding: 32px 26px 28px;
-    }
-
-    .triptych-panel-dark {
-        min-height: 500px;
-        padding: 48px 28px;
-    }
-
-    .audience-grid, .registration-steps, .price-grid, .build-mosaic {
-        width: min(92vw, 520px);
-        margin-right: auto;
-        margin-left: auto;
-        grid-template-columns: 1fr;
-    }
-
-    .audience-card, .registration-card, .price-card, .build-card {
-        min-height: auto;
-        padding: 46px 28px;
-    }
-
-    .audience-card + .audience-card, .registration-card + .registration-card, .price-card + .price-card, .build-card + .build-card {
-        border-top: 1px solid rgba(185, 166, 106, 0.28);
-        border-left: 0;
-    }
-
-    .audience-title {
-        width: min(88vw, 430px);
-        margin-bottom: 44px;
-        font-size: 18px;
-        line-height: 1.62;
-        letter-spacing: 0.075em;
-    }
-
-    .split-feature {
-        grid-template-columns: 1fr;
-    }
-
-    .split-feature-image {
-        min-height: 420px;
-    }
-
-    .split-feature-copy {
-        padding: 46px 28px 54px;
-    }
-
-    .split-feature-copy .editorial-title {
-        margin-bottom: 38px;
-    }
-
-    .semester-editorial, .terms-image-panel .editorial-shell {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .semester-panel, .schedule-panel {
-        width: 100%;
-    }
-
-    .terms-image-panel .section-title {
-        grid-column: 1;
-        grid-row: 1;
-        text-align: left;
-    }
-
-    .terms-image-panel .schedule-panel {
-        grid-column: 1;
-        grid-row: 2;
-    }
-
-    .practice-editorial-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .practice-editorial-image {
-        height: 320px;
-    }
-
-    .practice-editorial-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 22% center;
-    }
-
-    .teacher-panel {
-        grid-template-columns: 1fr;
-    }
-
-    .teacher-image {
-        min-height: 360px;
-        max-height: 460px;
-    }
-
-    .teacher-copy {
-        padding: 40px 28px;
-    }
-
-    .faq-list {
-        border-top: 0;
-        border-bottom: 0;
-    }
-
-}
-
 .build-card h3 span {
     display: inline-block;
     margin-top: 5px;
-}
-
-@media (max-width: 767px) {
-    .triptych-practice-card.right img {
-        object-position: 18% center;
-    }
-
 }
 
 .menu-icon {
@@ -2948,47 +2120,6 @@ footer.landing-footer {
     margin-bottom: 52px;
 }
 
-@media (max-width: 767px) {
-    .test-section {
-        padding-top: 76px;
-    }
-
-    .test-hero {
-        min-height: 700px;
-        background-position: center center;
-    }
-
-    .test-copy {
-        width: min(88vw, 430px);
-        padding-top: 112px;
-        padding-bottom: 112px;
-    }
-
-    .test-copy .editorial-title, .semester-intro .editorial-title {
-        margin-bottom: 38px;
-    }
-
-    .split-feature-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 38% center;
-    }
-
-    .teacher-image img {
-        object-position: 44% center;
-    }
-
-    .semester-hero-mobile-image {
-        display: block;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: 20% center;
-    }
-
-}
-
 body.budokon-semester-page .navbar-custom .navbar-nav > li > a, body.budokon-semester-page .navbar-custom .navbar-nav > li > a:hover, body.budokon-semester-page .navbar-custom .navbar-nav > li > a:focus, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a:hover, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a:focus, body.budokon-semester-page .navbar-custom .nav > li.active > a, body.budokon-semester-page .navbar-custom .nav > li.active > a:hover, body.budokon-semester-page .navbar-custom .nav > li.active > a:focus {
     background-color: transparent;
     background-image: none;
@@ -3058,35 +2189,6 @@ body.budokon-semester-page .semester-intro .editorial-title {
     margin-bottom: 52px;
 }
 
-@media (max-width: 767px) {
-    body.budokon-semester-page .test-hero {
-        min-height: 700px;
-        background-position: center center;
-    }
-
-    body.budokon-semester-page .test-hero .test-copy {
-        width: min(88vw, 430px);
-        padding: 112px 0;
-    }
-
-    body.budokon-semester-page .test-hero .test-copy .editorial-title, body.budokon-semester-page .semester-intro .editorial-title {
-        margin-bottom: 38px;
-    }
-
-    body.budokon-semester-page .semester-hero-mobile-image {
-        object-position: 20% center;
-    }
-
-    body.budokon-semester-page .split-feature-image img {
-        object-position: 38% center;
-    }
-
-    body.budokon-semester-page .teacher-image img {
-        object-position: 52% center;
-    }
-
-}
-
 body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li:hover, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li:focus, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.open {
     background: transparent;
     background-color: transparent;
@@ -3107,6 +2209,660 @@ body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav 
     color: var(--bdk-gold-active);
 }
 
+@media (max-width: 1180px) {
+    .triptych-grid {
+        grid-template-columns: 1fr;
+    }
+    .triptych-image, .triptych-panel {
+        min-height: 420px;
+    }
+    .triptych-panel {
+        padding: 58px 42px;
+    }
+    .build-mosaic {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .semester-editorial, .build-heading-row, .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 44px;
+    }
+    .schedule-panel {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .semester-hero {
+        min-height: 90vh;
+    }
+    .semester-hero-inner {
+        width: min(92vw, 680px);
+        padding-top: 90px;
+    }
+    .semester-meta {
+        display: block;
+        line-height: 2.1;
+    }
+    .semester-meta span {
+        display: block;
+    }
+    .semester-meta span + span::before {
+        content: "";
+        margin: 0;
+    }
+    .audience-grid, .price-grid, .practice-editorial-grid, .testimonials-grid, .registration-steps {
+        grid-template-columns: 1fr;
+    }
+    .audience-card + .audience-card, .testimonial-card + .testimonial-card, .registration-step + .registration-step {
+        border-left: 0;
+        border-top: 1px solid var(--bdk-line);
+    }
+    .split-feature, .split-feature.reverse, .teacher-panel {
+        grid-template-columns: 1fr;
+    }
+    .split-feature-copy, .split-feature.reverse .split-feature-copy, .teacher-copy {
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid var(--bdk-line-soft);
+    }
+    .split-feature-image, .teacher-image {
+        min-height: 460px;
+    }
+    .split-feature-copy, .teacher-copy {
+        padding: 58px 46px;
+    }
+    .schedule-row, .semester-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .terms-image-panel {
+        min-height: 640px;
+        padding-top: 90px;
+        padding-bottom: 168px;
+    }
+    .price-section {
+        padding-top: 42px;
+        padding-bottom: 90px;
+    }
+}
+
+@media (max-width: 560px) {
+    .editorial-shell, .editorial-shell.narrow {
+        width: min(88vw, 430px);
+    }
+    .navbar-custom .navbar-brand {
+        font-size: 16px;
+    }
+    .semester-hero {
+        min-height: calc(100svh - 56px);
+        margin-top: 56px;
+    }
+    .semester-hero-overlay {
+        background: linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 0.16) 0%,
+                        rgba(0, 0, 0, 0.30) 56%,
+                        rgba(5, 5, 5, 0.70) 86%,
+                        var(--bdk-black) 100%
+                    ),
+                    radial-gradient(circle at center, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.30) 50%, rgba(0, 0, 0, 0.58) 100%);
+    }
+    .semester-hero-inner {
+        padding-top: 78px;
+        padding-bottom: 74px;
+    }
+    .semester-subtitle {
+        margin-top: 24px;
+        font-size: 13px;
+        letter-spacing: 0.20em;
+    }
+    .semester-lead {
+        margin-top: 32px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+    .hero-actions {
+        margin-top: 34px;
+    }
+    .landing-button {
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        padding: 15px 20px;
+        letter-spacing: 0.16em;
+    }
+    .triptych-image, .triptych-panel {
+        min-height: 360px;
+    }
+    .triptych-panel::before {
+        inset: 22px;
+    }
+    .section-title, .section-title.left {
+        font-size: 20px;
+        letter-spacing: 0.16em;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+    .editorial-title {
+        font-size: 34px;
+        text-align: center;
+    }
+    .editorial-kicker {
+        text-align: center;
+    }
+    .split-feature-image, .teacher-image {
+        min-height: 340px;
+    }
+    .split-feature-copy, .teacher-copy {
+        padding: 46px 28px;
+    }
+    .build-heading-row {
+        margin-bottom: 46px;
+    }
+    .build-mosaic {
+        grid-template-columns: 1fr;
+    }
+    .build-card {
+        min-height: auto;
+        padding: 40px 28px;
+    }
+    .practice-editorial-image {
+        height: 270px;
+    }
+    .practice-editorial-copy {
+        padding: 40px 28px 46px;
+    }
+    .practice-editorial-copy h3 {
+        font-size: 20px;
+        letter-spacing: 0.15em;
+    }
+    .registration-step {
+        padding: 30px 0;
+    }
+    .test-date-divider {
+        display: block;
+        height: 0;
+        margin: 8px 0;
+        overflow: hidden;
+    }
+    .terms-image-panel {
+        min-height: 590px;
+        padding-top: 78px;
+        padding-bottom: 146px;
+    }
+    .price-section {
+        padding-top: 36px;
+        padding-bottom: 78px;
+    }
+    .teacher-name {
+        font-size: 32px;
+    }
+    .teacher-stats {
+        font-size: 10px;
+        letter-spacing: 0.05em;
+    }
+    .teacher-stats-line, .teacher-stats-training {
+        white-space: normal;
+    }
+    .teacher-stats-line span {
+        margin: 0 8px;
+    }
+    .testimonial-card {
+        padding: 34px 0;
+    }
+    .faq-question {
+        font-size: 13px;
+        letter-spacing: 0.13em;
+    }
+    .faq-answer {
+        font-size: 15px;
+    }
+    .footer-logo-mark {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+    .semester-hero-video {
+        display: none;
+    }
+    .landing-button, a {
+        transition: none;
+    }
+}
+
+@media (max-width: 1180px) {
+    .audience-grid-five {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .audience-grid-five .audience-card + .audience-card {
+        border-left: 0;
+        border-top: 1px solid var(--bdk-line);
+    }
+}
+
+@media (max-width: 900px) {
+    .semester-title {
+        font-size: clamp(68px, 18vw, 116px);
+        letter-spacing: 0.08em;
+        white-space: normal;
+    }
+    .audience-grid-five {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .semester-title {
+        line-height: 1.05;
+        letter-spacing: 0.08em;
+        font-size: clamp(58px, 18vw, 92px);
+        white-space: normal;
+    }
+    .triptych-card-overlay {
+        padding: 30px 26px 27px;
+    }
+    .triptych-panel {
+        padding: 52px 30px;
+    }
+    .triptych-section, .audience-section, .semester-section, .build-section, .teacher-section, .testimonials-section, .faq-section, .registration-steps-section {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+    .split-feature-section, .practices-section {
+        padding-bottom: 72px;
+    }
+}
+
+@media (max-width: 1180px) {
+    .audience-grid, .audience-grid-five {
+        grid-template-columns: 1fr;
+    }
+    .audience-card + .audience-card {
+        border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.30);
+    }
+}
+
+@media (max-width: 560px) {
+    .triptych-panel, .triptych-panel-gray {
+        padding: 48px 28px;
+    }
+    .audience-section {
+        padding-top: 72px;
+        padding-bottom: 76px;
+    }
+    .audience-card p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+}
+
+@media (max-width: 1000px) {
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+    .audience-card + .audience-card {
+        border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+    }
+}
+
+@media (max-width: 560px) {
+    .audience-card {
+        min-height: auto;
+        padding: 46px 28px;
+    }
+    .audience-card h3 {
+        font-size: 15px;
+    }
+    .split-feature-copy .editorial-title {
+        margin-bottom: 38px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .build-mosaic {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .build-card:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+    }
+    .build-card:nth-child(4) {
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+    }
+}
+
+@media (max-width: 900px) {
+    .registration-steps, .price-grid, .build-mosaic {
+        grid-template-columns: 1fr;
+    }
+    .registration-card + .registration-card, .price-card + .price-card, .build-card + .build-card {
+        border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+    }
+    .terms-image-panel .editorial-shell {
+        grid-template-columns: 1fr;
+        gap: 52px;
+    }
+    .terms-image-panel .section-title {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+    }
+    .terms-image-panel .schedule-panel {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .teacher-panel {
+        grid-template-columns: 1fr;
+    }
+    .teacher-image {
+        min-height: 380px;
+    }
+}
+
+@media (max-width: 560px) {
+    .registration-card, .price-card, .build-card {
+        min-height: auto;
+        padding: 46px 28px;
+    }
+    .terms-image-panel .section-title, .price-section .section-title, .practices-section .section-title, .final-cta .section-title {
+        font-size: 32px;
+    }
+    .teacher-copy {
+        padding: 38px 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    .semester-hero-video {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .registration-steps {
+        grid-template-columns: 1fr;
+    }
+    .registration-card + .registration-card {
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+        border-left: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    :root {
+        --section-rhythm: 76px;
+    }
+    .triptych-section {
+        padding-top: 94px;
+    }
+    .triptych-panel-dark {
+        padding: 48px 28px;
+    }
+    .audience-title {
+        margin-bottom: 46px;
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: 0.08em;
+    }
+    .registration-card {
+        min-height: auto;
+        padding: 46px 28px;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --section-rhythm: 76px;
+    }
+    .semester-hero {
+        min-height: 100svh;
+        height: auto;
+        margin-top: 56px;
+        padding: 0;
+        align-items: stretch;
+        background: #050505;
+    }
+    .semester-hero-overlay {
+        background: linear-gradient(
+                to bottom,
+                rgba(5, 5, 5, 0.30) 0%,
+                rgba(5, 5, 5, 0.42) 44%,
+                rgba(5, 5, 5, 0.76) 82%,
+                #050505 100%
+            );
+    }
+    .semester-hero::after {
+        height: 150px;
+    }
+    .semester-hero-inner {
+        width: min(88vw, 430px);
+        min-height: calc(100svh - 56px);
+        padding-top: 86px;
+        padding-bottom: 88px;
+        display: flex;
+        align-items: center;
+    }
+    .semester-hero-copy {
+        width: 100%;
+        max-width: none;
+    }
+    .semester-title {
+        margin: 0;
+        font-size: clamp(54px, 17vw, 82px);
+        line-height: 1.02;
+        letter-spacing: 0.065em;
+        white-space: normal;
+    }
+    .semester-subtitle {
+        margin-top: 22px;
+        font-size: 12px;
+        line-height: 1.65;
+        letter-spacing: 0.17em;
+    }
+    .semester-lead {
+        margin-top: 28px;
+        font-size: 15px;
+        line-height: 1.75;
+    }
+    .semester-lead p:nth-child(2) {
+        display: none;
+    }
+    .semester-meta {
+        margin-top: 26px;
+        font-size: 10px;
+        line-height: 1.9;
+        letter-spacing: 0.11em;
+    }
+    .hero-actions {
+        margin-top: 30px;
+        gap: 10px;
+    }
+    .hero-actions .landing-button {
+        width: 100%;
+        max-width: 360px;
+        padding: 14px 15px;
+        font-size: 10px;
+        line-height: 1.55;
+        letter-spacing: 0.12em;
+    }
+    .triptych-section {
+        padding-top: 90px;
+        padding-bottom: var(--section-rhythm);
+    }
+    .triptych-grid {
+        width: min(88vw, 430px);
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+    .triptych-image, .triptych-panel {
+        min-height: 0;
+        height: auto;
+    }
+    .triptych-practice-card {
+        height: 520px;
+    }
+    .triptych-practice-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .triptych-card-overlay {
+        padding: 32px 26px 28px;
+    }
+    .triptych-panel-dark {
+        min-height: 500px;
+        padding: 48px 28px;
+    }
+    .audience-grid, .registration-steps, .price-grid, .build-mosaic {
+        width: min(92vw, 520px);
+        margin-right: auto;
+        margin-left: auto;
+        grid-template-columns: 1fr;
+    }
+    .audience-card, .registration-card, .price-card, .build-card {
+        min-height: auto;
+        padding: 46px 28px;
+    }
+    .audience-card + .audience-card, .registration-card + .registration-card, .price-card + .price-card, .build-card + .build-card {
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+        border-left: 0;
+    }
+    .audience-title {
+        width: min(88vw, 430px);
+        margin-bottom: 44px;
+        font-size: 18px;
+        line-height: 1.62;
+        letter-spacing: 0.075em;
+    }
+    .split-feature {
+        grid-template-columns: 1fr;
+    }
+    .split-feature-image {
+        min-height: 420px;
+    }
+    .split-feature-copy {
+        padding: 46px 28px 54px;
+    }
+    .split-feature-copy .editorial-title {
+        margin-bottom: 38px;
+    }
+    .semester-editorial, .terms-image-panel .editorial-shell {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    .semester-panel, .schedule-panel {
+        width: 100%;
+    }
+    .terms-image-panel .section-title {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+    }
+    .terms-image-panel .schedule-panel {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .practice-editorial-grid {
+        grid-template-columns: 1fr;
+    }
+    .practice-editorial-image {
+        height: 320px;
+    }
+    .practice-editorial-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 22% center;
+    }
+    .teacher-panel {
+        grid-template-columns: 1fr;
+    }
+    .teacher-image {
+        min-height: 360px;
+        max-height: 460px;
+    }
+    .teacher-copy {
+        padding: 40px 28px;
+    }
+    .faq-list {
+        border-top: 0;
+        border-bottom: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .triptych-practice-card.right img {
+        object-position: 18% center;
+    }
+}
+
+@media (max-width: 767px) {
+    .test-section {
+        padding-top: 76px;
+    }
+    .test-hero {
+        min-height: 700px;
+        background-position: center center;
+    }
+    .test-copy {
+        width: min(88vw, 430px);
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
+    .test-copy .editorial-title, .semester-intro .editorial-title {
+        margin-bottom: 38px;
+    }
+    .split-feature-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 38% center;
+    }
+    .teacher-image img {
+        object-position: 44% center;
+    }
+    .semester-hero-mobile-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 20% center;
+    }
+}
+
+@media (max-width: 767px) {
+    body.budokon-semester-page .test-hero {
+        min-height: 700px;
+        background-position: center center;
+    }
+    body.budokon-semester-page .test-hero .test-copy {
+        width: min(88vw, 430px);
+        padding: 112px 0;
+    }
+    body.budokon-semester-page .test-hero .test-copy .editorial-title, body.budokon-semester-page .semester-intro .editorial-title {
+        margin-bottom: 38px;
+    }
+    body.budokon-semester-page .semester-hero-mobile-image {
+        object-position: 20% center;
+    }
+    body.budokon-semester-page .split-feature-image img {
+        object-position: 38% center;
+    }
+    body.budokon-semester-page .teacher-image img {
+        object-position: 44% center;
+    }
+}
+
 @media (max-width: 767px) {
     body.budokon-semester-page .semester-hero-overlay {
         background: linear-gradient(
@@ -3123,7 +2879,6 @@ body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav 
                 #050505 100%
             );
     }
-
 }
 </style></head>
 <body class="budokon-semester-page" data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
@@ -3466,7 +3221,7 @@ body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav 
 <p>
        BDK slow flow je povezan in tekoč tip prakse na vadbeni podlogi.
       </p><p>
-       Počasneje ne pomeni manj zahtevno, a počasno gibanje omogoči več prostora za boljšo tehniko, ki podpira bolj varno gibanje. Slow flow gradi moč skozi nadzor, zadrževanje, prehode in natančnost. Primeren je, če želiš bolj introspektivno prakso, kjer se intenzivnost ne meri s hitrostjo, ampak s kakovostjo prisotnosti v gibu.
+       Počasneje ne pomeni lažje. Slow flow gradi moč skozi nadzor, zadrževanje, prehode in natančnost. Primeren je, če želiš bolj introspektivno prakso, kjer se intenzivnost ne meri s hitrostjo, ampak s kakovostjo prisotnosti v gibu.
       </p>
 </div>
 </article>
