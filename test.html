@@ -3773,6 +3773,112 @@
         border-bottom: 0;
     }
 }
+
+/* =========================================================
+   KONČNI POPRAVKI: PREMAZ, COPY, NASLOVI IN MOBILNE SLIKE
+   ========================================================= */
+
+/* En sam neprekinjen premaz čez celotno fotografijo.
+   Zgornji in spodnji rob se mehko zlijeta v črno ozadje. */
+.test-hero {
+    position: relative;
+    min-height: 720px;
+    overflow: hidden;
+    background-image: url("/redne-prakse-testna-lekcija.webp");
+    background-position: 22% center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.test-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            to bottom,
+            #050505 0%,
+            rgba(5, 5, 5, 0.88) 8%,
+            rgba(5, 5, 5, 0.56) 24%,
+            rgba(5, 5, 5, 0.50) 74%,
+            rgba(5, 5, 5, 0.86) 91%,
+            #050505 100%
+        ),
+        rgba(5, 5, 5, 0.28);
+}
+
+.test-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.test-copy .editorial-title {
+    margin-bottom: 52px;
+}
+
+.test-copy p {
+    max-width: 610px;
+    margin-bottom: 24px;
+    color: var(--bdk-white);
+    line-height: 1.9;
+}
+
+.test-copy p:last-of-type {
+    margin-bottom: 0;
+}
+
+.test-copy .landing-button {
+    margin-top: 34px;
+}
+
+/* Naslovi pri "Kaj gradimo" imajo namenski prelom. */
+.build-card h3 span {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Vse relevantne slike na telefonu kažejo izraziteje levi del motiva. */
+@media (max-width: 767px) {
+    .semester-hero-mobile-image {
+        object-position: 18% center;
+    }
+
+    .triptych-practice-card img,
+    .triptych-image img {
+        object-position: 12% center;
+    }
+
+    .triptych-practice-card.right img {
+        object-position: 18% center;
+    }
+
+    .test-hero {
+        min-height: 700px;
+        background-position: 16% center;
+    }
+
+    .split-feature-image img {
+        object-position: 14% center;
+    }
+
+    .practice-editorial-card .practice-editorial-image img {
+        object-position: 14% center;
+    }
+
+    .practice-editorial-card:nth-child(2) .practice-editorial-image img {
+        object-position: 20% center;
+    }
+
+    .terms-image-panel {
+        background-position: 18% center;
+    }
+
+    .teacher-image img {
+        object-position: 38% center;
+    }
+}
 </style>
 <script type="application/ld+json">
     {
@@ -3957,7 +4063,7 @@
 </div>
 </nav>
 <header class="semester-hero"><img alt="" aria-hidden="true" class="semester-hero-mobile-image" decoding="async" fetchpriority="high" loading="eager" src="/redne-prakse-mobile.webp"/>
-<video aria-hidden="true" autoplay="" class="semester-hero-video" loop="" muted="" playsinline="" poster="/redne-prakse-testna-lekcija.jpg" preload="none">
+<video aria-hidden="true" autoplay="" class="semester-hero-video" loop="" muted="" playsinline="" poster="/redne-prakse-mobile.webp" preload="none">
 <source data-src="/img/header.mp4" type="video/mp4"/>
 </video>
 <div class="semester-hero-overlay">
@@ -3995,7 +4101,7 @@
 <div class="editorial-shell">
 <div class="triptych-grid">
 <article class="triptych-image triptych-practice-card left">
-<img alt="BDK slow flow praksa" decoding="async" loading="lazy" src="/leteča bojevnica.jpg"/>
+<img alt="BDK slow flow praksa" decoding="async" loading="lazy" src="/leteca-bojevnica.webp"/>
 <div class="triptych-card-overlay">
 <h3>BDK slow flow</h3>
 <div class="triptych-card-time">
@@ -4009,7 +4115,7 @@
 <strong>Atletsko zahteven Budokon, voden somatsko, dostopno in brez forsiranja.</strong>
 </p><p>Obe praksi razvijata moč<br/>mobilnost in koordinacijo.</p><div class="panel-facts">testna praksa · 25 €</div><a class="panel-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">Prijava</a></article>
 <article class="triptych-image triptych-practice-card right">
-<img alt="BDK tatami praksa" decoding="async" loading="lazy" src="/img/gorilaw.jpg"/>
+<img alt="BDK tatami praksa" decoding="async" loading="lazy" src="/gorilaw.webp"/>
 <div class="triptych-card-overlay">
 <h3>BDK tatami</h3>
 <div class="triptych-card-time">
@@ -4059,14 +4165,7 @@
 </div>
 </section><section class="test-section section-anchor" id="testna-praksa">
 <div class="test-hero">
-<div class="test-copy">
-<div class="editorial-kicker">testna praksa</div>
-<h2 class="editorial-title">Najprej izkusi prakso</h2>
-<p>Testna praksa je nezavezujoča in stane 25 €.</p>
-<p>Če se nato vpišeš v semester, se plačani znesek v celoti odšteje od šolnine.</p>
-<p>Posamezna testna praksa traja 75 minut.</p>
-<a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">Prijava na testno prakso</a>
-</div>
+<div class="test-copy"><div class="editorial-kicker">testna praksa</div><h2 class="editorial-title">Najprej izkusi prakso</h2><p>Testna praksa je namenjena temu, da izkusiš prostor, moj način vodenja, tempo, skupino in svoje telo v tem gibalnem jeziku.</p><p>Ni ti treba že vedeti, ali je Budokon zate. Zato obstaja testna praksa.</p><p>Če se po testnem obisku odločiš za vpis v semester, se cena testne prakse odšteje od šolnine.</p><a class="landing-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">Prijava na testno prakso</a></div>
 </div>
 </section><section class="registration-steps-section section-anchor" id="prijava">
 <div class="editorial-shell narrow">
@@ -4213,30 +4312,22 @@
 <div class="text-block"><p>Osrednji fokus ni popolna izvedba. Fokus je odnos do telesa, napora, meja in trenutka, ko bi najraje pobegnili ali odnehali.</p></div>
 </div>
 <div class="build-mosaic"><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
-<h3>
-       Moč kot kapaciteto
-      </h3>
+<h3>Moč<br/><span>kot kapaciteto</span></h3>
 <p>
        Moč ni samo mišična sila. Je kapaciteta, da pri naporu ostaneš v stiku s sabo. Da ne greš takoj v primerjanje, dokazovanje ali umik iz izziva. Gradimo jo postopno, z izzivom in brez forsiranja.
       </p>
 </article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
-<h3>
-       Mobilnost kot telesno inteligenco
-      </h3>
+<h3>Mobilnost<br/><span>kot telesno inteligenco</span></h3>
 <p>
        Mobilnost ni samo obseg gibanja. Je sposobnost, da gib čutiš, nadzoruješ in se v njem znajdeš. V Budokonu raziskujemo prehode, prilagajanje in gibanje skozi prostor.
       </p>
 </article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
-<h3>
-       Koordinacijo kot jasnost
-      </h3>
+<h3>Koordinacijo<br/><span>kot jasnost</span></h3>
 <p>
        Budokon zahteva pozornost. Gibanje povezuje roke, noge, hrbtenico, pogled, dih in orientacijo v prostoru. Sčasoma se telo začne gibati bolj celostno, manj fragmentirano.
       </p>
 </article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
-<h3>
-       Meje kot del prakse
-      </h3>
+<h3>Meje<br/><span>kot del prakse</span></h3>
 <p>
        Praksa ni namenjena potiskanju preko meja, kjer telo utišamo zato, da bi nekaj dosegli. Izziv je prisoten, vendar znotraj jasnega odnosa do meja.
       </p>
@@ -4247,7 +4338,7 @@
 <h2 class="section-title white-editorial-heading">Podrobneje o praksah</h2>
 <div class="practice-editorial-grid">
 <article class="practice-editorial-card">
-<div class="practice-editorial-image"><img alt="BDK slow flow Budokon praksa na vadbeni podlogi" decoding="async" height="461" loading="lazy" src="/leteča bojevnica.jpg" width="1000"/></div>
+<div class="practice-editorial-image"><img alt="BDK slow flow Budokon praksa na vadbeni podlogi" decoding="async" height="461" loading="lazy" src="/leteca-bojevnica.webp" width="1000"/></div>
 <div class="practice-editorial-copy">
 <h3>
        BDK slow flow
@@ -4272,7 +4363,7 @@
 </div>
 </article>
 <article class="practice-editorial-card">
-<div class="practice-editorial-image"><img alt="BDK tatami Budokon praksa na tatamijih" decoding="async" height="837" loading="lazy" src="/img/gorilaw.jpg" width="1000"/></div>
+<div class="practice-editorial-image"><img alt="BDK tatami Budokon praksa na tatamijih" decoding="async" height="837" loading="lazy" src="/gorilaw.webp" width="1000"/></div>
 <div class="practice-editorial-copy">
 <h3>
        BDK tatami
