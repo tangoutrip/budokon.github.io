@@ -28,7 +28,7 @@
 <meta content="Slow flow na Viču in tatami v BTC-ju. Moč, mobilnost in koordinacija skozi 5-mesečni Budokon semester." name="twitter:description"/>
 <meta content="https://budokon.si/img/og-budokon-slovenija.jpg" name="twitter:image"/>
 <meta content="Redne Budokon prakse v Ljubljani" name="twitter:image:alt"/>
-
+<link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
@@ -168,89 +168,87 @@
       ]
     }
     </script>
-<link as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" rel="stylesheet"/></noscript><style>
-:root {
-    --bdk-black: #050505;
-    --bdk-charcoal: #101010;
-    --bdk-card: #101010;
-    --bdk-white: #f4f1ea;
-    --bdk-muted: #cfc8b9;
-    --bdk-gold: #b9a66a;
-    --bdk-line: rgba(185, 166, 106, 0.28);
-    --bdk-line-soft: rgba(185, 166, 106, 0.18);
-    --section-space: 108px;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+<link as="style" href="/css/futura.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><link as="style" href="/css/grayscale.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><link as="style" href="/css/budokon.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><link as="style" href="/css/dark-theme.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><link as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><style>html, body {
+    margin: 0;
+    background: var(--bdk-black);
+    color: var(--bdk-white);
 }
 
 html {
     scroll-behavior: smooth;
-    background: var(--bdk-black);
 }
 
-body {
-    margin: 0;
-    overflow-x: hidden;
+body.budokon-semester-page {
+    font-family: "Montserrat", "Futura", sans-serif;
     background: var(--bdk-black);
     color: var(--bdk-white);
-    font-family: "Montserrat", Arial, sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-img,
-video {
-    display: block;
-    max-width: 100%;
-}
-
-a {
-    color: var(--bdk-gold);
-    text-decoration: none;
-    transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease;
-}
-
-a:hover,
-a:focus {
-    color: var(--bdk-white);
-    text-decoration: none;
-}
-
-button,
-a {
-    -webkit-tap-highlight-color: transparent;
 }
 
 .section-anchor {
-    scroll-margin-top: 72px;
+    scroll-margin-top: 90px;
+}
+
+a {
+    color: var(--bdk-gold-active);
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+a:hover, a:focus {
+    color: var(--bdk-white);
+    text-decoration: none;
+}
+
+.navbar-custom {
+    background: rgba(0, 0, 0, 0.94);
+    border-bottom: 1px solid var(--bdk-line);
+}
+
+.navbar-custom .navbar-brand, .navbar-custom .nav li a {
+    color: var(--bdk-white);
+}
+
+.navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus, .navbar-custom .nav li.active a, .navbar-custom .nav li.active a:hover, .navbar-custom .nav li.active a:focus, .navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:hover, .navbar-custom .navbar-nav > .active > a:focus {
+    background: transparent;
+    color: var(--bdk-gold-active);
+}
+
+.navbar-custom .nav li.active {
+    background: transparent;
+}
+
+.navbar-custom .navbar-toggle:hover, .navbar-custom .navbar-toggle:focus {
+    background: transparent;
+    color: var(--bdk-gold-active);
+    border-color: var(--bdk-gold-active);
+}
+
+.navbar-custom .navbar-brand .light {
+    color: var(--bdk-muted);
 }
 
 .editorial-shell {
-    width: min(1320px, 92vw);
+    width: min(1480px, 91vw);
     margin: 0 auto;
 }
 
 .editorial-shell.narrow {
-    width: min(1120px, 88vw);
+    width: min(1120px, 86vw);
 }
 
 .editorial-kicker {
     margin: 0 0 20px;
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 12px;
     line-height: 1.6;
     letter-spacing: 0.28em;
     text-transform: uppercase;
+    font-weight: 400;
 }
 
 .editorial-title {
     margin: 0;
     color: var(--bdk-white);
-    font-size: clamp(34px, 4.2vw, 58px);
+    font-size: clamp(32px, 4vw, 58px);
     line-height: 1.08;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -258,18 +256,23 @@ a {
 }
 
 .section-title {
-    margin: 0 0 58px;
-    color: var(--bdk-gold);
+    margin: 0 0 54px;
+    color: var(--bdk-gold-active);
     font-size: 26px;
     line-height: 1.45;
-    letter-spacing: 0.22em;
-    text-align: center;
+    letter-spacing: 0.24em;
     text-transform: uppercase;
+    text-align: center;
     font-weight: 400;
 }
 
-.white-editorial-heading {
-    color: var(--bdk-white);
+.section-title.left {
+    text-align: left;
+    margin-bottom: 36px;
+}
+
+.section-title.small-space {
+    margin-bottom: 34px;
 }
 
 .text-block {
@@ -279,177 +282,66 @@ a {
 }
 
 .text-block p {
-    margin: 0 0 24px;
-}
-
-.text-block p:last-child {
-    margin-bottom: 0;
-}
-
-.landing-button,
-.panel-button {
-    display: inline-block;
-    border: 1px solid var(--bdk-gold);
-    background: var(--bdk-gold);
-    color: var(--bdk-black);
-    font-size: 12px;
-    line-height: 1.4;
-    letter-spacing: 0.18em;
-    text-align: center;
-    text-transform: uppercase;
-}
-
-.landing-button {
-    padding: 15px 32px;
-}
-
-.landing-button:hover,
-.landing-button:focus,
-.panel-button:hover,
-.panel-button:focus {
-    border-color: var(--bdk-white);
-    background: var(--bdk-white);
-    color: var(--bdk-black);
-}
-
-.landing-button.secondary {
-    background: transparent;
-    color: var(--bdk-gold);
-}
-
-.landing-button.secondary:hover,
-.landing-button.secondary:focus {
-    background: var(--bdk-gold);
-    color: var(--bdk-black);
-}
-
-/* NAVIGATION */
-
-.navbar-custom {
-    position: fixed;
-    inset: 0 0 auto;
-    z-index: 1000;
-    min-height: 64px;
-    border: 0;
-    border-bottom: 1px solid var(--bdk-line);
-    background: rgba(0, 0, 0, 0.94);
-}
-
-.navbar-custom .container {
-    width: min(1180px, 90vw);
-    min-height: 64px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.navbar-header {
-    display: flex;
-    align-items: center;
-}
-
-.navbar-brand {
-    display: inline-flex;
-    align-items: center;
-    min-height: 64px;
-    padding: 0;
-    color: var(--bdk-white);
-    font-size: 17px;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-}
-
-.navbar-brand .light {
-    margin-left: 5px;
+    margin-bottom: 24px;
     color: var(--bdk-muted);
+}
+
+.text-block strong {
+    color: var(--bdk-white);
     font-weight: 400;
 }
 
-.navbar-toggle {
-    display: none;
-    align-items: center;
-    gap: 9px;
-    border: 0;
-    background: transparent;
-    color: var(--bdk-white);
-    font: inherit;
-    font-size: 12px;
-    letter-spacing: 0.14em;
+.landing-button {
+    display: inline-block;
+    padding: 16px 34px;
+    border: 1px solid var(--bdk-gold-active);
+    color: var(--bdk-black);
+    background: var(--bdk-gold-active);
+    font-size: 13px;
+    line-height: 1.4;
+    letter-spacing: 0.20em;
     text-transform: uppercase;
-    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
 }
 
-.menu-icon {
-    position: relative;
-    width: 20px;
-    height: 14px;
-    border-top: 2px solid currentColor;
-    border-bottom: 2px solid currentColor;
-}
-
-.menu-icon::before {
-    content: "";
-    position: absolute;
-    top: 4px;
-    left: 0;
-    width: 100%;
-    border-top: 2px solid currentColor;
-}
-
-.navbar-collapse {
-    display: block;
-}
-
-.navbar-nav {
-    display: flex;
-    align-items: center;
-    gap: 2px;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-.navbar-nav > li {
-    margin: 0;
-    padding: 0;
+.landing-button:hover, .landing-button:focus {
+    color: var(--bdk-gold-active);
     background: transparent;
+    border-color: var(--bdk-gold-active);
+    text-decoration: none;
 }
 
-.navbar-nav > li > a {
-    display: block;
-    padding: 23px 17px 21px;
-    border: 0;
+.landing-button.secondary {
+    color: var(--bdk-gold-active);
     background: transparent;
-    color: var(--bdk-white);
-    font-size: 12px;
-    line-height: 20px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    box-shadow: none;
+    border-color: var(--bdk-gold-active);
 }
 
-.navbar-nav > li > a:hover,
-.navbar-nav > li > a:focus,
-.navbar-nav > li.is-active > a {
-    background: transparent;
-    color: var(--bdk-gold);
+.landing-button.secondary:hover, .landing-button.secondary:focus {
+    color: var(--bdk-black);
+    background: var(--bdk-gold-active);
 }
 
-/* HERO */
+.logo-mark {
+    width: 68px;
+    height: 68px;
+    background-color: var(--bdk-gold-active);
+    -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    opacity: 0.94;
+}
 
 .semester-hero {
     position: relative;
     min-height: 100vh;
     overflow: hidden;
+    background: linear-gradient(rgba(5, 5, 5, 0.34), rgba(5, 5, 5, 0.34)),
+                url("/redne-prakse-testna-lekcija.webp") center 44% / cover no-repeat;
     display: flex;
     align-items: center;
-    background: var(--bdk-black);
 }
 
-.semester-hero-video,
-.semester-hero-mobile-image {
+.semester-hero-video {
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -458,351 +350,139 @@ a {
     object-fit: cover;
 }
 
-.semester-hero-mobile-image {
-    display: none;
-}
-
 .semester-hero-overlay {
     position: absolute;
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.12) 0%,
-            rgba(0, 0, 0, 0.20) 56%,
-            rgba(5, 5, 5, 0.60) 86%,
-            var(--bdk-black) 100%
-        ),
-        radial-gradient(circle at center, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.35));
-}
-
-.semester-hero-inner {
-    position: relative;
-    z-index: 2;
-    width: min(1180px, 88vw);
-    margin: 0 auto;
-    padding: 92px 0 72px;
-}
-
-.semester-hero-copy {
-    width: min(1060px, 100%);
-    margin: 0 auto;
-    text-align: center;
-}
-
-.semester-title {
-    margin: 0;
-    color: var(--bdk-white);
-    font-family: "Six Caps", "Arial Narrow", sans-serif;
-    font-size: clamp(72px, 8vw, 128px);
-    font-weight: 400;
-    line-height: 1;
-    letter-spacing: 0.10em;
-    text-transform: uppercase;
-    white-space: nowrap;
-}
-
-.semester-subtitle {
-    margin-top: 30px;
-    color: var(--bdk-gold);
-    font-size: clamp(14px, 1.5vw, 23px);
-    line-height: 1.55;
-    letter-spacing: 0.26em;
-    text-transform: uppercase;
+    background: linear-gradient(
+                    to bottom,
+                    rgba(0, 0, 0, 0.08) 0%,
+                    rgba(0, 0, 0, 0.16) 54%,
+                    rgba(5, 5, 5, 0.54) 86%,
+                    var(--bdk-black) 100%
+                ),
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.18) 50%, rgba(0, 0, 0, 0.38) 100%);
 }
 
 .semester-lead {
     width: min(760px, 88vw);
-    margin: 36px auto 0;
+    margin: 38px auto 0;
     color: var(--bdk-white);
     font-size: 18px;
     line-height: 1.9;
+    text-align: center;
 }
 
 .semester-lead p {
     margin: 0 0 4px;
+    color: var(--bdk-white);
 }
 
 .semester-meta {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 32px;
+    margin-top: 34px;
     color: var(--bdk-muted);
     font-size: 12px;
     line-height: 1.8;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
+}
+
+.semester-meta span {
+    display: inline-block;
 }
 
 .semester-meta span + span::before {
     content: "|";
+    color: var(--bdk-gold-active);
     margin: 0 14px;
-    color: var(--bdk-gold);
 }
 
 .hero-actions {
-    margin-top: 38px;
+    margin-top: 42px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
 }
 
-/* FIRST TRIPTYCH */
-
-.triptych-section {
-    padding: 128px 0 var(--section-space);
-    background: var(--bdk-black);
-}
-
-.triptych-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.92fr) minmax(0, 1.06fr);
-    gap: 18px;
-    align-items: stretch;
-}
-
-.triptych-image,
-.triptych-panel {
-    min-height: 560px;
-}
-
 .triptych-image {
     position: relative;
     overflow: hidden;
-    background: var(--bdk-card);
+    background: var(--bdk-charcoal);
 }
 
 .triptych-image img {
-    position: absolute;
-    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 18% center;
-    filter: grayscale(10%) contrast(1.04) brightness(0.82);
+    filter: grayscale(12%) contrast(1.04) brightness(0.76);
+    transform: scale(1.01);
 }
 
-.triptych-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 1;
-    pointer-events: none;
-    background: linear-gradient(
-        to bottom,
-        rgba(5, 5, 5, 0.02) 0%,
-        rgba(5, 5, 5, 0.10) 42%,
-        rgba(5, 5, 5, 0.64) 74%,
-        rgba(5, 5, 5, 0.92) 100%
-    );
+.triptych-image.left img {
+    object-position: 30% center;
 }
 
-.triptych-card-overlay {
-    position: absolute;
-    inset: auto 0 0;
-    z-index: 2;
-    padding: 36px 34px 32px;
-}
-
-.triptych-card-overlay h3 {
-    margin: 0 0 12px;
-    color: var(--bdk-white);
-    font-size: 20px;
-    line-height: 1.4;
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.triptych-card-time {
-    margin-bottom: 16px;
-    color: var(--bdk-gold);
-    font-size: 11px;
-    line-height: 1.7;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-}
-
-.triptych-card-overlay p {
-    margin: 0;
-    color: rgba(244, 241, 234, 0.82);
-    font-size: 14px;
-    line-height: 1.82;
-}
-
-.inline-location {
-    color: inherit;
-    border-bottom: 1px solid currentColor;
+.triptych-image.right img {
+    object-position: center 38%;
 }
 
 .triptych-panel {
-    padding: 60px 48px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: var(--bdk-card);
-    color: var(--bdk-white);
-    text-align: center;
-}
-
-.logo-mark,
-.build-icon,
-.footer-logo-mark {
-    background-color: var(--bdk-gold);
-    -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
-    mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
-}
-
-.triptych-panel .logo-mark {
-    width: 58px;
-    height: 58px;
-    margin: 0 auto 26px;
-}
-
-.triptych-panel h2 {
-    margin: 0 0 26px;
-    color: var(--bdk-white);
-    font-size: 24px;
-    line-height: 1.34;
-    letter-spacing: 0.19em;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.triptych-claim {
-    max-width: 380px;
-    margin: 0 auto 24px;
-    color: var(--bdk-white);
-    font-size: 16px;
-    line-height: 1.85;
-}
-
-.triptych-panel > p:not(.triptych-claim) {
-    max-width: 360px;
-    margin: 0 auto 18px;
-    color: var(--bdk-white);
-    font-size: 16px;
-    line-height: 1.85;
-}
-
-.panel-facts {
-    width: min(250px, 100%);
-    margin-top: 24px;
-    padding-top: 24px;
-    border-top: 1px solid rgba(185, 166, 106, 0.48);
-    color: var(--bdk-white);
-    font-size: 11px;
-    line-height: 1.9;
-    letter-spacing: 0.17em;
-    text-transform: uppercase;
-}
-
-.panel-button {
-    margin-top: 28px;
-    padding: 14px 30px;
-}
-
-/* AUDIENCE */
-
-.audience-section {
-    padding: var(--section-space) 0;
-    background: var(--bdk-black);
-}
-
-.audience-title {
-    max-width: 1040px;
-    margin: 0 auto 68px;
-    color: var(--bdk-white);
-    font-size: 24px;
-    line-height: 1.55;
-    letter-spacing: 0.12em;
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.audience-grid,
-.registration-steps,
-.price-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    background: transparent;
-}
-
-.audience-card,
-.registration-card,
-.price-card,
-.build-card {
-    background: var(--bdk-card);
-}
-
-.audience-card {
-    min-height: 360px;
-    padding: 62px 44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.audience-card + .audience-card,
-.registration-card + .registration-card,
-.price-card + .price-card,
-.build-card + .build-card {
-    border-left: 1px solid var(--bdk-line);
-}
-
-.audience-icon {
     position: relative;
-    width: 36px;
-    height: 36px;
-    margin-bottom: 28px;
-    border: 1px solid var(--bdk-gold);
-    border-radius: 50%;
+    padding: 62px 54px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--bdk-gold-active);
+    color: var(--bdk-black);
+    text-align: center;
+    overflow: hidden;
+}
+
+.triptych-panel::before {
+    content: "";
+    position: absolute;
+    inset: 36px;
+    border: 1px solid rgba(5, 5, 5, 0.18);
+    pointer-events: none;
+}
+
+.triptych-panel p {
+    position: relative;
+    margin: 0 auto 18px;
+    max-width: 420px;
+    color: rgba(5, 5, 5, 0.86);
+    font-size: 16px;
+    line-height: 1.95;
 }
 
 .audience-icon::after {
     content: "";
     position: absolute;
-    inset: 9px;
-    background-color: var(--bdk-gold);
+    left: 50%;
+    top: 50%;
+    width: 16px;
+    height: 16px;
+    transform: translate(-50%, -50%);
+    background: var(--bdk-gold-active);
     -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
     mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
 }
 
-.audience-card h3 {
-    margin: 0 0 22px;
-    color: var(--bdk-white);
-    font-size: 17px;
-    line-height: 1.55;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.audience-card p {
-    margin: 0;
-    color: var(--bdk-muted);
-    font-size: 15px;
-    line-height: 1.9;
-}
-
-/* WHAT IS BUDOKON */
-
-.split-feature-section {
-    padding: var(--section-space) 0;
-    background: var(--bdk-black);
-}
-
 .split-feature {
-    min-height: 620px;
     display: grid;
     grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
+    gap: 0;
+    min-height: 620px;
     background: var(--bdk-charcoal);
+}
+
+.split-feature.reverse {
+    grid-template-columns: minmax(420px, 0.88fr) minmax(0, 1.12fr);
 }
 
 .split-feature-image {
@@ -818,183 +498,21 @@ a {
 }
 
 .split-feature-copy {
-    padding: 80px 72px;
+    padding: 82px 76px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-left: 1px solid var(--bdk-line-soft);
 }
 
-.split-feature-copy .editorial-title {
-    margin-bottom: 52px;
+.split-feature.reverse .split-feature-copy {
+    border-left: 0;
+    border-right: 1px solid var(--bdk-line-soft);
 }
 
-.split-feature-copy p {
-    margin: 0 0 24px;
-    color: var(--bdk-muted);
-    font-size: 16px;
-    line-height: 2;
-}
-
-.split-feature-copy p:last-child {
-    margin-bottom: 0;
-}
-
-/* TEST PRACTICE */
-
-.test-section {
-    padding: var(--section-space) 0 0;
-    background: var(--bdk-black);
-}
-
-.test-hero {
-    position: relative;
-    min-height: 720px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: url("/redne-prakse-testna-lekcija.webp") center 44% / cover no-repeat;
-}
-
-.test-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background:
-        linear-gradient(
-            to right,
-            rgba(5, 5, 5, 0.84) 0%,
-            rgba(5, 5, 5, 0.58) 46%,
-            rgba(5, 5, 5, 0.32) 100%
-        ),
-        linear-gradient(
-            to bottom,
-            #050505 0%,
-            #050505 7%,
-            rgba(5, 5, 5, 0.94) 12%,
-            rgba(5, 5, 5, 0.56) 28%,
-            rgba(5, 5, 5, 0.36) 68%,
-            rgba(5, 5, 5, 0.82) 91%,
-            #050505 100%
-        );
-}
-
-.test-copy {
-    position: relative;
-    z-index: 1;
-    width: min(1280px, 92vw);
-    margin: 0 auto;
-    padding: 128px 0;
-}
-
-.test-copy > * {
-    max-width: 610px;
-}
-
-.test-copy .editorial-title {
-    margin-bottom: 52px;
-}
-
-.test-copy p {
-    margin: 0 0 24px;
-    color: var(--bdk-white);
-    font-size: 17px;
-    line-height: 1.9;
-}
-
-.test-copy .landing-button {
-    margin-top: 10px;
-}
-
-/* REGISTRATION */
-
-.registration-steps-section {
-    padding: var(--section-space) 0;
-    background: var(--bdk-black);
-}
-
-.registration-steps-section .editorial-shell.narrow {
-    width: min(1320px, 92vw);
-}
-
-.registration-card {
-    min-height: 360px;
-    padding: 62px 44px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.registration-number {
-    display: block;
-    margin-bottom: 28px;
-    color: var(--bdk-gold);
-    font-size: 18px;
-    line-height: 1;
-    letter-spacing: 0.16em;
-}
-
-.registration-card h4 {
-    margin: 0 0 22px;
-    color: var(--bdk-white);
-    font-size: 17px;
-    line-height: 1.55;
-    letter-spacing: 0.13em;
-    text-transform: uppercase;
-    font-weight: 400;
-}
-
-.registration-card p {
-    margin: 0;
-    color: var(--bdk-muted);
-    font-size: 15px;
-    line-height: 1.9;
-}
-
-.test-date-panel {
-    margin-top: 64px;
-    text-align: center;
-}
-
-.test-date-title {
-    margin-bottom: 24px;
-    color: var(--bdk-gold);
-    font-size: 12px;
-    line-height: 1.6;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-}
-
-.test-date-line {
-    margin: 0;
-    color: var(--bdk-muted);
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.test-date-line strong {
+.split-feature-copy strong {
     color: var(--bdk-white);
     font-weight: 400;
-    letter-spacing: 0.08em;
-}
-
-.test-date-divider {
-    margin: 0 14px;
-    color: var(--bdk-gold);
-}
-
-.registration-action {
-    margin-top: 50px;
-    text-align: center;
-}
-
-/* SEMESTER */
-
-.semester-section {
-    padding: var(--section-space) 0;
-    background: var(--bdk-black);
 }
 
 .semester-editorial {
@@ -1004,12 +522,7 @@ a {
     align-items: start;
 }
 
-.semester-intro .editorial-title {
-    margin-bottom: 52px;
-}
-
 .semester-intro p {
-    margin: 0;
     color: var(--bdk-muted);
     font-size: 17px;
     line-height: 2;
@@ -1020,15 +533,16 @@ a {
     grid-template-columns: 240px 1fr;
     gap: 42px;
     padding: 30px 0;
+    border-bottom: 1px solid var(--bdk-line-soft);
     align-items: baseline;
 }
 
-.semester-row:not(:last-child) {
-    border-bottom: 1px solid var(--bdk-line-soft);
+.semester-row:last-child {
+    border-bottom: 0;
 }
 
 .semester-label {
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.22em;
@@ -1041,18 +555,8 @@ a {
     line-height: 1.8;
 }
 
-/* TERMS AND PRICE */
-
 .terms-price-section {
     background: var(--bdk-black);
-}
-
-.terms-image-panel {
-    position: relative;
-    min-height: 700px;
-    overflow: hidden;
-    padding: var(--section-space) 0 150px;
-    background: url("/redne-prakse-semester.webp") center 44% / cover no-repeat;
 }
 
 .terms-image-panel::before {
@@ -1060,41 +564,15 @@ a {
     position: absolute;
     inset: 0;
     z-index: 0;
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(5, 5, 5, 0.66) 0%,
-            rgba(5, 5, 5, 0.40) 34%,
-            rgba(5, 5, 5, 0.44) 64%,
-            rgba(5, 5, 5, 0.80) 89%,
-            var(--bdk-black) 100%
-        ),
-        radial-gradient(circle at center, rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.50));
-}
-
-.terms-image-panel .editorial-shell {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
-    gap: 88px;
-    align-items: start;
-}
-
-.terms-image-panel .section-title {
-    grid-column: 2;
-    grid-row: 1;
-    margin: 0;
-    color: var(--bdk-white);
-    font-size: clamp(34px, 4.2vw, 58px);
-    line-height: 1.08;
-    letter-spacing: 0.08em;
-    text-align: right;
-}
-
-.schedule-panel {
-    grid-column: 1;
-    grid-row: 1;
+    background: linear-gradient(
+                    to bottom,
+                    rgba(5, 5, 5, 0.64) 0%,
+                    rgba(5, 5, 5, 0.38) 32%,
+                    rgba(5, 5, 5, 0.42) 62%,
+                    rgba(5, 5, 5, 0.78) 88%,
+                    var(--bdk-black) 100%
+                ),
+                radial-gradient(circle at center, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.36) 58%, rgba(0, 0, 0, 0.58) 100%);
 }
 
 .schedule-row {
@@ -1102,14 +580,12 @@ a {
     grid-template-columns: 180px 1fr;
     gap: 44px;
     padding: 32px 0;
-}
-
-.schedule-row:first-child {
     border-bottom: 1px solid var(--bdk-line);
+    align-items: start;
 }
 
 .schedule-day {
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 14px;
     line-height: 1.7;
     letter-spacing: 0.22em;
@@ -1123,18 +599,28 @@ a {
     line-height: 1.75;
 }
 
+.schedule-practice-name {
+    color: var(--bdk-white);
+}
+
 .schedule-location {
     display: inline-block;
     margin-top: 10px;
-    border-bottom: 1px solid rgba(185, 166, 106, 0.48);
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 14px;
     line-height: 1.7;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid rgba(185, 166, 106, 0.48);
+}
+
+.schedule-location:hover, .schedule-location:focus {
+    color: var(--bdk-white);
+    border-bottom-color: var(--bdk-white);
 }
 
 .schedule-test-date {
     margin-top: 10px;
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 11px;
     line-height: 1.7;
     letter-spacing: 0.14em;
@@ -1150,32 +636,9 @@ a {
     font-style: normal;
 }
 
-.price-section {
-    padding: var(--section-space) 0;
-    background: var(--bdk-black);
-}
-
-.price-section .editorial-shell.narrow {
-    width: min(1320px, 92vw);
-}
-
-.price-section .section-title {
-    color: var(--bdk-white);
-}
-
-.price-card {
-    min-height: 320px;
-    padding: 58px 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
 .price-card h3 {
     margin: 0 0 20px;
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 13px;
     line-height: 1.6;
     letter-spacing: 0.22em;
@@ -1184,6 +647,7 @@ a {
 }
 
 .price-card .price {
+    display: block;
     margin-bottom: 14px;
     color: var(--bdk-white);
     font-size: 36px;
@@ -1197,63 +661,27 @@ a {
     line-height: 1.8;
 }
 
-.price-note {
-    max-width: 780px;
-    margin: 58px auto 0;
-    color: var(--bdk-muted);
-    font-size: 15px;
-    line-height: 1.9;
-    text-align: center;
+.build-heading-row .text-block {
+    font-size: 17px;
 }
 
-/* BUILD */
-
-.build-section {
-    padding: var(--section-space) 0;
-    background: var(--bdk-black);
-}
-
-.build-heading-row {
-    display: grid;
-    grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.2fr);
-    gap: 86px;
-    align-items: end;
-    margin-bottom: 64px;
-}
-
-.build-mosaic {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-}
-
-.build-card {
-    min-height: 390px;
-    padding: 54px 36px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.build-icon {
-    width: 34px;
-    height: 34px;
-    margin-bottom: 28px;
-    opacity: 0.72;
+.build-card.gold {
+    background: var(--bdk-gold-active);
+    color: var(--bdk-black);
 }
 
 .build-card h3 {
-    margin: 0 0 24px;
+    margin: 0 0 26px;
     color: var(--bdk-white);
     font-size: 18px;
     line-height: 1.5;
-    letter-spacing: 0.17em;
+    letter-spacing: 0.19em;
     text-transform: uppercase;
     font-weight: 400;
 }
 
-.build-card h3 span {
-    display: inline-block;
-    margin-top: 5px;
+.build-card.gold h3 {
+    color: var(--bdk-black);
 }
 
 .build-card p {
@@ -1263,15 +691,8 @@ a {
     line-height: 1.9;
 }
 
-/* PRACTICES */
-
-.practices-section {
-    padding: var(--section-space) 0;
-    background: var(--bdk-black);
-}
-
-.practices-section .section-title {
-    color: var(--bdk-white);
+.build-card.gold p {
+    color: rgba(5, 5, 5, 0.86);
 }
 
 .practice-editorial-grid {
@@ -1296,14 +717,6 @@ a {
     filter: grayscale(14%) contrast(1.05) brightness(0.75);
 }
 
-.practice-editorial-card:first-child .practice-editorial-image img {
-    object-position: 30% center;
-}
-
-.practice-editorial-card:nth-child(2) .practice-editorial-image img {
-    object-position: center 38%;
-}
-
 .practice-editorial-copy {
     padding: 48px 44px 54px;
 }
@@ -1320,7 +733,7 @@ a {
 
 .practice-time {
     margin-bottom: 20px;
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 12px;
     line-height: 1.7;
     letter-spacing: 0.18em;
@@ -1338,59 +751,78 @@ a {
 
 .practice-tags span + span::before {
     content: "·";
+    color: var(--bdk-gold-active);
     margin: 0 10px;
-    color: var(--bdk-gold);
 }
 
 .practice-editorial-copy p {
-    margin: 0 0 18px;
     color: var(--bdk-muted);
     font-size: 15px;
     line-height: 1.9;
+    margin-bottom: 18px;
 }
 
-.practice-detail-action {
-    margin-top: 42px;
-    text-align: center;
+.inline-location {
+    color: inherit;
+    border-bottom: 1px solid currentColor;
 }
 
-/* TEACHER */
-
-.teacher-section {
-    padding: var(--section-space) 0;
-    background: var(--bdk-black);
+.practice-time .inline-location {
+    color: var(--bdk-gold-active);
 }
 
-.teacher-panel {
-    display: grid;
-    grid-template-columns: minmax(280px, 0.36fr) minmax(0, 0.64fr);
-    background: var(--bdk-charcoal);
+.practice-time .inline-location:hover, .practice-time .inline-location:focus {
+    color: var(--bdk-white);
+    border-bottom-color: var(--bdk-white);
 }
 
-.teacher-image {
-    min-height: 520px;
-    overflow: hidden;
+.registration-step {
+    padding: 42px 38px;
 }
 
-.teacher-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 60% center;
-    filter: grayscale(12%) contrast(1.04) brightness(0.78);
+.registration-step + .registration-step {
+    border-left: 1px solid var(--bdk-line);
 }
 
-.teacher-copy {
-    padding: 44px 52px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-left: 1px solid var(--bdk-line-soft);
+.registration-step h4 {
+    margin: 0 0 14px;
+    color: var(--bdk-white);
+    font-size: 14px;
+    line-height: 1.55;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.registration-step p {
+    margin: 0;
+    color: var(--bdk-muted);
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+.test-date-line {
+    margin: 0;
+    color: var(--bdk-muted);
+    font-size: 14px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+}
+
+.test-date-line strong {
+    color: var(--bdk-white);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+}
+
+.test-date-divider {
+    margin: 0 14px;
+    color: var(--bdk-gold-active);
 }
 
 .teacher-kicker {
     margin-bottom: 18px;
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 12px;
     line-height: 1.5;
     letter-spacing: 0.26em;
@@ -1398,68 +830,94 @@ a {
 }
 
 .teacher-name {
-    margin: 0 0 28px;
+    margin: 0 0 30px;
     color: var(--bdk-white);
-    font-size: clamp(28px, 3.2vw, 42px);
+    font-family: "Futura", "Montserrat", sans-serif;
+    font-size: clamp(28px, 3.2vw, 44px);
     font-weight: 400;
-    line-height: 1.2;
+    line-height: 1.18;
+    letter-spacing: 0.04em;
 }
 
 .teacher-name span {
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
 }
 
 .teacher-text {
     color: var(--bdk-muted);
     font-size: 15px;
-    line-height: 1.9;
+    line-height: 1.95;
 }
 
 .teacher-text p {
-    margin: 0 0 22px;
+    margin-bottom: 22px;
+    color: var(--bdk-muted);
+}
+
+.teacher-text p:last-child {
+    margin-bottom: 0;
+}
+
+.teacher-text strong {
+    color: var(--bdk-white);
+    font-weight: 400;
 }
 
 .teacher-text a {
+    color: var(--bdk-gold-active);
+    text-decoration: none;
     border-bottom: 1px solid rgba(185, 166, 106, 0.46);
 }
 
+.teacher-text a:hover, .teacher-text a:focus {
+    color: var(--bdk-white);
+    border-bottom-color: var(--bdk-white);
+}
+
 .teacher-stats {
-    margin-top: 26px;
-    padding-top: 24px;
+    margin-top: 30px;
+    padding-top: 26px;
     border-top: 1px solid var(--bdk-line-soft);
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 12px;
     line-height: 1.7;
-    letter-spacing: 0.14em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
 }
 
+.teacher-stats-line, .teacher-stats-training {
+    white-space: nowrap;
+}
+
 .teacher-stats-line span {
-    margin: 0 12px;
     color: var(--bdk-white);
+    margin: 0 12px;
 }
 
 .teacher-stats-training {
     margin-top: 8px;
     color: var(--bdk-muted);
+    letter-spacing: 0.12em;
 }
 
-/* TESTIMONIALS */
-
 .testimonials-section {
-    padding: var(--section-space) 0;
+    padding: 118px 0;
     background: var(--bdk-black);
 }
 
 .testimonials-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--bdk-line);
+    border-bottom: 1px solid var(--bdk-line);
 }
 
 .testimonial-card {
+    min-height: 100%;
     padding: 44px 42px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .testimonial-card + .testimonial-card {
@@ -1467,25 +925,23 @@ a {
 }
 
 .testimonial-text {
-    margin: 0 0 30px;
     color: var(--bdk-muted);
     font-size: 15px;
     line-height: 1.9;
+    margin: 0 0 30px;
 }
 
 .testimonial-name {
-    margin-top: auto;
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 12px;
-    line-height: 1.6;
     letter-spacing: 0.22em;
+    line-height: 1.6;
     text-transform: uppercase;
+    margin-top: auto;
 }
 
-/* FAQ */
-
 .faq-section {
-    padding: var(--section-space) 0;
+    padding: 118px 0 96px;
     background: var(--bdk-black);
 }
 
@@ -1498,20 +954,17 @@ a {
 
 .faq-item {
     padding: 28px 0;
-}
-
-.faq-item + .faq-item {
-    border-top: 1px solid var(--bdk-line);
+    border-bottom: 1px solid var(--bdk-line);
 }
 
 .faq-question {
     margin: 0 0 12px;
     color: var(--bdk-white);
     font-size: 15px;
+    font-weight: 400;
     line-height: 1.6;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    font-weight: 400;
 }
 
 .faq-answer {
@@ -1521,20 +974,9 @@ a {
     line-height: 1.9;
 }
 
-/* FINAL CTA AND FOOTER */
-
-.final-cta {
+.final-cta .editorial-shell {
     position: relative;
-    padding: var(--section-space) 0;
-    overflow: hidden;
-    background:
-        linear-gradient(rgba(5, 5, 5, 0.74), rgba(5, 5, 5, 0.82)),
-        url("/leteca-bojevnica.webp") center 36% / cover no-repeat;
-    text-align: center;
-}
-
-.final-cta .section-title {
-    color: var(--bdk-white);
+    z-index: 1;
 }
 
 .final-cta p {
@@ -1549,55 +991,72 @@ a {
     margin-top: 20px;
 }
 
-.contact-prompt a {
-    border-bottom: 1px solid rgba(185, 166, 106, 0.46);
-}
-
-.landing-footer {
-    padding: 76px 0 60px;
+footer.landing-footer {
+    padding: 78px 0 62px;
     border-top: 1px solid var(--bdk-line-soft);
-    background: var(--bdk-black);
     color: var(--bdk-muted);
     text-align: center;
+    background: var(--bdk-black);
 }
 
 .footer-logo-mark {
     width: 72px;
     height: 72px;
     margin: 0 auto 28px;
+    background-color: var(--bdk-gold-active);
+    -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    opacity: 0.92;
 }
 
 .footer-brand {
-    margin-bottom: 12px;
     color: var(--bdk-white);
     font-size: 15px;
     letter-spacing: 0.28em;
     text-transform: uppercase;
+    margin-bottom: 12px;
 }
 
 .footer-subtitle {
-    margin-bottom: 34px;
-    color: var(--bdk-gold);
+    color: var(--bdk-gold-active);
     font-size: 12px;
     letter-spacing: 0.22em;
     text-transform: lowercase;
+    margin-bottom: 34px;
 }
 
 .footer-contact {
-    margin-bottom: 28px;
+    color: var(--bdk-muted);
     font-size: 14px;
     line-height: 1.9;
+    margin-bottom: 28px;
+}
+
+.footer-contact a {
+    color: var(--bdk-gold-active);
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    color: var(--bdk-white);
+    text-decoration: none;
 }
 
 .footer-links {
-    margin-bottom: 28px;
     font-size: 12px;
     letter-spacing: 0.18em;
     text-transform: uppercase;
+    margin-bottom: 28px;
 }
 
 .footer-links a {
     color: var(--bdk-white);
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--bdk-gold-active);
+    text-decoration: none;
 }
 
 .footer-links span {
@@ -1612,68 +1071,1134 @@ a {
     text-transform: uppercase;
 }
 
-/* TABLET */
-
-@media (max-width: 1100px) {
+@media (max-width: 1180px) {
     .triptych-grid {
         grid-template-columns: 1fr;
-        max-width: 680px;
-        margin: 0 auto;
     }
 
-    .triptych-image,
+    .triptych-image, .triptych-panel {
+        min-height: 420px;
+    }
+
     .triptych-panel {
-        min-height: 520px;
+        padding: 58px 42px;
     }
 
     .build-mosaic {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .build-card:nth-child(3) {
-        border-top: 1px solid var(--bdk-line);
-        border-left: 0;
+    .semester-editorial, .build-heading-row, .faq-layout {
+        grid-template-columns: 1fr;
+        gap: 44px;
     }
 
-    .build-card:nth-child(4) {
+    .schedule-panel {
+        margin-left: 0;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 900px) {
+    .semester-hero {
+        min-height: 90vh;
+    }
+
+    .semester-hero-inner {
+        width: min(92vw, 680px);
+        padding-top: 90px;
+    }
+
+    .semester-meta {
+        display: block;
+        line-height: 2.1;
+    }
+
+    .semester-meta span {
+        display: block;
+    }
+
+    .semester-meta span + span::before {
+        content: "";
+        margin: 0;
+    }
+
+    .audience-grid, .price-grid, .practice-editorial-grid, .testimonials-grid, .registration-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-card + .audience-card, .testimonial-card + .testimonial-card, .registration-step + .registration-step {
+        border-left: 0;
         border-top: 1px solid var(--bdk-line);
     }
+
+    .split-feature, .split-feature.reverse, .teacher-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .split-feature-copy, .split-feature.reverse .split-feature-copy, .teacher-copy {
+        border-left: 0;
+        border-right: 0;
+        border-top: 1px solid var(--bdk-line-soft);
+    }
+
+    .split-feature-image, .teacher-image {
+        min-height: 460px;
+    }
+
+    .split-feature-copy, .teacher-copy {
+        padding: 58px 46px;
+    }
+
+    .schedule-row, .semester-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .terms-image-panel {
+        min-height: 640px;
+        padding-top: 90px;
+        padding-bottom: 168px;
+    }
+
+    .price-section {
+        padding-top: 42px;
+        padding-bottom: 90px;
+    }
+
+}
+
+@media (max-width: 560px) {
+    .editorial-shell, .editorial-shell.narrow {
+        width: min(88vw, 430px);
+    }
+
+    .navbar-custom .navbar-brand {
+        font-size: 16px;
+    }
+
+    .semester-hero {
+        min-height: calc(100vh - 56px);
+        min-height: calc(100svh - 56px);
+        margin-top: 56px;
+    }
+
+    .semester-hero-overlay {
+        background: linear-gradient(
+                        to bottom,
+                        rgba(0, 0, 0, 0.16) 0%,
+                        rgba(0, 0, 0, 0.30) 56%,
+                        rgba(5, 5, 5, 0.70) 86%,
+                        var(--bdk-black) 100%
+                    ),
+                    radial-gradient(circle at center, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.30) 50%, rgba(0, 0, 0, 0.58) 100%);
+    }
+
+    .semester-hero-inner {
+        padding-top: 78px;
+        padding-bottom: 74px;
+    }
+
+    .semester-subtitle {
+        margin-top: 24px;
+        font-size: 13px;
+        letter-spacing: 0.20em;
+    }
+
+    .semester-lead {
+        margin-top: 32px;
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .hero-actions {
+        margin-top: 34px;
+    }
+
+    .landing-button {
+        width: 100%;
+        max-width: 360px;
+        text-align: center;
+        padding: 15px 20px;
+        letter-spacing: 0.16em;
+    }
+
+    .triptych-image, .triptych-panel {
+        min-height: 360px;
+    }
+
+    .triptych-panel::before {
+        inset: 22px;
+    }
+
+    .section-title, .section-title.left {
+        font-size: 20px;
+        letter-spacing: 0.16em;
+        margin-bottom: 36px;
+        text-align: center;
+    }
+
+    .editorial-title {
+        font-size: 34px;
+        text-align: center;
+    }
+
+    .editorial-kicker {
+        text-align: center;
+    }
+
+    .split-feature-image, .teacher-image {
+        min-height: 340px;
+    }
+
+    .split-feature-copy, .teacher-copy {
+        padding: 46px 28px;
+    }
+
+    .build-heading-row {
+        margin-bottom: 46px;
+    }
+
+    .build-mosaic {
+        grid-template-columns: 1fr;
+    }
+
+    .build-card {
+        min-height: auto;
+        padding: 40px 28px;
+    }
+
+    .practice-editorial-image {
+        height: 270px;
+    }
+
+    .practice-editorial-copy {
+        padding: 40px 28px 46px;
+    }
+
+    .practice-editorial-copy h3 {
+        font-size: 20px;
+        letter-spacing: 0.15em;
+    }
+
+    .registration-step {
+        padding: 30px 0;
+    }
+
+    .test-date-divider {
+        display: block;
+        height: 0;
+        margin: 8px 0;
+        overflow: hidden;
+    }
+
+    .terms-image-panel {
+        min-height: 590px;
+        padding-top: 78px;
+        padding-bottom: 146px;
+    }
+
+    .price-section {
+        padding-top: 36px;
+        padding-bottom: 78px;
+    }
+
+    .teacher-name {
+        font-size: 32px;
+    }
+
+    .teacher-stats {
+        font-size: 10px;
+        letter-spacing: 0.05em;
+    }
+
+    .teacher-stats-line, .teacher-stats-training {
+        white-space: normal;
+    }
+
+    .teacher-stats-line span {
+        margin: 0 8px;
+    }
+
+    .testimonial-card {
+        padding: 34px 0;
+    }
+
+    .faq-question {
+        font-size: 13px;
+        letter-spacing: 0.13em;
+    }
+
+    .faq-answer {
+        font-size: 15px;
+    }
+
+    .footer-logo-mark {
+        width: 64px;
+        height: 64px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    .semester-hero-video {
+        display: none;
+    }
+
+    .landing-button, a {
+        transition: none;
+    }
+
+}
+
+.semester-hero-inner {
+    position: relative;
+    z-index: 2;
+    width: min(1480px, 91vw);
+    margin: 0 auto;
+    padding-top: 92px;
+    width: min(1180px, 88vw);
+    padding-top: 86px;
+}
+
+.semester-hero-copy {
+    width: min(1120px, 100%);
+    margin: 0 auto;
+    text-align: center;
+    max-width: 980px;
+}
+
+.semester-title {
+    margin: 0;
+    font-family: "Six Caps", "Arial Narrow", sans-serif;
+    font-weight: 400;
+    font-size: clamp(82px, 9.6vw, 176px);
+    line-height: 0.86;
+    letter-spacing: 0.10em;
+    color: var(--bdk-white);
+    text-transform: uppercase;
+    font-size: clamp(72px, 8vw, 128px);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.semester-subtitle {
+    margin-top: 30px;
+    color: var(--bdk-gold-active);
+    font-size: clamp(13px, 1.55vw, 24px);
+    line-height: 1.55;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: clamp(14px, 1.5vw, 23px);
+    letter-spacing: 0.26em;
+}
+
+.triptych-grid {
+    display: grid;
+    gap: 18px;
+    align-items: stretch;
+    grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.92fr) minmax(0, 1.06fr);
+}
+
+.triptych-image, .triptych-panel {
+    min-height: 560px;
+}
+
+.triptych-practice-card {
+    position: relative;
+}
+
+.triptych-practice-card img {
+    position: absolute;
+    inset: 0;
+}
+
+.triptych-practice-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(
+            to bottom,
+            rgba(5, 5, 5, 0.04) 0%,
+            rgba(5, 5, 5, 0.10) 40%,
+            rgba(5, 5, 5, 0.62) 72%,
+            rgba(5, 5, 5, 0.90) 100%
+        );
+    pointer-events: none;
+}
+
+.triptych-card-overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    padding: 38px 36px 34px;
+}
+
+.triptych-card-overlay h3 {
+    margin: 0 0 13px;
+    color: var(--bdk-white);
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.triptych-card-time {
+    margin-bottom: 16px;
+    color: var(--bdk-gold-active);
+    font-size: 11px;
+    line-height: 1.7;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.triptych-card-time .inline-location {
+    color: var(--bdk-gold-active);
+}
+
+.triptych-card-overlay p {
+    margin: 0;
+    color: rgba(244, 241, 234, 0.80);
+    font-size: 14px;
+    line-height: 1.82;
+}
+
+.triptych-panel-gray {
+    background: #b8b5ad;
+    color: #050505;
+}
+
+.triptych-panel-gray::before {
+    border-color: rgba(5, 5, 5, 0.18);
+}
+
+.triptych-panel-gray .logo-mark {
+    background-color: #050505;
+}
+
+.triptych-panel-gray h2, .triptych-panel-gray p, .triptych-panel-gray strong, .triptych-panel-gray .panel-facts {
+    color: #050505;
+}
+
+.triptych-claim {
+    margin-bottom: 24px;
+}
+
+.triptych-panel-gray .panel-button {
+    color: #050505;
+    border-color: rgba(5, 5, 5, 0.70);
+}
+
+.triptych-panel-gray .panel-button:hover, .triptych-panel-gray .panel-button:focus {
+    background: #050505;
+    color: #b8b5ad;
+}
+
+.audience-grid-five {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.audience-grid-five .audience-card {
+    padding: 34px 28px;
+}
+
+.practice-detail-action {
+    margin-top: 42px;
+    text-align: center;
+}
+
+.price-note .landing-button {
+    margin-top: 20px;
+}
+
+.testimonials-section .section-title {
+    margin-bottom: 54px;
+}
+
+.triptych-section, .audience-section, .semester-section, .build-section, .teacher-section, .testimonials-section, .faq-section, .registration-steps-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
+}
+
+.split-feature-section, .practices-section {
+    padding-bottom: 96px;
+}
+
+@media (max-width: 1180px) {
+    .audience-grid-five {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .audience-grid-five .audience-card + .audience-card {
+        border-left: 0;
+        border-top: 1px solid var(--bdk-line);
+    }
+
 }
 
 @media (max-width: 900px) {
     .semester-title {
+        font-size: clamp(68px, 18vw, 116px);
+        letter-spacing: 0.08em;
         white-space: normal;
     }
 
-    .audience-grid,
-    .registration-steps,
-    .price-grid,
-    .practice-editorial-grid,
-    .testimonials-grid {
+    .audience-grid-five {
         grid-template-columns: 1fr;
     }
 
-    .audience-card + .audience-card,
-    .registration-card + .registration-card,
-    .price-card + .price-card,
-    .testimonial-card + .testimonial-card {
-        border-top: 1px solid var(--bdk-line);
-        border-left: 0;
+}
+
+@media (max-width: 560px) {
+    .semester-title {
+        line-height: 1.05;
+        letter-spacing: 0.08em;
+        font-size: clamp(58px, 18vw, 92px);
+        white-space: normal;
     }
 
-    .split-feature,
-    .semester-editorial,
-    .teacher-panel,
-    .faq-layout,
-    .build-heading-row {
+    .triptych-card-overlay {
+        padding: 30px 26px 27px;
+    }
+
+    .triptych-panel {
+        padding: 52px 30px;
+    }
+
+    .triptych-section, .audience-section, .semester-section, .build-section, .teacher-section, .testimonials-section, .faq-section, .registration-steps-section {
+        padding-top: 78px;
+        padding-bottom: 78px;
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    .split-feature-section, .practices-section {
+        padding-bottom: 78px;
+        padding-bottom: 72px;
+    }
+
+}
+
+.triptych-panel, .triptych-panel-gray {
+    background: #f1efe9;
+    color: #050505;
+    padding: 62px 54px;
+}
+
+.triptych-panel::before, .triptych-panel-gray::before {
+    display: none;
+}
+
+.triptych-panel h2, .triptych-panel-gray h2 {
+    margin: 0 0 22px;
+    color: #050505;
+    font-size: 24px;
+    line-height: 1.34;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.triptych-panel p, .triptych-panel-gray p, .triptych-panel strong, .triptych-panel-gray strong {
+    color: #050505;
+}
+
+.triptych-panel .panel-button:hover, .triptych-panel .panel-button:focus {
+    background: var(--bdk-black);
+    color: var(--bdk-gold-active);
+    border-color: var(--bdk-black);
+    background: transparent;
+    color: #050505;
+    border-color: #050505;
+}
+
+.audience-grid, .audience-grid-five {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    border: 0;
+    background: transparent;
+}
+
+.audience-note {
+    margin-top: 38px;
+    color: var(--bdk-gold-active);
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.7;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    margin-top: 40px;
+}
+
+@media (max-width: 1180px) {
+    .audience-grid, .audience-grid-five {
         grid-template-columns: 1fr;
-        gap: 48px;
     }
 
-    .split-feature-copy,
-    .teacher-copy {
-        border-top: 1px solid var(--bdk-line-soft);
+    .audience-card + .audience-card {
         border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.30);
+    }
+
+}
+
+@media (max-width: 560px) {
+    .triptych-panel, .triptych-panel-gray {
+        padding: 48px 28px;
+    }
+
+    .audience-section {
+        padding-top: 72px;
+        padding-bottom: 76px;
+    }
+
+    .audience-card p {
+        font-size: 15px;
+        line-height: 1.9;
+    }
+
+}
+
+.triptych-panel .logo-mark, .triptych-panel-gray .logo-mark {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 30px;
+    background-color: #050505;
+    opacity: 0.82;
+    background-color: var(--bdk-gold-active);
+    opacity: 1;
+}
+
+.triptych-panel .panel-button, .triptych-panel-gray .panel-button {
+    background: #050505;
+    border-color: #050505;
+    color: var(--bdk-gold-active);
+}
+
+.triptych-panel .panel-button:hover, .triptych-panel .panel-button:focus, .triptych-panel-gray .panel-button:hover, .triptych-panel-gray .panel-button:focus {
+    background: #050505;
+    color: var(--bdk-white);
+    border-color: #050505;
+}
+
+.audience-grid {
+    border-top: 1px solid var(--bdk-line);
+    border-bottom: 1px solid var(--bdk-line);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+    margin: 0 auto;
+    border: 0;
+    background: transparent;
+}
+
+.audience-card {
+    min-height: 210px;
+    padding: 38px 38px 34px;
+    min-height: 300px;
+    padding: 58px 42px;
+    align-items: center;
+    background: #0c0c0c;
+    min-height: 360px;
+    padding: 64px 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background: #0b0b0b;
+}
+
+.audience-card:nth-child(2) {
+    background: #111111;
+    background: #101010;
+}
+
+.audience-card:nth-child(3) {
+    background: #151515;
+}
+
+.audience-card + .audience-card {
+    border-left: 1px solid var(--bdk-line);
+    border-left: 1px solid rgba(185, 166, 106, 0.30);
+    border-left: 1px solid rgba(185, 166, 106, 0.28);
+    border-top: 0;
+}
+
+.audience-icon {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 26px;
+    border: 1px solid var(--bdk-gold-active);
+    border-radius: 50%;
+    position: relative;
+    width: 34px;
+    height: 34px;
+    margin: 0 0 28px;
+    background-color: var(--bdk-gold-active);
+    -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    opacity: 0.72;
+}
+
+.audience-card h3 {
+    margin: 0 0 18px;
+    font-size: 14px;
+    letter-spacing: 0.18em;
+    margin: 0 0 22px;
+    color: var(--bdk-white);
+    font-size: 17px;
+    line-height: 1.55;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.audience-card p {
+    font-size: 16px;
+    line-height: 1.95;
+    margin: 0;
+    color: var(--bdk-muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+@media (max-width: 1000px) {
+    .audience-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .audience-card + .audience-card {
+        border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+    }
+
+}
+
+@media (max-width: 560px) {
+    .audience-card {
+        padding: 34px 0;
+        padding: 42px 28px;
+        min-height: auto;
+        padding: 46px 28px;
+    }
+
+    .audience-card h3 {
+        font-size: 15px;
+    }
+
+    .split-feature-copy .editorial-title {
+        margin-bottom: 38px;
+    }
+
+}
+
+.triptych-panel .logo-mark {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 34px;
+    background-color: var(--bdk-black);
+    opacity: 0.72;
+    margin-bottom: 26px;
+}
+
+.triptych-panel h2 {
+    position: relative;
+    color: var(--bdk-black);
+    font-size: 24px;
+    line-height: 1.35;
+    letter-spacing: 0.20em;
+    text-transform: uppercase;
+    font-weight: 400;
+    order: 2;
+    margin: 0 0 26px;
+}
+
+.triptych-panel .triptych-claim {
+    max-width: 380px;
+    font-size: 16px;
+    line-height: 1.85;
+    order: 3;
+    margin: 0 auto 24px;
+}
+
+.triptych-panel > p:not(.triptych-claim) {
+    max-width: 360px;
+    margin: 0 auto 18px;
+    font-size: 16px;
+    line-height: 1.85;
+    order: 4;
+}
+
+.triptych-panel .panel-facts {
+    position: relative;
+    margin: 34px 0 0;
+    padding-top: 28px;
+    border-top: 1px solid rgba(5, 5, 5, 0.22);
+    color: rgba(5, 5, 5, 0.78);
+    line-height: 2;
+    letter-spacing: 0.18em;
+    margin: 24px 0 0;
+    padding-top: 24px;
+    border-top: 1px solid rgba(5, 5, 5, 0.28);
+    color: #050505;
+    font-size: 11px;
+    line-height: 1.9;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+    order: 5;
+}
+
+.triptych-panel .panel-button {
+    position: relative;
+    display: inline-block;
+    margin: 34px auto 0;
+    padding: 14px 28px;
+    border: 1px solid rgba(5, 5, 5, 0.70);
+    color: var(--bdk-black);
+    background: transparent;
+    font-size: 12px;
+    line-height: 1.4;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin: 28px auto 0;
+    padding: 14px 30px;
+    border: 1px solid #050505;
+    background: #050505;
+    color: #f1efe9;
+    order: 6;
+}
+
+.audience-section {
+    padding: 78px 0 112px;
+    background: var(--bdk-black);
+    padding: 94px 0 104px;
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.split-feature-section {
+    padding: 0 0 118px;
+    background: var(--bdk-black);
+    padding-bottom: 96px;
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.registration-steps-section::before, .registration-steps-section::after, .registration-steps::before, .registration-steps::after {
+    display: none;
+    content: none;
+}
+
+.registration-action .landing-button {
+    margin-top: 0;
+}
+
+.semester-section {
+    padding: 118px 0;
+    background: var(--bdk-black);
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.semester-panel .semester-row:first-child {
+    border-top: 0;
+}
+
+.semester-panel .semester-row:last-child {
+    border-bottom: 0;
+}
+
+.terms-image-panel .editorial-shell {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
+    gap: 88px;
+    align-items: start;
+}
+
+.terms-image-panel .schedule-panel {
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+}
+
+.terms-image-panel .section-title {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    color: var(--bdk-white);
+    text-align: right;
+    font-size: clamp(34px, 4.2vw, 58px);
+    line-height: 1.08;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.price-section {
+    padding: 48px 0 112px;
+    background: var(--bdk-black);
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.price-section .section-title {
+    margin-bottom: 64px;
+    color: var(--bdk-white);
+    font-size: clamp(34px, 4.2vw, 58px);
+    line-height: 1.08;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.price-grid {
+    max-width: 1080px;
+    margin: 0 auto;
+    gap: 1px;
+    border: 1px solid var(--bdk-line);
+    background: var(--bdk-line);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+    max-width: none;
+    border: 0;
+    background: transparent;
+}
+
+.price-card {
+    padding: 46px 34px;
+    background: var(--bdk-black);
+    text-align: center;
+    min-height: 320px;
+    padding: 60px 42px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #0b0b0b;
+    border: 0;
+}
+
+.price-card:nth-child(2) {
+    background: #101010;
+}
+
+.price-card:nth-child(3) {
+    background: #151515;
+}
+
+.price-card + .price-card {
+    border-left: 1px solid rgba(185, 166, 106, 0.28);
+}
+
+.price-note {
+    max-width: 780px;
+    margin: 48px auto 0;
+    color: var(--bdk-muted);
+    font-size: 15px;
+    line-height: 1.9;
+    text-align: center;
+    margin-top: 58px;
+}
+
+.build-section {
+    padding: 118px 0;
+    background: var(--bdk-black);
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.build-heading-row {
+    display: grid;
+    grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.2fr);
+    gap: 86px;
+    align-items: end;
+    margin-bottom: 70px;
+    margin-bottom: 64px;
+}
+
+.build-section .editorial-title {
+    color: var(--bdk-white);
+}
+
+.build-mosaic {
+    gap: 1px;
+    border: 1px solid var(--bdk-line);
+    background: var(--bdk-line);
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+    border: 0;
+    background: transparent;
+}
+
+.build-card {
+    min-height: 360px;
+    padding: 48px 38px;
+    background: var(--bdk-black);
+    min-height: 390px;
+    padding: 56px 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #0b0b0b;
+    border: 0;
+}
+
+.build-card:nth-child(2) {
+    background: #0f0f0f;
+}
+
+.build-card:nth-child(3) {
+    background: #131313;
+}
+
+.build-card:nth-child(4) {
+    background: #171717;
+}
+
+.build-card + .build-card {
+    border-left: 1px solid rgba(185, 166, 106, 0.28);
+}
+
+.build-icon {
+    width: 34px;
+    height: 34px;
+    margin: 0 0 28px;
+    background-color: var(--bdk-gold-active);
+    -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    opacity: 0.72;
+}
+
+.practices-section {
+    padding: 0 0 118px;
+    background: var(--bdk-black);
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.practices-section .section-title {
+    margin-bottom: 64px;
+    color: var(--bdk-white);
+    font-size: clamp(34px, 4.2vw, 58px);
+    line-height: 1.08;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.teacher-section {
+    padding: 118px 0;
+    background: var(--bdk-black);
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.teacher-panel {
+    display: grid;
+    grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
+    background: var(--bdk-charcoal);
+    grid-template-columns: minmax(280px, 0.36fr) minmax(0, 0.64fr);
+    align-items: stretch;
+}
+
+.teacher-image {
+    min-height: 620px;
+    overflow: hidden;
+    min-height: 0;
+    height: auto;
+}
+
+.teacher-image img {
+    display: block;
+    filter: grayscale(12%) contrast(1.04) brightness(0.78);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.teacher-copy {
+    padding: 76px 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-left: 1px solid var(--bdk-line-soft);
+    padding: 44px 52px;
+}
+
+.testimonials-section, .testimonials-section::before, .testimonials-section::after, .testimonials-grid {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.testimonials-section::before, .testimonials-section::after {
+    display: none;
+    content: none;
+}
+
+.final-cta {
+    position: relative;
+    padding: 118px 0;
+    text-align: center;
+    overflow: hidden;
+    background: linear-gradient(rgba(5, 5, 5, 0.72), rgba(5, 5, 5, 0.78)),
+                url("/leteca-bojevnica.webp") center 36% / cover no-repeat;
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.final-cta .section-title {
+    color: var(--bdk-gold-active);
+    color: var(--bdk-white);
+    font-size: clamp(34px, 4.2vw, 58px);
+    line-height: 1.08;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+@media (max-width: 1100px) {
+    .build-mosaic {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .build-card:nth-child(3) {
+        border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+    }
+
+    .build-card:nth-child(4) {
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+    }
+
+}
+
+@media (max-width: 900px) {
+    .registration-steps, .price-grid, .build-mosaic {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-card + .registration-card, .price-card + .price-card, .build-card + .build-card {
+        border-left: 0;
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
     }
 
     .terms-image-panel .editorial-shell {
@@ -1687,112 +2212,501 @@ a {
         text-align: left;
     }
 
-    .schedule-panel {
+    .terms-image-panel .schedule-panel {
         grid-column: 1;
         grid-row: 2;
     }
 
-    .semester-row,
-    .schedule-row {
+    .teacher-panel {
         grid-template-columns: 1fr;
-        gap: 10px;
     }
+
+    .teacher-image {
+        min-height: 380px;
+    }
+
 }
 
-/* MOBILE */
+@media (max-width: 560px) {
+    .registration-card, .price-card, .build-card {
+        min-height: auto;
+        padding: 46px 28px;
+    }
+
+    .terms-image-panel .section-title, .price-section .section-title, .practices-section .section-title, .final-cta .section-title {
+        font-size: 32px;
+    }
+
+    .teacher-copy {
+        padding: 38px 28px;
+    }
+
+}
+
+.semester-hero-mobile-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
 @media (max-width: 767px) {
-    :root {
-        --section-space: 76px;
-    }
-
-    .navbar-custom {
-        min-height: 56px;
-    }
-
-    .navbar-custom .container {
-        width: min(92vw, 520px);
-        min-height: 56px;
-    }
-
-    .navbar-brand {
-        min-height: 56px;
-        font-size: 16px;
-    }
-
-    .navbar-toggle {
-        display: inline-flex;
-    }
-
-    .navbar-collapse {
-        position: absolute;
-        top: 56px;
-        left: 0;
-        right: 0;
-        display: none;
-        border-bottom: 1px solid var(--bdk-line);
-        background: rgba(0, 0, 0, 0.98);
-    }
-
-    .navbar-collapse.is-open {
-        display: block;
-    }
-
-    .navbar-nav {
-        width: min(92vw, 520px);
-        margin: 0 auto;
-        padding: 10px 0 14px;
-        display: block;
-    }
-
-    .navbar-nav > li > a {
-        padding: 13px 0;
-        background: transparent;
-    }
-
-    .semester-hero {
-        min-height: 100svh;
-        margin-top: 56px;
-    }
-
     .semester-hero-video {
         display: none;
     }
 
-    .semester-hero-mobile-image {
-        display: block;
-        object-position: 20% center;
+}
+
+.semester-hero::after {
+    height: 180px;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 5, 0) 0%,
+        rgba(5, 5, 5, 0.38) 48%,
+        rgba(5, 5, 5, 0.82) 78%,
+        var(--bdk-black) 100%
+    );
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    height: 190px;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        rgba(5, 5, 5, 0) 0%,
+        rgba(5, 5, 5, 0.34) 42%,
+        rgba(5, 5, 5, 0.82) 78%,
+        var(--bdk-black) 100%
+    );
+}
+
+.triptych-section {
+    padding: 98px 0 70px;
+    background: var(--bdk-black);
+    padding-top: 128px;
+    padding-bottom: var(--section-rhythm);
+}
+
+.triptych-panel-dark {
+    padding: 62px 54px;
+    background: var(--card-black);
+    color: var(--bdk-white);
+}
+
+.triptych-panel-dark::before {
+    display: none;
+}
+
+.triptych-panel-dark .logo-mark {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 26px;
+    background-color: var(--bdk-gold-active);
+    opacity: 1;
+}
+
+.triptych-panel-dark h2 {
+    margin: 0 0 26px;
+    color: var(--bdk-white);
+    font-size: 24px;
+    line-height: 1.34;
+    letter-spacing: 0.19em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.triptych-panel-dark .triptych-claim {
+    max-width: 380px;
+    margin: 0 auto 24px;
+    color: var(--bdk-white);
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.triptych-panel-dark .triptych-claim strong, .triptych-panel-dark > p:not(.triptych-claim) {
+    color: var(--bdk-white);
+}
+
+.triptych-panel-dark > p:not(.triptych-claim) {
+    max-width: 360px;
+    margin: 0 auto 18px;
+    font-size: 16px;
+    line-height: 1.85;
+}
+
+.triptych-panel-dark .panel-facts {
+    margin-top: 24px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(185, 166, 106, 0.48);
+    color: var(--bdk-white);
+    font-size: 11px;
+    line-height: 1.9;
+    letter-spacing: 0.17em;
+    text-transform: uppercase;
+}
+
+.triptych-panel-dark .panel-button {
+    margin: 28px auto 0;
+    padding: 14px 30px;
+    border: 1px solid var(--bdk-gold-active);
+    background: var(--bdk-gold-active);
+    color: var(--bdk-black);
+}
+
+.triptych-panel-dark .panel-button:hover, .triptych-panel-dark .panel-button:focus {
+    border-color: var(--bdk-white);
+    background: var(--bdk-white);
+    color: var(--bdk-black);
+}
+
+.audience-section, .split-feature-section, .semester-section, .registration-steps-section, .price-section, .build-section, .practices-section, .teacher-section, .testimonials-section, .faq-section, .final-cta {
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+}
+
+.audience-title {
+    max-width: 860px;
+    margin: 0 auto 62px;
+    line-height: 1.6;
+    letter-spacing: 0.08em;
+    max-width: 980px;
+    margin: 0 auto 64px;
+    line-height: 1.58;
+    letter-spacing: 0.07em;
+    text-transform: none;
+    max-width: 1040px;
+    margin: 0 auto 68px;
+    color: var(--bdk-white);
+    font-size: 24px;
+    line-height: 1.55;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 400;
+}
+
+.split-feature-copy .editorial-title {
+    margin-bottom: 52px;
+}
+
+.split-feature-copy p {
+    color: var(--bdk-muted);
+    font-size: 16px;
+    line-height: 2;
+    margin-bottom: 22px;
+    margin-bottom: 24px;
+}
+
+.split-feature-copy p:last-child {
+    margin-bottom: 0;
+}
+
+.registration-steps-section {
+    padding: 96px 0 118px;
+    padding-top: 92px;
+    padding-bottom: 96px;
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+    background: var(--bdk-black);
+}
+
+.registration-steps-section .editorial-shell.narrow {
+    width: min(1320px, 92vw);
+    max-width: none;
+}
+
+.registration-steps-section .section-title {
+    margin-bottom: 64px;
+    color: var(--bdk-gold-active);
+}
+
+.registration-steps {
+    border-top: 1px solid var(--bdk-line);
+    border-bottom: 1px solid var(--bdk-line);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0;
+    width: 100%;
+    border: 0;
+    background: transparent;
+}
+
+.registration-card {
+    background: #0b0b0b;
+    min-height: 360px;
+    padding: 64px 44px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    border: 0;
+    background: var(--card-black);
+}
+
+.registration-card:nth-child(2) {
+    background: #101010;
+    background: var(--card-black-2);
+}
+
+.registration-card:nth-child(3) {
+    background: #151515;
+    background: var(--card-black-3);
+}
+
+.registration-card + .registration-card {
+    border-left: 1px solid rgba(185, 166, 106, 0.28);
+}
+
+.registration-number {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 13px;
+    letter-spacing: 0.18em;
+    margin: 0 0 28px;
+    color: var(--bdk-gold-active);
+    font-size: 18px;
+    line-height: 1;
+    letter-spacing: 0.16em;
+}
+
+.registration-card h4 {
+    margin: 0 0 22px;
+    color: var(--bdk-white);
+    font-size: 17px;
+    line-height: 1.55;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.registration-card p {
+    margin: 0;
+    color: var(--bdk-muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.test-date-panel {
+    max-width: 1040px;
+    margin: 44px auto 0;
+    text-align: center;
+    margin-top: 64px;
+}
+
+.test-date-title {
+    margin-bottom: 20px;
+    color: var(--bdk-gold-active);
+    font-size: 12px;
+    line-height: 1.6;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+}
+
+.registration-action {
+    margin-top: 38px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.semester-panel {
+    border-top: 1px solid var(--bdk-line);
+    border-bottom: 1px solid var(--bdk-line);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.semester-panel .semester-row {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.semester-panel .semester-row:not(:last-child) {
+    border-bottom: 1px solid rgba(185, 166, 106, 0.22);
+}
+
+.schedule-panel {
+    width: min(820px, 100%);
+    margin-left: auto;
+    border-top: 1px solid var(--bdk-line);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.schedule-panel .schedule-row {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.schedule-panel .schedule-row:first-child {
+    border-bottom: 1px solid rgba(185, 166, 106, 0.22);
+}
+
+.price-section .editorial-shell.narrow {
+    width: min(1320px, 92vw);
+    max-width: none;
+}
+
+.price-section .section-title, .practices-section .section-title, .final-cta .section-title {
+    color: var(--bdk-white);
+}
+
+.testimonials-section, .testimonials-grid {
+    border-top: 0;
+    border-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .registration-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-card + .registration-card {
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+        border-left: 0;
+    }
+
+}
+
+@media (max-width: 560px) {
+    :root {
+        --section-rhythm: 76px;
+    }
+
+    .triptych-section {
+        padding-top: 92px;
+        padding-top: 94px;
+    }
+
+    .triptych-panel-dark {
+        padding: 48px 28px;
+    }
+
+    .audience-title {
+        letter-spacing: 0.06em;
+        margin-bottom: 44px;
+        line-height: 1.65;
+        letter-spacing: 0.03em;
+        margin-bottom: 46px;
+        font-size: 18px;
+        line-height: 1.6;
+        letter-spacing: 0.08em;
+    }
+
+    .registration-card {
+        min-height: auto;
+        padding: 46px 28px;
+    }
+
+}
+
+:root {
+    --bdk-black: #050505;
+    --bdk-charcoal: #0b0b0b;
+    --bdk-soft-black: #11100d;
+    --bdk-white: #f4f1ea;
+    --bdk-muted: #cfc8b9;
+    --bdk-muted-2: #918979;
+    --bdk-gold-fallback: #b9a66a;
+    --bdk-gold-active: var(--bdk-gold, var(--bdk-gold-fallback));
+    --bdk-line: rgba(185, 166, 106, 0.28);
+    --bdk-line-soft: rgba(185, 166, 106, 0.18);
+    --card-black: #0b0b0b;
+    --card-black-2: #101010;
+    --card-black-3: #151515;
+    --section-rhythm: 108px;
+    --uniform-card: #101010;
+    --uniform-card-soft: #121212;
+}
+
+.uniform-dark-card, .audience-card:nth-child(2), .audience-card:nth-child(3), .registration-card:nth-child(2), .registration-card:nth-child(3), .price-card:nth-child(2), .price-card:nth-child(3), .build-card:nth-child(2), .build-card:nth-child(3), .build-card:nth-child(4) {
+    background: var(--uniform-card);
+}
+
+.audience-card + .audience-card, .registration-card + .registration-card, .price-card + .price-card, .build-card + .build-card {
+    border-left-color: rgba(185, 166, 106, 0.28);
+}
+
+.terms-image-panel {
+    position: relative;
+    min-height: 700px;
+    overflow: hidden;
+    padding: 124px 0 190px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: var(--section-rhythm);
+    padding-bottom: var(--section-rhythm);
+    background-image: url("/redne-prakse-semester.webp");
+}
+
+.faq-list {
+    border-top: 1px solid var(--bdk-line);
+    border-top: 0;
+    border-bottom: 0;
+}
+
+.faq-item.faq-first {
+    border-top: 0;
+}
+
+.faq-item.faq-last {
+    border-bottom: 0;
+}
+
+@media (max-width: 767px) {
+    :root {
+        --section-rhythm: 76px;
+    }
+
+    .semester-hero {
+        min-height: 100svh;
+        height: auto;
+        margin-top: 56px;
+        padding: 0;
+        align-items: stretch;
+        background: #050505;
     }
 
     .semester-hero-overlay {
-        background:
-            linear-gradient(
-                to right,
-                rgba(5, 5, 5, 0.58) 0%,
-                rgba(5, 5, 5, 0.38) 58%,
-                rgba(5, 5, 5, 0.26) 100%
-            ),
-            linear-gradient(
+        background: linear-gradient(
                 to bottom,
-                rgba(5, 5, 5, 0.36) 0%,
-                rgba(5, 5, 5, 0.50) 56%,
-                rgba(5, 5, 5, 0.82) 88%,
-                var(--bdk-black) 100%
+                rgba(5, 5, 5, 0.30) 0%,
+                rgba(5, 5, 5, 0.42) 44%,
+                rgba(5, 5, 5, 0.76) 82%,
+                #050505 100%
             );
+    }
+
+    .semester-hero::after {
+        height: 150px;
     }
 
     .semester-hero-inner {
         width: min(88vw, 430px);
         min-height: calc(100svh - 56px);
-        padding: 82px 0 82px;
+        padding-top: 86px;
+        padding-bottom: 88px;
         display: flex;
         align-items: center;
     }
 
+    .semester-hero-copy {
+        width: 100%;
+        max-width: none;
+    }
+
     .semester-title {
+        margin: 0;
         font-size: clamp(54px, 17vw, 82px);
         line-height: 1.02;
         letter-spacing: 0.065em;
+        white-space: normal;
     }
 
     .semester-subtitle {
@@ -1813,30 +2727,21 @@ a {
     }
 
     .semester-meta {
-        display: block;
         margin-top: 26px;
         font-size: 10px;
         line-height: 1.9;
         letter-spacing: 0.11em;
     }
 
-    .semester-meta span {
-        display: block;
-    }
-
-    .semester-meta span + span::before {
-        content: "";
-        margin: 0;
-    }
-
     .hero-actions {
         margin-top: 30px;
+        gap: 10px;
     }
 
-    .landing-button {
+    .hero-actions .landing-button {
         width: 100%;
         max-width: 360px;
-        padding: 14px 16px;
+        padding: 14px 15px;
         font-size: 10px;
         line-height: 1.55;
         letter-spacing: 0.12em;
@@ -1844,57 +2749,254 @@ a {
 
     .triptych-section {
         padding-top: 90px;
+        padding-bottom: var(--section-rhythm);
     }
 
     .triptych-grid {
         width: min(88vw, 430px);
+        margin: 0 auto;
+        grid-template-columns: 1fr;
         gap: 16px;
     }
 
-    .triptych-image {
-        min-height: 500px;
+    .triptych-image, .triptych-panel {
+        min-height: 0;
+        height: auto;
     }
 
-    .triptych-panel {
+    .triptych-practice-card {
+        height: 520px;
+    }
+
+    .triptych-practice-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .triptych-card-overlay {
+        padding: 32px 26px 28px;
+    }
+
+    .triptych-panel-dark {
         min-height: 500px;
         padding: 48px 28px;
     }
 
-    .triptych-card-overlay {
-        padding: 30px 26px 27px;
+    .audience-grid, .registration-steps, .price-grid, .build-mosaic {
+        width: min(92vw, 520px);
+        margin-right: auto;
+        margin-left: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .audience-card, .registration-card, .price-card, .build-card {
+        min-height: auto;
+        padding: 46px 28px;
+    }
+
+    .audience-card + .audience-card, .registration-card + .registration-card, .price-card + .price-card, .build-card + .build-card {
+        border-top: 1px solid rgba(185, 166, 106, 0.28);
+        border-left: 0;
     }
 
     .audience-title {
-        margin-bottom: 46px;
+        width: min(88vw, 430px);
+        margin-bottom: 44px;
         font-size: 18px;
         line-height: 1.62;
         letter-spacing: 0.075em;
     }
 
-    .audience-card,
-    .registration-card,
-    .price-card,
-    .build-card {
-        min-height: auto;
-        padding: 46px 28px;
+    .split-feature {
+        grid-template-columns: 1fr;
     }
 
     .split-feature-image {
         min-height: 420px;
     }
 
-    .split-feature-image img {
-        object-position: 38% center;
-    }
-
     .split-feature-copy {
         padding: 46px 28px 54px;
     }
 
-    .split-feature-copy .editorial-title,
-    .semester-intro .editorial-title,
-    .test-copy .editorial-title {
+    .split-feature-copy .editorial-title {
         margin-bottom: 38px;
+    }
+
+    .semester-editorial, .terms-image-panel .editorial-shell {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .semester-panel, .schedule-panel {
+        width: 100%;
+    }
+
+    .terms-image-panel .section-title {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: left;
+    }
+
+    .terms-image-panel .schedule-panel {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .practice-editorial-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-editorial-image {
+        height: 320px;
+    }
+
+    .practice-editorial-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 22% center;
+    }
+
+    .teacher-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .teacher-image {
+        min-height: 360px;
+        max-height: 460px;
+    }
+
+    .teacher-copy {
+        padding: 40px 28px;
+    }
+
+    .faq-list {
+        border-top: 0;
+        border-bottom: 0;
+    }
+
+}
+
+.build-card h3 span {
+    display: inline-block;
+    margin-top: 5px;
+}
+
+@media (max-width: 767px) {
+    .triptych-practice-card.right img {
+        object-position: 18% center;
+    }
+
+}
+
+.menu-icon {
+    position: relative;
+    display: inline-block;
+    width: 21px;
+    height: 14px;
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+}
+
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid currentColor;
+}
+
+.navbar-custom .nav li a, .navbar-custom .navbar-nav > li > a, .navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:hover, .navbar-custom .navbar-nav > .active > a:focus {
+    background: transparent;
+    box-shadow: none;
+}
+
+.navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus, .navbar-custom .navbar-nav > .active > a, .navbar-custom .navbar-nav > .active > a:hover, .navbar-custom .navbar-nav > .active > a:focus {
+    color: var(--bdk-gold-active);
+}
+
+.test-section {
+    padding-top: 108px;
+    padding-bottom: 0;
+    background: #050505;
+}
+
+.test-hero {
+    position: relative;
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("/redne-prakse-testna-lekcija.webp");
+    background-position: center 44%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.test-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(5, 5, 5, 0.82) 0%,
+            rgba(5, 5, 5, 0.54) 46%,
+            rgba(5, 5, 5, 0.30) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            #050505 0%,
+            rgba(5, 5, 5, 0.92) 8%,
+            rgba(5, 5, 5, 0.48) 27%,
+            rgba(5, 5, 5, 0.36) 68%,
+            rgba(5, 5, 5, 0.80) 91%,
+            #050505 100%
+        );
+}
+
+.test-copy {
+    position: relative;
+    z-index: 1;
+    width: min(1280px, 92vw);
+    margin: 0 auto;
+    padding-top: 128px;
+    padding-bottom: 128px;
+}
+
+.test-copy > * {
+    max-width: 610px;
+}
+
+.test-copy .editorial-title {
+    margin-bottom: 52px;
+}
+
+.test-copy p {
+    margin-bottom: 24px;
+    color: var(--bdk-white);
+    line-height: 1.9;
+}
+
+.test-copy p:last-of-type {
+    margin-bottom: 0;
+}
+
+.test-copy .landing-button {
+    margin-top: 34px;
+}
+
+.semester-intro .editorial-title {
+    margin-bottom: 52px;
+}
+
+@media (max-width: 767px) {
+    .test-section {
+        padding-top: 76px;
     }
 
     .test-hero {
@@ -1904,124 +3006,180 @@ a {
 
     .test-copy {
         width: min(88vw, 430px);
-        padding: 112px 0;
+        padding-top: 112px;
+        padding-bottom: 112px;
     }
 
-    .test-copy p {
-        font-size: 15px;
+    .test-copy .editorial-title, .semester-intro .editorial-title {
+        margin-bottom: 38px;
     }
 
-    .test-date-divider {
-        display: block;
-        height: 0;
-        margin: 8px 0;
-        overflow: hidden;
-    }
-
-    .terms-image-panel {
-        min-height: 620px;
-        padding: 76px 0 118px;
-    }
-
-    .build-mosaic {
-        grid-template-columns: 1fr;
-    }
-
-    .build-card + .build-card {
-        border-top: 1px solid var(--bdk-line);
-        border-left: 0;
-    }
-
-    .practice-editorial-image {
-        height: 320px;
-    }
-
-    .practice-editorial-copy {
-        padding: 40px 28px 46px;
-    }
-
-    .teacher-image {
-        min-height: 360px;
-        max-height: 460px;
+    .split-feature-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 38% center;
     }
 
     .teacher-image img {
         object-position: 44% center;
     }
 
-    .teacher-copy {
-        padding: 40px 28px;
+    .semester-hero-mobile-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 20% center;
     }
 
-    .testimonial-card {
-        padding: 34px 0;
-    }
-
-    .faq-question {
-        font-size: 13px;
-        letter-spacing: 0.13em;
-    }
-
-    .faq-answer {
-        font-size: 15px;
-    }
-
-    .final-cta p {
-        font-size: 16px;
-    }
 }
 
-@media (max-width: 560px) {
-    .editorial-shell,
-    .editorial-shell.narrow {
+body.budokon-semester-page .navbar-custom .navbar-nav > li > a, body.budokon-semester-page .navbar-custom .navbar-nav > li > a:hover, body.budokon-semester-page .navbar-custom .navbar-nav > li > a:focus, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a:hover, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a:focus, body.budokon-semester-page .navbar-custom .nav > li.active > a, body.budokon-semester-page .navbar-custom .nav > li.active > a:hover, body.budokon-semester-page .navbar-custom .nav > li.active > a:focus {
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+    color: var(--bdk-white);
+}
+
+body.budokon-semester-page .navbar-custom .navbar-nav > li > a:hover, body.budokon-semester-page .navbar-custom .navbar-nav > li > a:focus, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a:hover, body.budokon-semester-page .navbar-custom .navbar-nav > .active > a:focus, body.budokon-semester-page .navbar-custom .nav > li.active > a, body.budokon-semester-page .navbar-custom .nav > li.active > a:hover, body.budokon-semester-page .navbar-custom .nav > li.active > a:focus {
+    color: var(--bdk-gold-active);
+}
+
+body.budokon-semester-page .test-hero {
+    position: relative;
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("/redne-prakse-testna-lekcija.webp");
+    background-position: center 44%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+body.budokon-semester-page .test-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: linear-gradient(
+            to right,
+            rgba(5, 5, 5, 0.84) 0%,
+            rgba(5, 5, 5, 0.58) 46%,
+            rgba(5, 5, 5, 0.32) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            #050505 0%,
+            #050505 7%,
+            rgba(5, 5, 5, 0.94) 12%,
+            rgba(5, 5, 5, 0.56) 28%,
+            rgba(5, 5, 5, 0.36) 68%,
+            rgba(5, 5, 5, 0.82) 91%,
+            #050505 100%
+        );
+}
+
+body.budokon-semester-page .test-hero .test-copy {
+    position: relative;
+    z-index: 1;
+    width: min(1280px, 92vw);
+    max-width: none;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 128px 0;
+}
+
+body.budokon-semester-page .test-hero .test-copy > * {
+    max-width: 610px;
+}
+
+body.budokon-semester-page .test-hero .test-copy .editorial-title {
+    margin-bottom: 52px;
+}
+
+body.budokon-semester-page .semester-intro .editorial-title {
+    margin-bottom: 52px;
+}
+
+@media (max-width: 767px) {
+    body.budokon-semester-page .test-hero {
+        min-height: 700px;
+        background-position: center center;
+    }
+
+    body.budokon-semester-page .test-hero .test-copy {
         width: min(88vw, 430px);
+        padding: 112px 0;
     }
 
-    .editorial-title {
-        font-size: 34px;
+    body.budokon-semester-page .test-hero .test-copy .editorial-title, body.budokon-semester-page .semester-intro .editorial-title {
+        margin-bottom: 38px;
     }
 
-    .section-title {
-        margin-bottom: 42px;
-        font-size: 20px;
-        letter-spacing: 0.15em;
+    body.budokon-semester-page .semester-hero-mobile-image {
+        object-position: 20% center;
     }
 
-    .text-block {
-        font-size: 15px;
-        line-height: 1.9;
+    body.budokon-semester-page .split-feature-image img {
+        object-position: 38% center;
     }
 
-    .teacher-name {
-        font-size: 32px;
+    body.budokon-semester-page .teacher-image img {
+        object-position: 44% center;
     }
 
-    .teacher-stats {
-        font-size: 10px;
-        letter-spacing: 0.05em;
-    }
 }
 
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li:hover, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li:focus, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.open {
+    background: transparent;
+    background-color: transparent;
+    background-image: none;
+    box-shadow: none;
+}
+
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:link, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:visited, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:hover, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:focus, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:active, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active > a, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active > a:hover, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active > a:focus, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.open > a {
+    background: transparent;
+    background-color: transparent;
+    background-image: none;
+    border: 0;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:hover, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:focus, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li > a:active, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.active > a, body.budokon-semester-page nav.navbar-custom #main-navigation ul.nav.navbar-nav > li.open > a {
+    color: var(--bdk-gold-active);
+}
+
+@media (max-width: 767px) {
+    body.budokon-semester-page .semester-hero-overlay {
+        background: linear-gradient(
+                to right,
+                rgba(5, 5, 5, 0.58) 0%,
+                rgba(5, 5, 5, 0.36) 58%,
+                rgba(5, 5, 5, 0.24) 100%
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(5, 5, 5, 0.34) 0%,
+                rgba(5, 5, 5, 0.48) 56%,
+                rgba(5, 5, 5, 0.80) 88%,
+                #050505 100%
+            );
     }
 
-    .semester-hero-video {
-        display: none;
-    }
-
-    a,
-    .landing-button {
-        transition: none;
-    }
 }
 </style></head>
-<body class="budokon-semester-page" id="page-top">
+<body class="budokon-semester-page" data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 <div class="container">
 <div class="navbar-header">
-<button aria-controls="main-navigation" aria-expanded="false" aria-label="Odpri glavni meni" class="navbar-toggle" type="button">Meni <span aria-hidden="true" class="menu-icon"></span></button>
+<button aria-controls="main-navigation" aria-expanded="false" aria-label="Odpri glavni meni" class="navbar-toggle" data-target="#main-navigation" data-toggle="collapse" type="button">
+      Meni
+      <span aria-hidden="true" class="menu-icon"></span>
+</button>
 <a class="navbar-brand" href="/">
       BUDOKON
       <span class="light">
@@ -2029,7 +3187,7 @@ a {
       </span>
 </a>
 </div>
-<div aria-hidden="true" class="navbar-collapse" id="main-navigation">
+<div class="collapse navbar-collapse navbar-right navbar-main-collapse" id="main-navigation">
 <ul class="nav navbar-nav">
 <li>
 <a class="page-scroll" href="#za-koga">
@@ -2127,17 +3285,17 @@ a {
 <div class="editorial-shell">
 <h2 class="audience-title" id="audience-title">TA PRAKSA JE ZATE, ČE NE IŠČEŠ SAMO TELOVADBE, AMPAK GIBALNI PROCES, KI KREPI PSIHOFIZIČNO ODPORNOST BREZ POVOŽANJA TVOJIH MEJ.</h2>
 <div class="audience-grid">
-<article class="audience-card">
+<article class="audience-card uniform-dark-card">
 <div aria-hidden="true" class="audience-icon"></div>
 <h3>Za telo, ki potrebuje več kot raztezanje</h3>
 <p>Želiš razvijati mobilnost, stabilnost, koordinacijo in boljši občutek za telo v prostoru.</p>
 </article>
-<article class="audience-card">
+<article class="audience-card uniform-dark-card">
 <div aria-hidden="true" class="audience-icon"></div>
 <h3>Za človeka, ki ne želi več forsiranja</h3>
 <p>Želiš graditi moč inteligentno, brez potiskanja preko meja in brez primerjanja.</p>
 </article>
-<article class="audience-card">
+<article class="audience-card uniform-dark-card">
 <div aria-hidden="true" class="audience-icon"></div>
 <h3>Za prakso, ki te uči ostati</h3>
 <p>Zanima te izziv, v katerem se učiš razlikovati med naporom, odporom, nelagodjem in mejami.</p>
@@ -2167,17 +3325,17 @@ a {
 <div class="editorial-shell narrow">
 <h2 class="section-title">Kako se prijaviš na testno prakso</h2>
 <div class="registration-steps">
-<div class="registration-step registration-card">
+<div class="registration-step registration-card uniform-dark-card">
 <span class="registration-number">01</span>
 <h4>Izberi termin</h4>
 <p>Izberi testno prakso slow flow ali tatami in oddaj prijavo prek obrazca (za eno ali več praks).</p>
 </div>
-<div class="registration-step registration-card">
+<div class="registration-step registration-card uniform-dark-card">
 <span class="registration-number">02</span>
 <h4>Potrdi mesto</h4>
 <p>Po prijavi prejmeš e-pošto s QR kodo za plačilo. Mesto je rezervirano po prejetem plačilu.</p>
 </div>
-<div class="registration-step registration-card">
+<div class="registration-step registration-card uniform-dark-card">
 <span class="registration-number">03</span>
 <h4>Izkusi prakso</h4>
 <p>Posamezna testna praksa traja 75 minut in stane 25 €, dobrodošli na več praks. Ob vpisu v semester se znesek v celoti odšteje od šolnine.</p>
@@ -2197,7 +3355,7 @@ a {
 <div class="semester-editorial">
 <div class="semester-intro">
 <div class="editorial-kicker">5-mesečni proces</div>
-<h2 class="editorial-title">Kako poteka semester</h2>
+<h2 class="editorial-title white-editorial-heading">Kako poteka semester</h2>
 <p>
       Redne prakse Budokona potekajo v obliki dveh semestrov, ki trajata približno pet mesecev:
      </p>
@@ -2233,7 +3391,7 @@ a {
 </section><section class="terms-price-section section-anchor" id="termini">
 <div class="terms-image-panel">
 <div class="editorial-shell">
-<h2 class="section-title left">Termini</h2>
+<h2 class="section-title left white-editorial-heading">Termini</h2>
 <div class="schedule-panel">
 <div class="schedule-row">
 <div class="schedule-day">
@@ -2251,9 +3409,9 @@ a {
 </div>
 </div>
 <div class="price-section section-anchor">
-<div class="editorial-shell narrow"><h2 class="section-title small-space">Cena</h2>
+<div class="editorial-shell narrow"><h2 class="section-title small-space white-editorial-heading">Cena</h2>
 <div class="price-grid">
-<div class="price-card">
+<div class="price-card uniform-dark-card">
 <h3>
         Testna praksa
        </h3>
@@ -2264,7 +3422,7 @@ a {
         možna le ob začetku semestra
        </p>
 </div>
-<div class="price-card">
+<div class="price-card uniform-dark-card">
 <h3>
         Semester 1x tedensko
        </h3>
@@ -2275,7 +3433,7 @@ a {
         5-mesečni semester
        </p>
 </div>
-<div class="price-card">
+<div class="price-card uniform-dark-card">
 <h3>Obe praksi · 2x tedensko</h3>
 <span class="price">
         420 €
@@ -2303,26 +3461,26 @@ a {
 <div class="build-heading-row">
 <div>
 <div class="editorial-kicker">kaj razvijamo</div>
-<h2 class="editorial-title">Kaj gradimo</h2>
+<h2 class="editorial-title white-editorial-heading">Kaj gradimo</h2>
 </div>
 <div class="text-block"><p>Osrednji fokus ni popolna izvedba. Fokus je odnos do telesa, napora, meja in trenutka, ko bi najraje pobegnili ali odnehali.</p></div>
 </div>
-<div class="build-mosaic"><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
+<div class="build-mosaic"><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>Moč<br/><span>kot kapaciteto</span></h3>
 <p>
        Moč ni samo mišična sila. Je kapaciteta, da pri naporu ostaneš v stiku s sabo. Da ne greš takoj v primerjanje, dokazovanje ali umik iz izziva. Gradimo jo postopno, z izzivom in brez forsiranja.
       </p>
-</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
+</article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>Mobilnost<br/><span>kot telesno inteligenco</span></h3>
 <p>
        Mobilnost ni samo obseg gibanja. Je sposobnost, da gib čutiš, nadzoruješ in se v njem znajdeš. V Budokonu raziskujemo prehode, prilagajanje in gibanje skozi prostor.
       </p>
-</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
+</article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>Koordinacijo<br/><span>kot jasnost</span></h3>
 <p>
        Budokon zahteva pozornost. Gibanje povezuje roke, noge, hrbtenico, pogled, dih in orientacijo v prostoru. Sčasoma se telo začne gibati bolj celostno, manj fragmentirano.
       </p>
-</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
+</article><article class="build-card uniform-dark-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>Meje<br/><span>kot del prakse</span></h3>
 <p>
        Praksa ni namenjena potiskanju preko meja, kjer telo utišamo zato, da bi nekaj dosegli. Izziv je prisoten, vendar znotraj jasnega odnosa do meja.
@@ -2331,7 +3489,7 @@ a {
 </div>
 </section><section class="practices-section section-anchor" id="prakse">
 <div class="editorial-shell">
-<h2 class="section-title">Podrobneje o praksah</h2>
+<h2 class="section-title white-editorial-heading">Podrobneje o praksah</h2>
 <div class="practice-editorial-grid">
 <article class="practice-editorial-card">
 <div class="practice-editorial-image"><img alt="BDK slow flow Budokon praksa na vadbeni podlogi" decoding="async" height="461" loading="lazy" src="/leteca-bojevnica.webp" width="1000"/></div>
@@ -2468,7 +3626,7 @@ a {
 <div class="editorial-kicker">pogosta vprašanja</div>
 <h2 class="editorial-title" id="faq-title">Vprašanja</h2>
 </div>
-<div class="faq-list"><article class="faq-item">
+<div class="faq-list"><article class="faq-item faq-first">
 <h3 class="faq-question">
       Ali potrebujem predznanje ali posebno telesno pripravljenost?
      </h3>
@@ -2508,7 +3666,7 @@ a {
 <p class="faq-answer">
       Ne. Redne prakse potekajo v obliki semestra. Po začetnih testnih praksah se skupina zapre, saj kontinuiteta omogoča postopno progresijo in poglabljanje procesa.
      </p>
-</article><article class="faq-item"><h3 class="faq-question">Ali je možno plačilo šolnine na obroke?</h3><p class="faq-answer">Plačilo šolnine na obroke je možno po predhodnem dogovoru. Pred prijavo piši na <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>.</p></article><article class="faq-item">
+</article><article class="faq-item"><h3 class="faq-question">Ali je možno plačilo šolnine na obroke?</h3><p class="faq-answer">Plačilo šolnine na obroke je možno po predhodnem dogovoru. Pred prijavo piši na <a href="mailto:sanja@budokon.si">sanja@budokon.si</a>.</p></article><article class="faq-item faq-last">
 <h3 class="faq-question">
       Kako poteka prijava?
      </h3>
@@ -2518,7 +3676,7 @@ a {
 </div>
 </section><section class="final-cta">
 <div class="editorial-shell narrow">
-<h2 class="section-title">
+<h2 class="section-title white-editorial-heading">
      Pridruži se
     </h2>
 <div class="text-block">
@@ -2560,114 +3718,35 @@ a {
 <div class="footer-copy">
     © 2026 Budokon Slovenija
    </div>
-</footer><script>
+</footer><script src="/vendor/jquery/jquery.js"></script><script src="/vendor/bootstrap/js/bootstrap.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script><script>
 (function () {
-    "use strict";
+    var video = document.querySelector('.semester-hero-video');
+    if (!video) return;
 
-    var toggle = document.querySelector(".navbar-toggle");
-    var menu = document.getElementById("main-navigation");
-    var navLinks = Array.prototype.slice.call(
-        document.querySelectorAll('#main-navigation a[href^="#"]')
-    );
-
-    function setMenu(open) {
-        if (!toggle || !menu) return;
-        menu.classList.toggle("is-open", open);
-        toggle.setAttribute("aria-expanded", String(open));
-        menu.setAttribute("aria-hidden", String(!open));
-    }
-
-    if (toggle && menu) {
-        toggle.addEventListener("click", function () {
-            setMenu(!menu.classList.contains("is-open"));
-        });
-
-        navLinks.forEach(function (link) {
-            link.addEventListener("click", function () {
-                setMenu(false);
-            });
-        });
-
-        window.addEventListener("resize", function () {
-            if (window.innerWidth > 767) {
-                setMenu(false);
-                menu.removeAttribute("aria-hidden");
-            } else if (!menu.classList.contains("is-open")) {
-                menu.setAttribute("aria-hidden", "true");
-            }
-        });
-    }
-
-    var sectionLinks = navLinks
-        .map(function (link) {
-            var selector = link.getAttribute("href");
-            var section = selector ? document.querySelector(selector) : null;
-            return section ? { link: link, section: section } : null;
-        })
-        .filter(Boolean);
-
-    if ("IntersectionObserver" in window && sectionLinks.length) {
-        var observer = new IntersectionObserver(
-            function (entries) {
-                entries.forEach(function (entry) {
-                    if (!entry.isIntersecting) return;
-
-                    sectionLinks.forEach(function (item) {
-                        var itemLi = item.link.closest("li");
-                        if (itemLi) {
-                            itemLi.classList.toggle(
-                                "is-active",
-                                item.section === entry.target
-                            );
-                        }
-                    });
-                });
-            },
-            {
-                rootMargin: "-28% 0px -62% 0px",
-                threshold: 0
-            }
-        );
-
-        sectionLinks.forEach(function (item) {
-            observer.observe(item.section);
-        });
-    }
-
-    var video = document.querySelector(".semester-hero-video");
-    var desktop = window.matchMedia("(min-width: 768px)");
-    var reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    var desktop = window.matchMedia('(min-width: 768px)');
+    var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
     function loadDesktopVideo() {
-        if (
-            !video ||
-            !desktop.matches ||
-            reducedMotion.matches ||
-            video.dataset.loaded === "true"
-        ) {
-            return;
-        }
+        if (!desktop.matches || reducedMotion.matches || video.dataset.loaded === 'true') return;
 
-        Array.prototype.forEach.call(
-            video.querySelectorAll("source[data-src]"),
-            function (source) {
-                source.src = source.dataset.src;
-            }
-        );
+        var sources = video.querySelectorAll('source[data-src]');
+        sources.forEach(function (source) {
+            source.src = source.dataset.src;
+        });
 
-        video.dataset.loaded = "true";
+        video.dataset.loaded = 'true';
         video.load();
 
-        var promise = video.play();
-        if (promise && typeof promise.catch === "function") {
-            promise.catch(function () {});
+        var playPromise = video.play();
+        if (playPromise && typeof playPromise.catch === 'function') {
+            playPromise.catch(function () {});
         }
     }
 
     loadDesktopVideo();
 
     if (desktop.addEventListener) {
-        desktop.addEventListener("change", loadDesktopVideo);
+        desktop.addEventListener('change', loadDesktopVideo);
     } else if (desktop.addListener) {
         desktop.addListener(loadDesktopVideo);
     }
