@@ -29,17 +29,17 @@
 <meta content="https://budokon.si/img/og-budokon-slovenija.jpg" name="twitter:image"/>
 <meta content="Redne Budokon prakse v Ljubljani" name="twitter:image:alt"/>
 <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"/>
-<link as="style" href="/vendor/font-awesome/css/font-awesome.min.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload" type="text/css"/><noscript><link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet"/></noscript>
+
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" rel="stylesheet"/></noscript>
-<link as="style" href="/css/futura.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/css/futura.css" rel="stylesheet"/></noscript>
-<link as="style" href="/css/grayscale.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/css/grayscale.css" rel="stylesheet"/></noscript>
-<link as="style" href="/css/budokon.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/css/budokon.css" rel="stylesheet"/></noscript>
-<link as="style" href="/css/dark-theme.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><noscript><link href="/css/dark-theme.css" rel="stylesheet"/></noscript>
+
+
+
+
+
 <link href="/img/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
 <style>
-        :root {
+        :root{
             --bdk-black: #050505;
             --bdk-charcoal: #0b0b0b;
             --bdk-soft-black: #11100d;
@@ -53,44 +53,44 @@
         }
 
         html,
-        body {
+        body{
             margin: 0;
             background: var(--bdk-black);
             color: var(--bdk-white);
         }
 
-        html {
+        html{
             scroll-behavior: smooth;
         }
 
-        body.budokon-semester-page {
+        body.budokon-semester-page{
             font-family: "Montserrat", "Futura", sans-serif;
             background: var(--bdk-black);
             color: var(--bdk-white);
         }
 
-        .section-anchor {
+        .section-anchor{
             scroll-margin-top: 90px;
         }
 
-        a {
+        a{
             color: var(--bdk-gold-active);
             transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, opacity 0.2s ease;
         }
 
         a:hover,
-        a:focus {
+        a:focus{
             color: var(--bdk-white);
             text-decoration: none;
         }
 
-        .navbar-custom {
+        .navbar-custom{
             background: rgba(0, 0, 0, 0.94);
             border-bottom: 1px solid var(--bdk-line);
         }
 
         .navbar-custom .navbar-brand,
-        .navbar-custom .nav li a {
+        .navbar-custom .nav li a{
             color: var(--bdk-white);
         }
 
@@ -101,36 +101,36 @@
         .navbar-custom .nav li.active a:focus,
         .navbar-custom .navbar-nav > .active > a,
         .navbar-custom .navbar-nav > .active > a:hover,
-        .navbar-custom .navbar-nav > .active > a:focus {
+        .navbar-custom .navbar-nav > .active > a:focus{
             background: transparent;
             color: var(--bdk-gold-active);
         }
 
-        .navbar-custom .nav li.active {
+        .navbar-custom .nav li.active{
             background: transparent;
         }
 
         .navbar-custom .navbar-toggle:hover,
-        .navbar-custom .navbar-toggle:focus {
+        .navbar-custom .navbar-toggle:focus{
             background: transparent;
             color: var(--bdk-gold-active);
             border-color: var(--bdk-gold-active);
         }
 
-        .navbar-custom .navbar-brand .light {
+        .navbar-custom .navbar-brand .light{
             color: var(--bdk-muted);
         }
 
-        .editorial-shell {
+        .editorial-shell{
             width: min(1480px, 91vw);
             margin: 0 auto;
         }
 
-        .editorial-shell.narrow {
+        .editorial-shell.narrow{
             width: min(1120px, 86vw);
         }
 
-        .editorial-kicker {
+        .editorial-kicker{
             margin: 0 0 20px;
             color: var(--bdk-gold-active);
             font-size: 12px;
@@ -140,7 +140,7 @@
             font-weight: 400;
         }
 
-        .editorial-title {
+        .editorial-title{
             margin: 0;
             color: var(--bdk-white);
             font-size: clamp(32px, 4vw, 58px);
@@ -150,7 +150,7 @@
             font-weight: 400;
         }
 
-        .section-title {
+        .section-title{
             margin: 0 0 54px;
             color: var(--bdk-gold-active);
             font-size: 26px;
@@ -161,32 +161,32 @@
             font-weight: 400;
         }
 
-        .section-title.left {
+        .section-title.left{
             text-align: left;
             margin-bottom: 36px;
         }
 
-        .section-title.small-space {
+        .section-title.small-space{
             margin-bottom: 34px;
         }
 
-        .text-block {
+        .text-block{
             color: var(--bdk-muted);
             font-size: 17px;
             line-height: 2;
         }
 
-        .text-block p {
+        .text-block p{
             margin-bottom: 24px;
             color: var(--bdk-muted);
         }
 
-        .text-block strong {
+        .text-block strong{
             color: var(--bdk-white);
             font-weight: 400;
         }
 
-        .landing-button {
+        .landing-button{
             display: inline-block;
             padding: 16px 34px;
             border: 1px solid var(--bdk-gold-active);
@@ -200,26 +200,26 @@
         }
 
         .landing-button:hover,
-        .landing-button:focus {
+        .landing-button:focus{
             color: var(--bdk-gold-active);
             background: transparent;
             border-color: var(--bdk-gold-active);
             text-decoration: none;
         }
 
-        .landing-button.secondary {
+        .landing-button.secondary{
             color: var(--bdk-gold-active);
             background: transparent;
             border-color: var(--bdk-gold-active);
         }
 
         .landing-button.secondary:hover,
-        .landing-button.secondary:focus {
+        .landing-button.secondary:focus{
             color: var(--bdk-black);
             background: var(--bdk-gold-active);
         }
 
-        .logo-mark {
+        .logo-mark{
             width: 68px;
             height: 68px;
             background-color: var(--bdk-gold-active);
@@ -230,7 +230,7 @@
 
         /* HERO */
 
-        .semester-hero {
+        .semester-hero{
             position: relative;
             min-height: 100vh;
             overflow: hidden;
@@ -241,7 +241,7 @@
             align-items: center;
         }
 
-        .semester-hero-video {
+        .semester-hero-video{
             position: absolute;
             inset: 0;
             z-index: 0;
@@ -250,7 +250,7 @@
             object-fit: cover;
         }
 
-        .semester-hero-overlay {
+        .semester-hero-overlay{
             position: absolute;
             inset: 0;
             z-index: 1;
@@ -266,7 +266,7 @@
                 radial-gradient(circle at center, rgba(0, 0, 0, 0.04) 0%, rgba(0, 0, 0, 0.18) 50%, rgba(0, 0, 0, 0.38) 100%);
         }
 
-        .semester-hero-inner {
+        .semester-hero-inner{
             position: relative;
             z-index: 2;
             width: min(1480px, 91vw);
@@ -274,13 +274,13 @@
             padding-top: 92px;
         }
 
-        .semester-hero-copy {
+        .semester-hero-copy{
             width: min(1120px, 100%);
             margin: 0 auto;
             text-align: center;
         }
 
-        .semester-title {
+        .semester-title{
             margin: 0;
             font-family: "Six Caps", "Arial Narrow", sans-serif;
             font-weight: 400;
@@ -291,7 +291,7 @@
             text-transform: uppercase;
         }
 
-        .semester-subtitle {
+        .semester-subtitle{
             margin-top: 30px;
             color: var(--bdk-gold-active);
             font-size: clamp(13px, 1.55vw, 24px);
@@ -301,7 +301,7 @@
             font-weight: 400;
         }
 
-        .semester-lead {
+        .semester-lead{
             width: min(760px, 88vw);
             margin: 38px auto 0;
             color: var(--bdk-white);
@@ -310,12 +310,12 @@
             text-align: center;
         }
 
-        .semester-lead p {
+        .semester-lead p{
             margin: 0 0 4px;
             color: var(--bdk-white);
         }
 
-        .semester-meta {
+        .semester-meta{
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -327,17 +327,17 @@
             text-transform: uppercase;
         }
 
-        .semester-meta span {
+        .semester-meta span{
             display: inline-block;
         }
 
-        .semester-meta span + span::before {
+        .semester-meta span + span::before{
             content: "|";
             color: var(--bdk-gold-active);
             margin: 0 14px;
         }
 
-        .hero-actions {
+        .hero-actions{
             margin-top: 42px;
             display: flex;
             justify-content: center;
@@ -347,12 +347,12 @@
 
         /* EDITORIAL TRIPTYCH */
 
-        .triptych-section {
+        .triptych-section{
             padding: 98px 0 70px;
             background: var(--bdk-black);
         }
 
-        .triptych-grid {
+        .triptych-grid{
             display: grid;
             grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.92fr) minmax(0, 1.06fr);
             gap: 18px;
@@ -360,17 +360,17 @@
         }
 
         .triptych-image,
-        .triptych-panel {
+        .triptych-panel{
             min-height: 560px;
         }
 
-        .triptych-image {
+        .triptych-image{
             position: relative;
             overflow: hidden;
             background: var(--bdk-charcoal);
         }
 
-        .triptych-image img {
+        .triptych-image img{
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -378,15 +378,15 @@
             transform: scale(1.01);
         }
 
-        .triptych-image.left img {
+        .triptych-image.left img{
             object-position: 30% center;
         }
 
-        .triptych-image.right img {
+        .triptych-image.right img{
             object-position: center 38%;
         }
 
-        .triptych-panel {
+        .triptych-panel{
             position: relative;
             padding: 62px 54px;
             display: flex;
@@ -398,7 +398,7 @@
             overflow: hidden;
         }
 
-        .triptych-panel::before {
+        .triptych-panel::before{
             content: "";
             position: absolute;
             inset: 36px;
@@ -406,7 +406,7 @@
             pointer-events: none;
         }
 
-        .triptych-panel .logo-mark {
+        .triptych-panel .logo-mark{
             width: 58px;
             height: 58px;
             margin: 0 auto 34px;
@@ -414,7 +414,7 @@
             opacity: 0.72;
         }
 
-        .triptych-panel h2 {
+        .triptych-panel h2{
             position: relative;
             margin: 0 0 26px;
             color: var(--bdk-black);
@@ -425,7 +425,7 @@
             font-weight: 400;
         }
 
-        .triptych-panel p {
+        .triptych-panel p{
             position: relative;
             margin: 0 auto 18px;
             max-width: 420px;
@@ -434,7 +434,7 @@
             line-height: 1.95;
         }
 
-        .triptych-panel .panel-facts {
+        .triptych-panel .panel-facts{
             position: relative;
             margin: 34px 0 0;
             padding-top: 28px;
@@ -446,7 +446,7 @@
             text-transform: uppercase;
         }
 
-        .triptych-panel .panel-button {
+        .triptych-panel .panel-button{
             position: relative;
             display: inline-block;
             margin: 34px auto 0;
@@ -461,7 +461,7 @@
         }
 
         .triptych-panel .panel-button:hover,
-        .triptych-panel .panel-button:focus {
+        .triptych-panel .panel-button:focus{
             background: var(--bdk-black);
             color: var(--bdk-gold-active);
             border-color: var(--bdk-black);
@@ -469,12 +469,12 @@
 
         /* SMALL AUDIENCE CARDS */
 
-        .audience-section {
+        .audience-section{
             padding: 78px 0 112px;
             background: var(--bdk-black);
         }
 
-        .audience-title {
+        .audience-title{
             max-width: 860px;
             margin: 0 auto 62px;
             color: var(--bdk-white);
@@ -486,23 +486,23 @@
             font-weight: 400;
         }
 
-        .audience-grid {
+        .audience-grid{
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             border-top: 1px solid var(--bdk-line);
             border-bottom: 1px solid var(--bdk-line);
         }
 
-        .audience-card {
+        .audience-card{
             min-height: 210px;
             padding: 38px 38px 34px;
         }
 
-        .audience-card + .audience-card {
+        .audience-card + .audience-card{
             border-left: 1px solid var(--bdk-line);
         }
 
-        .audience-icon {
+        .audience-icon{
             width: 38px;
             height: 38px;
             margin-bottom: 26px;
@@ -511,7 +511,7 @@
             position: relative;
         }
 
-        .audience-icon::after {
+        .audience-icon::after{
             content: "";
             position: absolute;
             left: 50%;
@@ -524,7 +524,7 @@
             mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
         }
 
-        .audience-card h3 {
+        .audience-card h3{
             margin: 0 0 18px;
             color: var(--bdk-white);
             font-size: 14px;
@@ -534,7 +534,7 @@
             font-weight: 400;
         }
 
-        .audience-card p {
+        .audience-card p{
             margin: 0;
             color: var(--bdk-muted);
             font-size: 15px;
@@ -543,12 +543,12 @@
 
         /* SPLIT FEATURE */
 
-        .split-feature-section {
+        .split-feature-section{
             padding: 0 0 118px;
             background: var(--bdk-black);
         }
 
-        .split-feature {
+        .split-feature{
             display: grid;
             grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
             gap: 0;
@@ -556,23 +556,23 @@
             background: var(--bdk-charcoal);
         }
 
-        .split-feature.reverse {
+        .split-feature.reverse{
             grid-template-columns: minmax(420px, 0.88fr) minmax(0, 1.12fr);
         }
 
-        .split-feature-image {
+        .split-feature-image{
             min-height: 620px;
             overflow: hidden;
         }
 
-        .split-feature-image img {
+        .split-feature-image img{
             width: 100%;
             height: 100%;
             object-fit: cover;
             filter: grayscale(12%) contrast(1.04) brightness(0.74);
         }
 
-        .split-feature-copy {
+        .split-feature-copy{
             padding: 82px 76px;
             display: flex;
             flex-direction: column;
@@ -580,53 +580,53 @@
             border-left: 1px solid var(--bdk-line-soft);
         }
 
-        .split-feature.reverse .split-feature-copy {
+        .split-feature.reverse .split-feature-copy{
             border-left: 0;
             border-right: 1px solid var(--bdk-line-soft);
         }
 
-        .split-feature-copy p {
+        .split-feature-copy p{
             color: var(--bdk-muted);
             font-size: 16px;
             line-height: 2;
             margin-bottom: 22px;
         }
 
-        .split-feature-copy p:last-child {
+        .split-feature-copy p:last-child{
             margin-bottom: 0;
         }
 
-        .split-feature-copy strong {
+        .split-feature-copy strong{
             color: var(--bdk-white);
             font-weight: 400;
         }
 
         /* SEMESTER */
 
-        .semester-section {
+        .semester-section{
             padding: 118px 0;
             background: var(--bdk-black);
         }
 
-        .semester-editorial {
+        .semester-editorial{
             display: grid;
             grid-template-columns: minmax(320px, 0.72fr) minmax(0, 1.28fr);
             gap: 86px;
             align-items: start;
         }
 
-        .semester-intro p {
+        .semester-intro p{
             color: var(--bdk-muted);
             font-size: 17px;
             line-height: 2;
         }
 
-        .semester-panel {
+        .semester-panel{
             border-top: 1px solid var(--bdk-line);
             border-bottom: 1px solid var(--bdk-line);
         }
 
-        .semester-row {
+        .semester-row{
             display: grid;
             grid-template-columns: 240px 1fr;
             gap: 42px;
@@ -635,11 +635,11 @@
             align-items: baseline;
         }
 
-        .semester-row:last-child {
+        .semester-row:last-child{
             border-bottom: 0;
         }
 
-        .semester-label {
+        .semester-label{
             color: var(--bdk-gold-active);
             font-size: 12px;
             line-height: 1.7;
@@ -647,7 +647,7 @@
             text-transform: uppercase;
         }
 
-        .semester-value {
+        .semester-value{
             color: var(--bdk-white);
             font-size: 18px;
             line-height: 1.8;
@@ -655,22 +655,22 @@
 
         /* TERMS IMAGE + PRICE */
 
-        .terms-price-section {
+        .terms-price-section{
             background: var(--bdk-black);
         }
 
-        .terms-image-panel {
+        .terms-image-panel{
             position: relative;
             min-height: 700px;
             overflow: hidden;
             padding: 124px 0 190px;
             background-image: url("/redne-prakse-semester.webp");
-            background-position: center 44%;
+            
             background-size: cover;
             background-repeat: no-repeat;
         }
 
-        .terms-image-panel::before {
+        .terms-image-panel::before{
             content: "";
             position: absolute;
             inset: 0;
@@ -687,18 +687,18 @@
                 radial-gradient(circle at center, rgba(0, 0, 0, 0.14) 0%, rgba(0, 0, 0, 0.36) 58%, rgba(0, 0, 0, 0.58) 100%);
         }
 
-        .terms-image-panel .editorial-shell {
+        .terms-image-panel .editorial-shell{
             position: relative;
             z-index: 1;
         }
 
-        .schedule-panel {
+        .schedule-panel{
             width: min(820px, 100%);
             margin-left: auto;
             border-top: 1px solid var(--bdk-line);
         }
 
-        .schedule-row {
+        .schedule-row{
             display: grid;
             grid-template-columns: 180px 1fr;
             gap: 44px;
@@ -707,7 +707,7 @@
             align-items: start;
         }
 
-        .schedule-day {
+        .schedule-day{
             color: var(--bdk-gold-active);
             font-size: 14px;
             line-height: 1.7;
@@ -716,17 +716,17 @@
             font-weight: 700;
         }
 
-        .schedule-info {
+        .schedule-info{
             color: var(--bdk-white);
             font-size: 18px;
             line-height: 1.75;
         }
 
-        .schedule-practice-name {
+        .schedule-practice-name{
             color: var(--bdk-white);
         }
 
-        .schedule-location {
+        .schedule-location{
             display: inline-block;
             margin-top: 10px;
             color: var(--bdk-gold-active);
@@ -737,12 +737,12 @@
         }
 
         .schedule-location:hover,
-        .schedule-location:focus {
+        .schedule-location:focus{
             color: var(--bdk-white);
             border-bottom-color: var(--bdk-white);
         }
 
-        .schedule-test-date {
+        .schedule-test-date{
             margin-top: 10px;
             color: var(--bdk-gold-active);
             font-size: 11px;
@@ -751,7 +751,7 @@
             text-transform: uppercase;
         }
 
-        .schedule-info em {
+        .schedule-info em{
             display: block;
             margin-top: 24px;
             color: var(--bdk-white);
@@ -760,12 +760,12 @@
             font-style: normal;
         }
 
-        .price-section {
+        .price-section{
             padding: 48px 0 112px;
             background: var(--bdk-black);
         }
 
-        .price-grid {
+        .price-grid{
             max-width: 1080px;
             margin: 0 auto;
             display: grid;
@@ -775,13 +775,13 @@
             background: var(--bdk-line);
         }
 
-        .price-card {
+        .price-card{
             padding: 46px 34px;
             background: var(--bdk-black);
             text-align: center;
         }
 
-        .price-card h3 {
+        .price-card h3{
             margin: 0 0 20px;
             color: var(--bdk-gold-active);
             font-size: 13px;
@@ -791,7 +791,7 @@
             font-weight: 400;
         }
 
-        .price-card .price {
+        .price-card .price{
             display: block;
             margin-bottom: 14px;
             color: var(--bdk-white);
@@ -799,14 +799,14 @@
             line-height: 1.4;
         }
 
-        .price-card p {
+        .price-card p{
             margin: 0;
             color: var(--bdk-muted);
             font-size: 15px;
             line-height: 1.8;
         }
 
-        .price-note {
+        .price-note{
             max-width: 780px;
             margin: 48px auto 0;
             color: var(--bdk-muted);
@@ -817,12 +817,12 @@
 
         /* BUILD MOSAIC */
 
-        .build-section {
+        .build-section{
             padding: 118px 0;
             background: var(--bdk-black);
         }
 
-        .build-heading-row {
+        .build-heading-row{
             display: grid;
             grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.2fr);
             gap: 86px;
@@ -830,11 +830,11 @@
             margin-bottom: 70px;
         }
 
-        .build-heading-row .text-block {
+        .build-heading-row .text-block{
             font-size: 17px;
         }
 
-        .build-mosaic {
+        .build-mosaic{
             display: grid;
             grid-template-columns: repeat(4, minmax(0, 1fr));
             gap: 1px;
@@ -842,18 +842,18 @@
             background: var(--bdk-line);
         }
 
-        .build-card {
+        .build-card{
             min-height: 360px;
             padding: 48px 38px;
             background: var(--bdk-black);
         }
 
-        .build-card.gold {
+        .build-card.gold{
             background: var(--bdk-gold-active);
             color: var(--bdk-black);
         }
 
-        .build-card h3 {
+        .build-card h3{
             margin: 0 0 26px;
             color: var(--bdk-white);
             font-size: 18px;
@@ -863,63 +863,59 @@
             font-weight: 400;
         }
 
-        .build-card.gold h3 {
+        .build-card.gold h3{
             color: var(--bdk-black);
         }
 
-        .build-card p {
+        .build-card p{
             margin: 0;
             color: var(--bdk-muted);
             font-size: 15px;
             line-height: 1.9;
         }
 
-        .build-card.gold p {
+        .build-card.gold p{
             color: rgba(5, 5, 5, 0.86);
         }
 
         /* PRACTICES */
 
-        .practices-section {
+        .practices-section{
             padding: 0 0 118px;
             background: var(--bdk-black);
         }
 
-        .practice-editorial-grid {
+        .practice-editorial-grid{
             display: grid;
             grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 22px;
         }
 
-        .practice-editorial-card {
+        .practice-editorial-card{
             background: var(--bdk-charcoal);
         }
 
-        .practice-editorial-image {
+        .practice-editorial-image{
             height: 440px;
             overflow: hidden;
         }
 
-        .practice-editorial-image img {
+        .practice-editorial-image img{
             width: 100%;
             height: 100%;
             object-fit: cover;
             filter: grayscale(14%) contrast(1.05) brightness(0.75);
         }
 
-        .practice-editorial-card:first-child .practice-editorial-image img {
-            object-position: 30% center;
-        }
+        
 
-        .practice-editorial-card:nth-child(2) .practice-editorial-image img {
-            object-position: center 38%;
-        }
+        
 
-        .practice-editorial-copy {
+        .practice-editorial-copy{
             padding: 48px 44px 54px;
         }
 
-        .practice-editorial-copy h3 {
+        .practice-editorial-copy h3{
             margin: 0 0 16px;
             color: var(--bdk-white);
             font-size: 24px;
@@ -929,7 +925,7 @@
             font-weight: 400;
         }
 
-        .practice-time {
+        .practice-time{
             margin-bottom: 20px;
             color: var(--bdk-gold-active);
             font-size: 12px;
@@ -938,7 +934,7 @@
             text-transform: uppercase;
         }
 
-        .practice-tags {
+        .practice-tags{
             margin-bottom: 30px;
             color: var(--bdk-muted);
             font-size: 11px;
@@ -947,96 +943,67 @@
             text-transform: uppercase;
         }
 
-        .practice-tags span + span::before {
+        .practice-tags span + span::before{
             content: "·";
             color: var(--bdk-gold-active);
             margin: 0 10px;
         }
 
-        .practice-editorial-copy p {
+        .practice-editorial-copy p{
             color: var(--bdk-muted);
             font-size: 15px;
             line-height: 1.9;
             margin-bottom: 18px;
         }
 
-        .inline-location {
+        .inline-location{
             color: inherit;
             border-bottom: 1px solid currentColor;
         }
 
-        .practice-time .inline-location {
+        .practice-time .inline-location{
             color: var(--bdk-gold-active);
         }
 
         .practice-time .inline-location:hover,
-        .practice-time .inline-location:focus {
+        .practice-time .inline-location:focus{
             color: var(--bdk-white);
             border-bottom-color: var(--bdk-white);
         }
 
         /* TESTNA PRAKSA */
 
-        .test-section {
-            padding: 0;
-            background: var(--bdk-black);
-        }
+        
 
-        .test-hero {
-            position: relative;
-            min-height: 720px;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background: url("/redne-prakse-testna-lekcija.webp") center 44% / cover no-repeat;
-        }
+        
 
-        .test-hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            z-index: 0;
-            background:
-                linear-gradient(to right, rgba(5, 5, 5, 0.78) 0%, rgba(5, 5, 5, 0.46) 44%, rgba(5, 5, 5, 0.16) 100%),
-                linear-gradient(to bottom, rgba(5, 5, 5, 0.26), rgba(5, 5, 5, 0.62));
-        }
+        
 
-        .test-copy {
-            position: relative;
-            z-index: 1;
-            width: min(640px, 86vw);
-            margin-left: max(6vw, calc((100vw - 1480px) / 2));
-            padding: 96px 0;
-        }
+        
 
-        .test-copy p {
-            color: var(--bdk-white);
-            font-size: 17px;
-            line-height: 2;
-            margin-bottom: 22px;
-        }
+        
 
-        .registration-steps-section {
+        .registration-steps-section{
             padding: 96px 0 118px;
             background: var(--bdk-black);
         }
 
-        .registration-steps {
+        .registration-steps{
             display: grid;
             grid-template-columns: repeat(3, minmax(0, 1fr));
             border-top: 1px solid var(--bdk-line);
             border-bottom: 1px solid var(--bdk-line);
         }
 
-        .registration-step {
+        .registration-step{
             padding: 42px 38px;
         }
 
-        .registration-step + .registration-step {
+        .registration-step + .registration-step{
             border-left: 1px solid var(--bdk-line);
         }
 
-        .registration-number {
+        .registration-number{
             display: block;
             margin-bottom: 18px;
             color: var(--bdk-gold-active);
@@ -1045,7 +1012,7 @@
             letter-spacing: 0.18em;
         }
 
-        .registration-step h4 {
+        .registration-step h4{
             margin: 0 0 14px;
             color: var(--bdk-white);
             font-size: 14px;
@@ -1055,20 +1022,20 @@
             font-weight: 400;
         }
 
-        .registration-step p {
+        .registration-step p{
             margin: 0;
             color: var(--bdk-muted);
             font-size: 14px;
             line-height: 1.85;
         }
 
-        .test-date-panel {
+        .test-date-panel{
             max-width: 1040px;
             margin: 44px auto 0;
             text-align: center;
         }
 
-        .test-date-title {
+        .test-date-title{
             margin-bottom: 20px;
             color: var(--bdk-gold-active);
             font-size: 12px;
@@ -1077,7 +1044,7 @@
             text-transform: uppercase;
         }
 
-        .test-date-line {
+        .test-date-line{
             margin: 0;
             color: var(--bdk-muted);
             font-size: 14px;
@@ -1085,50 +1052,50 @@
             letter-spacing: 0.03em;
         }
 
-        .test-date-line strong {
+        .test-date-line strong{
             color: var(--bdk-white);
             font-weight: 400;
             letter-spacing: 0.08em;
         }
 
-        .test-date-divider {
+        .test-date-divider{
             margin: 0 14px;
             color: var(--bdk-gold-active);
         }
 
-        .registration-action {
+        .registration-action{
             margin-top: 38px;
             text-align: center;
         }
 
         /* TEACHER */
 
-        .teacher-section {
+        .teacher-section{
             padding: 118px 0;
             background: var(--bdk-black);
         }
 
-        .teacher-panel {
+        .teacher-panel{
             display: grid;
             grid-template-columns: minmax(0, 1.12fr) minmax(420px, 0.88fr);
             background: var(--bdk-charcoal);
         }
 
-        .teacher-image {
+        .teacher-image{
             min-height: 620px;
             overflow: hidden;
         }
 
-        .teacher-image img {
+        .teacher-image img{
             display: block;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            object-position: 60% center;
+            
             filter: grayscale(12%) contrast(1.04) brightness(0.78);
         }
 
-        .teacher-copy {
+        .teacher-copy{
             padding: 76px 70px;
             display: flex;
             flex-direction: column;
@@ -1136,7 +1103,7 @@
             border-left: 1px solid var(--bdk-line-soft);
         }
 
-        .teacher-kicker {
+        .teacher-kicker{
             margin-bottom: 18px;
             color: var(--bdk-gold-active);
             font-size: 12px;
@@ -1145,7 +1112,7 @@
             text-transform: uppercase;
         }
 
-        .teacher-name {
+        .teacher-name{
             margin: 0 0 30px;
             color: var(--bdk-white);
             font-family: "Futura", "Montserrat", sans-serif;
@@ -1155,43 +1122,43 @@
             letter-spacing: 0.04em;
         }
 
-        .teacher-name span {
+        .teacher-name span{
             color: var(--bdk-gold-active);
         }
 
-        .teacher-text {
+        .teacher-text{
             color: var(--bdk-muted);
             font-size: 15px;
             line-height: 1.95;
         }
 
-        .teacher-text p {
+        .teacher-text p{
             margin-bottom: 22px;
             color: var(--bdk-muted);
         }
 
-        .teacher-text p:last-child {
+        .teacher-text p:last-child{
             margin-bottom: 0;
         }
 
-        .teacher-text strong {
+        .teacher-text strong{
             color: var(--bdk-white);
             font-weight: 400;
         }
 
-        .teacher-text a {
+        .teacher-text a{
             color: var(--bdk-gold-active);
             text-decoration: none;
             border-bottom: 1px solid rgba(185, 166, 106, 0.46);
         }
 
         .teacher-text a:hover,
-        .teacher-text a:focus {
+        .teacher-text a:focus{
             color: var(--bdk-white);
             border-bottom-color: var(--bdk-white);
         }
 
-        .teacher-stats {
+        .teacher-stats{
             margin-top: 30px;
             padding-top: 26px;
             border-top: 1px solid var(--bdk-line-soft);
@@ -1203,16 +1170,16 @@
         }
 
         .teacher-stats-line,
-        .teacher-stats-training {
+        .teacher-stats-training{
             white-space: nowrap;
         }
 
-        .teacher-stats-line span {
+        .teacher-stats-line span{
             color: var(--bdk-white);
             margin: 0 12px;
         }
 
-        .teacher-stats-training {
+        .teacher-stats-training{
             margin-top: 8px;
             color: var(--bdk-muted);
             letter-spacing: 0.12em;
@@ -1220,19 +1187,19 @@
 
         /* TESTIMONIALS */
 
-        .testimonials-section {
+        .testimonials-section{
             padding: 118px 0;
             background: var(--bdk-black);
         }
 
-        .testimonials-grid {
+        .testimonials-grid{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             border-top: 1px solid var(--bdk-line);
             border-bottom: 1px solid var(--bdk-line);
         }
 
-        .testimonial-card {
+        .testimonial-card{
             min-height: 100%;
             padding: 44px 42px;
             display: flex;
@@ -1240,18 +1207,18 @@
             justify-content: space-between;
         }
 
-        .testimonial-card + .testimonial-card {
+        .testimonial-card + .testimonial-card{
             border-left: 1px solid var(--bdk-line);
         }
 
-        .testimonial-text {
+        .testimonial-text{
             color: var(--bdk-muted);
             font-size: 15px;
             line-height: 1.9;
             margin: 0 0 30px;
         }
 
-        .testimonial-name {
+        .testimonial-name{
             color: var(--bdk-gold-active);
             font-size: 12px;
             letter-spacing: 0.22em;
@@ -1262,28 +1229,28 @@
 
         /* FAQ */
 
-        .faq-section {
+        .faq-section{
             padding: 118px 0 96px;
             background: var(--bdk-black);
         }
 
-        .faq-layout {
+        .faq-layout{
             display: grid;
             grid-template-columns: minmax(280px, 0.55fr) minmax(0, 1.45fr);
             gap: 82px;
             align-items: start;
         }
 
-        .faq-list {
+        .faq-list{
             border-top: 1px solid var(--bdk-line);
         }
 
-        .faq-item {
+        .faq-item{
             padding: 28px 0;
             border-bottom: 1px solid var(--bdk-line);
         }
 
-        .faq-question {
+        .faq-question{
             margin: 0 0 12px;
             color: var(--bdk-white);
             font-size: 15px;
@@ -1293,7 +1260,7 @@
             text-transform: uppercase;
         }
 
-        .faq-answer {
+        .faq-answer{
             margin: 0;
             color: var(--bdk-muted);
             font-size: 16px;
@@ -1302,7 +1269,7 @@
 
         /* FINAL CTA */
 
-        .final-cta {
+        .final-cta{
             position: relative;
             padding: 118px 0;
             text-align: center;
@@ -1312,12 +1279,12 @@
                 url("/leteca-bojevnica.webp") center 36% / cover no-repeat;
         }
 
-        .final-cta .editorial-shell {
+        .final-cta .editorial-shell{
             position: relative;
             z-index: 1;
         }
 
-        .final-cta p {
+        .final-cta p{
             max-width: 760px;
             margin: 0 auto 26px;
             color: var(--bdk-white);
@@ -1325,13 +1292,13 @@
             line-height: 1.9;
         }
 
-        .final-cta .landing-button {
+        .final-cta .landing-button{
             margin-top: 20px;
         }
 
         /* FOOTER */
 
-        footer.landing-footer {
+        footer.landing-footer{
             padding: 78px 0 62px;
             border-top: 1px solid var(--bdk-line-soft);
             color: var(--bdk-muted);
@@ -1339,7 +1306,7 @@
             background: var(--bdk-black);
         }
 
-        .footer-logo-mark {
+        .footer-logo-mark{
             width: 72px;
             height: 72px;
             margin: 0 auto 28px;
@@ -1349,7 +1316,7 @@
             opacity: 0.92;
         }
 
-        .footer-brand {
+        .footer-brand{
             color: var(--bdk-white);
             font-size: 15px;
             letter-spacing: 0.28em;
@@ -1357,7 +1324,7 @@
             margin-bottom: 12px;
         }
 
-        .footer-subtitle {
+        .footer-subtitle{
             color: var(--bdk-gold-active);
             font-size: 12px;
             letter-spacing: 0.22em;
@@ -1365,108 +1332,108 @@
             margin-bottom: 34px;
         }
 
-        .footer-contact {
+        .footer-contact{
             color: var(--bdk-muted);
             font-size: 14px;
             line-height: 1.9;
             margin-bottom: 28px;
         }
 
-        .footer-contact a {
+        .footer-contact a{
             color: var(--bdk-gold-active);
             text-decoration: none;
         }
 
-        .footer-contact a:hover {
+        .footer-contact a:hover{
             color: var(--bdk-white);
             text-decoration: none;
         }
 
-        .footer-links {
+        .footer-links{
             font-size: 12px;
             letter-spacing: 0.18em;
             text-transform: uppercase;
             margin-bottom: 28px;
         }
 
-        .footer-links a {
+        .footer-links a{
             color: var(--bdk-white);
             text-decoration: none;
         }
 
-        .footer-links a:hover {
+        .footer-links a:hover{
             color: var(--bdk-gold-active);
             text-decoration: none;
         }
 
-        .footer-links span {
+        .footer-links span{
             margin: 0 12px;
             color: rgba(185, 166, 106, 0.55);
         }
 
-        .footer-copy {
+        .footer-copy{
             color: rgba(207, 200, 185, 0.55);
             font-size: 11px;
             letter-spacing: 0.16em;
             text-transform: uppercase;
         }
 
-        @media (max-width: 1180px) {
-            .triptych-grid {
+        @media (max-width: 1180px){
+            .triptych-grid{
                 grid-template-columns: 1fr;
             }
 
             .triptych-image,
-            .triptych-panel {
+            .triptych-panel{
                 min-height: 420px;
             }
 
-            .triptych-panel {
+            .triptych-panel{
                 padding: 58px 42px;
             }
 
-            .build-mosaic {
+            .build-mosaic{
                 grid-template-columns: repeat(2, minmax(0, 1fr));
             }
 
             .semester-editorial,
             .build-heading-row,
-            .faq-layout {
+            .faq-layout{
                 grid-template-columns: 1fr;
                 gap: 44px;
             }
 
-            .schedule-panel {
+            .schedule-panel{
                 margin-left: 0;
                 width: 100%;
             }
         }
 
-        @media (max-width: 900px) {
-            .semester-hero {
+        @media (max-width: 900px){
+            .semester-hero{
                 min-height: 90vh;
             }
 
-            .semester-hero-inner {
+            .semester-hero-inner{
                 width: min(92vw, 680px);
                 padding-top: 90px;
             }
 
-            .semester-title {
+            .semester-title{
                 font-size: clamp(68px, 18vw, 116px);
                 letter-spacing: 0.08em;
             }
 
-            .semester-meta {
+            .semester-meta{
                 display: block;
                 line-height: 2.1;
             }
 
-            .semester-meta span {
+            .semester-meta span{
                 display: block;
             }
 
-            .semester-meta span + span::before {
+            .semester-meta span + span::before{
                 content: "";
                 margin: 0;
             }
@@ -1475,76 +1442,76 @@
             .price-grid,
             .practice-editorial-grid,
             .testimonials-grid,
-            .registration-steps {
+            .registration-steps{
                 grid-template-columns: 1fr;
             }
 
             .audience-card + .audience-card,
             .testimonial-card + .testimonial-card,
-            .registration-step + .registration-step {
+            .registration-step + .registration-step{
                 border-left: 0;
                 border-top: 1px solid var(--bdk-line);
             }
 
             .split-feature,
             .split-feature.reverse,
-            .teacher-panel {
+            .teacher-panel{
                 grid-template-columns: 1fr;
             }
 
             .split-feature-copy,
             .split-feature.reverse .split-feature-copy,
-            .teacher-copy {
+            .teacher-copy{
                 border-left: 0;
                 border-right: 0;
                 border-top: 1px solid var(--bdk-line-soft);
             }
 
             .split-feature-image,
-            .teacher-image {
+            .teacher-image{
                 min-height: 460px;
             }
 
             .split-feature-copy,
-            .teacher-copy {
+            .teacher-copy{
                 padding: 58px 46px;
             }
 
             .schedule-row,
-            .semester-row {
+            .semester-row{
                 grid-template-columns: 1fr;
                 gap: 10px;
             }
 
-            .terms-image-panel {
+            .terms-image-panel{
                 min-height: 640px;
                 padding-top: 90px;
                 padding-bottom: 168px;
             }
 
-            .price-section {
+            .price-section{
                 padding-top: 42px;
                 padding-bottom: 90px;
             }
         }
 
-        @media (max-width: 560px) {
+        @media (max-width: 560px){
             .editorial-shell,
-            .editorial-shell.narrow {
+            .editorial-shell.narrow{
                 width: min(88vw, 430px);
             }
 
-            .navbar-custom .navbar-brand {
+            .navbar-custom .navbar-brand{
                 font-size: 16px;
             }
 
-            .semester-hero {
+            .semester-hero{
                 min-height: calc(100vh - 56px);
                 min-height: calc(100svh - 56px);
                 margin-top: 56px;
             }
 
-            .semester-hero-overlay {
+            .semester-hero-overlay{
                 background:
                     linear-gradient(
                         to bottom,
@@ -1556,34 +1523,34 @@
                     radial-gradient(circle at center, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.30) 50%, rgba(0, 0, 0, 0.58) 100%);
             }
 
-            .semester-hero-inner {
+            .semester-hero-inner{
                 padding-top: 78px;
                 padding-bottom: 74px;
             }
 
-            .semester-title {
+            .semester-title{
                 font-size: clamp(58px, 18vw, 92px);
                 line-height: 1.05;
                 letter-spacing: 0.08em;
             }
 
-            .semester-subtitle {
+            .semester-subtitle{
                 margin-top: 24px;
                 font-size: 13px;
                 letter-spacing: 0.20em;
             }
 
-            .semester-lead {
+            .semester-lead{
                 margin-top: 32px;
                 font-size: 15px;
                 line-height: 1.8;
             }
 
-            .hero-actions {
+            .hero-actions{
                 margin-top: 34px;
             }
 
-            .landing-button {
+            .landing-button{
                 width: 100%;
                 max-width: 360px;
                 text-align: center;
@@ -1598,189 +1565,171 @@
             .teacher-section,
             .testimonials-section,
             .faq-section,
-            .registration-steps-section {
+            .registration-steps-section{
                 padding-top: 78px;
                 padding-bottom: 78px;
             }
 
             .split-feature-section,
-            .practices-section {
+            .practices-section{
                 padding-bottom: 78px;
             }
 
             .triptych-image,
-            .triptych-panel {
+            .triptych-panel{
                 min-height: 360px;
             }
 
-            .triptych-panel {
+            .triptych-panel{
                 padding: 52px 30px;
             }
 
-            .triptych-panel::before {
+            .triptych-panel::before{
                 inset: 22px;
             }
 
-            .audience-title {
+            .audience-title{
                 margin-bottom: 44px;
                 font-size: 18px;
                 letter-spacing: 0.06em;
             }
 
-            .audience-card {
+            .audience-card{
                 min-height: auto;
                 padding: 34px 0;
             }
 
             .section-title,
-            .section-title.left {
+            .section-title.left{
                 font-size: 20px;
                 letter-spacing: 0.16em;
                 margin-bottom: 36px;
                 text-align: center;
             }
 
-            .editorial-title {
+            .editorial-title{
                 font-size: 34px;
                 text-align: center;
             }
 
-            .editorial-kicker {
+            .editorial-kicker{
                 text-align: center;
             }
 
-            .text-block,
-            .split-feature-copy p,
-            .semester-intro p,
-            .test-copy p,
-            .final-cta p {
-                font-size: 15px;
-                line-height: 1.9;
-            }
+            
 
             .split-feature-image,
-            .teacher-image {
+            .teacher-image{
                 min-height: 340px;
             }
 
             .split-feature-copy,
-            .teacher-copy {
+            .teacher-copy{
                 padding: 46px 28px;
             }
 
-            .build-heading-row {
+            .build-heading-row{
                 margin-bottom: 46px;
             }
 
-            .build-mosaic {
+            .build-mosaic{
                 grid-template-columns: 1fr;
             }
 
-            .build-card {
+            .build-card{
                 min-height: auto;
                 padding: 40px 28px;
             }
 
-            .practice-editorial-image {
+            .practice-editorial-image{
                 height: 270px;
             }
 
-            .practice-editorial-copy {
+            .practice-editorial-copy{
                 padding: 40px 28px 46px;
             }
 
-            .practice-editorial-copy h3 {
+            .practice-editorial-copy h3{
                 font-size: 20px;
                 letter-spacing: 0.15em;
             }
 
-            .test-hero {
-                min-height: 620px;
-                background-position: center 44%;
-            }
+            
 
-            .test-hero::before {
-                background:
-                    linear-gradient(to bottom, rgba(5, 5, 5, 0.34) 0%, rgba(5, 5, 5, 0.56) 50%, rgba(5, 5, 5, 0.82) 100%);
-            }
+            
 
-            .test-copy {
-                width: min(88vw, 430px);
-                margin: 0 auto;
-                text-align: center;
-                padding: 76px 0;
-            }
+            
 
-            .registration-step {
+            .registration-step{
                 padding: 30px 0;
             }
 
-            .test-date-divider {
+            .test-date-divider{
                 display: block;
                 height: 0;
                 margin: 8px 0;
                 overflow: hidden;
             }
 
-            .terms-image-panel {
+            .terms-image-panel{
                 min-height: 590px;
                 padding-top: 78px;
                 padding-bottom: 146px;
             }
 
-            .price-section {
+            .price-section{
                 padding-top: 36px;
                 padding-bottom: 78px;
             }
 
-            .teacher-name {
+            .teacher-name{
                 font-size: 32px;
             }
 
-            .teacher-stats {
+            .teacher-stats{
                 font-size: 10px;
                 letter-spacing: 0.05em;
             }
 
             .teacher-stats-line,
-            .teacher-stats-training {
+            .teacher-stats-training{
                 white-space: normal;
             }
 
-            .teacher-stats-line span {
+            .teacher-stats-line span{
                 margin: 0 8px;
             }
 
-            .testimonial-card {
+            .testimonial-card{
                 padding: 34px 0;
             }
 
-            .faq-question {
+            .faq-question{
                 font-size: 13px;
                 letter-spacing: 0.13em;
             }
 
-            .faq-answer {
+            .faq-answer{
                 font-size: 15px;
             }
 
-            .footer-logo-mark {
+            .footer-logo-mark{
                 width: 64px;
                 height: 64px;
             }
         }
 
-        @media (prefers-reduced-motion: reduce) {
-            html {
+        @media (prefers-reduced-motion: reduce){
+            html{
                 scroll-behavior: auto;
             }
 
-            .semester-hero-video {
+            .semester-hero-video{
                 display: none;
             }
 
             .landing-button,
-            a {
+            a{
                 transition: none;
             }
         }
@@ -1788,47 +1737,47 @@
 /* FINAL MERGE: original copy + test2 design + agreed section order */
 
 /* Hero proportions from the currently published page */
-.semester-hero-inner {
+.semester-hero-inner{
     width: min(1180px, 88vw);
     padding-top: 86px;
 }
 
-.semester-hero-copy {
+.semester-hero-copy{
     max-width: 980px;
 }
 
-.semester-title {
+.semester-title{
     font-size: clamp(72px, 8vw, 128px);
     line-height: 1;
     white-space: nowrap;
 }
 
-.semester-subtitle {
+.semester-subtitle{
     font-size: clamp(14px, 1.5vw, 23px);
     letter-spacing: 0.26em;
 }
 
 /* Triptych keeps the exact test2 dimensions. */
-.triptych-grid {
+.triptych-grid{
     grid-template-columns: minmax(0, 1.06fr) minmax(340px, 0.92fr) minmax(0, 1.06fr);
 }
 
 .triptych-image,
-.triptych-panel {
+.triptych-panel{
     min-height: 560px;
 }
 
-.triptych-practice-card {
+.triptych-practice-card{
     position: relative;
 }
 
-.triptych-practice-card img {
+.triptych-practice-card img{
     position: absolute;
     inset: 0;
-    object-position: 18% center;
+    
 }
 
-.triptych-practice-card::after {
+.triptych-practice-card::after{
     content: "";
     position: absolute;
     inset: 0;
@@ -1844,7 +1793,7 @@
     pointer-events: none;
 }
 
-.triptych-card-overlay {
+.triptych-card-overlay{
     position: absolute;
     left: 0;
     right: 0;
@@ -1853,7 +1802,7 @@
     padding: 38px 36px 34px;
 }
 
-.triptych-card-overlay h3 {
+.triptych-card-overlay h3{
     margin: 0 0 13px;
     color: var(--bdk-white);
     font-size: 20px;
@@ -1863,7 +1812,7 @@
     font-weight: 400;
 }
 
-.triptych-card-time {
+.triptych-card-time{
     margin-bottom: 16px;
     color: var(--bdk-gold-active);
     font-size: 11px;
@@ -1872,62 +1821,62 @@
     text-transform: uppercase;
 }
 
-.triptych-card-time .inline-location {
+.triptych-card-time .inline-location{
     color: var(--bdk-gold-active);
 }
 
-.triptych-card-overlay p {
+.triptych-card-overlay p{
     margin: 0;
     color: rgba(244, 241, 234, 0.80);
     font-size: 14px;
     line-height: 1.82;
 }
 
-.triptych-panel-gray {
+.triptych-panel-gray{
     background: #b8b5ad;
     color: #050505;
 }
 
-.triptych-panel-gray::before {
+.triptych-panel-gray::before{
     border-color: rgba(5, 5, 5, 0.18);
 }
 
-.triptych-panel-gray .logo-mark {
+.triptych-panel-gray .logo-mark{
     background-color: #050505;
 }
 
 .triptych-panel-gray h2,
 .triptych-panel-gray p,
 .triptych-panel-gray strong,
-.triptych-panel-gray .panel-facts {
+.triptych-panel-gray .panel-facts{
     color: #050505;
 }
 
-.triptych-claim {
+.triptych-claim{
     margin-bottom: 24px;
 }
 
-.triptych-panel-gray .panel-button {
+.triptych-panel-gray .panel-button{
     color: #050505;
     border-color: rgba(5, 5, 5, 0.70);
 }
 
 .triptych-panel-gray .panel-button:hover,
-.triptych-panel-gray .panel-button:focus {
+.triptych-panel-gray .panel-button:focus{
     background: #050505;
     color: #b8b5ad;
 }
 
 /* Five original audience statements in the test2 visual system. */
-.audience-grid-five {
+.audience-grid-five{
     grid-template-columns: repeat(5, minmax(0, 1fr));
 }
 
-.audience-grid-five .audience-card {
+.audience-grid-five .audience-card{
     padding: 34px 28px;
 }
 
-.audience-note {
+.audience-note{
     margin-top: 38px;
     color: var(--bdk-gold-active);
     text-align: center;
@@ -1938,20 +1887,20 @@
 }
 
 /* Preserve original section copy while keeping test2 proportions. */
-.practice-detail-action {
+.practice-detail-action{
     margin-top: 42px;
     text-align: center;
 }
 
-.price-note .landing-button {
+.price-note .landing-button{
     margin-top: 20px;
 }
 
-.testimonials-section .section-title {
+.testimonials-section .section-title{
     margin-bottom: 54px;
 }
 
-.final-cta .section-title {
+.final-cta .section-title{
     color: var(--bdk-gold-active);
 }
 
@@ -1963,48 +1912,48 @@
 .teacher-section,
 .testimonials-section,
 .faq-section,
-.registration-steps-section {
+.registration-steps-section{
     padding-top: 96px;
     padding-bottom: 96px;
 }
 
 .split-feature-section,
-.practices-section {
+.practices-section{
     padding-bottom: 96px;
 }
 
-@media (max-width: 1180px) {
-    .audience-grid-five {
+@media (max-width: 1180px){
+    .audience-grid-five{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .audience-grid-five .audience-card + .audience-card {
+    .audience-grid-five .audience-card + .audience-card{
         border-left: 0;
         border-top: 1px solid var(--bdk-line);
     }
 }
 
-@media (max-width: 900px) {
-    .semester-title {
+@media (max-width: 900px){
+    .semester-title{
         white-space: normal;
     }
 
-    .audience-grid-five {
+    .audience-grid-five{
         grid-template-columns: 1fr;
     }
 }
 
-@media (max-width: 560px) {
-    .semester-title {
+@media (max-width: 560px){
+    .semester-title{
         font-size: clamp(58px, 18vw, 92px);
         white-space: normal;
     }
 
-    .triptych-card-overlay {
+    .triptych-card-overlay{
         padding: 30px 26px 27px;
     }
 
-    .triptych-panel {
+    .triptych-panel{
         padding: 52px 30px;
     }
 
@@ -2015,13 +1964,13 @@
     .teacher-section,
     .testimonials-section,
     .faq-section,
-    .registration-steps-section {
+    .registration-steps-section{
         padding-top: 72px;
         padding-bottom: 72px;
     }
 
     .split-feature-section,
-    .practices-section {
+    .practices-section{
         padding-bottom: 72px;
     }
 }
@@ -2030,19 +1979,19 @@
 
 /* Sredinska kartica */
 .triptych-panel,
-.triptych-panel-gray {
+.triptych-panel-gray{
     background: #f1efe9;
     color: #050505;
     padding: 62px 54px;
 }
 
 .triptych-panel::before,
-.triptych-panel-gray::before {
+.triptych-panel-gray::before{
     display: none;
 }
 
 .triptych-panel .logo-mark,
-.triptych-panel-gray .logo-mark {
+.triptych-panel-gray .logo-mark{
     width: 58px;
     height: 58px;
     margin: 0 auto 30px;
@@ -2051,7 +2000,7 @@
 }
 
 .triptych-panel h2,
-.triptych-panel-gray h2 {
+.triptych-panel-gray h2{
     margin: 0 0 22px;
     color: #050505;
     font-size: 24px;
@@ -2064,25 +2013,25 @@
 .triptych-panel p,
 .triptych-panel-gray p,
 .triptych-panel strong,
-.triptych-panel-gray strong {
+.triptych-panel-gray strong{
     color: #050505;
 }
 
-.triptych-panel .triptych-claim {
+.triptych-panel .triptych-claim{
     max-width: 380px;
     margin: 0 auto 24px;
     font-size: 16px;
     line-height: 1.85;
 }
 
-.triptych-panel > p:not(.triptych-claim) {
+.triptych-panel > p:not(.triptych-claim){
     max-width: 360px;
     margin: 0 auto 18px;
     font-size: 16px;
     line-height: 1.85;
 }
 
-.triptych-panel .panel-facts {
+.triptych-panel .panel-facts{
     margin: 24px 0 0;
     padding-top: 24px;
     border-top: 1px solid rgba(5, 5, 5, 0.28);
@@ -2093,7 +2042,7 @@
     text-transform: uppercase;
 }
 
-.triptych-panel .panel-button {
+.triptych-panel .panel-button{
     margin: 28px auto 0;
     padding: 14px 30px;
     border: 1px solid #050505;
@@ -2102,18 +2051,18 @@
 }
 
 .triptych-panel .panel-button:hover,
-.triptych-panel .panel-button:focus {
+.triptych-panel .panel-button:focus{
     background: transparent;
     color: #050505;
     border-color: #050505;
 }
 
 /* Za koga — isti test2 občutek, tri enakovredna polja */
-.audience-section {
+.audience-section{
     padding: 94px 0 104px;
 }
 
-.audience-title {
+.audience-title{
     max-width: 980px;
     margin: 0 auto 64px;
     color: var(--bdk-white);
@@ -2126,14 +2075,14 @@
 }
 
 .audience-grid,
-.audience-grid-five {
+.audience-grid-five{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     border: 0;
     background: transparent;
 }
 
-.audience-card {
+.audience-card{
     min-height: 300px;
     padding: 58px 42px;
     display: flex;
@@ -2141,111 +2090,96 @@
     background: #0c0c0c;
 }
 
-.audience-card:nth-child(2) {
+.audience-card:nth-child(2){
     background: #111111;
 }
 
-.audience-card:nth-child(3) {
+.audience-card:nth-child(3){
     background: #151515;
 }
 
-.audience-card + .audience-card {
+.audience-card + .audience-card{
     border-left: 1px solid rgba(185, 166, 106, 0.30);
     border-top: 0;
 }
 
-.audience-card p {
+.audience-card p{
     margin: 0;
     color: var(--bdk-muted);
     font-size: 16px;
     line-height: 1.95;
 }
 
-.audience-note {
+.audience-note{
     margin-top: 40px;
 }
 
 /* Testna praksa + prijava */
-.test-section {
-    padding: 0;
-}
 
-.test-hero {
-    min-height: 680px;
-}
 
-.test-copy {
-    width: min(640px, 86vw);
-    padding: 94px 0;
-}
 
-.registration-steps-section {
+
+
+
+.registration-steps-section{
     padding-top: 92px;
     padding-bottom: 96px;
 }
 
 /* Enoten ritem zgodnjih sekcij */
-.triptych-section,
-.audience-section,
-.split-feature-section,
-.test-section,
-.registration-steps-section {
-    margin: 0;
-}
 
-.split-feature-section {
+
+.split-feature-section{
     padding-bottom: 96px;
 }
 
-@media (max-width: 1180px) {
+@media (max-width: 1180px){
     .audience-grid,
-    .audience-grid-five {
+    .audience-grid-five{
         grid-template-columns: 1fr;
     }
 
-    .audience-card + .audience-card {
+    .audience-card + .audience-card{
         border-left: 0;
         border-top: 1px solid rgba(185, 166, 106, 0.30);
     }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 560px){
     .triptych-panel,
-    .triptych-panel-gray {
+    .triptych-panel-gray{
         padding: 48px 28px;
     }
 
-    .audience-section {
+    .audience-section{
         padding-top: 72px;
         padding-bottom: 76px;
     }
 
-    .audience-title {
+    .audience-title{
         margin-bottom: 44px;
         font-size: 18px;
         line-height: 1.65;
         letter-spacing: 0.03em;
     }
 
-    .audience-card {
+    .audience-card{
         min-height: auto;
         padding: 42px 28px;
     }
 
-    .audience-card p {
+    .audience-card p{
         font-size: 15px;
         line-height: 1.9;
     }
 
-    .test-hero {
-        min-height: 620px;
-    }
+    
 }
 
 /* DODATNI POPRAVKI: kartica, prehod iz heroja, Za koga, Kaj je Budokon */
 
 /* Mehkejši prehod iz heroja v vsebino */
-.semester-hero::after {
+.semester-hero::after{
     content: "";
     position: absolute;
     left: 0;
@@ -2263,19 +2197,19 @@
     );
 }
 
-.triptych-section {
+.triptych-section{
     padding-top: 128px;
 }
 
 /* Sredinska kartica */
 .triptych-panel .logo-mark,
-.triptych-panel-gray .logo-mark {
+.triptych-panel-gray .logo-mark{
     background-color: var(--bdk-gold-active);
     opacity: 1;
 }
 
 .triptych-panel .panel-button,
-.triptych-panel-gray .panel-button {
+.triptych-panel-gray .panel-button{
     background: #050505;
     border-color: #050505;
     color: var(--bdk-gold-active);
@@ -2284,14 +2218,14 @@
 .triptych-panel .panel-button:hover,
 .triptych-panel .panel-button:focus,
 .triptych-panel-gray .panel-button:hover,
-.triptych-panel-gray .panel-button:focus {
+.triptych-panel-gray .panel-button:focus{
     background: #050505;
     color: var(--bdk-white);
     border-color: #050505;
 }
 
 /* Za koga */
-.audience-title {
+.audience-title{
     max-width: 1040px;
     margin: 0 auto 68px;
     color: var(--bdk-white);
@@ -2303,7 +2237,7 @@
     font-weight: 400;
 }
 
-.audience-grid {
+.audience-grid{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
@@ -2313,7 +2247,7 @@
     background: transparent;
 }
 
-.audience-card {
+.audience-card{
     min-height: 360px;
     padding: 64px 44px;
     display: flex;
@@ -2323,20 +2257,20 @@
     background: #0b0b0b;
 }
 
-.audience-card:nth-child(2) {
+.audience-card:nth-child(2){
     background: #101010;
 }
 
-.audience-card:nth-child(3) {
+.audience-card:nth-child(3){
     background: #151515;
 }
 
-.audience-card + .audience-card {
+.audience-card + .audience-card{
     border-left: 1px solid rgba(185, 166, 106, 0.28);
     border-top: 0;
 }
 
-.audience-icon {
+.audience-icon{
     width: 34px;
     height: 34px;
     margin: 0 0 28px;
@@ -2346,7 +2280,7 @@
     opacity: 0.72;
 }
 
-.audience-card h3 {
+.audience-card h3{
     margin: 0 0 22px;
     color: var(--bdk-white);
     font-size: 17px;
@@ -2356,7 +2290,7 @@
     font-weight: 400;
 }
 
-.audience-card p {
+.audience-card p{
     margin: 0;
     color: var(--bdk-muted);
     font-size: 15px;
@@ -2364,51 +2298,51 @@
 }
 
 /* Kaj je Budokon: več prostora med naslovom in besedilom */
-.split-feature-copy .editorial-title {
+.split-feature-copy .editorial-title{
     margin-bottom: 52px;
 }
 
-.split-feature-copy p {
+.split-feature-copy p{
     margin-bottom: 24px;
 }
 
-.split-feature-copy p:last-child {
+.split-feature-copy p:last-child{
     margin-bottom: 0;
 }
 
-@media (max-width: 1000px) {
-    .audience-grid {
+@media (max-width: 1000px){
+    .audience-grid{
         grid-template-columns: 1fr;
     }
 
-    .audience-card + .audience-card {
+    .audience-card + .audience-card{
         border-left: 0;
         border-top: 1px solid rgba(185, 166, 106, 0.28);
     }
 }
 
-@media (max-width: 560px) {
-    .triptych-section {
+@media (max-width: 560px){
+    .triptych-section{
         padding-top: 92px;
     }
 
-    .audience-title {
+    .audience-title{
         margin-bottom: 46px;
         font-size: 18px;
         line-height: 1.6;
         letter-spacing: 0.08em;
     }
 
-    .audience-card {
+    .audience-card{
         min-height: auto;
         padding: 46px 28px;
     }
 
-    .audience-card h3 {
+    .audience-card h3{
         font-size: 15px;
     }
 
-    .split-feature-copy .editorial-title {
+    .split-feature-copy .editorial-title{
         margin-bottom: 38px;
     }
 }
@@ -2417,7 +2351,7 @@
    NATANČNI POPRAVKI PO FEEDBACKU
    ========================================================= */
 
-:root {
+:root{
     --section-rhythm: 108px;
 }
 
@@ -2425,29 +2359,29 @@
    1. SREDINSKA KARTICA
    --------------------------------------------------------- */
 
-.triptych-panel .logo-mark {
+.triptych-panel .logo-mark{
     margin-bottom: 26px;
 }
 
-.triptych-panel h2 {
+.triptych-panel h2{
     order: 2;
     margin: 0 0 26px;
 }
 
-.triptych-panel .triptych-claim {
+.triptych-panel .triptych-claim{
     order: 3;
     margin: 0 auto 24px;
 }
 
-.triptych-panel > p:not(.triptych-claim) {
+.triptych-panel > p:not(.triptych-claim){
     order: 4;
 }
 
-.triptych-panel .panel-facts {
+.triptych-panel .panel-facts{
     order: 5;
 }
 
-.triptych-panel .panel-button {
+.triptych-panel .panel-button{
     order: 6;
 }
 
@@ -2455,17 +2389,17 @@
    2. ENOTEN PADDING MED ZGODNJIMI SEGMENTI
    --------------------------------------------------------- */
 
-.triptych-section {
+.triptych-section{
     padding-top: 128px;
     padding-bottom: var(--section-rhythm);
 }
 
-.audience-section {
+.audience-section{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
-.split-feature-section {
+.split-feature-section{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
@@ -2474,45 +2408,19 @@
    3. NAJPREJ IZKUSI PRAKSO
    --------------------------------------------------------- */
 
-.test-section {
-    padding-top: var(--section-rhythm);
-    padding-bottom: 0;
-    background: var(--bdk-black);
-}
 
-.test-hero {
-    position: relative;
-    overflow: hidden;
-}
 
-.test-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0 0 auto 0;
-    z-index: 1;
-    height: 190px;
-    pointer-events: none;
-    background: linear-gradient(
-        to bottom,
-        var(--bdk-black) 0%,
-        rgba(5, 5, 5, 0.92) 26%,
-        rgba(5, 5, 5, 0.58) 64%,
-        rgba(5, 5, 5, 0) 100%
-    );
-}
 
-.test-copy {
-    position: relative;
-    z-index: 2;
-    padding-top: 132px;
-    padding-bottom: 104px;
-}
+
+
+
+
 
 /* ---------------------------------------------------------
    4. KAKO SE PRIJAVIŠ – ISTI SISTEM KOT "ZA KOGA"
    --------------------------------------------------------- */
 
-.registration-steps-section {
+.registration-steps-section{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
@@ -2520,22 +2428,22 @@
 .registration-steps-section::before,
 .registration-steps-section::after,
 .registration-steps::before,
-.registration-steps::after {
+.registration-steps::after{
     display: none;
     content: none;
 }
 
-.registration-steps-section .editorial-shell.narrow {
+.registration-steps-section .editorial-shell.narrow{
     width: min(1320px, 92vw);
     max-width: none;
 }
 
-.registration-steps-section .section-title {
+.registration-steps-section .section-title{
     margin-bottom: 64px;
     color: var(--bdk-gold-active);
 }
 
-.registration-steps {
+.registration-steps{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
@@ -2544,7 +2452,7 @@
     background: transparent;
 }
 
-.registration-card {
+.registration-card{
     min-height: 360px;
     padding: 64px 44px;
     display: flex;
@@ -2555,19 +2463,19 @@
     border: 0;
 }
 
-.registration-card:nth-child(2) {
+.registration-card:nth-child(2){
     background: #101010;
 }
 
-.registration-card:nth-child(3) {
+.registration-card:nth-child(3){
     background: #151515;
 }
 
-.registration-card + .registration-card {
+.registration-card + .registration-card{
     border-left: 1px solid rgba(185, 166, 106, 0.28);
 }
 
-.registration-number {
+.registration-number{
     margin: 0 0 28px;
     color: var(--bdk-gold-active);
     font-size: 18px;
@@ -2575,7 +2483,7 @@
     letter-spacing: 0.16em;
 }
 
-.registration-card h4 {
+.registration-card h4{
     margin: 0 0 22px;
     color: var(--bdk-white);
     font-size: 17px;
@@ -2585,26 +2493,26 @@
     font-weight: 400;
 }
 
-.registration-card p {
+.registration-card p{
     margin: 0;
     color: var(--bdk-muted);
     font-size: 15px;
     line-height: 1.9;
 }
 
-.test-date-panel {
+.test-date-panel{
     margin-top: 64px;
 }
 
-.test-date-title {
+.test-date-title{
     margin-bottom: 24px;
 }
 
-.registration-action {
+.registration-action{
     margin-top: 50px;
 }
 
-.registration-action .landing-button {
+.registration-action .landing-button{
     margin-top: 0;
 }
 
@@ -2612,21 +2520,21 @@
    5. KAKO POTEKA SEMESTER
    --------------------------------------------------------- */
 
-.semester-section {
+.semester-section{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
-.semester-panel .semester-row:first-child {
+.semester-panel .semester-row:first-child{
     border-top: 0;
 }
 
-.semester-panel .semester-row:last-child {
+.semester-panel .semester-row:last-child{
     border-bottom: 0;
 }
 
 /* Ohranimo samo tri notranje ločnice. */
-.semester-panel .semester-row:not(:last-child) {
+.semester-panel .semester-row:not(:last-child){
     border-bottom: 1px solid rgba(185, 166, 106, 0.22);
 }
 
@@ -2634,19 +2542,19 @@
    6. TERMINI – VSEBINA LEVO, NASLOV DESNO
    --------------------------------------------------------- */
 
-.terms-image-panel {
+.terms-image-panel{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
-.terms-image-panel .editorial-shell {
+.terms-image-panel .editorial-shell{
     display: grid;
     grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr);
     gap: 88px;
     align-items: start;
 }
 
-.terms-image-panel .schedule-panel {
+.terms-image-panel .schedule-panel{
     grid-column: 1;
     grid-row: 1;
     width: 100%;
@@ -2654,7 +2562,7 @@
     margin: 0;
 }
 
-.terms-image-panel .section-title {
+.terms-image-panel .section-title{
     grid-column: 2;
     grid-row: 1;
     margin: 0;
@@ -2671,17 +2579,17 @@
    7. CENA – BEL NASLOV, TRI POLJA ČEZ ŠIRINO
    --------------------------------------------------------- */
 
-.price-section {
+.price-section{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
-.price-section .editorial-shell.narrow {
+.price-section .editorial-shell.narrow{
     width: min(1320px, 92vw);
     max-width: none;
 }
 
-.price-section .section-title {
+.price-section .section-title{
     margin-bottom: 64px;
     color: var(--bdk-white);
     font-size: clamp(34px, 4.2vw, 58px);
@@ -2691,7 +2599,7 @@
     font-weight: 400;
 }
 
-.price-grid {
+.price-grid{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
@@ -2701,7 +2609,7 @@
     background: transparent;
 }
 
-.price-card {
+.price-card{
     min-height: 320px;
     padding: 60px 42px;
     display: flex;
@@ -2712,19 +2620,19 @@
     border: 0;
 }
 
-.price-card:nth-child(2) {
+.price-card:nth-child(2){
     background: #101010;
 }
 
-.price-card:nth-child(3) {
+.price-card:nth-child(3){
     background: #151515;
 }
 
-.price-card + .price-card {
+.price-card + .price-card{
     border-left: 1px solid rgba(185, 166, 106, 0.28);
 }
 
-.price-note {
+.price-note{
     margin-top: 58px;
 }
 
@@ -2732,20 +2640,20 @@
    8. KAJ GRADIMO – ŠTIRI POLJA V ISTEM SISTEMU
    --------------------------------------------------------- */
 
-.build-section {
+.build-section{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
-.build-heading-row {
+.build-heading-row{
     margin-bottom: 64px;
 }
 
-.build-section .editorial-title {
+.build-section .editorial-title{
     color: var(--bdk-white);
 }
 
-.build-mosaic {
+.build-mosaic{
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 0;
@@ -2754,7 +2662,7 @@
     background: transparent;
 }
 
-.build-card {
+.build-card{
     min-height: 390px;
     padding: 56px 38px;
     display: flex;
@@ -2764,23 +2672,23 @@
     border: 0;
 }
 
-.build-card:nth-child(2) {
+.build-card:nth-child(2){
     background: #0f0f0f;
 }
 
-.build-card:nth-child(3) {
+.build-card:nth-child(3){
     background: #131313;
 }
 
-.build-card:nth-child(4) {
+.build-card:nth-child(4){
     background: #171717;
 }
 
-.build-card + .build-card {
+.build-card + .build-card{
     border-left: 1px solid rgba(185, 166, 106, 0.28);
 }
 
-.build-icon {
+.build-icon{
     width: 34px;
     height: 34px;
     margin: 0 0 28px;
@@ -2794,12 +2702,12 @@
    9. PODROBNEJE O PRAKSAH
    --------------------------------------------------------- */
 
-.practices-section {
+.practices-section{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
-.practices-section .section-title {
+.practices-section .section-title{
     margin-bottom: 64px;
     color: var(--bdk-white);
     font-size: clamp(34px, 4.2vw, 58px);
@@ -2813,28 +2721,28 @@
    10. SANJA SOMATIKA
    --------------------------------------------------------- */
 
-.teacher-section {
+.teacher-section{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
-.teacher-panel {
+.teacher-panel{
     grid-template-columns: minmax(280px, 0.36fr) minmax(0, 0.64fr);
     align-items: stretch;
 }
 
-.teacher-image {
+.teacher-image{
     min-height: 0;
     height: auto;
 }
 
-.teacher-image img {
+.teacher-image img{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.teacher-copy {
+.teacher-copy{
     padding: 44px 52px;
 }
 
@@ -2845,13 +2753,13 @@
 .testimonials-section,
 .testimonials-section::before,
 .testimonials-section::after,
-.testimonials-grid {
+.testimonials-grid{
     border-top: 0;
     border-bottom: 0;
 }
 
 .testimonials-section::before,
-.testimonials-section::after {
+.testimonials-section::after{
     display: none;
     content: none;
 }
@@ -2860,12 +2768,12 @@
    12. PRIDRUŽI SE – VELIK BEL NASLOV
    --------------------------------------------------------- */
 
-.final-cta {
+.final-cta{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
-.final-cta .section-title {
+.final-cta .section-title{
     color: var(--bdk-white);
     font-size: clamp(34px, 4.2vw, 58px);
     line-height: 1.08;
@@ -2878,89 +2786,86 @@
    RESPONSIVE
    --------------------------------------------------------- */
 
-@media (max-width: 1100px) {
-    .build-mosaic {
+@media (max-width: 1100px){
+    .build-mosaic{
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .build-card:nth-child(3) {
+    .build-card:nth-child(3){
         border-left: 0;
         border-top: 1px solid rgba(185, 166, 106, 0.28);
     }
 
-    .build-card:nth-child(4) {
+    .build-card:nth-child(4){
         border-top: 1px solid rgba(185, 166, 106, 0.28);
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 900px){
     .registration-steps,
     .price-grid,
-    .build-mosaic {
+    .build-mosaic{
         grid-template-columns: 1fr;
     }
 
     .registration-card + .registration-card,
     .price-card + .price-card,
-    .build-card + .build-card {
+    .build-card + .build-card{
         border-left: 0;
         border-top: 1px solid rgba(185, 166, 106, 0.28);
     }
 
-    .terms-image-panel .editorial-shell {
+    .terms-image-panel .editorial-shell{
         grid-template-columns: 1fr;
         gap: 52px;
     }
 
-    .terms-image-panel .section-title {
+    .terms-image-panel .section-title{
         grid-column: 1;
         grid-row: 1;
         text-align: left;
     }
 
-    .terms-image-panel .schedule-panel {
+    .terms-image-panel .schedule-panel{
         grid-column: 1;
         grid-row: 2;
     }
 
-    .teacher-panel {
+    .teacher-panel{
         grid-template-columns: 1fr;
     }
 
-    .teacher-image {
+    .teacher-image{
         min-height: 380px;
     }
 }
 
-@media (max-width: 560px) {
-    :root {
+@media (max-width: 560px){
+    :root{
         --section-rhythm: 76px;
     }
 
-    .triptych-section {
+    .triptych-section{
         padding-top: 94px;
     }
 
     .registration-card,
     .price-card,
-    .build-card {
+    .build-card{
         min-height: auto;
         padding: 46px 28px;
     }
 
-    .test-copy {
-        padding-top: 112px;
-        padding-bottom: 78px;
-    }
+    
 
     .terms-image-panel .section-title,
     .price-section .section-title,
     .practices-section .section-title,
-    .final-cta .section-title {
+    .final-cta .section-title{
         font-size: 32px;
     }
 
-    .teacher-copy {
+    .teacher-copy{
         padding: 38px 28px;
     }
 }
@@ -2969,7 +2874,7 @@
    FINALNA PRODUKCIJSKA VERZIJA
    ========================================================= */
 
-:root {
+:root{
     --section-rhythm: 108px;
     --card-black: #0b0b0b;
     --card-black-2: #101010;
@@ -2977,7 +2882,7 @@
 }
 
 /* Mobilni hero uporablja sliko; video se na telefonu sploh ne naloži. */
-.semester-hero-mobile-image {
+.semester-hero-mobile-image{
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -2985,21 +2890,21 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center 44%;
+    
 }
 
-@media (max-width: 767px) {
-    .semester-hero-mobile-image {
+@media (max-width: 767px){
+    .semester-hero-mobile-image{
         display: block;
     }
 
-    .semester-hero-video {
+    .semester-hero-video{
         display: none;
     }
 }
 
 /* Mehkejši prehod med herojem in prvo vsebino. */
-.semester-hero::after {
+.semester-hero::after{
     content: "";
     position: absolute;
     left: 0;
@@ -3018,22 +2923,22 @@
 }
 
 /* Prvi triptih */
-.triptych-section {
+.triptych-section{
     padding-top: 128px;
     padding-bottom: var(--section-rhythm);
 }
 
-.triptych-panel-dark {
+.triptych-panel-dark{
     padding: 62px 54px;
     background: var(--card-black);
     color: var(--bdk-white);
 }
 
-.triptych-panel-dark::before {
+.triptych-panel-dark::before{
     display: none;
 }
 
-.triptych-panel-dark .logo-mark {
+.triptych-panel-dark .logo-mark{
     width: 58px;
     height: 58px;
     margin: 0 auto 26px;
@@ -3041,7 +2946,7 @@
     opacity: 1;
 }
 
-.triptych-panel-dark h2 {
+.triptych-panel-dark h2{
     margin: 0 0 26px;
     color: var(--bdk-white);
     font-size: 24px;
@@ -3051,7 +2956,7 @@
     font-weight: 400;
 }
 
-.triptych-panel-dark .triptych-claim {
+.triptych-panel-dark .triptych-claim{
     max-width: 380px;
     margin: 0 auto 24px;
     color: var(--bdk-white);
@@ -3060,18 +2965,18 @@
 }
 
 .triptych-panel-dark .triptych-claim strong,
-.triptych-panel-dark > p:not(.triptych-claim) {
+.triptych-panel-dark > p:not(.triptych-claim){
     color: var(--bdk-white);
 }
 
-.triptych-panel-dark > p:not(.triptych-claim) {
+.triptych-panel-dark > p:not(.triptych-claim){
     max-width: 360px;
     margin: 0 auto 18px;
     font-size: 16px;
     line-height: 1.85;
 }
 
-.triptych-panel-dark .panel-facts {
+.triptych-panel-dark .panel-facts{
     margin-top: 24px;
     padding-top: 24px;
     border-top: 1px solid rgba(185, 166, 106, 0.48);
@@ -3082,7 +2987,7 @@
     text-transform: uppercase;
 }
 
-.triptych-panel-dark .panel-button {
+.triptych-panel-dark .panel-button{
     margin: 28px auto 0;
     padding: 14px 30px;
     border: 1px solid var(--bdk-gold-active);
@@ -3091,7 +2996,7 @@
 }
 
 .triptych-panel-dark .panel-button:hover,
-.triptych-panel-dark .panel-button:focus {
+.triptych-panel-dark .panel-button:focus{
     border-color: var(--bdk-white);
     background: var(--bdk-white);
     color: var(--bdk-black);
@@ -3108,13 +3013,13 @@
 .teacher-section,
 .testimonials-section,
 .faq-section,
-.final-cta {
+.final-cta{
     padding-top: var(--section-rhythm);
     padding-bottom: var(--section-rhythm);
 }
 
 /* Za koga */
-.audience-title {
+.audience-title{
     max-width: 1040px;
     margin: 0 auto 68px;
     color: var(--bdk-white);
@@ -3127,80 +3032,45 @@
 }
 
 /* Kaj je Budokon: enak razmik naslov–besedilo. */
-.split-feature-copy .editorial-title {
+.split-feature-copy .editorial-title{
     margin-bottom: 52px;
 }
 
-.split-feature-copy p {
+.split-feature-copy p{
     margin-bottom: 24px;
 }
 
-.split-feature-copy p:last-child {
+.split-feature-copy p:last-child{
     margin-bottom: 0;
 }
 
 /* Najprej izkusi prakso */
-.test-section {
-    padding-top: var(--section-rhythm);
-    padding-bottom: 0;
-    background: var(--bdk-black);
-}
 
-.test-hero {
-    position: relative;
-    overflow: hidden;
-}
 
-.test-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background:
-        linear-gradient(
-            to bottom,
-            var(--bdk-black) 0%,
-            rgba(5, 5, 5, 0.78) 15%,
-            rgba(5, 5, 5, 0.48) 38%,
-            rgba(5, 5, 5, 0.48) 64%,
-            rgba(5, 5, 5, 0.80) 86%,
-            var(--bdk-black) 100%
-        ),
-        linear-gradient(
-            to right,
-            rgba(5, 5, 5, 0.76) 0%,
-            rgba(5, 5, 5, 0.46) 46%,
-            rgba(5, 5, 5, 0.22) 100%
-        );
-}
 
-.test-copy {
-    position: relative;
-    z-index: 1;
-    padding-top: 132px;
-    padding-bottom: 132px;
-}
 
-.test-copy .editorial-title {
-    margin-bottom: 52px;
-}
+
+
+
+
+
 
 /* Kako se prijaviš */
-.registration-steps-section {
+.registration-steps-section{
     background: var(--bdk-black);
 }
 
-.registration-steps-section .editorial-shell.narrow {
+.registration-steps-section .editorial-shell.narrow{
     width: min(1320px, 92vw);
     max-width: none;
 }
 
-.registration-steps-section .section-title {
+.registration-steps-section .section-title{
     margin-bottom: 64px;
     color: var(--bdk-gold-active);
 }
 
-.registration-steps {
+.registration-steps{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0;
@@ -3209,7 +3079,7 @@
     background: transparent;
 }
 
-.registration-card {
+.registration-card{
     min-height: 360px;
     padding: 64px 44px;
     display: flex;
@@ -3220,19 +3090,19 @@
     background: var(--card-black);
 }
 
-.registration-card:nth-child(2) {
+.registration-card:nth-child(2){
     background: var(--card-black-2);
 }
 
-.registration-card:nth-child(3) {
+.registration-card:nth-child(3){
     background: var(--card-black-3);
 }
 
-.registration-card + .registration-card {
+.registration-card + .registration-card{
     border-left: 1px solid rgba(185, 166, 106, 0.28);
 }
 
-.registration-number {
+.registration-number{
     margin: 0 0 28px;
     color: var(--bdk-gold-active);
     font-size: 18px;
@@ -3240,7 +3110,7 @@
     letter-spacing: 0.16em;
 }
 
-.registration-card h4 {
+.registration-card h4{
     margin: 0 0 22px;
     color: var(--bdk-white);
     font-size: 17px;
@@ -3250,116 +3120,111 @@
     font-weight: 400;
 }
 
-.registration-card p {
+.registration-card p{
     margin: 0;
     color: var(--bdk-muted);
     font-size: 15px;
     line-height: 1.9;
 }
 
-.test-date-panel {
+.test-date-panel{
     margin-top: 64px;
 }
 
-.test-date-title {
+.test-date-title{
     margin-bottom: 24px;
 }
 
-.registration-action {
+.registration-action{
     margin-top: 50px;
 }
 
 /* Semester: brez zunanjih črt, tri notranje ostanejo. */
-.semester-panel {
+.semester-panel{
     border-top: 0;
     border-bottom: 0;
 }
 
-.semester-panel .semester-row {
+.semester-panel .semester-row{
     border-top: 0;
     border-bottom: 0;
 }
 
-.semester-panel .semester-row:not(:last-child) {
+.semester-panel .semester-row:not(:last-child){
     border-bottom: 1px solid rgba(185, 166, 106, 0.22);
 }
 
 /* Termini: brez zunanjih črt, notranja ostane. */
-.schedule-panel {
+.schedule-panel{
     border-top: 0;
     border-bottom: 0;
 }
 
-.schedule-panel .schedule-row {
+.schedule-panel .schedule-row{
     border-top: 0;
     border-bottom: 0;
 }
 
-.schedule-panel .schedule-row:first-child {
+.schedule-panel .schedule-row:first-child{
     border-bottom: 1px solid rgba(185, 166, 106, 0.22);
 }
 
 /* Cena */
-.price-section .editorial-shell.narrow {
+.price-section .editorial-shell.narrow{
     width: min(1320px, 92vw);
     max-width: none;
 }
 
 .price-section .section-title,
 .practices-section .section-title,
-.final-cta .section-title {
+.final-cta .section-title{
     color: var(--bdk-white);
 }
 
 /* Mnenja brez zunanjih horizontalnih črt. */
 .testimonials-section,
-.testimonials-grid {
+.testimonials-grid{
     border-top: 0;
     border-bottom: 0;
 }
 
 /* Responsive */
-@media (max-width: 900px) {
-    .registration-steps {
+@media (max-width: 900px){
+    .registration-steps{
         grid-template-columns: 1fr;
     }
 
-    .registration-card + .registration-card {
+    .registration-card + .registration-card{
         border-top: 1px solid rgba(185, 166, 106, 0.28);
         border-left: 0;
     }
 }
 
-@media (max-width: 560px) {
-    :root {
+@media (max-width: 560px){
+    :root{
         --section-rhythm: 76px;
     }
 
-    .triptych-section {
+    .triptych-section{
         padding-top: 94px;
     }
 
-    .triptych-panel-dark {
+    .triptych-panel-dark{
         padding: 48px 28px;
     }
 
-    .audience-title {
+    .audience-title{
         margin-bottom: 46px;
         font-size: 18px;
         line-height: 1.6;
         letter-spacing: 0.08em;
     }
 
-    .test-copy {
-        padding-top: 112px;
-        padding-bottom: 112px;
-    }
+    
 
-    .test-copy .editorial-title {
-        margin-bottom: 38px;
-    }
+    
 
-    .registration-card {
+    .registration-card{
         min-height: auto;
         padding: 46px 28px;
     }
@@ -3369,7 +3234,7 @@
    FINALNI VIZUALNI IN MOBILNI POPRAVKI
    ========================================================= */
 
-:root {
+:root{
     --section-rhythm: 108px;
     --uniform-card: #101010;
     --uniform-card-soft: #121212;
@@ -3385,7 +3250,7 @@
 .price-card:nth-child(3),
 .build-card:nth-child(2),
 .build-card:nth-child(3),
-.build-card:nth-child(4) {
+.build-card:nth-child(4){
     background: var(--uniform-card);
 }
 
@@ -3393,82 +3258,41 @@
 .audience-card + .audience-card,
 .registration-card + .registration-card,
 .price-card + .price-card,
-.build-card + .build-card {
+.build-card + .build-card{
     border-left-color: rgba(185, 166, 106, 0.28);
 }
 
 /* Mobilna hero slika */
-.semester-hero-mobile-image {
-    object-position: center center;
-}
+
 
 /* Najprej izkusi prakso:
    enakomeren temen premaz čez celo sliko in mehka fade-a zgoraj/spodaj. */
-.test-section {
-    padding-top: var(--section-rhythm);
-    padding-bottom: 0;
-    background: var(--bdk-black);
-}
 
-.test-hero {
-    min-height: 720px;
-    background-image: url("/redne-prakse-testna-lekcija.webp");
-    background-position: center 44%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
-.test-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    background:
-        linear-gradient(
-            to bottom,
-            #050505 0%,
-            rgba(5, 5, 5, 0.90) 9%,
-            rgba(5, 5, 5, 0.54) 26%,
-            rgba(5, 5, 5, 0.48) 68%,
-            rgba(5, 5, 5, 0.84) 90%,
-            #050505 100%
-        ),
-        linear-gradient(
-            to right,
-            rgba(5, 5, 5, 0.72) 0%,
-            rgba(5, 5, 5, 0.50) 48%,
-            rgba(5, 5, 5, 0.34) 100%
-        ),
-        rgba(5, 5, 5, 0.18);
-}
 
-.test-copy {
-    position: relative;
-    z-index: 1;
-    padding-top: 136px;
-    padding-bottom: 136px;
-}
 
-.test-copy .editorial-title {
-    margin-bottom: 52px;
-}
+
+
+
+
+
 
 /* Termini uporabljajo optimizirano WebP sliko. */
-.terms-image-panel {
+.terms-image-panel{
     background-image: url("/redne-prakse-semester.webp");
 }
 
 /* FAQ: brez črte nad prvim in pod zadnjim vprašanjem. */
-.faq-list {
+.faq-list{
     border-top: 0;
     border-bottom: 0;
 }
 
-.faq-item.faq-first {
+.faq-item.faq-first{
     border-top: 0;
 }
 
-.faq-item.faq-last {
+.faq-item.faq-last{
     border-bottom: 0;
 }
 
@@ -3476,13 +3300,13 @@
    MOBILNI PREGLED
    --------------------------------------------------------- */
 
-@media (max-width: 767px) {
-    :root {
+@media (max-width: 767px){
+    :root{
         --section-rhythm: 76px;
     }
 
     /* Hero je dovolj visok za celotno vsebino in se ne odreže. */
-    .semester-hero {
+    .semester-hero{
         min-height: 100svh;
         height: auto;
         margin-top: 56px;
@@ -3491,15 +3315,15 @@
         background: #050505;
     }
 
-    .semester-hero-mobile-image {
+    .semester-hero-mobile-image{
         display: block;
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 52% center;
+        
     }
 
-    .semester-hero-overlay {
+    .semester-hero-overlay{
         background:
             linear-gradient(
                 to bottom,
@@ -3510,11 +3334,11 @@
             );
     }
 
-    .semester-hero::after {
+    .semester-hero::after{
         height: 150px;
     }
 
-    .semester-hero-inner {
+    .semester-hero-inner{
         width: min(88vw, 430px);
         min-height: calc(100svh - 56px);
         padding-top: 86px;
@@ -3523,12 +3347,12 @@
         align-items: center;
     }
 
-    .semester-hero-copy {
+    .semester-hero-copy{
         width: 100%;
         max-width: none;
     }
 
-    .semester-title {
+    .semester-title{
         margin: 0;
         font-size: clamp(54px, 17vw, 82px);
         line-height: 1.02;
@@ -3536,37 +3360,37 @@
         white-space: normal;
     }
 
-    .semester-subtitle {
+    .semester-subtitle{
         margin-top: 22px;
         font-size: 12px;
         line-height: 1.65;
         letter-spacing: 0.17em;
     }
 
-    .semester-lead {
+    .semester-lead{
         margin-top: 28px;
         font-size: 15px;
         line-height: 1.75;
     }
 
     /* Na mobilnem odstranimo drugi stavek, da hero ostane jasen. */
-    .semester-lead p:nth-child(2) {
+    .semester-lead p:nth-child(2){
         display: none;
     }
 
-    .semester-meta {
+    .semester-meta{
         margin-top: 26px;
         font-size: 10px;
         line-height: 1.9;
         letter-spacing: 0.11em;
     }
 
-    .hero-actions {
+    .hero-actions{
         margin-top: 30px;
         gap: 10px;
     }
 
-    .hero-actions .landing-button {
+    .hero-actions .landing-button{
         width: 100%;
         max-width: 360px;
         padding: 14px 15px;
@@ -3576,12 +3400,12 @@
     }
 
     /* Prvi triptih se na telefonu zloži pravilno. */
-    .triptych-section {
+    .triptych-section{
         padding-top: 90px;
         padding-bottom: var(--section-rhythm);
     }
 
-    .triptych-grid {
+    .triptych-grid{
         width: min(88vw, 430px);
         margin: 0 auto;
         grid-template-columns: 1fr;
@@ -3589,27 +3413,27 @@
     }
 
     .triptych-image,
-    .triptych-panel {
+    .triptych-panel{
         min-height: 0;
         height: auto;
     }
 
-    .triptych-practice-card {
+    .triptych-practice-card{
         height: 520px;
     }
 
-    .triptych-practice-card img {
+    .triptych-practice-card img{
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 20% center;
+        
     }
 
-    .triptych-card-overlay {
+    .triptych-card-overlay{
         padding: 32px 26px 28px;
     }
 
-    .triptych-panel-dark {
+    .triptych-panel-dark{
         min-height: 500px;
         padding: 48px 28px;
     }
@@ -3618,7 +3442,7 @@
     .audience-grid,
     .registration-steps,
     .price-grid,
-    .build-mosaic {
+    .build-mosaic{
         width: min(92vw, 520px);
         margin-right: auto;
         margin-left: auto;
@@ -3628,7 +3452,7 @@
     .audience-card,
     .registration-card,
     .price-card,
-    .build-card {
+    .build-card{
         min-height: auto;
         padding: 46px 28px;
     }
@@ -3636,12 +3460,12 @@
     .audience-card + .audience-card,
     .registration-card + .registration-card,
     .price-card + .price-card,
-    .build-card + .build-card {
+    .build-card + .build-card{
         border-top: 1px solid rgba(185, 166, 106, 0.28);
         border-left: 0;
     }
 
-    .audience-title {
+    .audience-title{
         width: min(88vw, 430px);
         margin-bottom: 44px;
         font-size: 18px;
@@ -3650,125 +3474,97 @@
     }
 
     /* Kaj je Budokon: slika se ne reže nenaravno. */
-    .split-feature {
+    .split-feature{
         grid-template-columns: 1fr;
     }
 
-    .split-feature-image {
+    .split-feature-image{
         min-height: 420px;
     }
 
-    .split-feature-image img {
+    .split-feature-image img{
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: 32% center;
+        
     }
 
-    .split-feature-copy {
+    .split-feature-copy{
         padding: 46px 28px 54px;
     }
 
-    .split-feature-copy .editorial-title {
+    .split-feature-copy .editorial-title{
         margin-bottom: 38px;
     }
 
     /* Testna praksa: tudi mobilno brez trdega roba. */
-    .test-hero {
-        min-height: 680px;
-        background-position: 46% center;
-    }
+    
 
-    .test-hero::before {
-        background:
-            linear-gradient(
-                to bottom,
-                #050505 0%,
-                rgba(5, 5, 5, 0.86) 10%,
-                rgba(5, 5, 5, 0.58) 28%,
-                rgba(5, 5, 5, 0.54) 70%,
-                rgba(5, 5, 5, 0.88) 91%,
-                #050505 100%
-            ),
-            rgba(5, 5, 5, 0.22);
-    }
+    
 
-    .test-copy {
-        width: min(88vw, 430px);
-        margin: 0 auto;
-        padding-top: 118px;
-        padding-bottom: 118px;
-        text-align: left;
-    }
+    
 
-    .test-copy .editorial-title {
-        margin-bottom: 38px;
-        font-size: 42px;
-    }
+    
 
     /* Semester in termini na telefonu ostanejo logično zloženi. */
     .semester-editorial,
-    .terms-image-panel .editorial-shell {
+    .terms-image-panel .editorial-shell{
         grid-template-columns: 1fr;
         gap: 50px;
     }
 
     .semester-panel,
-    .schedule-panel {
+    .schedule-panel{
         width: 100%;
     }
 
-    .terms-image-panel .section-title {
+    .terms-image-panel .section-title{
         grid-column: 1;
         grid-row: 1;
         text-align: left;
     }
 
-    .terms-image-panel .schedule-panel {
+    .terms-image-panel .schedule-panel{
         grid-column: 1;
         grid-row: 2;
     }
 
     /* Podrobneje o praksah: slike so poravnane in ne uidejo iz kartic. */
-    .practice-editorial-grid {
+    .practice-editorial-grid{
         grid-template-columns: 1fr;
     }
 
-    .practice-editorial-image {
+    .practice-editorial-image{
         height: 320px;
     }
 
-    .practice-editorial-image img {
+    .practice-editorial-image img{
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: 22% center;
     }
 
-    .practice-editorial-card:nth-child(2) .practice-editorial-image img {
-        object-position: 48% center;
-    }
+    
 
     /* Sanja: slika ne postane preveč visoka. */
-    .teacher-panel {
+    .teacher-panel{
         grid-template-columns: 1fr;
     }
 
-    .teacher-image {
+    .teacher-image{
         min-height: 360px;
         max-height: 460px;
     }
 
-    .teacher-image img {
-        object-position: 58% center;
-    }
+    
 
-    .teacher-copy {
+    .teacher-copy{
         padding: 40px 28px;
     }
 
     /* FAQ brez zunanjih črt tudi na mobilnem. */
-    .faq-list {
+    .faq-list{
         border-top: 0;
         border-bottom: 0;
     }
@@ -3780,12 +3576,105 @@
 
 /* En sam neprekinjen premaz čez celotno fotografijo.
    Zgornji in spodnji rob se mehko zlijeta v črno ozadje. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Naslovi pri "Kaj gradimo" imajo namenski prelom. */
+.build-card h3 span{
+    display: inline-block;
+    margin-top: 5px;
+}
+
+/* Vse relevantne slike na telefonu kažejo izraziteje levi del motiva. */
+@media (max-width: 767px){
+    
+
+    
+
+    .triptych-practice-card.right img{
+        object-position: 18% center;
+    }
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+}
+
+/* =========================================================
+   FINALNI POPRAVKI PO ZADNJEM PREGLEDU
+   ========================================================= */
+
+/* Testna praksa: enoten premaz čez celotno sliko brez trdega pasu. */
+
+
+
+
+
+
+
+
+/* Enak razmik naslov–copy kot pri "Kaj je Budokon". */
+
+
+/* Na mobilnem premaknemo le dve zahtevani sliki bolj levo. */
+
+
+/* =========================================================
+   OČIŠČENA FINALNA PRAVILA
+   ========================================================= */
+
+.menu-icon {
+    position: relative;
+    display: inline-block;
+    width: 21px;
+    height: 14px;
+    border-top: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+}
+
+.menu-icon::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 100%;
+    border-top: 2px solid currentColor;
+}
+
+/* Najprej izkusi prakso: ena sama definicija, brez prepisov. */
+.test-section {
+    padding-top: 108px;
+    padding-bottom: 0;
+    background: #050505;
+}
+
 .test-hero {
     position: relative;
     min-height: 720px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     background-image: url("/redne-prakse-testna-lekcija.webp");
-    background-position: 22% center;
+    background-position: center 44%;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -3798,20 +3687,27 @@
     pointer-events: none;
     background:
         linear-gradient(
-            to bottom,
-            #050505 0%,
-            rgba(5, 5, 5, 0.88) 8%,
-            rgba(5, 5, 5, 0.56) 24%,
-            rgba(5, 5, 5, 0.50) 74%,
-            rgba(5, 5, 5, 0.86) 91%,
-            #050505 100%
+            to right,
+            rgba(5, 5, 5, 0.80) 0%,
+            rgba(5, 5, 5, 0.52) 46%,
+            rgba(5, 5, 5, 0.30) 100%
         ),
-        rgba(5, 5, 5, 0.28);
+        linear-gradient(
+            to bottom,
+            rgba(5, 5, 5, 0.58) 0%,
+            rgba(5, 5, 5, 0.32) 26%,
+            rgba(5, 5, 5, 0.32) 72%,
+            rgba(5, 5, 5, 0.78) 91%,
+            #050505 100%
+        );
 }
 
 .test-copy {
     position: relative;
     z-index: 1;
+    width: min(640px, 86vw);
+    padding-top: 128px;
+    padding-bottom: 128px;
 }
 
 .test-copy .editorial-title {
@@ -3833,118 +3729,43 @@
     margin-top: 34px;
 }
 
-/* Naslovi pri "Kaj gradimo" imajo namenski prelom. */
-.build-card h3 span {
-    display: inline-block;
-    margin-top: 5px;
-}
-
-/* Vse relevantne slike na telefonu kažejo izraziteje levi del motiva. */
-@media (max-width: 767px) {
-    .semester-hero-mobile-image {
-        object-position: 18% center;
-    }
-
-    .triptych-practice-card img,
-    .triptych-image img {
-        object-position: 12% center;
-    }
-
-    .triptych-practice-card.right img {
-        object-position: 18% center;
-    }
-
-    .test-hero {
-        min-height: 700px;
-        background-position: 16% center;
-    }
-
-    .split-feature-image img {
-        object-position: 14% center;
-    }
-
-    .practice-editorial-card .practice-editorial-image img {
-        object-position: 14% center;
-    }
-
-    .practice-editorial-card:nth-child(2) .practice-editorial-image img {
-        object-position: 20% center;
-    }
-
-    .terms-image-panel {
-        background-position: 18% center;
-    }
-
-    .teacher-image img {
-        object-position: 38% center;
-    }
-}
-
-/* =========================================================
-   FINALNI POPRAVKI PO ZADNJEM PREGLEDU
-   ========================================================= */
-
-/* Testna praksa: enoten premaz čez celotno sliko brez trdega pasu. */
-.test-hero {
-    position: relative;
-    min-height: 720px;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background-image: url("/redne-prakse-testna-lekcija.webp");
-    background-position: center 44%;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.test-hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    background:
-        linear-gradient(
-            to right,
-            rgba(5, 5, 5, 0.78) 0%,
-            rgba(5, 5, 5, 0.46) 44%,
-            rgba(5, 5, 5, 0.16) 100%
-        ),
-        linear-gradient(
-            to bottom,
-            rgba(5, 5, 5, 0.36) 0%,
-            rgba(5, 5, 5, 0.48) 70%,
-            rgba(5, 5, 5, 0.88) 92%,
-            #050505 100%
-        );
-}
-
-.test-copy {
-    position: relative;
-    z-index: 1;
-}
-
-.test-copy .editorial-title {
-    margin-bottom: 52px;
-}
-
-/* Enak razmik naslov–copy kot pri "Kaj je Budokon". */
+/* Enak razmik naslov–copy kot pri Kaj je Budokon. */
 .semester-intro .editorial-title {
     margin-bottom: 52px;
 }
 
-/* Na mobilnem premaknemo le dve zahtevani sliki bolj levo. */
+/* Mobilno: samo ti dve sliki sta rahlo pomaknjeni proti sredini. */
 @media (max-width: 767px) {
-    .split-feature-image img {
-        object-position: left center;
+    .test-section {
+        padding-top: 76px;
     }
 
-    .teacher-image img {
-        object-position: left center;
+    .test-hero {
+        min-height: 700px;
+        background-position: center center;
+    }
+
+    .test-copy {
+        width: min(88vw, 430px);
+        margin: 0 auto;
+        padding-top: 112px;
+        padding-bottom: 112px;
+    }
+
+    .test-copy .editorial-title {
+        margin-bottom: 38px;
     }
 
     .semester-intro .editorial-title {
         margin-bottom: 38px;
+    }
+
+    .split-feature-image img {
+        object-position: 38% center;
+    }
+
+    .teacher-image img {
+        object-position: 44% center;
     }
 }
 </style>
@@ -4084,15 +3905,14 @@
       ]
     }
     </script>
-</head>
+<link as="style" href="/css/futura.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><link as="style" href="/css/grayscale.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><link as="style" href="/css/budokon.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><link as="style" href="/css/dark-theme.css" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/><link as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Six+Caps&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'" rel="preload"/></head>
 <body class="budokon-semester-page" data-spy="scroll" data-target=".navbar-fixed-top" id="page-top">
 <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
 <div class="container">
 <div class="navbar-header">
 <button aria-controls="main-navigation" aria-expanded="false" aria-label="Odpri glavni meni" class="navbar-toggle" data-target="#main-navigation" data-toggle="collapse" type="button">
       Meni
-      <i class="fa fa-bars">
-</i>
+      <span aria-hidden="true" class="menu-icon"></span>
 </button>
 <a class="navbar-brand" href="/">
       BUDOKON
