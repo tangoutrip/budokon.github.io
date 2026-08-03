@@ -2412,6 +2412,558 @@
         margin-bottom: 38px !important;
     }
 }
+
+/* =========================================================
+   NATANČNI POPRAVKI PO FEEDBACKU
+   ========================================================= */
+
+:root {
+    --section-rhythm: 108px;
+}
+
+/* ---------------------------------------------------------
+   1. SREDINSKA KARTICA
+   --------------------------------------------------------- */
+
+.triptych-panel .logo-mark {
+    margin-bottom: 26px !important;
+}
+
+.triptych-panel h2 {
+    order: 2;
+    margin: 0 0 26px !important;
+}
+
+.triptych-panel .triptych-claim {
+    order: 3;
+    margin: 0 auto 24px !important;
+}
+
+.triptych-panel > p:not(.triptych-claim) {
+    order: 4;
+}
+
+.triptych-panel .panel-facts {
+    order: 5;
+}
+
+.triptych-panel .panel-button {
+    order: 6;
+}
+
+/* ---------------------------------------------------------
+   2. ENOTEN PADDING MED ZGODNJIMI SEGMENTI
+   --------------------------------------------------------- */
+
+.triptych-section {
+    padding-top: 128px !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.audience-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.split-feature-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+/* ---------------------------------------------------------
+   3. NAJPREJ IZKUSI PRAKSO
+   --------------------------------------------------------- */
+
+.test-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: 0 !important;
+    background: var(--bdk-black);
+}
+
+.test-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.test-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    z-index: 1;
+    height: 190px;
+    pointer-events: none;
+    background: linear-gradient(
+        to bottom,
+        var(--bdk-black) 0%,
+        rgba(5, 5, 5, 0.92) 26%,
+        rgba(5, 5, 5, 0.58) 64%,
+        rgba(5, 5, 5, 0) 100%
+    );
+}
+
+.test-copy {
+    position: relative;
+    z-index: 2;
+    padding-top: 132px !important;
+    padding-bottom: 104px !important;
+}
+
+/* ---------------------------------------------------------
+   4. KAKO SE PRIJAVIŠ – ISTI SISTEM KOT "ZA KOGA"
+   --------------------------------------------------------- */
+
+.registration-steps-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.registration-steps-section::before,
+.registration-steps-section::after,
+.registration-steps::before,
+.registration-steps::after {
+    display: none !important;
+    content: none !important;
+}
+
+.registration-steps-section .editorial-shell.narrow {
+    width: min(1320px, 92vw) !important;
+    max-width: none !important;
+}
+
+.registration-steps-section .section-title {
+    margin-bottom: 64px !important;
+    color: var(--bdk-gold-active) !important;
+}
+
+.registration-steps {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    width: 100% !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.registration-card {
+    min-height: 360px !important;
+    padding: 64px 44px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    background: #0b0b0b !important;
+    border: 0 !important;
+}
+
+.registration-card:nth-child(2) {
+    background: #101010 !important;
+}
+
+.registration-card:nth-child(3) {
+    background: #151515 !important;
+}
+
+.registration-card + .registration-card {
+    border-left: 1px solid rgba(185, 166, 106, 0.28) !important;
+}
+
+.registration-number {
+    margin: 0 0 28px !important;
+    color: var(--bdk-gold-active) !important;
+    font-size: 18px !important;
+    line-height: 1 !important;
+    letter-spacing: 0.16em !important;
+}
+
+.registration-card h4 {
+    margin: 0 0 22px !important;
+    color: var(--bdk-white) !important;
+    font-size: 17px !important;
+    line-height: 1.55 !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+}
+
+.registration-card p {
+    margin: 0 !important;
+    color: var(--bdk-muted) !important;
+    font-size: 15px !important;
+    line-height: 1.9 !important;
+}
+
+.test-date-panel {
+    margin-top: 64px !important;
+}
+
+.test-date-title {
+    margin-bottom: 24px !important;
+}
+
+.registration-action {
+    margin-top: 50px !important;
+}
+
+.registration-action .landing-button {
+    margin-top: 0 !important;
+}
+
+/* ---------------------------------------------------------
+   5. KAKO POTEKA SEMESTER
+   --------------------------------------------------------- */
+
+.semester-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.semester-panel .semester-row:first-child {
+    border-top: 0 !important;
+}
+
+.semester-panel .semester-row:last-child {
+    border-bottom: 0 !important;
+}
+
+/* Ohranimo samo tri notranje ločnice. */
+.semester-panel .semester-row:not(:last-child) {
+    border-bottom: 1px solid rgba(185, 166, 106, 0.22) !important;
+}
+
+/* ---------------------------------------------------------
+   6. TERMINI – VSEBINA LEVO, NASLOV DESNO
+   --------------------------------------------------------- */
+
+.terms-image-panel {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.terms-image-panel .editorial-shell {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.65fr) !important;
+    gap: 88px !important;
+    align-items: start !important;
+}
+
+.terms-image-panel .schedule-panel {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+}
+
+.terms-image-panel .section-title {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin: 0 !important;
+    color: var(--bdk-white) !important;
+    text-align: right !important;
+    font-size: clamp(34px, 4.2vw, 58px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+}
+
+/* ---------------------------------------------------------
+   7. CENA – BEL NASLOV, TRI POLJA ČEZ ŠIRINO
+   --------------------------------------------------------- */
+
+.price-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.price-section .editorial-shell.narrow {
+    width: min(1320px, 92vw) !important;
+    max-width: none !important;
+}
+
+.price-section .section-title {
+    margin-bottom: 64px !important;
+    color: var(--bdk-white) !important;
+    font-size: clamp(34px, 4.2vw, 58px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+}
+
+.price-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    width: 100% !important;
+    max-width: none !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.price-card {
+    min-height: 320px !important;
+    padding: 60px 42px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: #0b0b0b !important;
+    border: 0 !important;
+}
+
+.price-card:nth-child(2) {
+    background: #101010 !important;
+}
+
+.price-card:nth-child(3) {
+    background: #151515 !important;
+}
+
+.price-card + .price-card {
+    border-left: 1px solid rgba(185, 166, 106, 0.28) !important;
+}
+
+.price-note {
+    margin-top: 58px !important;
+}
+
+/* ---------------------------------------------------------
+   8. KAJ GRADIMO – ŠTIRI POLJA V ISTEM SISTEMU
+   --------------------------------------------------------- */
+
+.build-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.build-heading-row {
+    margin-bottom: 64px !important;
+}
+
+.build-section .editorial-title {
+    color: var(--bdk-white) !important;
+}
+
+.build-mosaic {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 0 !important;
+    width: 100% !important;
+    border: 0 !important;
+    background: transparent !important;
+}
+
+.build-card {
+    min-height: 390px !important;
+    padding: 56px 38px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    background: #0b0b0b !important;
+    border: 0 !important;
+}
+
+.build-card:nth-child(2) {
+    background: #0f0f0f !important;
+}
+
+.build-card:nth-child(3) {
+    background: #131313 !important;
+}
+
+.build-card:nth-child(4) {
+    background: #171717 !important;
+}
+
+.build-card + .build-card {
+    border-left: 1px solid rgba(185, 166, 106, 0.28) !important;
+}
+
+.build-icon {
+    width: 34px;
+    height: 34px;
+    margin: 0 0 28px;
+    background-color: var(--bdk-gold-active);
+    -webkit-mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    mask: url("/img/bdk-logo-black.png") center / contain no-repeat;
+    opacity: 0.72;
+}
+
+/* ---------------------------------------------------------
+   9. PODROBNEJE O PRAKSAH
+   --------------------------------------------------------- */
+
+.practices-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.practices-section .section-title {
+    margin-bottom: 64px !important;
+    color: var(--bdk-white) !important;
+    font-size: clamp(34px, 4.2vw, 58px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+}
+
+/* ---------------------------------------------------------
+   10. SANJA SOMATIKA
+   --------------------------------------------------------- */
+
+.teacher-section {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.teacher-panel {
+    grid-template-columns: minmax(280px, 0.36fr) minmax(0, 0.64fr) !important;
+    align-items: stretch !important;
+}
+
+.teacher-image {
+    min-height: 0 !important;
+    height: auto !important;
+}
+
+.teacher-image img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+}
+
+.teacher-copy {
+    padding: 44px 52px !important;
+}
+
+/* ---------------------------------------------------------
+   11. MNENJA – BREZ ZGORNJE IN SPODNJE ČRTE
+   --------------------------------------------------------- */
+
+.testimonials-section,
+.testimonials-section::before,
+.testimonials-section::after,
+.testimonials-grid {
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+}
+
+.testimonials-section::before,
+.testimonials-section::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* ---------------------------------------------------------
+   12. PRIDRUŽI SE – VELIK BEL NASLOV
+   --------------------------------------------------------- */
+
+.final-cta {
+    padding-top: var(--section-rhythm) !important;
+    padding-bottom: var(--section-rhythm) !important;
+}
+
+.final-cta .section-title {
+    color: var(--bdk-white) !important;
+    font-size: clamp(34px, 4.2vw, 58px) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase !important;
+    font-weight: 400 !important;
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE
+   --------------------------------------------------------- */
+
+@media (max-width: 1100px) {
+    .build-mosaic {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+
+    .build-card:nth-child(3) {
+        border-left: 0 !important;
+        border-top: 1px solid rgba(185, 166, 106, 0.28) !important;
+    }
+
+    .build-card:nth-child(4) {
+        border-top: 1px solid rgba(185, 166, 106, 0.28) !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .registration-steps,
+    .price-grid,
+    .build-mosaic {
+        grid-template-columns: 1fr !important;
+    }
+
+    .registration-card + .registration-card,
+    .price-card + .price-card,
+    .build-card + .build-card {
+        border-left: 0 !important;
+        border-top: 1px solid rgba(185, 166, 106, 0.28) !important;
+    }
+
+    .terms-image-panel .editorial-shell {
+        grid-template-columns: 1fr !important;
+        gap: 52px !important;
+    }
+
+    .terms-image-panel .section-title {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        text-align: left !important;
+    }
+
+    .terms-image-panel .schedule-panel {
+        grid-column: 1 !important;
+        grid-row: 2 !important;
+    }
+
+    .teacher-panel {
+        grid-template-columns: 1fr !important;
+    }
+
+    .teacher-image {
+        min-height: 380px !important;
+    }
+}
+
+@media (max-width: 560px) {
+    :root {
+        --section-rhythm: 76px;
+    }
+
+    .triptych-section {
+        padding-top: 94px !important;
+    }
+
+    .registration-card,
+    .price-card,
+    .build-card {
+        min-height: auto !important;
+        padding: 46px 28px !important;
+    }
+
+    .test-copy {
+        padding-top: 112px !important;
+        padding-bottom: 78px !important;
+    }
+
+    .terms-image-panel .section-title,
+    .price-section .section-title,
+    .practices-section .section-title,
+    .final-cta .section-title {
+        font-size: 32px !important;
+    }
+
+    .teacher-copy {
+        padding: 38px 28px !important;
+    }
+}
 </style>
 <script type="application/ld+json">
     {
@@ -2644,16 +3196,9 @@
 <p>Flow praksa na podlogi, ki krepi odpornost skozi nadzor, natančnost in tekoče prehode.</p>
 </div>
 </article>
-<article class="triptych-panel triptych-panel-gray">
-<div aria-hidden="true" class="logo-mark"></div>
-<p class="triptych-claim">
+<article class="triptych-panel triptych-panel-gray"><div aria-hidden="true" class="logo-mark"></div><h2 id="practice-choice-title">Dva tipa<br/>rednih praks</h2><p class="triptych-claim">
 <strong>Atletsko zahteven Budokon, voden somatsko, dostopno in brez forsiranja.</strong>
-</p>
-<h2 id="practice-choice-title">Dva tipa<br/>rednih praks</h2>
-<p>Obe praksi razvijata moč<br/>mobilnost in koordinacijo.</p>
-<div class="panel-facts">testna praksa · 25 €</div>
-<a class="panel-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">Prijava</a>
-</article>
+</p><p>Obe praksi razvijata moč<br/>mobilnost in koordinacijo.</p><div class="panel-facts">testna praksa · 25 €</div><a class="panel-button" href="https://forms.gle/QyuVCJcnDNyiGUP16" rel="noopener" target="_blank">Prijava</a></article>
 <article class="triptych-image triptych-practice-card right">
 <img alt="BDK tatami praksa" src="/img/gorilaw.jpg"/>
 <div class="triptych-card-overlay">
@@ -2720,17 +3265,17 @@
 <div class="editorial-shell narrow">
 <h2 class="section-title">Kako se prijaviš na testno prakso</h2>
 <div class="registration-steps">
-<div class="registration-step">
+<div class="registration-step registration-card">
 <span class="registration-number">01</span>
 <h4>Izberi termin</h4>
 <p>Izberi testno prakso slow flow ali tatami in oddaj prijavo prek obrazca (za eno ali več praks).</p>
 </div>
-<div class="registration-step">
+<div class="registration-step registration-card">
 <span class="registration-number">02</span>
 <h4>Potrdi mesto</h4>
 <p>Po prijavi prejmeš e-pošto s QR kodo za plačilo. Mesto je rezervirano po prejetem plačilu.</p>
 </div>
-<div class="registration-step">
+<div class="registration-step registration-card">
 <span class="registration-number">03</span>
 <h4>Izkusi prakso</h4>
 <p>Posamezna testna praksa traja 75 minut in stane 25 €, dobrodošli na več praks. Ob vpisu v semester se znesek v celoti odšteje od šolnine.</p>
@@ -2750,7 +3295,7 @@
 <div class="semester-editorial">
 <div class="semester-intro">
 <div class="editorial-kicker">5-mesečni proces</div>
-<h2 class="editorial-title">Kako poteka semester</h2>
+<h2 class="editorial-title white-editorial-heading">Kako poteka semester</h2>
 <p>
       Redne prakse Budokona potekajo v obliki dveh semestrov, ki trajata približno pet mesecev:
      </p>
@@ -2786,7 +3331,7 @@
 </section><section class="terms-price-section section-anchor" id="termini">
 <div class="terms-image-panel">
 <div class="editorial-shell">
-<h2 class="section-title left">Termini</h2>
+<h2 class="section-title left white-editorial-heading">Termini</h2>
 <div class="schedule-panel">
 <div class="schedule-row">
 <div class="schedule-day">
@@ -2804,7 +3349,7 @@
 </div>
 </div>
 <div class="price-section section-anchor" id="prijava">
-<div class="editorial-shell narrow"><h2 class="section-title small-space">Cena</h2>
+<div class="editorial-shell narrow"><h2 class="section-title small-space white-editorial-heading">Cena</h2>
 <div class="price-grid">
 <div class="price-card">
 <h3>
@@ -2856,32 +3401,32 @@
 <div class="build-heading-row">
 <div>
 <div class="editorial-kicker">kaj razvijamo</div>
-<h2 class="editorial-title">Kaj gradimo</h2>
+<h2 class="editorial-title white-editorial-heading">Kaj gradimo</h2>
 </div>
 <div class="text-block"><p>Osrednji fokus ni popolna izvedba. Fokus je odnos do telesa, napora, meja in trenutka, ko bi najraje pobegnili ali odnehali.</p></div>
 </div>
-<div class="build-mosaic"><article class="build-card">
+<div class="build-mosaic"><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>
        Moč kot kapaciteto
       </h3>
 <p>
        Moč ni samo mišična sila. Je kapaciteta, da pri naporu ostaneš v stiku s sabo. Da ne greš takoj v primerjanje, dokazovanje ali umik iz izziva. Gradimo jo postopno, z izzivom in brez forsiranja.
       </p>
-</article><article class="build-card">
+</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>
        Mobilnost kot telesno inteligenco
       </h3>
 <p>
        Mobilnost ni samo obseg gibanja. Je sposobnost, da gib čutiš, nadzoruješ in se v njem znajdeš. V Budokonu raziskujemo prehode, prilagajanje in gibanje skozi prostor.
       </p>
-</article><article class="build-card">
+</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>
        Koordinacijo kot jasnost
       </h3>
 <p>
        Budokon zahteva pozornost. Gibanje povezuje roke, noge, hrbtenico, pogled, dih in orientacijo v prostoru. Sčasoma se telo začne gibati bolj celostno, manj fragmentirano.
       </p>
-</article><article class="build-card">
+</article><article class="build-card"><div aria-hidden="true" class="build-icon"></div>
 <h3>
        Meje kot del prakse
       </h3>
@@ -2892,7 +3437,7 @@
 </div>
 </section><section class="practices-section section-anchor" id="prakse">
 <div class="editorial-shell">
-<h2 class="section-title">Podrobneje o praksah</h2>
+<h2 class="section-title white-editorial-heading">Podrobneje o praksah</h2>
 <div class="practice-editorial-grid">
 <article class="practice-editorial-card">
 <div class="practice-editorial-image"><img alt="BDK slow flow Budokon praksa na vadbeni podlogi" decoding="async" height="461" loading="lazy" src="/leteča bojevnica.jpg" width="1000"/></div>
@@ -2975,9 +3520,7 @@
        </a>
        je prva slovenska certificirana učiteljica Budokona® in ustanoviteljica šole Budokon Slovenija. Budokon je v Slovenijo pripeljala leta 2016 kot edukantka, licenco pa je pridobila leta 2017, ko je tudi odprla šolo.
       </p>
-<p>
-       Vsa Budokon izobraževanja je opravila v živo pri avtorju metode Cameronu Shaynu.
-      </p>
+<p>Vsa Budokon izobraževanja je opravila v živo pri ustanovitelju, Cameronu Shaynu.</p>
 <p>
        Je avtorica metode Somatska čuječnost, RYT joga učiteljica, učiteljica argentinskega tanga, psihosocialna svetovalka in praktikantka Somatic Experiencing.
       </p>
@@ -3081,7 +3624,7 @@
 </div>
 </section><section class="final-cta">
 <div class="editorial-shell narrow">
-<h2 class="section-title">
+<h2 class="section-title white-editorial-heading">
      Pridruži se
     </h2>
 <div class="text-block">
