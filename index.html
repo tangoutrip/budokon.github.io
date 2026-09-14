@@ -321,7 +321,7 @@
 
         .program-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 1px;
             border: 1px solid rgba(185, 166, 106, 0.28);
             background: rgba(185, 166, 106, 0.28);
@@ -810,6 +810,27 @@
         "@type": "Place",
         "name": "Ljubljana"
       },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Budokon Slovenija – ponudba",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "name": "Redne Budokon prakse",
+            "url": "https://budokon.si/redne-prakse/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Budokon delavnice",
+            "url": "https://budokon.si/budokon-moc/"
+          },
+          {
+            "@type": "Offer",
+            "name": "Individualne Budokon lekcije",
+            "url": "mailto:sanja@budokon.si"
+          }
+        ]
+      },
       "sameAs": [
         "https://www.instagram.com/budokonslovenija/",
         "https://www.facebook.com/budokonslovenija/",
@@ -897,6 +918,9 @@
                         <a href="/budokon-moc/">Delavnice</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#individualno">Individualno</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#program">Program</a>
                     </li>
                     <li>
@@ -947,8 +971,6 @@
 
     <section class="image-band band-warrior" aria-label="Budokon gibanje"></section>
 
-    <section class="image-band band-bridge" aria-label="Budokon prehod"></section>
-
     <section id="delavnice" class="home-section compact">
         <div class="home-container">
             <h2 class="section-title">Delavnice</h2>
@@ -957,6 +979,21 @@
                 <p><strong>Budokon moč</strong> je poletna serija štirih delavnic, ki raziskuje moč skozi stabilnost, mobilnost, meje in tok.</p>
                 <p>Julij–avgust · Ljubljana · 4 x 2h delavnice</p>
                 <p><a href="/budokon-moc/" class="home-button">Budokon moč</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="image-band band-bridge" aria-label="Budokon prehod"></section>
+
+
+    <section id="individualno" class="home-section compact">
+        <div class="home-container">
+            <h2 class="section-title">Individualno</h2>
+
+            <div class="text-block">
+                <p>Personalizirano delo, prilagojeno potrebam posameznika. Primerno za poglabljanje tehnike, razumevanje giba, doživljanje telesa in natančnejšo prakso.</p>
+                <p>65 € · 60 minut</p>
+                <p><a href="mailto:sanja@budokon.si" class="home-button">Piši za individualno lekcijo</a></p>
             </div>
         </div>
     </section>
@@ -978,11 +1015,6 @@
                     <p>Gibanje po prostoru na tatami podlogah v doju. Praksa vključuje vse jezike Budokona, s fokusom na krepitvi gibalne agilnosti.</p>
                 </article>
 
-                <article class="program-card">
-                    <img src="img/bojb.jpg" alt="Budokon individualno delo">
-                    <h3>Individualno</h3>
-                    <p>Personalizirano delo, prilagojeno potrebam posameznika. Primerno za poglabljanje tehnike, razumevanje giba, doživljanje telesa in natančnejšo prakso.</p>
-                </article>
             </div>
         </div>
     </section>
