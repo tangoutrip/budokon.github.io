@@ -365,28 +365,6 @@
             text-align: center;
         }
 
-        .gallery-strip {
-            width: 100%;
-            background: var(--bdk-black);
-            border-top: 1px solid rgba(185, 166, 106, 0.24);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.24);
-        }
-
-        .mini-grid {
-            width: 100%;
-            display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 0;
-        }
-
-        .mini-grid img {
-            width: 100%;
-            height: 210px;
-            object-fit: cover;
-            display: block;
-            filter: grayscale(12%) contrast(1.04) brightness(0.78);
-        }
-
         .teacher-panel {
             width: min(980px, 88vw);
             margin: 0 auto;
@@ -608,14 +586,6 @@
                 padding: 42px 28px;
             }
 
-            .mini-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-
-            .mini-grid img {
-                height: 180px;
-            }
-
             .teacher-panel {
                 grid-template-columns: 1fr;
                 width: min(88vw, 680px);
@@ -704,14 +674,6 @@
 
             .image-band {
                 height: 150px;
-            }
-
-            .mini-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .mini-grid img {
-                height: 155px;
             }
 
             .teacher-panel {
@@ -958,16 +920,44 @@
                 <p>Praksa krepi moč, koordinacijo, mobilnost in fleksibilnost ob sprotni refleksiji doživljanja. Budokon je pot preobrazbe skozi samoopazovanje - pot bojevniškega duha, ki ne išče bližnjic, se z izzivi sooča, spreminja tisto na kar lahko vplivamo in nas uči sprejemanja tistega na kar ne moremo vplivati.</p>
 
                 <p>V Slovenijo je leta 2016 prakso pripeljala Sanja Zalar Gostimirović - Sanja Somatika. Pri vodenju se opira na avtorsko metodo <a href="https://sanjasomatika.si/somatska-cujecnost.html">Somatska čuječnost™</a>.</p>
-
-                <p>
-                    <a href="/redne-prakse/" class="home-button">Vpis v redne prakse 2026</a>
-                
-                </p>
             </div>
         </div>
     </section>
 
     <div class="gold-divider"></div>
+
+    <section id="program" class="home-section">
+            <div class="home-container wide">
+                <h2 class="section-title">Program</h2>
+    
+                <div class="program-grid">
+                    <article class="program-card">
+                        <img src="img/leap.jpg" alt="Budokon redna praksa">
+                        <h3>BDK slow flow</h3>
+                        <p>Kontinuiran flow na vadbeni podlogi. Fokus prakse je na vzdržljivosti, nadzoru, stabilnosti, prehodih in tekoči Budokon joga praksi.</p>
+                    </article>
+    
+                    <article class="program-card">
+                        <img src="img/gorilaw.jpg" alt="Budokon tematske delavnice">
+                        <h3>BDK tatami</h3>
+                        <p>Gibanje po prostoru na tatami podlogah v doju. Praksa vključuje vse jezike Budokona, s fokusom na krepitvi gibalne agilnosti.</p>
+                    </article>
+    
+                </div>
+            </div>
+        </section>
+
+    <section id="redne-prakse-povzetek" class="home-section compact">
+            <div class="home-container">
+                <h2 class="section-title">Redne prakse</h2>
+    
+                <div class="text-block">
+                    <p>Redne Budokon prakse potekajo na dveh lokacijah v Ljubljani: ob sredah na Viču in ob petkih pri BTC-ju.</p>
+                    <p>Prakse potekajo v obliki 5-mesečnih semestrov. Vpis je dvakrat letno, pred začetkom semestra pa so odprte testne prakse.</p>
+                    <p><a href="/redne-prakse/" class="home-button">Več o rednih praksah</a></p>
+                </div>
+            </div>
+        </section>
 
     <section class="image-band band-warrior" aria-label="Budokon gibanje"></section>
 
@@ -976,8 +966,8 @@
             <h2 class="section-title">Delavnice</h2>
 
             <div class="text-block">
-                <p><strong>Budokon moč</strong> je poletna serija štirih delavnic, ki raziskuje moč skozi stabilnost, mobilnost, meje in tok.</p>
-                <p>Julij–avgust · Ljubljana · 4 x 2h delavnice</p>
+                <p>Tekom leta organiziram Budokon delavnice. Redna poletna serija <strong>Budokon moč</strong> raziskuje moč skozi stabilnost, mobilnost, meje in tok, letos pa uvajam tudi zimske delavnice.</p>
+                <p>Več informacij o naslednjih delavnicah v kratkem.</p>
                 <p><a href="/budokon-moc/" class="home-button">Budokon moč</a></p>
             </div>
         </div>
@@ -995,38 +985,6 @@
                 <p>65 € · 60 minut</p>
                 <p><a href="mailto:sanja@budokon.si" class="home-button">Piši za individualno lekcijo</a></p>
             </div>
-        </div>
-    </section>
-
-    <section id="program" class="home-section">
-        <div class="home-container wide">
-            <h2 class="section-title">Program</h2>
-
-            <div class="program-grid">
-                <article class="program-card">
-                    <img src="img/leap.jpg" alt="Budokon redna praksa">
-                    <h3>BDK slow flow</h3>
-                    <p>Kontinuiran flow na vadbeni podlogi. Fokus prakse je na vzdržljivosti, nadzoru, stabilnosti, prehodih in tekoči Budokon joga praksi.</p>
-                </article>
-
-                <article class="program-card">
-                    <img src="img/gorilaw.jpg" alt="Budokon tematske delavnice">
-                    <h3>BDK tatami</h3>
-                    <p>Gibanje po prostoru na tatami podlogah v doju. Praksa vključuje vse jezike Budokona, s fokusom na krepitvi gibalne agilnosti.</p>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="image-band" class="gallery-strip" aria-label="Budokon gibanje">
-        <div class="mini-grid">
-            <img src="img/bdk-mini1.png" alt="Budokon gibanje 1">
-            <img src="img/bdk-mini2.png" alt="Budokon gibanje 2">
-            <img src="img/bdk-mini6.png" alt="Budokon gibanje 3">
-            <img src="img/bdk-mini4.png" alt="Budokon gibanje 4">
-            <img src="img/bdk-mini5.png" alt="Budokon gibanje 5">
-            <img src="img/bdk-mini3.png" alt="Budokon gibanje 6">
         </div>
     </section>
 
