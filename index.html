@@ -319,48 +319,6 @@
     background-position: center 25%;
 }
 
-        .schedule-panel {
-            max-width: 760px;
-            margin: 0 auto;
-            border-top: 1px solid rgba(185, 166, 106, 0.34);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.34);
-        }
-
-        .schedule-row {
-            display: grid;
-            grid-template-columns: 180px 1fr;
-            gap: 42px;
-            padding: 26px 0;
-            border-bottom: 1px solid rgba(185, 166, 106, 0.22);
-            align-items: baseline;
-        }
-
-        .schedule-row:last-child {
-            border-bottom: 0;
-        }
-
-        .schedule-day {
-            color: var(--bdk-gold-active);
-            font-size: 15px;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-        }
-
-        .schedule-info {
-            color: var(--bdk-white);
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        .muted-note {
-            max-width: 680px;
-            margin: 42px auto 0;
-            color: var(--bdk-muted);
-            text-align: center;
-            font-size: 15px;
-            line-height: 1.9;
-        }
-
         .program-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -427,45 +385,6 @@
             object-fit: cover;
             display: block;
             filter: grayscale(12%) contrast(1.04) brightness(0.78);
-        }
-
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 68px;
-            max-width: 860px;
-            margin: 0 auto;
-        }
-
-        .price-block {
-            border-top: 1px solid rgba(185, 166, 106, 0.34);
-            border-bottom: 1px solid rgba(185, 166, 106, 0.34);
-            padding: 34px 0;
-            text-align: center;
-        }
-
-        .price-block h3 {
-            margin: 0 0 22px;
-            color: var(--bdk-gold-active);
-            font-size: 16px;
-            letter-spacing: 0.22em;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
-
-        .price-block p {
-            color: var(--bdk-muted);
-            font-size: 16px;
-            line-height: 1.9;
-            margin-bottom: 0;
-        }
-
-        .price-block .price {
-            display: block;
-            color: var(--bdk-white);
-            font-size: 28px;
-            line-height: 1.5;
-            margin-top: 8px;
         }
 
         .teacher-panel {
@@ -684,9 +603,6 @@
             }
 
             .program-grid,
-            .pricing-grid {
-                grid-template-columns: 1fr;
-            }
 
             .program-card {
                 padding: 42px 28px;
@@ -698,11 +614,6 @@
 
             .mini-grid img {
                 height: 180px;
-            }
-
-            .schedule-row {
-                grid-template-columns: 1fr;
-                gap: 10px;
             }
 
             .teacher-panel {
@@ -774,9 +685,7 @@
                 letter-spacing: 0.18em;
             }
 
-            .text-block,
-            .join-panel,
-            .join-panel p {
+            .text-block {
                 font-size: 15px;
                 line-height: 1.9;
             }
@@ -849,60 +758,107 @@
     </style>
 
     <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      "@context": "https://schema.org",
-      "@graph": [
+      "@type": "WebSite",
+      "@id": "https://budokon.si/#website",
+      "url": "https://budokon.si/",
+      "name": "Budokon Slovenija",
+      "publisher": {
+        "@id": "https://budokon.si/#organization"
+      },
+      "inLanguage": "sl-SI",
+      "description": "Budokon Slovenija je prva slovenska Budokon šola za mešane gibalne umetnosti."
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://budokon.si/#webpage",
+      "url": "https://budokon.si/",
+      "name": "Budokon Slovenija | Mešane gibalne umetnosti v Ljubljani",
+      "description": "Budokon Slovenija je prva slovenska Budokon šola, ki jo vodi Sanja Zalar Gostimirović – Sanja Somatika. Mešane gibalne umetnosti: živalsko gibanje, mobilnost, kalistenika, BDK joga in osnove borilnih veščin.",
+      "isPartOf": {
+        "@id": "https://budokon.si/#website"
+      },
+      "about": {
+        "@id": "https://budokon.si/#organization"
+      },
+      "author": {
+        "@id": "https://sanjasomatika.si/#person"
+      },
+      "mentions": {
+        "@id": "https://sanjasomatika.si/#person"
+      },
+      "inLanguage": "sl-SI"
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://budokon.si/#organization",
+      "name": "Budokon Slovenija",
+      "url": "https://budokon.si/",
+      "email": "sanja@budokon.si",
+      "description": "Budokon Slovenija je prva slovenska Budokon šola za mešane gibalne umetnosti v Ljubljani.",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://budokon.si/img/bdk-logo-black.png"
+      },
+      "founder": {
+        "@id": "https://sanjasomatika.si/#person"
+      },
+      "areaServed": {
+        "@type": "Place",
+        "name": "Ljubljana"
+      },
+      "sameAs": [
+        "https://www.instagram.com/budokonslovenija/",
+        "https://www.facebook.com/budokonslovenija/",
+        "https://www.facebook.com/groups/1751705628459893/",
+        "https://www.youtube.com/channel/UCN39OXmKX4rBJyyXUuC2EKw"
+      ]
+    },
+    {
+      "@type": "Person",
+      "@id": "https://sanjasomatika.si/#person",
+      "name": "Sanja Zalar Gostimirović",
+      "alternateName": "Sanja Somatika",
+      "url": "https://sanjasomatika.si/sanja.html",
+      "jobTitle": "somatska praktičarka in psihosocialna svetovalka",
+      "image": "https://sanjasomatika.si/prof.jpg",
+      "knowsAbout": [
+        "Budokon",
+        "mešane gibalne umetnosti",
+        "somatsko gibanje",
+        "Somatska čuječnost™",
+        "mobilnost",
+        "BDK joga",
+        "kalistenika",
+        "živalsko gibanje",
+        "borilne veščine"
+      ],
+      "hasOccupation": [
         {
-          "@type": "WebSite",
-          "@id": "https://budokon.si/#website",
-          "name": "Budokon Slovenija",
-          "url": "https://budokon.si/",
-          "inLanguage": "sl-SI",
-          "description": "Budokon Slovenija je prva slovenska Budokon šola za mešane gibalne umetnosti."
+          "@type": "Occupation",
+          "name": "Somatska praktičarka"
         },
         {
-          "@type": "Organization",
-          "@id": "https://budokon.si/#organization",
-          "name": "Budokon Slovenija",
-          "url": "https://budokon.si/",
-          "logo": "https://budokon.si/img/og-budokon-slovenija.jpg",
-          "founder": {
-            "@id": "https://budokon.si/#sanja-zalar-gostimirovic"
-          },
-          "sameAs": [
-            "https://www.instagram.com/budokonslovenija/",
-            "https://www.facebook.com/budokonslovenija/",
-            "https://www.facebook.com/groups/1751705628459893/",
-            "https://www.youtube.com/channel/UCN39OXmKX4rBJyyXUuC2EKw"
-          ]
+          "@type": "Occupation",
+          "name": "Psihosocialna svetovalka"
         },
         {
-          "@type": "Person",
-          "@id": "https://budokon.si/#sanja-zalar-gostimirovic",
-          "name": "Sanja Zalar Gostimirović",
-          "alternateName": "",
-          "url": "https://sanjasomatika.si/",
-          "email": "sanja@budokon.si",
-          "jobTitle": "certificirana Budokon učiteljica",
-          "worksFor": {
-            "@id": "https://budokon.si/#organization"
-          },
-          "knowsAbout": [
-            "Budokon",
-            "mešane gibalne umetnosti",
-            "BDK joga",
-            "somatska čuječnost",
-            "mobilnost",
-            "borilne veščine",
-            "živalsko gibanje"
-          ],
-          "sameAs": [
-            "https://sanjasomatika.si/",
-            "https://www.instagram.com/sanja.somatika/"
-          ]
+          "@type": "Occupation",
+          "name": "Učiteljica Budokona"
         }
+      ],
+      "sameAs": [
+        "https://orcid.org/0009-0004-4659-688X",
+        "https://www.instagram.com/sanja.somatika/",
+        "https://www.facebook.com/sanjasomatika",
+        "https://www.youtube.com/@sanjasomatika"
       ]
     }
+  ]
+}
     </script>
 
     <script>
@@ -938,13 +894,10 @@
                         <a href="/redne-prakse/">Redne prakse</a>
                     </li>
                     <li>
-                        <a href="/budokon-moc/" target="_blank" rel="noopener">Delavnice</a>
+                        <a href="/budokon-moc/">Delavnice</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#program">Program</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#cenik">Cenik</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#kontakt">Kontakt</a>
@@ -980,10 +933,10 @@
 
                 <p>Praksa krepi moč, koordinacijo, mobilnost in fleksibilnost ob sprotni refleksiji doživljanja. Budokon je pot preobrazbe skozi samoopazovanje - pot bojevniškega duha, ki ne išče bližnjic, se z izzivi sooča, spreminja tisto na kar lahko vplivamo in nas uči sprejemanja tistega na kar ne moremo vplivati.</p>
 
-                <p>V Slovenijo je leta 2016 prakso pripeljala Sanja Zalar Gostimirović - Sanja Somatika. Vodi po avtorski metodi Somatske čuječnosti.</p>
+                <p>V Slovenijo je leta 2016 prakso pripeljala Sanja Zalar Gostimirović - Sanja Somatika. Pri vodenju se opira na avtorsko metodo <a href="https://sanjasomatika.si/somatska-cujecnost.html">Somatska čuječnost™</a>.</p>
 
                 <p>
-                    <a href="https://budokon.si/redne-prakse/" class="home-button" target="_blank" rel="noopener">Vpis v redne prakse 2026</a>
+                    <a href="/redne-prakse/" class="home-button">Vpis v redne prakse 2026</a>
                 
                 </p>
             </div>
@@ -994,29 +947,6 @@
 
     <section class="image-band band-warrior" aria-label="Budokon gibanje"></section>
 
-    <section id="vteku" class="home-section">
-        <div class="home-container">
-            <h2 class="section-title">BDK Ljubljana</h2>
-
-            <div class="schedule-panel">
-                <div class="schedule-row">
-                    <div class="schedule-day">Sreda</div>
-                    <div class="schedule-info">BDK slow flow · 19:10 · Vič<br><br><em>Povezan in tekoč tip prakse na vadbeni podlogi, fokus na vzdržljivosti in odpornosti.</em></div>
-                </div>
-
-                <div class="schedule-row">
-                    <div class="schedule-day">Petek</div>
-                    <div class="schedule-info">BDK tatami · 18:00 · BTC<br><br><em>Vsi jeziki Budokona, delo na tatamijih, gibanje po prostoru, fokus na moči in agilnosti.</em></div>
-                </div>
-            </div>
-
-            <div class="muted-note">
-                <p>Praksa je primerna za gibalce, ki si želijo krepiti moč na inteligenten in postopen način.<br><br>Vse logistične informacije prejmete po prijavi preko e-pošte.</p>
-                <p><a href="https://forms.gle/QyuVCJcnDNyiGUP16" class="home-button" target="_blank" rel="noopener">Prijava: testna praksa | semester</a></p>
-            </div>
-        </div>
-    </section>
-
     <section class="image-band band-bridge" aria-label="Budokon prehod"></section>
 
     <section id="delavnice" class="home-section compact">
@@ -1026,7 +956,7 @@
             <div class="text-block">
                 <p><strong>Budokon moč</strong> je poletna serija štirih delavnic, ki raziskuje moč skozi stabilnost, mobilnost, meje in tok.</p>
                 <p>Julij–avgust · Ljubljana · 4 x 2h delavnice</p>
-                <p><a href="/budokon-moc/" class="home-button" target="_blank" rel="noopener">Budokon moč</a></p>
+                <p><a href="/budokon-moc/" class="home-button">Budokon moč</a></p>
             </div>
         </div>
     </section>
@@ -1057,28 +987,6 @@
         </div>
     </section>
 
-    <section id="kako-se-pridruzis" class="home-section compact">
-        <div class="home-container">
-            <h2 class="section-title">Kako se pridružiš</h2>
-
-            <div class="text-block join-panel">
-                <p><strong>Vpis v redne skupine.</strong></p>
-
-                <p>Za ljudi, ki želijo graditi moč, mobilnost, koordinacijo in stik s telesom na inteligenten, postopen in čuječ način. Predznanje ni pogoj.</p>
-
-                <p>Vpis v redne Budokon skupine poteka dvakrat letno: septembra in februarja.</p>
-
-                <p>Pred vsakim vpisom so odprte testne lekcije, ki so namenjene spoznavanju prakse, prostora in mojega načina dela pred odločitvijo za semester.</p>
-
-                <p>Če se po testnem obisku odločite za vpis v semester, se cena testnega obiska odšteje od vaše šolnine.</p>
-
-                <p>Pred srečanjem, po oddani prijavi, prejmete e-pošto z vsemi potrebnimi informacijami.</p>
-
-                <p><a href="https://forms.gle/QyuVCJcnDNyiGUP16" class="home-button" target="_blank" rel="noopener">Prijava na testno lekcijo</a></p>
-            </div>
-        </div>
-    </section>
-
     <section id="image-band" class="gallery-strip" aria-label="Budokon gibanje">
         <div class="mini-grid">
             <img src="img/bdk-mini1.png" alt="Budokon gibanje 1">
@@ -1090,42 +998,7 @@
         </div>
     </section>
 
-    <section id="cenik" class="home-section">
-        <div class="home-container">
-            <h2 class="section-title">Cenik</h2>
-
-            <div class="pricing-grid">
-                <div class="price-block">
-                    <h3>Redne prakse</h3>
-                    <p>5-mesečni semester 1x tedensko<br><span class="price">270 €</span></p>
-                    <p>5-mesečni semester 2x tedensko<br><span class="price">420 €</span></p>
-                    <p><a href="https://forms.gle/QyuVCJcnDNyiGUP16" class="home-button" target="_blank" rel="noopener">Prijava</a></p>
-                </div>
-
-                <div class="price-block">
-                    <h3>Dodatno</h3>
-                    <p>Individualne lekcije<br><span class="price">65 €</span><span>60 minut</span></p>
-                    <p>Poletna serija delavnic: <br><a href="/budokon-moc/" target="_blank" rel="noopener">Budokon moč</a>.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="image-band band-final" aria-label="Budokon Slovenija"></section>
-
-    <section id="okvir-sodelovanja" class="home-section compact">
-        <div class="home-container">
-            <h2 class="section-title">Okvir sodelovanja</h2>
-
-            <div class="text-block">
-                <p>Redne prakse potekajo v obliki 5-mesečnih semestrov.<br>Skupina se po začetku semestra zapre, da se lahko gradijo kontinuiteta, skupnost in globlje delo.</p>
-
-                <p>Drop-in obiski niso možni.<br>S šolnino rezervirate svoje mesto v skupini, ne posameznih obiskov.</p>
-
-                <p>V izjemnih primerih, kot so poškodba, nosečnost ali druge posebne okoliščine, se dogovorimo o prenosu šolnine.</p>
-            </div>
-        </div>
-    </section>
 
     <section id="kontakt" class="home-section">
         <div class="home-container wide">
@@ -1144,7 +1017,7 @@
 
                         <p>Vsa BDK izobraževanja je opravila v živo pri avtorju metode, Cameronu Shaynu: BDK joga, mobilnost in animalistika, osnove MMA in kalistenika.</p>
 
-                        <p>Je somatska praktičarka in psihosocialna svetovalka, avtorica metode Somatska čuječnost™, RYT joga učiteljica, učiteljica argentinskega tanga in praktikantka Somatic Experiencing. Deluje v Ljubljani in online. Njeno delo temelji na somatskem in travmo upoštevajočem vodenju procesov.</p>
+                        <p>Je somatska praktičarka in psihosocialna svetovalka, avtorica metode <a href="https://sanjasomatika.si/somatska-cujecnost.html">Somatska čuječnost™</a>, RYT joga učiteljica, učiteljica argentinskega tanga in Somatic Experiencing® edukantka pod supervizijo. Deluje v Ljubljani in po spletu.</p>
 
                         <p><a href="mailto:sanja@budokon.si">sanja@budokon.si</a></p>
                     </div>
